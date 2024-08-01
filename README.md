@@ -25,3 +25,31 @@ To get a copy of the project up and running on your local machine, follow these 
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/mouad-abaaqil/WaterQualityProject.git
+
+2. **Navigate to the project directory**:
+   ```bash
+   cd WaterQualityProject
+   
+3. **Install the required packages**:
+   ```bash
+   pip install -r requirements.txt
+
+4. **Download the dataset**:
+   Ensure the `Water quality.xlsx` file is in the project directory. If not, please add it manually.
+
+5. **Run Jupyter Notebook**:
+   ```bash
+   jupyter notebook
+
+6. **Open the notebook**:
+   Open `Water_Quality_Index_Calculation.ipynb` in the Jupyter Notebook interface.
+
+## Project Details
+
+This project includes the following key components:
+
+- **Data Loading and Exploration**: Importing libraries and dataset, initial data exploration.
+- **Data Preprocessing**: Handling missing values, normalization, and scaling.
+- **WQI Calculation**: Calculating the Water Quality Index based on various parameters.
+- **Data Visualization**: Generating visualizations for data distribution, WQI distribution, and geographic WQI representation.
+- **Conclusion**: Summarizing results and discussing implications for water quality management.
