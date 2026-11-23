@@ -1,0 +1,576 @@
+{
+  "asOf": "2026-11-18",
+  "researchedAt": "2026-11-19",
+  "region": {
+    "name": "Souss-Massa",
+    "storageMm3": 383.13,
+    "capacityMm3": 722.83,
+    "fillPct": 53.0,
+    "totalNote": "Total publié conservé ; somme des stocks arrondis par barrage : 383,12 Mm³."
+  },
+  "snapshots": [
+    {
+      "date": "2026-11-09",
+      "storageMm3": 333.15,
+      "capacityMm3": 722.83,
+      "fillPct": 46.09,
+      "sourceId": "maa-2026-11-09"
+    },
+    {
+      "date": "2026-11-13",
+      "storageMm3": 383.01,
+      "capacityMm3": 722.83,
+      "fillPct": 52.99,
+      "sourceId": "maa-2026-11-13"
+    },
+    {
+      "date": "2026-11-18",
+      "storageMm3": 383.13,
+      "capacityMm3": 722.83,
+      "fillPct": 53.0,
+      "sameDayPreviousYearFillPct": 19.56,
+      "sourceId": "maa-2026-11-18"
+    }
+  ],
+  "sources": [
+    {
+      "id": "maa-2026-11-18",
+      "title": "Situation journalière des barrages — Souss-Massa, page 10",
+      "publisher": "Ministère de l’Équipement, de l’Eau et des Forêts / Maa Dialna",
+      "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-18/ar/etat_global.pdf",
+      "date": "2026-11-18",
+      "kind": "official-snapshot",
+      "license": "Publicly accessible; redistribution license not specified in PDF",
+      "limitations": "Relevé lu visuellement sur la page 10. Stockage, pas qualité chimique. Pas un flux de télémesure. Le bulletin indique aussi 19,56 % pour le même jour de 2025 (région seulement)."
+    },
+    {
+      "id": "maa-2026-11-13",
+      "title": "Situation journalière des barrages — Souss-Massa, page 10",
+      "publisher": "Ministère de l’Équipement, de l’Eau et des Forêts / Maa Dialna",
+      "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-13/ar/etat_global.pdf",
+      "date": "2026-11-13",
+      "kind": "official-snapshot",
+      "license": "Publicly accessible; redistribution license not specified in PDF",
+      "limitations": "Snapshot visually transcribed from page 10. Storage, not chemical water quality. Not a live telemetry feed."
+    },
+    {
+      "id": "maa-2026-11-09",
+      "title": "Situation journalière des barrages — Souss-Massa, page 10",
+      "publisher": "Ministère de l’Équipement, de l’Eau et des Forêts / Maa Dialna",
+      "url": "https://www.maadialna.ma/sites/default/files/barrages/2026-11-09/fr/etat_global.pdf",
+      "date": "2026-11-09",
+      "kind": "official-snapshot",
+      "license": "Publicly accessible; redistribution license not specified in PDF",
+      "limitations": "Snapshot visually transcribed from page 10. Only two dated snapshots are bundled; no interpolated daily history."
+    },
+    {
+      "id": "abhsm-inventory",
+      "title": "Liste des barrages dans le bassin hydraulique de Souss Massa",
+      "publisher": "Agence du Bassin Hydraulique de Souss Massa / data.gov.ma",
+      "url": "https://data.gov.ma/data/dataset/liste-des-barrages-dans-le-bassin-hydraulique-de-souss-massa",
+      "date": "2023-06-20",
+      "kind": "open-inventory",
+      "license": "ODbL 1.0",
+      "limitations": "Inventory contains nine dams with projected X/Y but no declared CRS in inspected resources. Those coordinates were not silently transformed into GPS. Map uses separate approximate OSM feature locations."
+    },
+    {
+      "id": "osm",
+      "title": "OpenStreetMap contributors — facility feature locations",
+      "publisher": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/copyright",
+      "date": "2026-11-19",
+      "kind": "open-geodata",
+      "license": "ODbL 1.0",
+      "limitations": "Approximate feature representative points returned by Nominatim, not surveyed intake, sensor or sampling positions. Individual feature URLs appear on facilities."
+    },
+    {
+      "id": "onee-desal-2022",
+      "title": "L’ONEE sécurise l’alimentation en eau potable du Grand Agadir",
+      "publisher": "ONEE",
+      "url": "https://www.onep.org.ma/Communiques-Presse-ONEP/communiques-2022/02/CDP-Agadir-ONEE-02-02-2022/CDP-Agadir-ONEE-VF-02-02-2022.pdf",
+      "date": "2022-02-02",
+      "kind": "official-publication",
+      "limitations": "Initial capacity and long-term expansion objective, not current metered production. No current source-mix percentages are inferred."
+    },
+    {
+      "id": "agadir-gcap-2025",
+      "title": "Agadir Green City Action Plan — Water section",
+      "publisher": "City of Agadir / EBRD Green Cities",
+      "url": "https://www.ebrdgreencities.com/assets/downloads/Agadir-GCAP_English_1.0.pdf",
+      "date": "2025",
+      "kind": "institutional-plan",
+      "limitations": "Reports transfer to SRM-SM on 15 October 2024. Reuse figures include a 2026 upgrade target, not independently verified achieved output."
+    },
+    {
+      "id": "ormvasm-water",
+      "title": "Service de l’eau — ressources en eau",
+      "publisher": "Office Régional de Mise en Valeur Agricole du Souss-Massa",
+      "url": "https://www.ormvasm.ma/index.php/fr/metiers/gestion-des-reseaux.html",
+      "date": "undated; accessed 2026-11-19",
+      "kind": "official-context",
+      "limitations": "Describes rivers, dams and Souss/Chtouka aquifers. Undated aggregate inventory is not a current water balance or live groundwater level."
+    },
+    {
+      "id": "abhsm-hydraulic-2023",
+      "title": "Ressources et ouvrages hydrauliques du bassin du Souss-Massa",
+      "publisher": "Agence du Bassin Hydraulique de Souss Massa",
+      "url": "https://abhsm.ma/document/sallon2023/1.pdf",
+      "date": "2023",
+      "kind": "official-publication",
+      "limitations": "Historical dam usage and capacity context; bathymetric reference years differ by facility. Not used as current storage."
+    },
+    {
+      "id": "mzar-study-2019",
+      "title": "Bacteriological and physicochemical quality of treated wastewater of the Mzar treatment plant",
+      "publisher": "Bourouache et al., Applied Water Science 9:86",
+      "url": "https://d-nb.info/1201541182/34",
+      "date": "2019-05-09",
+      "kind": "primary-research",
+      "license": "Open-access article; see article license",
+      "limitations": "Plant description and published position are historical. Sampling was February–June 2015. Historical chemical/bacterial results are not displayed as current quality."
+    },
+    {
+      "id": "aourir-study-2021",
+      "title": "Study of Physicochemical and Bacteriological Quality of Treated Wastewater by the New Aourir Plant",
+      "publisher": "Hajji et al., Journal of Ecological Engineering 22(6):83–98",
+      "url": "https://www.jeeng.net/pdf-137360-65156?filename=Study-of-Physicochemical-.pdf",
+      "date": "2021-06-01",
+      "kind": "primary-research",
+      "license": "CC BY 4.0",
+      "limitations": "Published location and design horizon. The 7,600 m³/day figure is the 2030 saturation design, not current measured flow; samples date 2017–2018."
+    },
+    {
+      "id": "oss-crem",
+      "title": "Besoins stratégiques en données — Souss Massa et Chtouka",
+      "publisher": "Observatoire du Sahara et du Sahel / projet CREM",
+      "url": "https://projet.oss-online.org/maghreb-eau/sites/default/files/2020-01/RAPPORT-DEFINITIF-CHTOUKA%20DU%20MAROC-PROJET-CREM-CAPION.pdf",
+      "date": "2017",
+      "kind": "institutional-study",
+      "limitations": "Historical background on groundwater depletion, salinity and local nitrogen pollution. Reference-area markers are schematic, not wells or aquifer boundaries."
+    },
+    {
+      "id": "open-meteo",
+      "title": "Open-Meteo Weather API — pricing and licensing",
+      "publisher": "Open-Meteo",
+      "url": "https://open-meteo.com/en/pricing",
+      "date": "accessed 2026-11-19",
+      "kind": "model-api",
+      "license": "Data CC BY 4.0; hosted free API is non-commercial",
+      "limitations": "Weather model estimates/forecasts, not measured water chemistry. Commercial SaaS requires an appropriate commercial endpoint or self-hosted service."
+    },
+    {
+      "id": "gemstat",
+      "title": "GEMStat data portal and open data",
+      "publisher": "UNEP GEMS/Water / International Centre for Water Resources and Global Change",
+      "url": "https://gemstat.org/data-gemstat/data-portal/",
+      "date": "accessed 2026-11-19",
+      "kind": "candidate-data",
+      "license": "Open subset CC BY 4.0 or equivalent; other access conditions vary",
+      "limitations": "Regional station coverage not established. Portal reports October 2026 disruption. Do not imply a connected Souss-Massa laboratory feed."
+    },
+    {
+      "id": "hdx-cod-ab-mar",
+      "title": "Limites administratives du Maroc (COD-AB), région Souss-Massa (MA009) et 6 provinces",
+      "publisher": "HCP / OCHA via HDX",
+      "url": "https://data.humdata.org/dataset/cod-ab-mar",
+      "date": "2024-12-19",
+      "kind": "boundary",
+      "license": "CC BY-IGO (attribution requise)",
+      "limitations": "Limites administratives de référence, pas des limites d’un opérateur ni d’un bassin hydraulique. Jeu limité à 10 régions sur 12."
+    }
+  ],
+  "context": [
+    {
+      "id": "water-security",
+      "title": "Une ressource à suivre à l’échelle du bassin",
+      "summary": "Le système régional combine eaux de surface, nappes du Souss et de Chtouka, et dessalement. Les réserves des barrages renseignent sur la disponibilité de l’eau, pas sur sa potabilité.",
+      "sourceIds": [
+        "ormvasm-water",
+        "onee-desal-2022",
+        "maa-2026-11-13"
+      ]
+    },
+    {
+      "id": "institution",
+      "title": "RAMSA, une histoire prolongée par SRM-SM",
+      "summary": "Le plan Ville verte d’Agadir situe le transfert des activités RAMSA et des services concernés de l’ONEE à SRM Souss-Massa au 15 octobre 2024. Le projet conserve son origine de stage RAMSA et utilise l’identité régionale actuelle.",
+      "sourceIds": [
+        "agadir-gcap-2025"
+      ]
+    },
+    {
+      "id": "desalination",
+      "title": "Dessalement pour l’eau potable et l’irrigation",
+      "summary": "L’ONEE documente une capacité initiale mutualisée de 275 000 m³/j : 150 000 pour l’eau potable et 125 000 pour l’irrigation. L’extension à 400 000 m³/j est un objectif publié, sans confirmation de production actuelle dans cette application.",
+      "sourceIds": [
+        "onee-desal-2022"
+      ]
+    },
+    {
+      "id": "reuse",
+      "title": "Traiter, désinfecter, réutiliser",
+      "summary": "M’Zar et Aourir font partie des installations de traitement. La réutilisation dessert notamment les espaces verts et golfs. Le plan d’Agadir annonce pour M’Zar un objectif de 24 millions de m³/an en 2026, contre 11 millions auparavant : ce chiffre reste un objectif documentaire.",
+      "sourceIds": [
+        "agadir-gcap-2025",
+        "mzar-study-2019",
+        "aourir-study-2021"
+      ]
+    },
+    {
+      "id": "quality-gap",
+      "title": "La qualité exige des prélèvements traçables",
+      "summary": "Aucun flux ouvert de mesures physico-chimiques récentes des ouvrages suivis n’a été validé pendant cette recherche. Importer des résultats de laboratoire horodatés est nécessaire avant toute évaluation de qualité.",
+      "sourceIds": [
+        "gemstat",
+        "abhsm-inventory"
+      ]
+    }
+  ],
+  "facilities": [
+    {
+      "id": "moulay-abdellah",
+      "name": "Moulay Abdellah",
+      "kind": "dam",
+      "coordinates": [
+        -9.675681,
+        30.773338
+      ],
+      "locationAccuracy": "approximate",
+      "locationSourceId": "osm",
+      "locationUrl": "https://www.openstreetmap.org/relation/5961856",
+      "locationNote": "Point représentatif OSM, non emplacement de capteur.",
+      "description": "Ouvrage du bassin de Tamri participant à l’alimentation du Grand Agadir.",
+      "sourceIds": [
+        "maa-2026-11-18",
+        "abhsm-inventory",
+        "osm",
+        "abhsm-hydraulic-2023"
+      ],
+      "storageMm3": 78.57,
+      "fillPct": 95.9,
+      "asOf": "2026-11-18"
+    },
+    {
+      "id": "dkhila",
+      "name": "Dkhila",
+      "kind": "dam",
+      "coordinates": [
+        -9.2854089,
+        30.569422
+      ],
+      "locationAccuracy": "approximate",
+      "locationSourceId": "osm",
+      "locationUrl": "https://www.openstreetmap.org/way/387880522",
+      "locationNote": "Point représentatif OSM, non emplacement de capteur.",
+      "description": "Petit ouvrage de compensation et de dérivation sur l’Issen.",
+      "sourceIds": [
+        "maa-2026-11-18",
+        "abhsm-inventory",
+        "osm",
+        "abhsm-hydraulic-2023"
+      ],
+      "storageMm3": 0.16,
+      "fillPct": 67.79,
+      "asOf": "2026-11-18"
+    },
+    {
+      "id": "ahl-souss",
+      "name": "Ahl Souss",
+      "kind": "dam",
+      "coordinates": [
+        -9.1284082,
+        30.0537593
+      ],
+      "locationAccuracy": "approximate",
+      "locationSourceId": "osm",
+      "locationUrl": "https://www.openstreetmap.org/way/119569970",
+      "locationNote": "Point représentatif OSM, non emplacement de capteur.",
+      "description": "Ouvrage de la zone d’Aït Baha, pour mobilisation des eaux locales.",
+      "sourceIds": [
+        "maa-2026-11-18",
+        "abhsm-inventory",
+        "osm",
+        "abhsm-hydraulic-2023"
+      ],
+      "storageMm3": 4.59,
+      "fillPct": 93.4,
+      "asOf": "2026-11-18"
+    },
+    {
+      "id": "aoulouz",
+      "name": "Aoulouz",
+      "kind": "dam",
+      "coordinates": [
+        -8.111548,
+        30.705819
+      ],
+      "locationAccuracy": "approximate",
+      "locationSourceId": "osm",
+      "locationUrl": "https://www.openstreetmap.org/way/385098917",
+      "locationNote": "Point représentatif OSM, non emplacement de capteur.",
+      "description": "Barrage du Souss, important pour la régularisation et les usages agricoles.",
+      "sourceIds": [
+        "maa-2026-11-18",
+        "abhsm-inventory",
+        "osm",
+        "abhsm-hydraulic-2023"
+      ],
+      "storageMm3": 71.89,
+      "fillPct": 80.81,
+      "asOf": "2026-11-18"
+    },
+    {
+      "id": "sidi-abdellah",
+      "name": "Sidi Abdellah",
+      "kind": "dam",
+      "coordinates": [
+        -8.8243217,
+        30.6359993
+      ],
+      "locationAccuracy": "approximate",
+      "locationSourceId": "osm",
+      "locationUrl": "https://www.openstreetmap.org/way/409855136",
+      "locationNote": "Point représentatif OSM, non emplacement de capteur.",
+      "description": "Ouvrage recensé dans la situation officielle de Souss-Massa.",
+      "sourceIds": [
+        "maa-2026-11-18",
+        "abhsm-inventory",
+        "osm",
+        "abhsm-hydraulic-2023"
+      ],
+      "storageMm3": 4.8,
+      "fillPct": 45.92,
+      "asOf": "2026-11-18"
+    },
+    {
+      "id": "youssef-ben-tachfine",
+      "name": "Youssef Ben Tachfine",
+      "kind": "dam",
+      "coordinates": [
+        -9.472591,
+        29.809193
+      ],
+      "locationAccuracy": "approximate",
+      "locationSourceId": "osm",
+      "locationUrl": "https://www.openstreetmap.org/way/385158725",
+      "locationNote": "Point représentatif OSM, non emplacement de capteur.",
+      "description": "Barrage sur l’oued Massa, associé aux usages d’irrigation et d’eau potable du sud du bassin.",
+      "sourceIds": [
+        "maa-2026-11-18",
+        "abhsm-inventory",
+        "osm",
+        "abhsm-hydraulic-2023"
+      ],
+      "storageMm3": 144.24,
+      "fillPct": 49.59,
+      "asOf": "2026-11-18"
+    },
+    {
+      "id": "abdelmoumen",
+      "name": "Abdelmoumen",
+      "kind": "dam",
+      "coordinates": [
+        -9.20762,
+        30.690474
+      ],
+      "locationAccuracy": "approximate",
+      "locationSourceId": "osm",
+      "locationUrl": "https://www.openstreetmap.org/way/289868587",
+      "locationNote": "Point représentatif OSM, non emplacement de capteur.",
+      "description": "Barrage sur l’Issen, associé à l’eau potable du Grand Agadir et à l’irrigation.",
+      "sourceIds": [
+        "maa-2026-11-18",
+        "abhsm-inventory",
+        "osm",
+        "abhsm-hydraulic-2023"
+      ],
+      "storageMm3": 72.44,
+      "fillPct": 36.5,
+      "asOf": "2026-11-18"
+    },
+    {
+      "id": "imi-el-kheng",
+      "name": "Imi El Kheng",
+      "kind": "dam",
+      "coordinates": [
+        -8.5321919,
+        30.6671908
+      ],
+      "locationAccuracy": "approximate",
+      "locationSourceId": "osm",
+      "locationUrl": "https://www.openstreetmap.org/way/179486552",
+      "locationNote": "Point représentatif OSM, non emplacement de capteur.",
+      "description": "Ouvrage du bassin du Souss, près d’Oulad Berhil.",
+      "sourceIds": [
+        "maa-2026-11-18",
+        "abhsm-inventory",
+        "osm",
+        "abhsm-hydraulic-2023"
+      ],
+      "storageMm3": 2.21,
+      "fillPct": 30.47,
+      "asOf": "2026-11-18"
+    },
+    {
+      "id": "mokhtar-soussi",
+      "name": "Mokhtar Soussi",
+      "kind": "dam",
+      "coordinates": [
+        -7.9722821,
+        30.7278015
+      ],
+      "locationAccuracy": "approximate",
+      "locationSourceId": "osm",
+      "locationUrl": "https://www.openstreetmap.org/way/197857304",
+      "locationNote": "Point représentatif OSM, non emplacement de capteur.",
+      "description": "Barrage en amont du Souss, dans le secteur d’Ouzioua.",
+      "sourceIds": [
+        "maa-2026-11-18",
+        "abhsm-inventory",
+        "osm",
+        "abhsm-hydraulic-2023"
+      ],
+      "storageMm3": 4.22,
+      "fillPct": 10.61,
+      "asOf": "2026-11-18"
+    },
+    {
+      "id": "chtouka-desalination",
+      "name": "Dessalement de Chtouka",
+      "kind": "desalination",
+      "coordinates": [
+        -9.6481144,
+        30.1384478
+      ],
+      "locationAccuracy": "approximate",
+      "locationSourceId": "osm",
+      "locationUrl": "https://www.openstreetmap.org/way/899848914",
+      "locationNote": "Point représentatif de la station de Douira dans OSM.",
+      "description": "Osmose inverse pour l’eau potable du Grand Agadir et l’irrigation de Chtouka. Capacité documentaire initiale ; aucun débit en temps réel connecté.",
+      "sourceIds": [
+        "onee-desal-2022",
+        "osm"
+      ],
+      "capacityLabel": "275 000 m³/j · capacité initiale (2022)",
+      "asOf": "2022-02-02",
+      "metrics": [
+        {
+          "label": "Capacité initiale",
+          "value": 275000,
+          "unit": "m³/j",
+          "note": "Capacité au démarrage, pas production actuelle."
+        },
+        {
+          "label": "Part eau potable — capacité",
+          "value": 150000,
+          "unit": "m³/j",
+          "note": "Composante initiale documentée en 2022."
+        },
+        {
+          "label": "Part irrigation — capacité",
+          "value": 125000,
+          "unit": "m³/j",
+          "note": "Composante initiale documentée en 2022."
+        },
+        {
+          "label": "Extension annoncée",
+          "value": 400000,
+          "unit": "m³/j",
+          "note": "Objectif publié, réalisation non vérifiée."
+        }
+      ]
+    },
+    {
+      "id": "mzar",
+      "name": "STEP M’Zar",
+      "kind": "treatment",
+      "coordinates": [
+        -9.5930556,
+        30.3411389
+      ],
+      "locationAccuracy": "approximate",
+      "locationSourceId": "mzar-study-2019",
+      "locationNote": "Position publiée dans l’étude de 2019 ; non mesure topographique récente.",
+      "description": "Traitement historique par décantation, infiltration-percolation sur sable et désinfection UV. Réutilisation pour les espaces verts et golfs ; modernisation décrite par le plan Ville verte.",
+      "sourceIds": [
+        "mzar-study-2019",
+        "agadir-gcap-2025"
+      ],
+      "capacityLabel": "24 Mm³/an · objectif de réutilisation 2026",
+      "metrics": [
+        {
+          "label": "Réutilisation — référence du plan",
+          "value": 11,
+          "unit": "Mm³/an",
+          "note": "Valeur de référence rapportée par le plan Ville verte 2025."
+        },
+        {
+          "label": "Réutilisation — objectif 2026",
+          "value": 24,
+          "unit": "Mm³/an",
+          "note": "Objectif du programme ; production réalisée non vérifiée."
+        }
+      ]
+    },
+    {
+      "id": "aourir",
+      "name": "STEP Aourir",
+      "kind": "treatment",
+      "coordinates": [
+        -9.7081381,
+        30.5456081
+      ],
+      "locationAccuracy": "approximate",
+      "locationSourceId": "aourir-study-2021",
+      "locationNote": "Position publiée dans l’étude de 2021, non position de capteur.",
+      "description": "Traitement biologique par boues activées, microfiltration et UV. Réutilisation documentée pour l’arrosage dans la zone de Taghazout.",
+      "sourceIds": [
+        "aourir-study-2021"
+      ],
+      "capacityLabel": "7 600 m³/j · dimensionnement horizon 2030",
+      "metrics": [
+        {
+          "label": "Débit de dimensionnement",
+          "value": 7600,
+          "unit": "m³/j",
+          "note": "Horizon de saturation 2030 dans l’étude de 2021 ; pas un débit actuel."
+        }
+      ]
+    },
+    {
+      "id": "souss-aquifer",
+      "name": "Nappe du Souss",
+      "kind": "groundwater",
+      "coordinates": [
+        -9.2,
+        30.42
+      ],
+      "locationAccuracy": "approximate",
+      "locationSourceId": "oss-crem",
+      "locationNote": "Repère schématique dans la plaine ; ni puits instrumenté ni limite de nappe.",
+      "description": "Ressource souterraine majeure de la plaine du Souss. Les pressions de prélèvement et les risques locaux de salinité et de pollution justifient un suivi dédié. Aucun niveau piézométrique récent n’est connecté.",
+      "sourceIds": [
+        "ormvasm-water",
+        "oss-crem"
+      ]
+    },
+    {
+      "id": "chtouka-aquifer",
+      "name": "Nappe de Chtouka",
+      "kind": "groundwater",
+      "coordinates": [
+        -9.45,
+        30.12
+      ],
+      "locationAccuracy": "approximate",
+      "locationSourceId": "oss-crem",
+      "locationNote": "Repère schématique de zone, pas un puits ni une délimitation scientifique.",
+      "description": "Ressource souterraine de la plaine de Chtouka. Le dessalement vise notamment à limiter la pression sur cette ressource. Aucune mesure récente de niveau ou de chimie n’est disponible dans le projet.",
+      "sourceIds": [
+        "ormvasm-water",
+        "oss-crem",
+        "onee-desal-2022"
+      ]
+    }
+  ]
+}

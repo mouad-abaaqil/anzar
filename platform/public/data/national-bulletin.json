@@ -1,0 +1,85 @@
+{
+  "date": "2026-11-18",
+  "sourceId": "maa-2026-11-18",
+  "national": {
+    "fillPct": 66.22,
+    "storedMm3": 11276.31,
+    "capacityMm3": 17027.59,
+    "sameDay2025Pct": 31.13
+  },
+  "basins": [
+    {
+      "name": "Oum Er-Rbia",
+      "nameAr": "أم الربيع",
+      "fillPct": 59.71,
+      "storedMm3": 2987.52,
+      "capacityMm3": 5003.37,
+      "sameDay2025Pct": 8.69
+    },
+    {
+      "name": "Loukkos",
+      "nameAr": "اللوكوس",
+      "fillPct": 72.13,
+      "storedMm3": 1411.31,
+      "capacityMm3": 1956.55,
+      "sameDay2025Pct": 44.46
+    },
+    {
+      "name": "Moulouya",
+      "nameAr": "ملوية",
+      "fillPct": 71.98,
+      "storedMm3": 504.96,
+      "capacityMm3": 701.49,
+      "sameDay2025Pct": 27.7
+    },
+    {
+      "name": "Sebou",
+      "nameAr": "سبو",
+      "fillPct": 73.72,
+      "storedMm3": 3958.96,
+      "capacityMm3": 5370.33,
+      "sameDay2025Pct": 41.7
+    },
+    {
+      "name": "Bouregreg",
+      "nameAr": "أبي رقراق",
+      "fillPct": 76.11,
+      "storedMm3": 1121.41,
+      "capacityMm3": 1473.39,
+      "sameDay2025Pct": 46.78
+    },
+    {
+      "name": "Tensift",
+      "nameAr": "تانسيفت",
+      "fillPct": 81.0,
+      "storedMm3": 164.56,
+      "capacityMm3": 203.17,
+      "sameDay2025Pct": 48.91
+    },
+    {
+      "name": "Souss-Massa",
+      "nameAr": "سوس - ماسة",
+      "fillPct": 53.0,
+      "storedMm3": 383.13,
+      "capacityMm3": 722.83,
+      "sameDay2025Pct": 19.56
+    },
+    {
+      "name": "Drâa-Oued Noun",
+      "nameAr": "درعة - واد نون",
+      "fillPct": 39.69,
+      "storedMm3": 416.05,
+      "capacityMm3": 1048.18,
+      "sameDay2025Pct": 28.22
+    },
+    {
+      "name": "Guir-Ziz-Ghriss",
+      "nameAr": "كير- زيز- غريس",
+      "fillPct": 59.9,
+      "storedMm3": 328.42,
+      "capacityMm3": 548.28,
+      "sameDay2025Pct": 46.33
+    }
+  ],
+  "note": "Relevé lu visuellement sur les pages 3 à 12 du bulletin (images, sans couche texte). Les sommes des bassins reproduisent le total national."
+}

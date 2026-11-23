@@ -1,0 +1,627 @@
+{
+ "fetchedAt": "2026-11-23T00:05:33+00:00",
+ "label": "Projection modélisée, usage non commercial, incertitude entre modèles. Ce n'est ni une prévision ni un relevé.",
+ "source": "Open-Meteo Climate API (climate-api.open-meteo.com/v1/climate), CMIP6, precipitation_sum quotidienne",
+ "sourceDoc": "https://open-meteo.com/en/docs/climate-api",
+ "licence": "CMIP6 CC BY 4.0 (attribution Open-Meteo et programme CMIP6) ; API gratuite : usage non commercial uniquement",
+ "scenario": "Modèles décrits par Open-Meteo comme « aussi proches que possible de RCP8.5 dans CMIP6 » ; pas de trajectoire basse disponible",
+ "resolution": "réduction d'échelle à 10 km (ERA5-Land) selon la documentation Open-Meteo",
+ "periods": {
+  "reference": [
+   1991,
+   2020
+  ],
+  "projection": [
+   2026,
+   2050
+  ]
+ },
+ "method": "Par modèle : moyenne annuelle (mm/an) des jours renseignés ; variation = projection - référence, en mm et en %. Un point représentatif par bassin (indicatif). Modèle écarté si plus de 5 % de jours vides. Médiane, min, max sur les modèles retenus.",
+ "caveats": [
+  "Un seul point par bassin : l'orographie (Rif, Moyen et Haut Atlas) n'est pas représentée.",
+  "Modèles de climat, pas de météo : les années isolées ne sont pas prédites.",
+  "Sur les bassins arides (Drâa, Guir) un pourcentage élevé peut ne représenter que quelques mm : voir changeMm."
+ ],
+ "basins": {
+  "Loukkos": {
+   "point": {
+    "lat": 35.0,
+    "lon": -5.6,
+    "gridLat": 35.0,
+    "gridLon": -5.599991,
+    "elevationM": 87.0
+   },
+   "models": {
+    "CMCC_CM2_VHR4": {
+     "referenceMmYr": 1077.6,
+     "projectionMmYr": 906.0,
+     "changeMm": -171.6,
+     "changePct": -15.9,
+     "emptyDays": 0
+    },
+    "FGOALS_f3_H": {
+     "referenceMmYr": 1075.4,
+     "projectionMmYr": 968.5,
+     "changeMm": -107.0,
+     "changePct": -9.9,
+     "emptyDays": 0
+    },
+    "HiRAM_SIT_HR": {
+     "referenceMmYr": 1031.3,
+     "projectionMmYr": 1007.1,
+     "changeMm": -24.3,
+     "changePct": -2.4,
+     "emptyDays": 0
+    },
+    "MRI_AGCM3_2_S": {
+     "referenceMmYr": 1189.4,
+     "projectionMmYr": 898.8,
+     "changeMm": -290.6,
+     "changePct": -24.4,
+     "emptyDays": 0
+    },
+    "EC_Earth3P_HR": {
+     "referenceMmYr": 1137.8,
+     "projectionMmYr": 993.7,
+     "changeMm": -144.1,
+     "changePct": -12.7,
+     "emptyDays": 365
+    },
+    "MPI_ESM1_2_XR": {
+     "referenceMmYr": 958.0,
+     "projectionMmYr": 1100.2,
+     "changeMm": 142.2,
+     "changePct": 14.8,
+     "emptyDays": 0
+    },
+    "NICAM16_8S": {
+     "referenceMmYr": 1131.9,
+     "projectionMmYr": 999.2,
+     "changeMm": -132.7,
+     "changePct": -11.7,
+     "emptyDays": 0
+    }
+   },
+   "droppedModels": {},
+   "summary": {
+    "nModels": 7,
+    "medianPct": -11.7,
+    "minPct": -24.4,
+    "maxPct": 14.8,
+    "medianMm": -132.7,
+    "referenceMedianMmYr": 1077.6
+   }
+  },
+  "Moulouya": {
+   "point": {
+    "lat": 34.3,
+    "lon": -3.4,
+    "gridLat": 34.300003,
+    "gridLon": -3.399994,
+    "elevationM": 369.0
+   },
+   "models": {
+    "CMCC_CM2_VHR4": {
+     "referenceMmYr": 205.9,
+     "projectionMmYr": 210.7,
+     "changeMm": 4.8,
+     "changePct": 2.3,
+     "emptyDays": 0
+    },
+    "FGOALS_f3_H": {
+     "referenceMmYr": 205.0,
+     "projectionMmYr": 166.1,
+     "changeMm": -39.0,
+     "changePct": -19.0,
+     "emptyDays": 0
+    },
+    "HiRAM_SIT_HR": {
+     "referenceMmYr": 194.6,
+     "projectionMmYr": 225.5,
+     "changeMm": 30.9,
+     "changePct": 15.9,
+     "emptyDays": 0
+    },
+    "MRI_AGCM3_2_S": {
+     "referenceMmYr": 211.6,
+     "projectionMmYr": 200.8,
+     "changeMm": -10.8,
+     "changePct": -5.1,
+     "emptyDays": 0
+    },
+    "EC_Earth3P_HR": {
+     "referenceMmYr": 197.8,
+     "projectionMmYr": 181.8,
+     "changeMm": -16.0,
+     "changePct": -8.1,
+     "emptyDays": 365
+    },
+    "MPI_ESM1_2_XR": {
+     "referenceMmYr": 199.5,
+     "projectionMmYr": 172.9,
+     "changeMm": -26.6,
+     "changePct": -13.3,
+     "emptyDays": 0
+    },
+    "NICAM16_8S": {
+     "referenceMmYr": 215.7,
+     "projectionMmYr": 187.3,
+     "changeMm": -28.4,
+     "changePct": -13.2,
+     "emptyDays": 0
+    }
+   },
+   "droppedModels": {},
+   "summary": {
+    "nModels": 7,
+    "medianPct": -8.1,
+    "minPct": -19.0,
+    "maxPct": 15.9,
+    "medianMm": -16.0,
+    "referenceMedianMmYr": 205.0
+   }
+  },
+  "Sebou": {
+   "point": {
+    "lat": 34.0,
+    "lon": -5.2,
+    "gridLat": 34.0,
+    "gridLon": -5.199997,
+    "elevationM": 395.0
+   },
+   "models": {
+    "CMCC_CM2_VHR4": {
+     "referenceMmYr": 498.7,
+     "projectionMmYr": 475.4,
+     "changeMm": -23.3,
+     "changePct": -4.7,
+     "emptyDays": 0
+    },
+    "FGOALS_f3_H": {
+     "referenceMmYr": 495.3,
+     "projectionMmYr": 444.9,
+     "changeMm": -50.4,
+     "changePct": -10.2,
+     "emptyDays": 0
+    },
+    "HiRAM_SIT_HR": {
+     "referenceMmYr": 472.6,
+     "projectionMmYr": 482.3,
+     "changeMm": 9.8,
+     "changePct": 2.1,
+     "emptyDays": 0
+    },
+    "MRI_AGCM3_2_S": {
+     "referenceMmYr": 533.2,
+     "projectionMmYr": 418.8,
+     "changeMm": -114.4,
+     "changePct": -21.5,
+     "emptyDays": 0
+    },
+    "EC_Earth3P_HR": {
+     "referenceMmYr": 515.2,
+     "projectionMmYr": 418.3,
+     "changeMm": -96.8,
+     "changePct": -18.8,
+     "emptyDays": 365
+    },
+    "MPI_ESM1_2_XR": {
+     "referenceMmYr": 433.6,
+     "projectionMmYr": 457.7,
+     "changeMm": 24.1,
+     "changePct": 5.5,
+     "emptyDays": 0
+    },
+    "NICAM16_8S": {
+     "referenceMmYr": 524.3,
+     "projectionMmYr": 457.2,
+     "changeMm": -67.1,
+     "changePct": -12.8,
+     "emptyDays": 0
+    }
+   },
+   "droppedModels": {},
+   "summary": {
+    "nModels": 7,
+    "medianPct": -10.2,
+    "minPct": -21.5,
+    "maxPct": 5.5,
+    "medianMm": -50.4,
+    "referenceMedianMmYr": 498.7
+   }
+  },
+  "Bouregreg": {
+   "point": {
+    "lat": 33.7,
+    "lon": -6.5,
+    "gridLat": 33.700005,
+    "gridLon": -6.5,
+    "elevationM": 265.0
+   },
+   "models": {
+    "CMCC_CM2_VHR4": {
+     "referenceMmYr": 428.8,
+     "projectionMmYr": 387.5,
+     "changeMm": -41.2,
+     "changePct": -9.6,
+     "emptyDays": 0
+    },
+    "FGOALS_f3_H": {
+     "referenceMmYr": 426.1,
+     "projectionMmYr": 378.9,
+     "changeMm": -47.2,
+     "changePct": -11.1,
+     "emptyDays": 0
+    },
+    "HiRAM_SIT_HR": {
+     "referenceMmYr": 390.8,
+     "projectionMmYr": 383.5,
+     "changeMm": -7.3,
+     "changePct": -1.9,
+     "emptyDays": 0
+    },
+    "MRI_AGCM3_2_S": {
+     "referenceMmYr": 456.3,
+     "projectionMmYr": 367.4,
+     "changeMm": -89.0,
+     "changePct": -19.5,
+     "emptyDays": 0
+    },
+    "EC_Earth3P_HR": {
+     "referenceMmYr": 452.0,
+     "projectionMmYr": 375.5,
+     "changeMm": -76.5,
+     "changePct": -16.9,
+     "emptyDays": 365
+    },
+    "MPI_ESM1_2_XR": {
+     "referenceMmYr": 383.1,
+     "projectionMmYr": 411.4,
+     "changeMm": 28.4,
+     "changePct": 7.4,
+     "emptyDays": 0
+    },
+    "NICAM16_8S": {
+     "referenceMmYr": 443.7,
+     "projectionMmYr": 374.0,
+     "changeMm": -69.7,
+     "changePct": -15.7,
+     "emptyDays": 0
+    }
+   },
+   "droppedModels": {},
+   "summary": {
+    "nModels": 7,
+    "medianPct": -11.1,
+    "minPct": -19.5,
+    "maxPct": 7.4,
+    "medianMm": -47.2,
+    "referenceMedianMmYr": 428.8
+   }
+  },
+  "Oum Er-Rbia": {
+   "point": {
+    "lat": 32.1,
+    "lon": -6.4,
+    "gridLat": 32.1,
+    "gridLon": -6.399994,
+    "elevationM": 802.0
+   },
+   "models": {
+    "CMCC_CM2_VHR4": {
+     "referenceMmYr": 505.0,
+     "projectionMmYr": 514.2,
+     "changeMm": 9.2,
+     "changePct": 1.8,
+     "emptyDays": 0
+    },
+    "FGOALS_f3_H": {
+     "referenceMmYr": 505.5,
+     "projectionMmYr": 429.5,
+     "changeMm": -76.0,
+     "changePct": -15.0,
+     "emptyDays": 0
+    },
+    "HiRAM_SIT_HR": {
+     "referenceMmYr": 487.6,
+     "projectionMmYr": 485.7,
+     "changeMm": -1.8,
+     "changePct": -0.4,
+     "emptyDays": 0
+    },
+    "MRI_AGCM3_2_S": {
+     "referenceMmYr": 522.3,
+     "projectionMmYr": 434.9,
+     "changeMm": -87.4,
+     "changePct": -16.7,
+     "emptyDays": 0
+    },
+    "EC_Earth3P_HR": {
+     "referenceMmYr": 531.1,
+     "projectionMmYr": 436.1,
+     "changeMm": -95.0,
+     "changePct": -17.9,
+     "emptyDays": 365
+    },
+    "MPI_ESM1_2_XR": {
+     "referenceMmYr": 462.3,
+     "projectionMmYr": 442.0,
+     "changeMm": -20.3,
+     "changePct": -4.4,
+     "emptyDays": 0
+    },
+    "NICAM16_8S": {
+     "referenceMmYr": 532.7,
+     "projectionMmYr": 425.3,
+     "changeMm": -107.4,
+     "changePct": -20.2,
+     "emptyDays": 0
+    }
+   },
+   "droppedModels": {},
+   "summary": {
+    "nModels": 7,
+    "medianPct": -15.0,
+    "minPct": -20.2,
+    "maxPct": 1.8,
+    "medianMm": -76.0,
+    "referenceMedianMmYr": 505.5
+   }
+  },
+  "Tensift": {
+   "point": {
+    "lat": 31.4,
+    "lon": -8.2,
+    "gridLat": 31.400002,
+    "gridLon": -8.199997,
+    "elevationM": 667.0
+   },
+   "models": {
+    "CMCC_CM2_VHR4": {
+     "referenceMmYr": 324.9,
+     "projectionMmYr": 356.1,
+     "changeMm": 31.1,
+     "changePct": 9.6,
+     "emptyDays": 0
+    },
+    "FGOALS_f3_H": {
+     "referenceMmYr": 334.4,
+     "projectionMmYr": 293.6,
+     "changeMm": -40.8,
+     "changePct": -12.2,
+     "emptyDays": 0
+    },
+    "HiRAM_SIT_HR": {
+     "referenceMmYr": 309.7,
+     "projectionMmYr": 302.5,
+     "changeMm": -7.2,
+     "changePct": -2.3,
+     "emptyDays": 0
+    },
+    "MRI_AGCM3_2_S": {
+     "referenceMmYr": 328.8,
+     "projectionMmYr": 318.1,
+     "changeMm": -10.7,
+     "changePct": -3.3,
+     "emptyDays": 0
+    },
+    "EC_Earth3P_HR": {
+     "referenceMmYr": 344.1,
+     "projectionMmYr": 276.3,
+     "changeMm": -67.8,
+     "changePct": -19.7,
+     "emptyDays": 365
+    },
+    "MPI_ESM1_2_XR": {
+     "referenceMmYr": 318.3,
+     "projectionMmYr": 287.5,
+     "changeMm": -30.8,
+     "changePct": -9.7,
+     "emptyDays": 0
+    },
+    "NICAM16_8S": {
+     "referenceMmYr": 369.7,
+     "projectionMmYr": 268.9,
+     "changeMm": -100.8,
+     "changePct": -27.3,
+     "emptyDays": 0
+    }
+   },
+   "droppedModels": {},
+   "summary": {
+    "nModels": 7,
+    "medianPct": -9.7,
+    "minPct": -27.3,
+    "maxPct": 9.6,
+    "medianMm": -30.8,
+    "referenceMedianMmYr": 328.8
+   }
+  },
+  "Souss-Massa": {
+   "point": {
+    "lat": 30.5,
+    "lon": -8.5,
+    "gridLat": 30.5,
+    "gridLon": -8.5,
+    "elevationM": 747.0
+   },
+   "models": {
+    "CMCC_CM2_VHR4": {
+     "referenceMmYr": 246.3,
+     "projectionMmYr": 266.3,
+     "changeMm": 20.1,
+     "changePct": 8.2,
+     "emptyDays": 0
+    },
+    "FGOALS_f3_H": {
+     "referenceMmYr": 247.6,
+     "projectionMmYr": 221.2,
+     "changeMm": -26.5,
+     "changePct": -10.7,
+     "emptyDays": 0
+    },
+    "HiRAM_SIT_HR": {
+     "referenceMmYr": 221.1,
+     "projectionMmYr": 232.9,
+     "changeMm": 11.7,
+     "changePct": 5.3,
+     "emptyDays": 0
+    },
+    "MRI_AGCM3_2_S": {
+     "referenceMmYr": 253.0,
+     "projectionMmYr": 233.9,
+     "changeMm": -19.2,
+     "changePct": -7.6,
+     "emptyDays": 0
+    },
+    "EC_Earth3P_HR": {
+     "referenceMmYr": 236.6,
+     "projectionMmYr": 193.7,
+     "changeMm": -42.9,
+     "changePct": -18.1,
+     "emptyDays": 365
+    },
+    "MPI_ESM1_2_XR": {
+     "referenceMmYr": 235.0,
+     "projectionMmYr": 208.0,
+     "changeMm": -27.0,
+     "changePct": -11.5,
+     "emptyDays": 0
+    },
+    "NICAM16_8S": {
+     "referenceMmYr": 271.7,
+     "projectionMmYr": 183.0,
+     "changeMm": -88.8,
+     "changePct": -32.7,
+     "emptyDays": 0
+    }
+   },
+   "droppedModels": {},
+   "summary": {
+    "nModels": 7,
+    "medianPct": -10.7,
+    "minPct": -32.7,
+    "maxPct": 8.2,
+    "medianMm": -26.5,
+    "referenceMedianMmYr": 246.3
+   }
+  },
+  "Drâa-Oued Noun": {
+   "point": {
+    "lat": 30.6,
+    "lon": -6.9,
+    "gridLat": 30.599998,
+    "gridLon": -6.899994,
+    "elevationM": 1506.0
+   },
+   "models": {
+    "CMCC_CM2_VHR4": {
+     "referenceMmYr": 106.3,
+     "projectionMmYr": 149.0,
+     "changeMm": 42.7,
+     "changePct": 40.2,
+     "emptyDays": 0
+    },
+    "MRI_AGCM3_2_S": {
+     "referenceMmYr": 102.2,
+     "projectionMmYr": 106.9,
+     "changeMm": 4.8,
+     "changePct": 4.7,
+     "emptyDays": 0
+    },
+    "EC_Earth3P_HR": {
+     "referenceMmYr": 110.3,
+     "projectionMmYr": 100.1,
+     "changeMm": -10.2,
+     "changePct": -9.3,
+     "emptyDays": 365
+    },
+    "MPI_ESM1_2_XR": {
+     "referenceMmYr": 98.5,
+     "projectionMmYr": 108.1,
+     "changeMm": 9.6,
+     "changePct": 9.7,
+     "emptyDays": 0
+    }
+   },
+   "droppedModels": {},
+   "summary": {
+    "nModels": 4,
+    "medianPct": 7.2,
+    "minPct": -9.3,
+    "maxPct": 40.2,
+    "medianMm": 7.2,
+    "referenceMedianMmYr": 104.2
+   }
+  },
+  "Guir-Ziz-Ghriss": {
+   "point": {
+    "lat": 31.9,
+    "lon": -4.4,
+    "gridLat": 31.900002,
+    "gridLon": -4.399994,
+    "elevationM": 1019.0
+   },
+   "models": {
+    "CMCC_CM2_VHR4": {
+     "referenceMmYr": 132.7,
+     "projectionMmYr": 151.2,
+     "changeMm": 18.6,
+     "changePct": 14.0,
+     "emptyDays": 0
+    },
+    "FGOALS_f3_H": {
+     "referenceMmYr": 124.7,
+     "projectionMmYr": 110.0,
+     "changeMm": -14.7,
+     "changePct": -11.8,
+     "emptyDays": 0
+    },
+    "HiRAM_SIT_HR": {
+     "referenceMmYr": 114.5,
+     "projectionMmYr": 150.6,
+     "changeMm": 36.2,
+     "changePct": 31.6,
+     "emptyDays": 0
+    },
+    "MRI_AGCM3_2_S": {
+     "referenceMmYr": 128.1,
+     "projectionMmYr": 116.9,
+     "changeMm": -11.2,
+     "changePct": -8.8,
+     "emptyDays": 0
+    },
+    "EC_Earth3P_HR": {
+     "referenceMmYr": 126.7,
+     "projectionMmYr": 116.4,
+     "changeMm": -10.3,
+     "changePct": -8.1,
+     "emptyDays": 365
+    },
+    "MPI_ESM1_2_XR": {
+     "referenceMmYr": 116.9,
+     "projectionMmYr": 115.1,
+     "changeMm": -1.8,
+     "changePct": -1.5,
+     "emptyDays": 0
+    },
+    "NICAM16_8S": {
+     "referenceMmYr": 148.9,
+     "projectionMmYr": 115.3,
+     "changeMm": -33.7,
+     "changePct": -22.6,
+     "emptyDays": 0
+    }
+   },
+   "droppedModels": {},
+   "summary": {
+    "nModels": 7,
+    "medianPct": -8.1,
+    "minPct": -22.6,
+    "maxPct": 31.6,
+    "medianMm": -10.3,
+    "referenceMedianMmYr": 126.7
+   }
+  }
+ }
+}

@@ -1,0 +1,516 @@
+{
+  "asOf": "2026-11-19",
+  "sources": [
+    {
+      "id": "le360-phases",
+      "title": "Le360 — les SRM mettent fin à la gestion par les régies (phases 1 à 3)",
+      "date": "2024-03-10",
+      "url": "https://fr.le360.ma/politique/assainissement-eau-et-electricite-les-societes-regionales-multiservices-mettent-fin-a-la-gestion-par_MT4JPNSBVFDYRCM5GCZKDENVR4/"
+    },
+    {
+      "id": "hespress-srm-dates",
+      "title": "Hespress — dates d’entrée en service des SRM dans huit régions",
+      "date": "2025-01-17",
+      "url": "https://fr.hespress.com/406803-voici-les-dates-dentree-en-service-des-srm-dans-huit-regions.html"
+    },
+    {
+      "id": "le7tv-srm-cs",
+      "title": "Le7tv — lancement de la SRM Casablanca-Settat",
+      "date": "2024-09-30",
+      "url": "https://fr.le7tv.ma/2024/09/30/lancement-de-la-societe-regionale-multiservices-srm-au-maroc-un-nouveau-modele-de-gestion-des-services-publics-dans-la-region-de-casablanca-settat/"
+    },
+    {
+      "id": "lavieeco-srm-sm",
+      "title": "La Vie éco — la SRM Souss-Massa voit le jour",
+      "date": "2024-09-26",
+      "url": "https://www.lavieeco.com/au-royaume/agadir-la-societe-regionale-multiservices-souss-massa-voit-le-jour/"
+    },
+    {
+      "id": "ecoactu-srm-ms",
+      "title": "EcoActu — la SRM Marrakech-Safi opérationnalisée",
+      "date": "2024-11-04",
+      "url": "https://ecoactu.ma/la-srm-marrakech-safi-operationnalisee/"
+    },
+    {
+      "id": "lavieeco-srm-fm",
+      "title": "La Vie éco — SRM Fès-Meknès, plus de 29 MMDH d’investissement",
+      "date": "2025-07-17",
+      "url": "https://www.lavieeco.com/affaires/fes-meknes-la-societe-regionale-multiservices-projette-plus-de-29-mmdh-dinvestissement/"
+    },
+    {
+      "id": "le360-srm-rsk",
+      "title": "Le360 — une SRM pour remplacer Redal à Rabat",
+      "date": "2025-03-19",
+      "url": "https://fr.le360.ma/economie/une-societe-regionale-multi-services-pour-remplacer-redal-a-rabat_HBFC4OSH4NE5PD67ECAUFFYNOI/"
+    },
+    {
+      "id": "infomediaire-srm-gon",
+      "title": "Infomediaire — SRM Guelmim-Oued Noun",
+      "date": "2026-01-16",
+      "url": "https://www.infomediaire.net/?p=189370"
+    },
+    {
+      "id": "onee-desal-2022",
+      "title": "ONEE — dessalement d’Agadir/Chtouka",
+      "date": "2022-02-02",
+      "url": null
+    },
+    {
+      "id": "ecoactu-sidi-ifni",
+      "title": "EcoActu — ONEE : nouvelle station de dessalement à Sidi Ifni",
+      "date": "2025-04-02",
+      "url": "https://ecoactu.ma/onee-mise-en-service-une-nouvelle-station-de-dessalement-a-sidi-ifni/"
+    },
+    {
+      "id": "maa-2026-11-18",
+      "title": "Ministère de l’Équipement et de l’Eau / Maa Dialna — situation des barrages",
+      "date": "2026-11-18",
+      "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-18/ar/etat_global.pdf"
+    },
+    {
+      "id": "geoboundaries-adm1",
+      "title": "geoBoundaries — Maroc, ADM1 (12 régions)",
+      "date": "2017",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/MAR/ADM1/geoBoundaries-MAR-ADM1.geojson"
+    }
+  ],
+  "notes": [
+    "Le voisinage est calculé à partir des frontières geoBoundaries (≤ 3 km entre sommets) ; c’est une contiguïté géographique, pas un lien hydraulique.",
+    "Le rattachement d’une région à un bassin est indicatif : les décrets des agences de bassin n’ont pas été obtenus, seul Souss-Massa est confirmé (communiqué ABHSM du 16 janvier 2026).",
+    "Seul transfert entre bassins en service documenté : Sebou → Bouregreg (15 m³/s, depuis août 2023)."
+  ],
+  "documentedTransfers": [
+    {
+      "from": "Sebou",
+      "to": "Bouregreg",
+      "status": "en service",
+      "since": "2023-08-28",
+      "flowM3PerSecond": 15,
+      "lengthKm": 67,
+      "sourceIds": [],
+      "note": "Le360, 17 avril 2026 ; phase 2 vers l’Oum Er-Rbia seulement prévue."
+    }
+  ],
+  "regions": [
+    {
+      "id": "tanger-tetouan-al-hoceima",
+      "name": "Tanger-Tétouan-Al Hoceima",
+      "operator": {
+        "acronym": "SRM-TTA",
+        "name": "Société Régionale Multiservices Tanger-Tétouan-Al Hoceima",
+        "status": "en service (date contestée)",
+        "date": "1er juin ou 1er septembre 2025",
+        "evidence": "presse",
+        "sourceIds": [
+          "hespress-srm-dates"
+        ],
+        "previousOperators": [
+          "Amendis (périmètre à confirmer)"
+        ],
+        "note": "Une source secondaire indique que le périmètre sous contrat Amendis court plus longtemps ; non confirmé."
+      },
+      "logo": "/brand/operators/tanger-tetouan-al-hoceima.jpg",
+      "icon": "/brand/operators/icons/tanger-tetouan-al-hoceima.png",
+      "basin": "Loukkos",
+      "basinMappingConfirmed": false,
+      "neighbours": [
+        "fes-meknes",
+        "oriental",
+        "rabat-sale-kenitra"
+      ],
+      "desalination": [],
+      "logoSource": {
+        "url": "https://www.somei.fr/site2017/wp-content/uploads/2025/11/SRM-Tanger-Tetouan-Al-Hoceima.jpg",
+        "retrievedAt": "2026-11-19",
+        "note": "Fourni par l’utilisateur ; hébergé par un site tiers (somei.fr), pas par l’opérateur. Marque de son titulaire ; pas de licence de réutilisation explicite."
+      }
+    },
+    {
+      "id": "oriental",
+      "name": "Oriental",
+      "operator": {
+        "acronym": "SRMO",
+        "name": "Société Régionale Multiservices de l’Oriental",
+        "status": "signalée en service",
+        "date": "création signalée le 15 novembre 2024",
+        "evidence": "résumé de recherche (non confirmé)",
+        "sourceIds": [
+          "le360-phases"
+        ],
+        "previousOperators": [
+          "RADEEO",
+          "ONEE (antenne locale)"
+        ],
+        "note": null
+      },
+      "logo": "/brand/operators/oriental.png",
+      "icon": "/brand/operators/icons/oriental.png",
+      "basin": "Moulouya",
+      "basinMappingConfirmed": false,
+      "neighbours": [
+        "draa-tafilalet",
+        "fes-meknes",
+        "tanger-tetouan-al-hoceima"
+      ],
+      "desalination": [],
+      "logoSource": {
+        "url": "https://anre.ma/wp-content/uploads/2025/01/LOGO-1033-x-308-px.png",
+        "retrievedAt": "2026-11-19",
+        "note": "Fourni par l’utilisateur ; hébergé par anre.ma (Agence nationale de réglementation de l’électricité). Marque de son titulaire ; pas de licence de réutilisation explicite."
+      }
+    },
+    {
+      "id": "fes-meknes",
+      "name": "Fès-Meknès",
+      "operator": {
+        "acronym": "SRM-FM",
+        "name": "Société Régionale Multiservices Fès-Meknès",
+        "status": "en service",
+        "date": "15 juillet 2025",
+        "evidence": "presse",
+        "sourceIds": [
+          "lavieeco-srm-fm"
+        ],
+        "previousOperators": [
+          "RADEEF (à confirmer)"
+        ],
+        "note": null
+      },
+      "logo": "/brand/operators/fes-meknes.webp",
+      "icon": "/brand/operators/icons/fes-meknes.png",
+      "basin": "Sebou",
+      "basinMappingConfirmed": false,
+      "neighbours": [
+        "beni-mellal-khenifra",
+        "draa-tafilalet",
+        "oriental",
+        "rabat-sale-kenitra",
+        "tanger-tetouan-al-hoceima"
+      ],
+      "desalination": [],
+      "logoSource": {
+        "url": "https://www.emploi-public.ma/fr/concours-liste?establishment=182",
+        "retrievedAt": "2026-11-19",
+        "note": "Marque de son titulaire ; pas de licence de réutilisation explicite."
+      }
+    },
+    {
+      "id": "rabat-sale-kenitra",
+      "name": "Rabat-Salé-Kénitra",
+      "operator": {
+        "acronym": "SRM-RSK",
+        "name": "Société Régionale Multiservices Rabat-Salé-Kénitra",
+        "status": "en service (date contestée)",
+        "date": "1er avril ou 1er juin 2025",
+        "evidence": "presse",
+        "sourceIds": [
+          "le360-srm-rsk"
+        ],
+        "previousOperators": [
+          "Redal (conserve une partie du périmètre jusqu’en 2028 selon une source)"
+        ],
+        "note": null
+      },
+      "logo": "/brand/operators/rabat-sale-kenitra.jpg",
+      "icon": "/brand/operators/icons/rabat-sale-kenitra.png",
+      "basin": "Bouregreg",
+      "basinMappingConfirmed": false,
+      "neighbours": [
+        "beni-mellal-khenifra",
+        "casablanca-settat",
+        "fes-meknes",
+        "tanger-tetouan-al-hoceima"
+      ],
+      "desalination": [],
+      "logoSource": {
+        "url": "https://media.licdn.com/dms/image/v2/D4E22AQFvHMqekbmIdQ/feedshare-shrink_800/B4EZZLDVXTGYAg-/0/1745015894213",
+        "retrievedAt": "2026-11-19",
+        "note": "Fourni par l’utilisateur ; image publiée sur LinkedIn, basse résolution, à remplacer par le fichier officiel. Marque de son titulaire ; pas de licence de réutilisation explicite."
+      }
+    },
+    {
+      "id": "beni-mellal-khenifra",
+      "name": "Béni Mellal-Khénifra",
+      "operator": {
+        "acronym": "SRM-BMK",
+        "name": "Société Régionale Multiservices Béni Mellal-Khénifra",
+        "status": "prévue ; mise en service non vérifiée",
+        "date": "1er août 2025 prévu",
+        "evidence": "plan annoncé",
+        "sourceIds": [
+          "hespress-srm-dates"
+        ],
+        "previousOperators": [
+          "RADEET"
+        ],
+        "note": null
+      },
+      "logo": "/brand/operators/beni-mellal-khenifra.jpg",
+      "icon": "/brand/operators/icons/beni-mellal-khenifra.png",
+      "basin": "Oum Er-Rbia",
+      "basinMappingConfirmed": false,
+      "neighbours": [
+        "casablanca-settat",
+        "draa-tafilalet",
+        "fes-meknes",
+        "marrakech-safi",
+        "rabat-sale-kenitra"
+      ],
+      "desalination": [],
+      "logoSource": {
+        "url": "https://www.emploi-public.ma/fr/concours-liste?establishment=728",
+        "retrievedAt": "2026-11-19",
+        "note": "Marque de son titulaire ; pas de licence de réutilisation explicite."
+      }
+    },
+    {
+      "id": "casablanca-settat",
+      "name": "Casablanca-Settat",
+      "operator": {
+        "acronym": "SRM-CS",
+        "name": "Société Régionale Multiservices Casablanca-Settat",
+        "status": "en service",
+        "date": "1er octobre 2024",
+        "evidence": "presse",
+        "sourceIds": [
+          "le7tv-srm-cs"
+        ],
+        "previousOperators": [
+          "Lydec",
+          "RADEEJ",
+          "RADEEC (d’après sources secondaires)"
+        ],
+        "note": null
+      },
+      "logo": "/brand/operators/casablanca-settat.png",
+      "icon": "/brand/operators/icons/casablanca-settat.png",
+      "basin": "Oum Er-Rbia",
+      "basinMappingConfirmed": false,
+      "neighbours": [
+        "beni-mellal-khenifra",
+        "marrakech-safi",
+        "rabat-sale-kenitra"
+      ],
+      "desalination": [],
+      "logoSource": {
+        "url": "https://commons.wikimedia.org/wiki/File:SRM-casablanca.png",
+        "retrievedAt": "2026-11-19",
+        "note": "Marque de son titulaire ; pas de licence de réutilisation explicite."
+      }
+    },
+    {
+      "id": "marrakech-safi",
+      "name": "Marrakech-Safi",
+      "operator": {
+        "acronym": "SRM-MS",
+        "name": "Société Régionale Multiservices Marrakech-Safi",
+        "status": "en service",
+        "date": "2 novembre 2024",
+        "evidence": "presse",
+        "sourceIds": [
+          "ecoactu-srm-ms"
+        ],
+        "previousOperators": [
+          "RADEEMA",
+          "RADEES",
+          "ONEE"
+        ],
+        "note": null
+      },
+      "logo": "/brand/operators/marrakech-safi.png",
+      "icon": "/brand/operators/icons/marrakech-safi.png",
+      "basin": "Tensift",
+      "basinMappingConfirmed": false,
+      "neighbours": [
+        "beni-mellal-khenifra",
+        "casablanca-settat",
+        "draa-tafilalet",
+        "souss-massa"
+      ],
+      "desalination": [],
+      "logoSource": {
+        "url": "https://www.emploi-public.ma/fr/concours-liste?establishment=687",
+        "retrievedAt": "2026-11-19",
+        "note": "Marque de son titulaire ; pas de licence de réutilisation explicite."
+      }
+    },
+    {
+      "id": "draa-tafilalet",
+      "name": "Drâa-Tafilalet",
+      "operator": {
+        "acronym": "SRM-DT",
+        "name": "Société Régionale Multiservices Drâa-Tafilalet",
+        "status": "prévue ; mise en service non vérifiée",
+        "date": "1er août 2025 prévu",
+        "evidence": "plan annoncé",
+        "sourceIds": [
+          "hespress-srm-dates"
+        ],
+        "previousOperators": [],
+        "note": null
+      },
+      "logo": "/brand/operators/draa-tafilalet.png",
+      "icon": "/brand/operators/icons/draa-tafilalet.png",
+      "basin": "Drâa-Oued Noun",
+      "basinMappingConfirmed": false,
+      "neighbours": [
+        "beni-mellal-khenifra",
+        "fes-meknes",
+        "marrakech-safi",
+        "oriental",
+        "souss-massa"
+      ],
+      "desalination": [],
+      "logoSource": {
+        "url": "https://cdneconcours.brainman.ma//images/companies/248331e3-bb84-485e-a0d6-ff7f2f4ffaa5.png",
+        "retrievedAt": "2026-11-19",
+        "note": "Fourni par l’utilisateur ; hébergé par un site de concours (brainman.ma). Marque de son titulaire ; pas de licence de réutilisation explicite."
+      }
+    },
+    {
+      "id": "souss-massa",
+      "name": "Souss-Massa",
+      "operator": {
+        "acronym": "SRM-SM",
+        "name": "Société Régionale Multiservices Souss-Massa SA",
+        "status": "en service",
+        "date": "15 octobre 2024",
+        "evidence": "presse",
+        "sourceIds": [
+          "lavieeco-srm-sm"
+        ],
+        "previousOperators": [
+          "RAMSA (Agadir)",
+          "ONEE (distribution)"
+        ],
+        "note": "Reprise de l’éclairage public en plus de l’eau, de l’électricité et de l’assainissement."
+      },
+      "logo": "/brand/srm-sm-official.png",
+      "icon": "/brand/operators/icons/souss-massa.png",
+      "basin": "Souss-Massa",
+      "basinMappingConfirmed": true,
+      "neighbours": [
+        "draa-tafilalet",
+        "guelmim-oued-noun",
+        "marrakech-safi"
+      ],
+      "desalination": [
+        {
+          "name": "Chtouka-Aït Baha (Agadir)",
+          "status": "en service",
+          "since": "2022-01-29",
+          "capacityM3PerDay": 275000,
+          "capacityNote": "capacité initiale ; 400 000 m³/j = objectif à terme, sans date confirmée",
+          "sourceIds": [
+            "onee-desal-2022"
+          ]
+        }
+      ],
+      "logoSource": {
+        "url": "https://www.emploi-public.ma/fr/concours/details/6b1bfd4c-b622-4c3e-8ae8-043a78cc6166",
+        "retrievedAt": "2026-11-19",
+        "note": "Marque de son titulaire ; pas de licence de réutilisation explicite."
+      }
+    },
+    {
+      "id": "guelmim-oued-noun",
+      "name": "Guelmim-Oued Noun",
+      "operator": {
+        "acronym": "SRM-GON",
+        "name": "Société Régionale Multiservices Guelmim-Oued Noun",
+        "status": "en service",
+        "date": "6 octobre 2025",
+        "evidence": "presse",
+        "sourceIds": [
+          "infomediaire-srm-gon"
+        ],
+        "previousOperators": [],
+        "note": null
+      },
+      "logo": "/brand/operators/guelmim-oued-noun.jpg",
+      "icon": "/brand/operators/icons/guelmim-oued-noun.png",
+      "basin": "Drâa-Oued Noun",
+      "basinMappingConfirmed": false,
+      "neighbours": [
+        "laayoune-sakia-el-hamra",
+        "souss-massa"
+      ],
+      "desalination": [
+        {
+          "name": "Sidi Ifni",
+          "status": "en service",
+          "since": "2025-04",
+          "capacityM3PerDay": 8640,
+          "capacityNote": "extensible à 17 280 m³/j",
+          "sourceIds": [
+            "ecoactu-sidi-ifni"
+          ]
+        }
+      ],
+      "logoSource": {
+        "url": "https://www.emploi-public.ma/fr/concours-liste?establishment=737",
+        "retrievedAt": "2026-11-19",
+        "note": "Marque de son titulaire ; pas de licence de réutilisation explicite."
+      }
+    },
+    {
+      "id": "laayoune-sakia-el-hamra",
+      "name": "Laâyoune-Sakia El Hamra",
+      "operator": {
+        "acronym": "SRM-LSH",
+        "name": "Société Régionale Multiservices Laâyoune-Sakia El Hamra",
+        "status": "signalée en service",
+        "date": "6 octobre 2025",
+        "evidence": "résumé de recherche (non confirmé)",
+        "sourceIds": [
+          "le360-phases"
+        ],
+        "previousOperators": [],
+        "note": null
+      },
+      "logo": "/brand/operators/laayoune-sakia-el-hamra.png",
+      "icon": "/brand/operators/icons/laayoune-sakia-el-hamra.png",
+      "basin": null,
+      "basinMappingConfirmed": false,
+      "neighbours": [
+        "dakhla-oued-ed-dahab",
+        "guelmim-oued-noun"
+      ],
+      "desalination": [],
+      "logoSource": {
+        "url": "https://www.emploi-public.ma/fr/concours-liste?establishment=724",
+        "retrievedAt": "2026-11-19",
+        "note": "Marque de son titulaire ; pas de licence de réutilisation explicite."
+      }
+    },
+    {
+      "id": "dakhla-oued-ed-dahab",
+      "name": "Dakhla-Oued Ed-Dahab",
+      "operator": {
+        "acronym": "SRM-DOD",
+        "name": "Société Régionale Multiservices Dakhla-Oued Ed-Dahab",
+        "status": "prévue ; mise en service non vérifiée",
+        "date": "6 octobre 2025 prévu",
+        "evidence": "plan annoncé",
+        "sourceIds": [
+          "le360-phases"
+        ],
+        "previousOperators": [],
+        "note": null
+      },
+      "logo": "/brand/operators/dakhla-oued-ed-dahab.jpg",
+      "icon": "/brand/operators/icons/dakhla-oued-ed-dahab.png",
+      "basin": null,
+      "basinMappingConfirmed": false,
+      "neighbours": [
+        "laayoune-sakia-el-hamra"
+      ],
+      "desalination": [],
+      "logoSource": {
+        "url": "https://www.emploi-public.ma/fr/concours-liste?establishment=713",
+        "retrievedAt": "2026-11-19",
+        "note": "Marque de son titulaire ; pas de licence de réutilisation explicite."
+      }
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+:root {
+  color-scheme: light;
+
+  /* Anzar palette (docs/BRAND_ANZAR.md) */
+  --anzar-night: #0a1b2a;
+  --anzar-night-deep: #06121d;
+  --anzar-cyan: #5fd4e6;
+  --anzar-ochre: #d9a441;
+  --anzar-coral: #ff6b4a;
+  --anzar-coral-ink: #b9381c;
+  --anzar-snow: #eaf2f5;
+  --anzar-mist: #9fb4c2;
+  --anzar-sand: #f3ebdd;
+  /* Accent on light surfaces: deep teal, 6.7:1 on white, 6.2:1 on --page (cyan itself is for dark surfaces) */
+  --anzar-accent: #0b6577;
+  --anzar-accent-hover: #084a58;
+  --anzar-accent-soft: #eaf4f6;
+  --anzar-critical: var(--anzar-coral-ink);
+  --anzar-ok: #2f7d3b;
+  /* Caution (callout rules, forecast fills): ochre, never text on white */
+  --anzar-warn: var(--anzar-ochre);
+
+  /* App accent is driven by Anzar */
+  --brand: var(--anzar-accent);
+  --brand-hover: var(--anzar-accent-hover);
+
+  /* SRM-SM logo colours, kept for the Souss-Massa view (docs/BRAND.md) */
+  --srm-blue: #12508f;
+  --yellow: #fab61f;
+  --green: #57b24a;
+  --white: #ffffff;
+
+  /* Text and neutrals (secondary text is >= 4.5:1 on white and on --page) */
+  --text: #19334f;
+  --ink: #19334f;
+  --muted: #5b6e82;
+  --surface-hover: #f5f8fb;
+  --line: #e4eaf0;
+  --line-strong: #c9d6e2;
+  --page: #f4f6f9;
+
+  /* Status (fills, bars and dots only, never text on white)
+     yellow = to watch / in progress, green = compliant / in service, grey = not provided */
+  --status-ok: var(--green);
+  --status-watch: var(--yellow);
+  --status-none: #8a99a8;
+
+  /* Regions map: sequential single-hue blue for basin fill (0-20 to 80-100 %), neutral grey without basin */
+  --fill-0: #e8f0f8;
+  --fill-1: #bcd2ea;
+  --fill-2: #86aed6;
+  --fill-3: #4f86bd;
+  --fill-4: #12508f;
+  --fill-na: #d0d7de;
+
+  /* Form errors (UI feedback, not a data classification) */
+  --error: #9b2c20;
+
+  /* Focus */
+  --focus: var(--anzar-accent);
+
+  /* Layout */
+  --sidebar-w: 248px;
+  --topbar-h: 52px;
+  --row-h: 36px;
+  --touch-min: 44px;
+
+  /* Radii: cards and controls 6px, small tags 4px */
+  --radius-xs: 3px;
+  --radius-sm: 4px;
+  --radius: 6px;
+
+  /* Spacing (gutter 16px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+
+  /* Type scale: 12 / 13 / 14 / 16 / 20 / 28 */
+  --fs-xs: 12px;
+  --fs-sm: 13px;
+  --fs-base: 14px;
+  --fs-md: 16px;
+  --fs-lg: 20px;
+  --fs-xl: 28px;
+
+  /* Stacking: map overlays < topbar < scrim < sidebar < modal < toast; the region popover (60) lives inside the topbar's context */
+  --z-map: 2;
+  --z-popover: 60;
+  --z-topbar: 30;
+  --z-scrim: 35;
+  --z-sidebar: 40;
+  --z-modal: 100;
+  --z-toast: 120;
+
+  /* Motion: one curve, two durations */
+  --ease: cubic-bezier(.2, 0, 0, 1);
+  --dur-fast: 120ms;
+  --dur: 200ms;
+
+  /* Font stacks */
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}

@@ -1,0 +1,328 @@
+{
+  "note": "FIXTURE DE TEST uniquement : valeurs fictives pour exercer le moteur, ne pas afficher.",
+  "asOf": "2026-01-01",
+  "bulletin": {
+    "date": "2026-01-01",
+    "basins": [
+      {
+        "name": "Alpha",
+        "storedMm3": 300,
+        "capacityMm3": 600,
+        "fillPct": 50
+      },
+      {
+        "name": "Beta",
+        "storedMm3": 100,
+        "capacityMm3": 400,
+        "fillPct": 25
+      }
+    ]
+  },
+  "basins": [
+    {
+      "name": "Alpha",
+      "meanAnnualInflowMm3": {
+        "value": 500,
+        "status": "hypothese",
+        "source": "fixture"
+      },
+      "climateFactor": {
+        "dry": 0.45,
+        "normal": 1,
+        "wet": 1.6,
+        "status": "hypothese"
+      }
+    },
+    {
+      "name": "Beta",
+      "meanAnnualInflowMm3": {
+        "value": 200,
+        "status": "hypothese",
+        "source": "fixture"
+      },
+      "climateFactor": {
+        "dry": 0.45,
+        "normal": 1,
+        "wet": 1.6,
+        "status": "hypothese"
+      }
+    }
+  ],
+  "regions": [
+    {
+      "id": "r-one",
+      "population": {
+        "value": 2000000,
+        "year": 2024,
+        "status": "sourced",
+        "source": "fixture"
+      },
+      "popGrowthPctYr": {
+        "value": 1,
+        "status": "hypothese",
+        "source": "fixture"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 100,
+          "status": "hypothese",
+          "source": "fixture"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": 50000,
+          "status": "hypothese",
+          "source": "fixture"
+        },
+        "m3PerHa": {
+          "value": 6000,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 10,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 20,
+          "status": "hypothese",
+          "source": "fixture"
+        },
+        "plannedMm3PerYear": []
+      },
+      "groundwater": null,
+      "basinShares": [
+        {
+          "basin": "Alpha",
+          "share": 1,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      ],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": 30,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      }
+    },
+    {
+      "id": "r-two",
+      "population": {
+        "value": 1000000,
+        "year": 2024,
+        "status": "sourced",
+        "source": "fixture"
+      },
+      "popGrowthPctYr": {
+        "value": 1,
+        "status": "hypothese",
+        "source": "fixture"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 100,
+          "status": "hypothese",
+          "source": "fixture"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": 20000,
+          "status": "hypothese",
+          "source": "fixture"
+        },
+        "m3PerHa": {
+          "value": 6000,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 10,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 0,
+          "status": "hypothese",
+          "source": "fixture"
+        },
+        "plannedMm3PerYear": []
+      },
+      "groundwater": null,
+      "basinShares": [
+        {
+          "basin": "Alpha",
+          "share": 0.3,
+          "status": "hypothese",
+          "source": "fixture"
+        },
+        {
+          "basin": "Beta",
+          "share": 0.5,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      ],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": null,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      }
+    },
+    {
+      "id": "r-dry",
+      "population": {
+        "value": 4000000,
+        "year": 2024,
+        "status": "sourced",
+        "source": "fixture"
+      },
+      "popGrowthPctYr": {
+        "value": 1,
+        "status": "hypothese",
+        "source": "fixture"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 100,
+          "status": "hypothese",
+          "source": "fixture"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": 200000,
+          "status": "hypothese",
+          "source": "fixture"
+        },
+        "m3PerHa": {
+          "value": 6000,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 10,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 0,
+          "status": "hypothese",
+          "source": "fixture"
+        },
+        "plannedMm3PerYear": []
+      },
+      "groundwater": null,
+      "basinShares": [
+        {
+          "basin": "Beta",
+          "share": 0.2,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      ],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": 30,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      }
+    },
+    {
+      "id": "r-nostock",
+      "population": {
+        "value": 300000,
+        "year": 2024,
+        "status": "sourced",
+        "source": "fixture"
+      },
+      "popGrowthPctYr": {
+        "value": 1,
+        "status": "hypothese",
+        "source": "fixture"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 100,
+          "status": "hypothese",
+          "source": "fixture"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": 1000,
+          "status": "hypothese",
+          "source": "fixture"
+        },
+        "m3PerHa": {
+          "value": 6000,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 10,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 5,
+          "status": "hypothese",
+          "source": "fixture"
+        },
+        "plannedMm3PerYear": []
+      },
+      "groundwater": null,
+      "basinShares": [],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": 30,
+          "status": "hypothese",
+          "source": "fixture"
+        }
+      }
+    }
+  ]
+}

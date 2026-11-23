@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-labelledby="title desc" color="#0A1B2A">
+  <title id="title">Anzar — Horizon commun — monochrome</title>
+  <desc id="desc">Un arc d’observation ouvert, une crête et deux niveaux d’eau évoquent le suivi des bassins.</desc>
+  <path fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" d="M20 76A47 47 0 1 1 108 76"/>
+  <path fill="currentColor" d="M26 84L47 57L62 73L75 60L101 84H84L75 76L62 88L48 73L40 84Z"/>
+  <path fill="currentColor" d="M18 88H110V98H18ZM43 108H85V118H43Z"/>
+</svg>

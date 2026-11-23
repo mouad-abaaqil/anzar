@@ -1,0 +1,121 @@
+{
+ "status": "ready",
+ "generatedAt": "2026-11-19T16:11:59+00:00",
+ "label": "prévision expérimentale",
+ "target": "variation mensuelle du stock reconstitué (Mm³) des grands barrages estimés (youssef-ben-tachfine, abdelmoumen, aoulouz, moulay-abdellah), somme ; départ des scénarios = bulletins officiels du 2026-11-18",
+ "inputs": [
+  "pluie ERA5 mensuelle (grille amont) corrigée par ratio mensuel station/ERA5 de Youssef Ben Tachfine",
+  "pluie cumulée du mois précédent et des 3 mois précédents",
+  "stock courant (mois précédent)",
+  "mois (sin/cos)"
+ ],
+ "backtest": {
+  "scheme": "leave-one-hydrological-year-out (sept→août ; année = année de septembre)",
+  "years": [
+   2017,
+   2018,
+   2019,
+   2020,
+   2021,
+   2022,
+   2023,
+   2024,
+   2025,
+   2026
+  ],
+  "nMonths": 87,
+  "metrics": [
+   {
+    "model": "modèle",
+    "maeMm3": 18.54,
+    "rmseMm3": 28.71
+   },
+   {
+    "model": "persistance",
+    "maeMm3": 19.66,
+    "rmseMm3": 33.76
+   },
+   {
+    "model": "climatologie",
+    "maeMm3": 22.96,
+    "rmseMm3": 34.87
+   }
+  ],
+  "beatsBaselines": true,
+  "skillVsPersistence": 0.057,
+  "note": "À afficher tel quel, même si le modèle perd. Le modèle fait mieux que persistance et climatologie sur la MAE hors échantillon.",
+  "ridgeAlpha": 20.0
+ },
+ "scenarios": [
+  {
+   "name": "sec",
+   "tercile": "bas",
+   "rain30dMm": 5.6,
+   "deltaMm3": -0.94,
+   "points": [
+    {
+     "date": "2026-11-18",
+     "volumeMm3": 367.14,
+     "low": 367.14,
+     "high": 367.14
+    },
+    {
+     "date": "2026-12-18",
+     "volumeMm3": 366.2,
+     "low": 323.82,
+     "high": 408.57
+    }
+   ]
+  },
+  {
+   "name": "normal",
+   "tercile": "moyen",
+   "rain30dMm": 13.3,
+   "deltaMm3": 6.39,
+   "points": [
+    {
+     "date": "2026-11-18",
+     "volumeMm3": 367.14,
+     "low": 367.14,
+     "high": 367.14
+    },
+    {
+     "date": "2026-12-18",
+     "volumeMm3": 373.53,
+     "low": 331.15,
+     "high": 415.9
+    }
+   ]
+  },
+  {
+   "name": "humide",
+   "tercile": "haut",
+   "rain30dMm": 33.5,
+   "deltaMm3": 26.41,
+   "points": [
+    {
+     "date": "2026-11-18",
+     "volumeMm3": 367.14,
+     "low": 367.14,
+     "high": 367.14
+    },
+    {
+     "date": "2026-12-18",
+     "volumeMm3": 393.55,
+     "low": 351.18,
+     "high": 435.93
+    }
+   ]
+  }
+ ],
+ "scenarioBasis": "terciles de pluie historiques (ERA5 corrigée 1990-2025, moyenne du tercile bas / médiane / moyenne du tercile haut pour novembre et décembre) ; prévision numérique Open-Meteo 16 jours (2026-11-19→2026-12-04) utilisée telle quelle (non corrigée du biais ERA5) pour les jours couverts, terciles pour les jours restants ; pluie observée ERA5 corrigée du 1er au 12 novembre ; départ : bulletins officiels du 2026-11-18 (367.14 Mm³)",
+ "caveats": [
+  "Prévision expérimentale : projection du stock des grands barrages sur 30 jours selon des scénarios de pluie, pas une prévision d'exploitation.",
+  "Lâchers, irrigation, eau potable, prélèvements et évaporation ne sont pas modélisés ; la variation de stock reflète seulement la relation statistique pluie → variation observée dans la série reconstruite.",
+  "La cible est elle-même une estimation satellite non officielle (surface saturée pour plusieurs barrages) ; l'apprentissage porte sur ~9 années hydrologiques de stock reconstruit, ridge fortement régularisé (alpha fixé a priori).",
+  "La correction de biais de la pluie (ratio mensuel station/ERA5) n'est validée qu'à Youssef Ben Tachfine et appliquée aux autres bassins sans validation ; ERA5 0,25° (ERA5-Land indisponible).",
+  "Bandes = quantile 90 % des erreurs absolues de validation croisée ; elles ne couvrent pas l'erreur d'exploitation ni la correction de pluie.",
+  "Les scénarios n'ont pas de valeur de vérité tant que les stocks observés des 30 jours ne sont pas publiés ; les résultats du backtest sont publiés tels quels.",
+  "Avantage sur les références faible (compétence vs persistance 0.06) sur ~87 mois et 10 années hydrologiques, la première (2017) et la dernière (2026) étant partielles : à ne pas surinterpréter."
+ ]
+}

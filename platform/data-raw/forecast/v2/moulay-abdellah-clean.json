@@ -1,0 +1,1540 @@
+{
+ "id": "moulay-abdellah",
+ "rules": {
+  "coreValidFractionMin": 0.95,
+  "singleTilePerDate": "highest validFraction",
+  "neighbourJump": ">35% vs median of scenes within +/-12 d dropped (isolated scenes kept)",
+  "cloudCoverFlag": 30.0,
+  "areaField": "areaKm2",
+  "note": "coreValidFraction and validFraction come from the COG reads of pipeline/satellite/s2_lib.read_scene (same read function and offset harmonisation, boaOffset fields in the series); no re-read of COGs was needed."
+ },
+ "removed": {
+  "coreValidFraction<0.95": 22,
+  "duplicateTile": 0,
+  "neighbourJump>35%": 4,
+  "cloud>30%": 0
+ },
+ "scenes": [
+  {
+   "date": "2017-07-29",
+   "sceneId": "S2B_29RMQ_20170729_0_L2A",
+   "area": 3.8778,
+   "validFraction": 0.9777,
+   "coreValidFraction": 0.9537,
+   "cloudCover": 10.04,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2017-09-07",
+   "sceneId": "S2B_29RMQ_20170907_0_L2A",
+   "area": 1.0228,
+   "validFraction": 0.9958,
+   "coreValidFraction": 0.9913,
+   "cloudCover": 9.13,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2017-11-16",
+   "sceneId": "S2B_29RMQ_20171116_0_L2A",
+   "area": 3.2827,
+   "validFraction": 0.9785,
+   "coreValidFraction": 0.9586,
+   "cloudCover": 3.2,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2017-12-06",
+   "sceneId": "S2B_29RMQ_20171206_0_L2A",
+   "area": 3.2925,
+   "validFraction": 0.981,
+   "coreValidFraction": 0.9653,
+   "cloudCover": 1.23,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2018-03-31",
+   "sceneId": "S2A_29RMQ_20180331_0_L2A",
+   "area": 4.297,
+   "validFraction": 0.9787,
+   "coreValidFraction": 0.957,
+   "cloudCover": 0.03,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2018-04-30",
+   "sceneId": "S2A_29RMQ_20180430_0_L2A",
+   "area": 4.1351,
+   "validFraction": 0.9796,
+   "coreValidFraction": 0.958,
+   "cloudCover": 5.07,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2018-06-04",
+   "sceneId": "S2B_29RMQ_20180604_1_L2A",
+   "area": 3.548,
+   "validFraction": 0.9794,
+   "coreValidFraction": 0.9572,
+   "cloudCover": 1.13,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2018-07-29",
+   "sceneId": "S2A_29RMQ_20180729_1_L2A",
+   "area": 2.3372,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 5.26,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2018-08-08",
+   "sceneId": "S2A_29RMQ_20180808_1_L2A",
+   "area": 3.4665,
+   "validFraction": 0.9999,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 4.34,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2018-08-18",
+   "sceneId": "S2A_29RMQ_20180818_1_L2A",
+   "area": 3.4537,
+   "validFraction": 0.9999,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.41,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2018-09-17",
+   "sceneId": "S2A_29RMQ_20180917_1_L2A",
+   "area": 3.377,
+   "validFraction": 0.9988,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 9.82,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2018-09-22",
+   "sceneId": "S2B_29RMQ_20180922_1_L2A",
+   "area": 3.2768,
+   "validFraction": 0.999,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 7.45,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2018-10-02",
+   "sceneId": "S2B_29RMQ_20181002_1_L2A",
+   "area": 3.5358,
+   "validFraction": 0.9986,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.21,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2018-10-12",
+   "sceneId": "S2B_29RMQ_20181012_1_L2A",
+   "area": 3.4162,
+   "validFraction": 0.9983,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 2.83,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2018-11-06",
+   "sceneId": "S2A_29RMQ_20181106_0_L2A",
+   "area": 3.5077,
+   "validFraction": 0.9818,
+   "coreValidFraction": 0.9651,
+   "cloudCover": 10.48,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2018-11-11",
+   "sceneId": "S2B_29RMQ_20181111_0_L2A",
+   "area": 3.3959,
+   "validFraction": 0.9763,
+   "coreValidFraction": 0.9542,
+   "cloudCover": 4.78,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2018-12-06",
+   "sceneId": "S2A_29RMQ_20181206_0_L2A",
+   "area": 3.7709,
+   "validFraction": 0.9785,
+   "coreValidFraction": 0.9605,
+   "cloudCover": 0.03,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2018-12-21",
+   "sceneId": "S2B_29RMQ_20181221_0_L2A",
+   "area": 3.6836,
+   "validFraction": 0.976,
+   "coreValidFraction": 0.9568,
+   "cloudCover": 0.06,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2019-01-10",
+   "sceneId": "S2B_29RMQ_20190110_0_L2A",
+   "area": 3.5957,
+   "validFraction": 0.9779,
+   "coreValidFraction": 0.9599,
+   "cloudCover": 0.78,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2019-01-25",
+   "sceneId": "S2A_29RMQ_20190125_0_L2A",
+   "area": 3.5729,
+   "validFraction": 0.9817,
+   "coreValidFraction": 0.9661,
+   "cloudCover": 0.68,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2019-02-14",
+   "sceneId": "S2A_29RMQ_20190214_1_L2A",
+   "area": 3.4511,
+   "validFraction": 0.982,
+   "coreValidFraction": 0.9654,
+   "cloudCover": 0.29,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2019-03-06",
+   "sceneId": "S2A_29RMQ_20190306_0_L2A",
+   "area": 3.2901,
+   "validFraction": 0.9797,
+   "coreValidFraction": 0.9595,
+   "cloudCover": 1.1,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2019-04-10",
+   "sceneId": "S2B_29RMQ_20190410_1_L2A",
+   "area": 3.1812,
+   "validFraction": 0.9993,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 2.37,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2019-04-30",
+   "sceneId": "S2B_29RMQ_20190430_1_L2A",
+   "area": 2.9643,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 5.87,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2019-05-05",
+   "sceneId": "S2A_29RMQ_20190505_1_L2A",
+   "area": 3.009,
+   "validFraction": 0.9999,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 1.37,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2019-07-14",
+   "sceneId": "S2A_29RMQ_20190714_1_L2A",
+   "area": 0.8881,
+   "validFraction": 0.9996,
+   "coreValidFraction": 0.9991,
+   "cloudCover": 0.16,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2019-07-29",
+   "sceneId": "S2B_29RMQ_20190729_1_L2A",
+   "area": 2.774,
+   "validFraction": 0.9999,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.07,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2019-08-13",
+   "sceneId": "S2A_29RMQ_20190813_1_L2A",
+   "area": 2.6772,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.13,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2019-08-18",
+   "sceneId": "S2B_29RMQ_20190818_1_L2A",
+   "area": 2.6746,
+   "validFraction": 0.9999,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.03,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2019-09-12",
+   "sceneId": "S2A_29RMQ_20190912_2_L2A",
+   "area": 2.6387,
+   "validFraction": 0.9997,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.02,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2019-09-22",
+   "sceneId": "S2A_29RMQ_20190922_1_L2A",
+   "area": 2.6461,
+   "validFraction": 0.9992,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.01,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2019-10-02",
+   "sceneId": "S2A_29RMQ_20191002_1_L2A",
+   "area": 2.5918,
+   "validFraction": 0.999,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.36,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2019-10-12",
+   "sceneId": "S2A_29RMQ_20191012_1_L2A",
+   "area": 2.5689,
+   "validFraction": 0.9985,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.23,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2019-11-01",
+   "sceneId": "S2A_29RMQ_20191101_1_L2A",
+   "area": 2.5284,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.06,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2019-11-16",
+   "sceneId": "S2B_29RMQ_20191116_1_L2A",
+   "area": 2.4662,
+   "validFraction": 1.0,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.34,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2019-12-11",
+   "sceneId": "S2A_29RMQ_20191211_1_L2A",
+   "area": 2.3925,
+   "validFraction": 0.9999,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.0,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2019-12-31",
+   "sceneId": "S2A_29RMQ_20191231_1_L2A",
+   "area": 2.516,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.0,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2020-01-10",
+   "sceneId": "S2A_29RMQ_20200110_1_L2A",
+   "area": 2.4767,
+   "validFraction": 0.9999,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.14,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2020-01-15",
+   "sceneId": "S2B_29RMQ_20200115_1_L2A",
+   "area": 2.4645,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.01,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2020-02-04",
+   "sceneId": "S2B_29RMQ_20200204_1_L2A",
+   "area": 2.3909,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.0,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2020-02-09",
+   "sceneId": "S2A_29RMQ_20200209_1_L2A",
+   "area": 2.3759,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.14,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2020-03-10",
+   "sceneId": "S2A_29RMQ_20200310_1_L2A",
+   "area": 2.2309,
+   "validFraction": 0.9983,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 1.8,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2020-03-30",
+   "sceneId": "S2A_29RMQ_20200330_1_L2A",
+   "area": 2.137,
+   "validFraction": 0.9993,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.01,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2020-04-09",
+   "sceneId": "S2A_29RMQ_20200409_1_L2A",
+   "area": 2.0517,
+   "validFraction": 0.9993,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.04,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2020-04-29",
+   "sceneId": "S2A_29RMQ_20200429_1_L2A",
+   "area": 1.859,
+   "validFraction": 0.9998,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 6.84,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2020-05-04",
+   "sceneId": "S2B_29RMQ_20200504_1_L2A",
+   "area": 1.7394,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.13,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2020-06-13",
+   "sceneId": "S2B_29RMQ_20200613_1_L2A",
+   "area": 1.6857,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 10.9,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2020-07-28",
+   "sceneId": "S2A_29RMQ_20200728_1_L2A",
+   "area": 1.5976,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.75,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2020-08-12",
+   "sceneId": "S2B_29RMQ_20200812_1_L2A",
+   "area": 1.6201,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.03,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2020-08-17",
+   "sceneId": "S2A_29RMQ_20200817_1_L2A",
+   "area": 1.6622,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.04,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2020-09-01",
+   "sceneId": "S2B_29RMQ_20200901_1_L2A",
+   "area": 1.605,
+   "validFraction": 0.9997,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.89,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2020-09-21",
+   "sceneId": "S2B_29RMQ_20200921_1_L2A",
+   "area": 1.5573,
+   "validFraction": 0.9994,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 3.25,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2020-10-11",
+   "sceneId": "S2B_29RMQ_20201011_1_L2A",
+   "area": 1.554,
+   "validFraction": 0.9939,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 3.22,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2020-10-31",
+   "sceneId": "S2B_29RMQ_20201031_1_L2A",
+   "area": 1.5341,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.01,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2020-11-10",
+   "sceneId": "S2B_29RMQ_20201110_1_L2A",
+   "area": 1.5351,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 1.07,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2020-11-20",
+   "sceneId": "S2B_29RMQ_20201120_1_L2A",
+   "area": 1.5211,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.01,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2020-12-15",
+   "sceneId": "S2A_29RMQ_20201215_1_L2A",
+   "area": 2.4132,
+   "validFraction": 0.9999,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 2.89,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2020-12-20",
+   "sceneId": "S2B_29RMQ_20201220_1_L2A",
+   "area": 2.452,
+   "validFraction": 0.9999,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.02,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2021-01-14",
+   "sceneId": "S2A_29RMQ_20210114_1_L2A",
+   "area": 3.0692,
+   "validFraction": 0.9997,
+   "coreValidFraction": 0.9994,
+   "cloudCover": 1.56,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2021-01-29",
+   "sceneId": "S2B_29RMQ_20210129_1_L2A",
+   "area": 3.1265,
+   "validFraction": 0.9998,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.02,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2021-02-08",
+   "sceneId": "S2B_29RMQ_20210208_1_L2A",
+   "area": 3.1659,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 2.66,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2021-02-23",
+   "sceneId": "S2A_29RMQ_20210223_1_L2A",
+   "area": 3.1479,
+   "validFraction": 0.997,
+   "coreValidFraction": 0.999,
+   "cloudCover": 0.01,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2021-03-25",
+   "sceneId": "S2A_29RMQ_20210325_1_L2A",
+   "area": 3.1687,
+   "validFraction": 0.9989,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.2,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2021-03-30",
+   "sceneId": "S2B_29RMQ_20210330_1_L2A",
+   "area": 2.5515,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 1.43,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2021-04-14",
+   "sceneId": "S2A_29RMQ_20210414_1_L2A",
+   "area": 3.0492,
+   "validFraction": 0.9997,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 1.98,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2021-04-19",
+   "sceneId": "S2B_29RMQ_20210419_1_L2A",
+   "area": 3.0285,
+   "validFraction": 0.9995,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.56,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2021-05-09",
+   "sceneId": "S2B_29RMQ_20210509_1_L2A",
+   "area": 2.6995,
+   "validFraction": 0.9783,
+   "coreValidFraction": 0.9549,
+   "cloudCover": 0.97,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2021-05-14",
+   "sceneId": "S2A_29RMQ_20210514_1_L2A",
+   "area": 2.591,
+   "validFraction": 0.9981,
+   "coreValidFraction": 0.996,
+   "cloudCover": 0.31,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2021-08-02",
+   "sceneId": "S2A_29RMQ_20210802_1_L2A",
+   "area": 2.6715,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.07,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2021-08-17",
+   "sceneId": "S2B_29RMQ_20210817_1_L2A",
+   "area": 2.5738,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.1,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2021-09-01",
+   "sceneId": "S2A_29RMQ_20210901_1_L2A",
+   "area": 2.5734,
+   "validFraction": 0.9997,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.01,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2021-09-26",
+   "sceneId": "S2B_29RMQ_20210926_1_L2A",
+   "area": 2.5024,
+   "validFraction": 0.9984,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 2.89,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2021-10-16",
+   "sceneId": "S2B_29RMQ_20211016_1_L2A",
+   "area": 2.4093,
+   "validFraction": 0.9992,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.22,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2021-10-31",
+   "sceneId": "S2A_29RMQ_20211031_1_L2A",
+   "area": 2.3778,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.0,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2021-11-10",
+   "sceneId": "S2A_29RMQ_20211110_1_L2A",
+   "area": 2.348,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.01,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2021-11-30",
+   "sceneId": "S2A_29RMQ_20211130_1_L2A",
+   "area": 2.308,
+   "validFraction": 1.0,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.0,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2021-12-10",
+   "sceneId": "S2A_29RMQ_20211210_1_L2A",
+   "area": 2.2617,
+   "validFraction": 1.0,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.02,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2021-12-30",
+   "sceneId": "S2A_29RMQ_20211230_1_L2A",
+   "area": 2.2139,
+   "validFraction": 0.9999,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.0,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-01-09",
+   "sceneId": "S2A_29RMQ_20220109_0_L2A",
+   "area": 2.0799,
+   "validFraction": 0.9888,
+   "coreValidFraction": 0.9812,
+   "cloudCover": 0.97,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2022-01-14",
+   "sceneId": "S2B_29RMQ_20220114_0_L2A",
+   "area": 1.9321,
+   "validFraction": 0.9793,
+   "coreValidFraction": 0.961,
+   "cloudCover": 0.05,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-02-08",
+   "sceneId": "S2A_29RMQ_20220208_0_L2A",
+   "area": 2.0631,
+   "validFraction": 0.9999,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 7.36,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-02-13",
+   "sceneId": "S2B_29RMQ_20220213_0_L2A",
+   "area": 2.0577,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.0,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-03-05",
+   "sceneId": "S2B_29RMQ_20220305_0_L2A",
+   "area": 1.9938,
+   "validFraction": 0.998,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 10.68,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-03-10",
+   "sceneId": "S2A_29RMQ_20220310_0_L2A",
+   "area": 1.9793,
+   "validFraction": 0.9985,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 5.12,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-04-09",
+   "sceneId": "S2A_29RMQ_20220409_0_L2A",
+   "area": 2.5776,
+   "validFraction": 0.9998,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.18,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-04-19",
+   "sceneId": "S2A_29RMQ_20220419_0_L2A",
+   "area": 2.5342,
+   "validFraction": 0.9962,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 4.69,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-05-04",
+   "sceneId": "S2B_29RMQ_20220504_0_L2A",
+   "area": 2.3166,
+   "validFraction": 0.9831,
+   "coreValidFraction": 0.9652,
+   "cloudCover": 3.7,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-05-09",
+   "sceneId": "S2A_29RMQ_20220509_0_L2A",
+   "area": 2.2168,
+   "validFraction": 0.9808,
+   "coreValidFraction": 0.96,
+   "cloudCover": 5.6,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-07-28",
+   "sceneId": "S2A_29RMQ_20220728_0_L2A",
+   "area": 1.8253,
+   "validFraction": 0.9826,
+   "coreValidFraction": 0.9638,
+   "cloudCover": 0.04,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-08-07",
+   "sceneId": "S2A_29RMQ_20220807_0_L2A",
+   "area": 1.9564,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.03,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-08-22",
+   "sceneId": "S2B_29RMQ_20220822_0_L2A",
+   "area": 1.7999,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.08,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2022-09-16",
+   "sceneId": "S2A_29RMQ_20220916_0_L2A",
+   "area": 1.8598,
+   "validFraction": 0.999,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 8.08,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-09-21",
+   "sceneId": "S2B_29RMQ_20220921_0_L2A",
+   "area": 1.8484,
+   "validFraction": 0.9987,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.27,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-10-21",
+   "sceneId": "S2B_29RMQ_20221021_0_L2A",
+   "area": 1.8066,
+   "validFraction": 0.9983,
+   "coreValidFraction": 0.9993,
+   "cloudCover": 2.3,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-10-26",
+   "sceneId": "S2A_29RMQ_20221026_0_L2A",
+   "area": 1.4849,
+   "validFraction": 1.0,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 3.74,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2022-11-05",
+   "sceneId": "S2A_29RMQ_20221105_0_L2A",
+   "area": 1.782,
+   "validFraction": 0.9999,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.16,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-11-20",
+   "sceneId": "S2B_29RMQ_20221120_0_L2A",
+   "area": 1.762,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 3.85,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2022-12-20",
+   "sceneId": "S2B_29RMQ_20221220_0_L2A",
+   "area": 2.5028,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 7.48,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2022-12-30",
+   "sceneId": "S2B_29RMQ_20221230_0_L2A",
+   "area": 2.5824,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.0,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2023-01-09",
+   "sceneId": "S2B_29RMQ_20230109_0_L2A",
+   "area": 2.5704,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.02,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2023-01-14",
+   "sceneId": "S2A_29RMQ_20230114_0_L2A",
+   "area": 2.5725,
+   "validFraction": 1.0,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.01,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2023-02-03",
+   "sceneId": "S2A_29RMQ_20230203_0_L2A",
+   "area": 2.5602,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.0,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2023-02-28",
+   "sceneId": "S2B_29RMQ_20230228_0_L2A",
+   "area": 2.6308,
+   "validFraction": 0.9972,
+   "coreValidFraction": 0.9989,
+   "cloudCover": 7.93,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2023-03-10",
+   "sceneId": "S2B_29RMQ_20230310_0_L2A",
+   "area": 2.6353,
+   "validFraction": 0.9979,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.1,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2023-03-25",
+   "sceneId": "S2A_29RMQ_20230325_0_L2A",
+   "area": 2.5771,
+   "validFraction": 0.9988,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.04,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2023-04-14",
+   "sceneId": "S2A_29RMQ_20230414_0_L2A",
+   "area": 2.5853,
+   "validFraction": 0.9997,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.13,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2023-04-24",
+   "sceneId": "S2A_29RMQ_20230424_0_L2A",
+   "area": 2.5453,
+   "validFraction": 1.0,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 6.89,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2023-05-09",
+   "sceneId": "S2B_29RMQ_20230509_0_L2A",
+   "area": 2.2682,
+   "validFraction": 0.985,
+   "coreValidFraction": 0.9689,
+   "cloudCover": 0.25,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2023-07-28",
+   "sceneId": "S2B_29RMQ_20230728_0_L2A",
+   "area": 1.9305,
+   "validFraction": 0.981,
+   "coreValidFraction": 0.9605,
+   "cloudCover": 0.06,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2023-08-02",
+   "sceneId": "S2A_29RMQ_20230802_0_L2A",
+   "area": 2.1427,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.1,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2023-08-27",
+   "sceneId": "S2B_29RMQ_20230827_0_L2A",
+   "area": 2.077,
+   "validFraction": 0.9997,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.03,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2023-09-11",
+   "sceneId": "S2A_29RMQ_20230911_0_L2A",
+   "area": 2.04,
+   "validFraction": 0.9995,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.01,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2023-09-21",
+   "sceneId": "S2A_29RMQ_20230921_0_L2A",
+   "area": 2.0124,
+   "validFraction": 0.9991,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.01,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2023-10-11",
+   "sceneId": "S2A_29RMQ_20231011_0_L2A",
+   "area": 1.9398,
+   "validFraction": 0.9987,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.0,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2023-10-26",
+   "sceneId": "S2B_29RMQ_20231026_0_L2A",
+   "area": 2.0849,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.65,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2023-11-05",
+   "sceneId": "S2B_29RMQ_20231105_0_L2A",
+   "area": 2.0566,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.27,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2023-11-20",
+   "sceneId": "S2A_29RMQ_20231120_0_L2A",
+   "area": 2.001,
+   "validFraction": 0.9999,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.53,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2023-12-10",
+   "sceneId": "S2A_29RMQ_20231210_0_L2A",
+   "area": 1.978,
+   "validFraction": 0.9998,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.0,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2023-12-25",
+   "sceneId": "S2B_29RMQ_20231225_0_L2A",
+   "area": 1.951,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.03,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2024-01-04",
+   "sceneId": "S2B_29RMQ_20240104_0_L2A",
+   "area": 1.9282,
+   "validFraction": 1.0,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.26,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2024-01-24",
+   "sceneId": "S2B_29RMQ_20240124_0_L2A",
+   "area": 1.8928,
+   "validFraction": 1.0,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 11.21,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2024-02-18",
+   "sceneId": "S2A_29RMQ_20240218_0_L2A",
+   "area": 2.5857,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.53,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2024-02-28",
+   "sceneId": "S2A_29RMQ_20240228_0_L2A",
+   "area": 2.7147,
+   "validFraction": 0.9885,
+   "coreValidFraction": 0.9802,
+   "cloudCover": 5.03,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2024-03-04",
+   "sceneId": "S2B_29RMQ_20240304_0_L2A",
+   "area": 2.8224,
+   "validFraction": 0.9981,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.02,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2024-03-14",
+   "sceneId": "S2B_29RMQ_20240314_0_L2A",
+   "area": 2.8096,
+   "validFraction": 0.9982,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.94,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2024-04-03",
+   "sceneId": "S2B_29RMQ_20240403_0_L2A",
+   "area": 2.8212,
+   "validFraction": 0.9988,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 1.0,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2024-04-13",
+   "sceneId": "S2B_29RMQ_20240413_0_L2A",
+   "area": 2.7627,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.13,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2024-05-03",
+   "sceneId": "S2B_29RMQ_20240503_0_L2A",
+   "area": 2.7064,
+   "validFraction": 0.9946,
+   "coreValidFraction": 0.9888,
+   "cloudCover": 0.46,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2024-08-06",
+   "sceneId": "S2A_29RMQ_20240806_0_L2A",
+   "area": 2.589,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.05,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2024-08-26",
+   "sceneId": "S2A_29RMQ_20240826_0_L2A",
+   "area": 2.5396,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 3.23,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2024-09-10",
+   "sceneId": "S2B_29RMQ_20240910_0_L2A",
+   "area": 2.6865,
+   "validFraction": 0.9991,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 4.13,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2024-09-25",
+   "sceneId": "S2A_29RMQ_20240925_0_L2A",
+   "area": 2.7252,
+   "validFraction": 0.9987,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 1.17,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2024-10-05",
+   "sceneId": "S2A_29RMQ_20241005_0_L2A",
+   "area": 2.694,
+   "validFraction": 0.9995,
+   "coreValidFraction": 1.0,
+   "cloudCover": 3.9,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2024-10-20",
+   "sceneId": "S2B_29RMQ_20241020_0_L2A",
+   "area": 2.752,
+   "validFraction": 0.998,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.27,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2024-11-29",
+   "sceneId": "S2B_29RMQ_20241129_0_L2A",
+   "area": 2.803,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 9.2,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2024-12-04",
+   "sceneId": "S2A_29RMQ_20241204_0_L2A",
+   "area": 2.8038,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.0,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2024-12-19",
+   "sceneId": "S2B_29RMQ_20241219_0_L2A",
+   "area": 2.787,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 1.83,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2025-02-22",
+   "sceneId": "S2C_29RMQ_20250222_0_L2A",
+   "area": 0.4074,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.03,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2025-03-24",
+   "sceneId": "S2C_29RMQ_20250324_0_L2A",
+   "area": 4.0311,
+   "validFraction": 0.9986,
+   "coreValidFraction": 0.9994,
+   "cloudCover": 1.38,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2025-05-03",
+   "sceneId": "S2C_29RMQ_20250503_0_L2A",
+   "area": 3.8743,
+   "validFraction": 0.9998,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.78,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2025-05-23",
+   "sceneId": "S2C_29RMQ_20250523_0_L2A",
+   "area": 3.598,
+   "validFraction": 0.9817,
+   "coreValidFraction": 0.9618,
+   "cloudCover": 0.78,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2025-07-17",
+   "sceneId": "S2B_29RMQ_20250717_0_L2A",
+   "area": 1.0795,
+   "validFraction": 0.9998,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.25,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2025-08-26",
+   "sceneId": "S2B_29RMQ_20250826_0_L2A",
+   "area": 3.5612,
+   "validFraction": 0.9993,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.32,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2025-08-31",
+   "sceneId": "S2C_29RMQ_20250831_0_L2A",
+   "area": 3.5427,
+   "validFraction": 0.9992,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 3.15,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2025-09-10",
+   "sceneId": "S2C_29RMQ_20250910_0_L2A",
+   "area": 3.5083,
+   "validFraction": 0.999,
+   "coreValidFraction": 0.9998,
+   "cloudCover": 0.24,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2025-09-30",
+   "sceneId": "S2C_29RMQ_20250930_0_L2A",
+   "area": 3.485,
+   "validFraction": 0.9986,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.22,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2025-10-05",
+   "sceneId": "S2B_29RMQ_20251005_0_L2A",
+   "area": 3.4788,
+   "validFraction": 0.9986,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.14,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2025-10-10",
+   "sceneId": "S2C_29RMQ_20251010_0_L2A",
+   "area": 3.4705,
+   "validFraction": 0.9985,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.01,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2025-11-24",
+   "sceneId": "S2B_29RMQ_20251124_0_L2A",
+   "area": 3.9122,
+   "validFraction": 0.9998,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.0,
+   "nNeighbours": 3
+  },
+  {
+   "date": "2025-11-29",
+   "sceneId": "S2C_29RMQ_20251129_0_L2A",
+   "area": 3.9662,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.0,
+   "nNeighbours": 3
+  },
+  {
+   "date": "2025-12-01",
+   "sceneId": "S2A_29RMQ_20251201_1_L2A",
+   "area": 3.9818,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 4.54,
+   "nNeighbours": 3
+  },
+  {
+   "date": "2025-12-04",
+   "sceneId": "S2B_29RMQ_20251204_0_L2A",
+   "area": 3.9738,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.29,
+   "nNeighbours": 3
+  },
+  {
+   "date": "2026-01-08",
+   "sceneId": "S2C_29RMQ_20260108_1_L2A",
+   "area": 6.0573,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.0,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2026-01-10",
+   "sceneId": "S2A_29RMQ_20260110_1_L2A",
+   "area": 6.0398,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.33,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2026-02-17",
+   "sceneId": "S2C_29RMQ_20260217_0_L2A",
+   "area": 6.1008,
+   "validFraction": 0.9996,
+   "coreValidFraction": 0.9992,
+   "cloudCover": 6.25,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2026-02-22",
+   "sceneId": "S2B_29RMQ_20260222_0_L2A",
+   "area": 6.0969,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 0.02,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2026-03-11",
+   "sceneId": "S2A_29RMQ_20260311_1_L2A",
+   "area": 6.0492,
+   "validFraction": 0.9856,
+   "coreValidFraction": 0.9903,
+   "cloudCover": 2.67,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2026-03-29",
+   "sceneId": "S2C_29RMQ_20260329_0_L2A",
+   "area": 5.9385,
+   "validFraction": 0.975,
+   "coreValidFraction": 0.9715,
+   "cloudCover": 3.81,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2026-04-03",
+   "sceneId": "S2B_29RMQ_20260403_0_L2A",
+   "area": 5.9511,
+   "validFraction": 0.9791,
+   "coreValidFraction": 0.9765,
+   "cloudCover": 6.22,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2026-04-13",
+   "sceneId": "S2B_29RMQ_20260413_1_L2A",
+   "area": 6.1548,
+   "validFraction": 0.9973,
+   "coreValidFraction": 0.9972,
+   "cloudCover": 3.03,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2026-07-29",
+   "sceneId": "S2A_29RMQ_20260729_1_L2A",
+   "area": 5.9079,
+   "validFraction": 0.9999,
+   "coreValidFraction": 0.9999,
+   "cloudCover": 0.86,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2026-08-18",
+   "sceneId": "S2A_29RMQ_20260818_2_L2A",
+   "area": 5.8843,
+   "validFraction": 0.9996,
+   "coreValidFraction": 0.9997,
+   "cloudCover": 0.01,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2026-08-26",
+   "sceneId": "S2C_29RMQ_20260826_0_L2A",
+   "area": 5.8448,
+   "validFraction": 0.9986,
+   "coreValidFraction": 0.9985,
+   "cloudCover": 0.01,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2026-09-10",
+   "sceneId": "S2B_29RMQ_20260910_0_L2A",
+   "area": 5.7751,
+   "validFraction": 0.9962,
+   "coreValidFraction": 0.9951,
+   "cloudCover": 5.69,
+   "nNeighbours": 0
+  },
+  {
+   "date": "2026-09-30",
+   "sceneId": "S2B_29RMQ_20260930_0_L2A",
+   "area": 5.676,
+   "validFraction": 0.9946,
+   "coreValidFraction": 0.993,
+   "cloudCover": 1.84,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2026-10-10",
+   "sceneId": "S2B_29RMQ_20261010_0_L2A",
+   "area": 5.6651,
+   "validFraction": 0.9964,
+   "coreValidFraction": 0.9968,
+   "cloudCover": 3.97,
+   "nNeighbours": 1
+  },
+  {
+   "date": "2026-10-25",
+   "sceneId": "S2C_29RMQ_20261025_1_L2A",
+   "area": 5.5651,
+   "validFraction": 0.9937,
+   "coreValidFraction": 0.9932,
+   "cloudCover": 0.01,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2026-10-30",
+   "sceneId": "S2B_29RMQ_20261030_0_L2A",
+   "area": 5.5944,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 5.09,
+   "nNeighbours": 2
+  },
+  {
+   "date": "2026-11-04",
+   "sceneId": "S2C_29RMQ_20261104_0_L2A",
+   "area": 5.5791,
+   "validFraction": 1.0,
+   "coreValidFraction": 1.0,
+   "cloudCover": 2.53,
+   "nNeighbours": 2
+  }
+ ]
+}

@@ -1,0 +1,128 @@
+{
+  "_note": "Logos des autres Sociétés Régionales Multiservices, récupérés depuis des sources publiques. Chaque image est la marque de son titulaire ; pas de licence de réutilisation explicite. Les entrées null n'ont pas de logo vérifié.",
+  "casablanca-settat": {
+    "file": "casablanca-settat.png",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SRM-casablanca.png",
+    "retrievedAt": "2026-11-19",
+    "licenceNote": "marque de son titulaire ; pas de licence de réutilisation explicite",
+    "verifiedVisually": true,
+    "commonsLicence": "Public domain (PD textlogo) ; restriction déclarée : trademarked",
+    "icon": "icons/casablanca-settat.png",
+    "iconKind": "symbole",
+    "iconNote": "symbole recadré depuis le logo complet ; recadrage automatique sur fond blanc, marque de son titulaire"
+  },
+  "fes-meknes": {
+    "file": "fes-meknes.webp",
+    "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?establishment=182",
+    "retrievedAt": "2026-11-19",
+    "licenceNote": "marque de son titulaire ; pas de licence de réutilisation explicite",
+    "verifiedVisually": true,
+    "icon": "icons/fes-meknes.png",
+    "iconKind": "symbole",
+    "iconNote": "symbole recadré depuis le logo complet ; recadrage automatique sur fond blanc, marque de son titulaire"
+  },
+  "dakhla-oued-ed-dahab": {
+    "file": "dakhla-oued-ed-dahab.jpg",
+    "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?establishment=713",
+    "retrievedAt": "2026-11-19",
+    "licenceNote": "marque de son titulaire ; pas de licence de réutilisation explicite",
+    "verifiedVisually": true,
+    "icon": "icons/dakhla-oued-ed-dahab.png",
+    "iconKind": "symbole",
+    "iconNote": "symbole recadré depuis le logo complet ; recadrage automatique sur fond blanc, marque de son titulaire"
+  },
+  "beni-mellal-khenifra": {
+    "file": "beni-mellal-khenifra.jpg",
+    "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?establishment=728",
+    "retrievedAt": "2026-11-19",
+    "licenceNote": "marque de son titulaire ; pas de licence de réutilisation explicite",
+    "verifiedVisually": true,
+    "icon": "icons/beni-mellal-khenifra.png",
+    "iconKind": "symbole",
+    "iconNote": "symbole recadré depuis le logo complet ; recadrage automatique sur fond blanc, marque de son titulaire"
+  },
+  "guelmim-oued-noun": {
+    "file": "guelmim-oued-noun.jpg",
+    "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?establishment=737",
+    "retrievedAt": "2026-11-19",
+    "licenceNote": "marque de son titulaire ; pas de licence de réutilisation explicite",
+    "verifiedVisually": true,
+    "icon": "icons/guelmim-oued-noun.png",
+    "iconKind": "symbole",
+    "iconNote": "symbole recadré depuis le logo complet ; recadrage automatique sur fond blanc, marque de son titulaire"
+  },
+  "laayoune-sakia-el-hamra": {
+    "file": "laayoune-sakia-el-hamra.png",
+    "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?establishment=724",
+    "retrievedAt": "2026-11-19",
+    "licenceNote": "marque de son titulaire ; pas de licence de réutilisation explicite",
+    "verifiedVisually": true,
+    "icon": "icons/laayoune-sakia-el-hamra.png",
+    "iconKind": "symbole",
+    "iconNote": "symbole recadré depuis le logo complet ; recadrage automatique sur fond blanc, marque de son titulaire"
+  },
+  "marrakech-safi": {
+    "file": "marrakech-safi.png",
+    "sourceUrl": "https://www.emploi-public.ma/fr/concours-liste?establishment=687",
+    "retrievedAt": "2026-11-19",
+    "licenceNote": "marque de son titulaire ; pas de licence de réutilisation explicite",
+    "verifiedVisually": true,
+    "icon": "icons/marrakech-safi.png",
+    "iconKind": "symbole",
+    "iconNote": "symbole recadré depuis le logo complet ; recadrage automatique sur fond blanc, marque de son titulaire"
+  },
+  "oriental": {
+    "file": "oriental.png",
+    "sourceUrl": "https://anre.ma/wp-content/uploads/2025/01/LOGO-1033-x-308-px.png",
+    "retrievedAt": "2026-11-19",
+    "licenceNote": "marque de son titulaire ; pas de licence de réutilisation explicite",
+    "verifiedVisually": true,
+    "providedBy": "utilisateur",
+    "provenanceNote": "Fourni par l’utilisateur ; hébergé par anre.ma (Agence nationale de réglementation de l’électricité).",
+    "icon": "icons/oriental.png",
+    "iconKind": "symbole",
+    "iconNote": "symbole recadré depuis le logo complet ; recadrage automatique sur fond blanc, marque de son titulaire"
+  },
+  "tanger-tetouan-al-hoceima": {
+    "file": "tanger-tetouan-al-hoceima.jpg",
+    "sourceUrl": "https://www.somei.fr/site2017/wp-content/uploads/2025/11/SRM-Tanger-Tetouan-Al-Hoceima.jpg",
+    "retrievedAt": "2026-11-19",
+    "licenceNote": "marque de son titulaire ; pas de licence de réutilisation explicite",
+    "verifiedVisually": true,
+    "providedBy": "utilisateur",
+    "provenanceNote": "Fourni par l’utilisateur ; hébergé par un site tiers (somei.fr), pas par l’opérateur.",
+    "icon": "icons/tanger-tetouan-al-hoceima.png",
+    "iconKind": "symbole",
+    "iconNote": "symbole + lettres SRM TTA (sans dénomination) ; recadrage automatique sur fond blanc, marque de son titulaire"
+  },
+  "rabat-sale-kenitra": {
+    "file": "rabat-sale-kenitra.jpg",
+    "sourceUrl": "https://media.licdn.com/dms/image/v2/D4E22AQFvHMqekbmIdQ/feedshare-shrink_800/B4EZZLDVXTGYAg-/0/1745015894213",
+    "retrievedAt": "2026-11-19",
+    "licenceNote": "marque de son titulaire ; pas de licence de réutilisation explicite",
+    "verifiedVisually": true,
+    "providedBy": "utilisateur",
+    "provenanceNote": "Fourni par l’utilisateur ; image publiée sur LinkedIn, basse résolution, à remplacer par le fichier officiel.",
+    "icon": "icons/rabat-sale-kenitra.png",
+    "iconKind": "symbole",
+    "iconNote": "symbole + lettres SRM (sans mention de ville) ; recadrage automatique sur fond blanc, marque de son titulaire"
+  },
+  "draa-tafilalet": {
+    "file": "draa-tafilalet.png",
+    "sourceUrl": "https://cdneconcours.brainman.ma//images/companies/248331e3-bb84-485e-a0d6-ff7f2f4ffaa5.png",
+    "retrievedAt": "2026-11-19",
+    "licenceNote": "marque de son titulaire ; pas de licence de réutilisation explicite",
+    "verifiedVisually": true,
+    "providedBy": "utilisateur",
+    "provenanceNote": "Fourni par l’utilisateur ; hébergé par un site de concours (brainman.ma).",
+    "icon": "icons/draa-tafilalet.png",
+    "iconKind": "symbole",
+    "iconNote": "symbole partiel (kasbah, palmier, vagues ; sans lettres SRM) ; recadrage automatique sur fond blanc, marque de son titulaire"
+  },
+  "souss-massa": {
+    "file": "../srm-sm-official.png",
+    "icon": "icons/souss-massa.png",
+    "iconKind": "symbole",
+    "iconNote": "symbole recadré depuis le logo complet ; recadrage automatique sur fond blanc, marque de son titulaire"
+  }
+}

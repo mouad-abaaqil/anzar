@@ -1,0 +1,1011 @@
+{
+ "generatedAt": "2026-11-19T15:24:11+00:00",
+ "source": "Ministry of Equipment and Water, daily dam bulletin (maadialna.ma, ar/etat_global.pdf), page 10 Souss-Massa basin; stored in platform/data-raw/bulletins/<date>.pdf",
+ "basinCapacityPrintedMm3": 722.83,
+ "bulletins": [
+  {
+   "date": "2026-10-29",
+   "basinFillPct": 46.6,
+   "basinStoredMm3": 337.2,
+   "sameDayPreviousYearPct": 16.7,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 67.5,
+     "fillPct": 82
+    },
+    "ahl-souss": {
+     "storedMm3": 3.7,
+     "fillPct": 76
+    },
+    "aoulouz": {
+     "storedMm3": 52.6,
+     "fillPct": 59
+    },
+    "dkhila": {
+     "storedMm3": 0.2,
+     "fillPct": 94
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 135.5,
+     "fillPct": 47
+    },
+    "sidi-abdellah": {
+     "storedMm3": 6.9,
+     "fillPct": 66
+    },
+    "abdelmoumen": {
+     "storedMm3": 65,
+     "fillPct": 33
+    },
+    "imi-el-kheng": {
+     "storedMm3": 1.5,
+     "fillPct": 21
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.2,
+     "fillPct": 11
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 337.1,
+    "sumDiffMm3": -0.1,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read",
+   "note": "Printed with reduced precision (stored to 0.1 Mm3, fill % integers, basin 46.6 %, 337.2 of 722.8); sum tolerance widened to rounding bound; later bulletins print 2 decimals."
+  },
+  {
+   "date": "2026-10-30",
+   "basinFillPct": 46.58,
+   "basinStoredMm3": 336.69,
+   "sameDayPreviousYearPct": 16.7,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 67.47,
+     "fillPct": 82.34
+    },
+    "ahl-souss": {
+     "storedMm3": 3.73,
+     "fillPct": 75.98
+    },
+    "aoulouz": {
+     "storedMm3": 52.33,
+     "fillPct": 58.82
+    },
+    "dkhila": {
+     "storedMm3": 0.16,
+     "fillPct": 70.92
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 135.43,
+     "fillPct": 46.56
+    },
+    "sidi-abdellah": {
+     "storedMm3": 6.91,
+     "fillPct": 66.01
+    },
+    "abdelmoumen": {
+     "storedMm3": 64.93,
+     "fillPct": 32.72
+    },
+    "imi-el-kheng": {
+     "storedMm3": 1.52,
+     "fillPct": 20.89
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 336.7,
+    "sumDiffMm3": 0.01,
+    "capacityStable": false,
+    "capacityOutliers": [
+     "dkhila"
+    ]
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-10-31",
+   "basinFillPct": 46.53,
+   "basinStoredMm3": 336.33,
+   "sameDayPreviousYearPct": 16.66,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 67.41,
+     "fillPct": 82.27
+    },
+    "ahl-souss": {
+     "storedMm3": 3.73,
+     "fillPct": 75.9
+    },
+    "aoulouz": {
+     "storedMm3": 52.12,
+     "fillPct": 58.59
+    },
+    "dkhila": {
+     "storedMm3": 0.13,
+     "fillPct": 54.51
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 135.43,
+     "fillPct": 46.56
+    },
+    "sidi-abdellah": {
+     "storedMm3": 6.91,
+     "fillPct": 66.01
+    },
+    "abdelmoumen": {
+     "storedMm3": 64.89,
+     "fillPct": 32.7
+    },
+    "imi-el-kheng": {
+     "storedMm3": 1.5,
+     "fillPct": 20.69
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 336.34,
+    "sumDiffMm3": 0.01,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-01",
+   "basinFillPct": 46.46,
+   "basinStoredMm3": 335.83,
+   "sameDayPreviousYearPct": 16.61,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 67.3,
+     "fillPct": 82.14
+    },
+    "ahl-souss": {
+     "storedMm3": 3.72,
+     "fillPct": 75.74
+    },
+    "aoulouz": {
+     "storedMm3": 51.88,
+     "fillPct": 58.31
+    },
+    "dkhila": {
+     "storedMm3": 0.22,
+     "fillPct": 94.87
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 135.34,
+     "fillPct": 46.53
+    },
+    "sidi-abdellah": {
+     "storedMm3": 6.9,
+     "fillPct": 65.96
+    },
+    "abdelmoumen": {
+     "storedMm3": 64.76,
+     "fillPct": 32.64
+    },
+    "imi-el-kheng": {
+     "storedMm3": 1.49,
+     "fillPct": 20.49
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 335.83,
+    "sumDiffMm3": 0.0,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-02",
+   "basinFillPct": 46.41,
+   "basinStoredMm3": 335.45,
+   "sameDayPreviousYearPct": 16.57,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 67.25,
+     "fillPct": 82.07
+    },
+    "ahl-souss": {
+     "storedMm3": 3.72,
+     "fillPct": 75.66
+    },
+    "aoulouz": {
+     "storedMm3": 51.63,
+     "fillPct": 58.03
+    },
+    "dkhila": {
+     "storedMm3": 0.19,
+     "fillPct": 84.12
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 135.34,
+     "fillPct": 46.53
+    },
+    "sidi-abdellah": {
+     "storedMm3": 6.9,
+     "fillPct": 65.96
+    },
+    "abdelmoumen": {
+     "storedMm3": 64.72,
+     "fillPct": 32.61
+    },
+    "imi-el-kheng": {
+     "storedMm3": 1.48,
+     "fillPct": 20.36
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 335.45,
+    "sumDiffMm3": 0.0,
+    "capacityStable": false,
+    "capacityOutliers": [
+     "dkhila"
+    ]
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-03",
+   "basinFillPct": 46.34,
+   "basinStoredMm3": 334.93,
+   "sameDayPreviousYearPct": 16.53,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 67.14,
+     "fillPct": 81.94
+    },
+    "ahl-souss": {
+     "storedMm3": 3.71,
+     "fillPct": 75.58
+    },
+    "aoulouz": {
+     "storedMm3": 51.38,
+     "fillPct": 57.76
+    },
+    "dkhila": {
+     "storedMm3": 0.18,
+     "fillPct": 77.41
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 135.25,
+     "fillPct": 46.5
+    },
+    "sidi-abdellah": {
+     "storedMm3": 6.9,
+     "fillPct": 65.92
+    },
+    "abdelmoumen": {
+     "storedMm3": 64.68,
+     "fillPct": 32.59
+    },
+    "imi-el-kheng": {
+     "storedMm3": 1.47,
+     "fillPct": 20.23
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 334.93,
+    "sumDiffMm3": 0.0,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-04",
+   "basinFillPct": 46.29,
+   "basinStoredMm3": 334.6,
+   "sameDayPreviousYearPct": 16.51,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 67.08,
+     "fillPct": 81.87
+    },
+    "ahl-souss": {
+     "storedMm3": 3.71,
+     "fillPct": 75.5
+    },
+    "aoulouz": {
+     "storedMm3": 51.18,
+     "fillPct": 57.53
+    },
+    "dkhila": {
+     "storedMm3": 0.17,
+     "fillPct": 72.52
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 135.25,
+     "fillPct": 46.5
+    },
+    "sidi-abdellah": {
+     "storedMm3": 6.9,
+     "fillPct": 65.92
+    },
+    "abdelmoumen": {
+     "storedMm3": 64.64,
+     "fillPct": 32.57
+    },
+    "imi-el-kheng": {
+     "storedMm3": 1.46,
+     "fillPct": 20.1
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 334.61,
+    "sumDiffMm3": 0.01,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-05",
+   "basinFillPct": 46.25,
+   "basinStoredMm3": 334.29,
+   "sameDayPreviousYearPct": 16.48,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 67.03,
+     "fillPct": 81.8
+    },
+    "ahl-souss": {
+     "storedMm3": 3.7,
+     "fillPct": 75.42
+    },
+    "aoulouz": {
+     "storedMm3": 51.02,
+     "fillPct": 57.34
+    },
+    "dkhila": {
+     "storedMm3": 0.13,
+     "fillPct": 57.13
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 135.25,
+     "fillPct": 46.5
+    },
+    "sidi-abdellah": {
+     "storedMm3": 6.89,
+     "fillPct": 65.88
+    },
+    "abdelmoumen": {
+     "storedMm3": 64.59,
+     "fillPct": 32.55
+    },
+    "imi-el-kheng": {
+     "storedMm3": 1.45,
+     "fillPct": 19.97
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 334.28,
+    "sumDiffMm3": -0.01,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-07",
+   "basinFillPct": 46.17,
+   "basinStoredMm3": 333.73,
+   "sameDayPreviousYearPct": 16.43,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 66.92,
+     "fillPct": 81.67
+    },
+    "ahl-souss": {
+     "storedMm3": 3.7,
+     "fillPct": 75.26
+    },
+    "aoulouz": {
+     "storedMm3": 50.69,
+     "fillPct": 56.98
+    },
+    "dkhila": {
+     "storedMm3": 0.21,
+     "fillPct": 90.9
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 135.25,
+     "fillPct": 46.5
+    },
+    "sidi-abdellah": {
+     "storedMm3": 6.89,
+     "fillPct": 65.83
+    },
+    "abdelmoumen": {
+     "storedMm3": 64.43,
+     "fillPct": 32.47
+    },
+    "imi-el-kheng": {
+     "storedMm3": 1.43,
+     "fillPct": 19.72
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 333.74,
+    "sumDiffMm3": 0.01,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-08",
+   "basinFillPct": 46.12,
+   "basinStoredMm3": 333.35,
+   "sameDayPreviousYearPct": 16.38,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 66.86,
+     "fillPct": 81.6
+    },
+    "ahl-souss": {
+     "storedMm3": 3.69,
+     "fillPct": 75.18
+    },
+    "aoulouz": {
+     "storedMm3": 50.53,
+     "fillPct": 56.8
+    },
+    "dkhila": {
+     "storedMm3": 0.19,
+     "fillPct": 81.87
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 135.16,
+     "fillPct": 46.47
+    },
+    "sidi-abdellah": {
+     "storedMm3": 6.89,
+     "fillPct": 65.83
+    },
+    "abdelmoumen": {
+     "storedMm3": 64.39,
+     "fillPct": 32.45
+    },
+    "imi-el-kheng": {
+     "storedMm3": 1.42,
+     "fillPct": 19.59
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 333.35,
+    "sumDiffMm3": 0.0,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-09",
+   "basinFillPct": 46.09,
+   "basinStoredMm3": 333.15,
+   "sameDayPreviousYearPct": 16.35,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 66.81,
+     "fillPct": 81.53
+    },
+    "ahl-souss": {
+     "storedMm3": 3.69,
+     "fillPct": 75.18
+    },
+    "aoulouz": {
+     "storedMm3": 50.33,
+     "fillPct": 56.57
+    },
+    "dkhila": {
+     "storedMm3": 0.2,
+     "fillPct": 85.25
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 135.16,
+     "fillPct": 46.47
+    },
+    "sidi-abdellah": {
+     "storedMm3": 6.92,
+     "fillPct": 66.14
+    },
+    "abdelmoumen": {
+     "storedMm3": 64.39,
+     "fillPct": 32.45
+    },
+    "imi-el-kheng": {
+     "storedMm3": 1.44,
+     "fillPct": 19.78
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 333.16,
+    "sumDiffMm3": 0.01,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-11",
+   "basinFillPct": 47.13,
+   "basinStoredMm3": 340.65,
+   "sameDayPreviousYearPct": 16.29,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 66.75,
+     "fillPct": 81.47
+    },
+    "ahl-souss": {
+     "storedMm3": 3.69,
+     "fillPct": 75.02
+    },
+    "aoulouz": {
+     "storedMm3": 57.95,
+     "fillPct": 65.13
+    },
+    "dkhila": {
+     "storedMm3": 0.22,
+     "fillPct": 93.17
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 135.16,
+     "fillPct": 46.47
+    },
+    "sidi-abdellah": {
+     "storedMm3": 6.46,
+     "fillPct": 61.76
+    },
+    "abdelmoumen": {
+     "storedMm3": 64.76,
+     "fillPct": 32.64
+    },
+    "imi-el-kheng": {
+     "storedMm3": 1.45,
+     "fillPct": 19.91
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 340.66,
+    "sumDiffMm3": 0.01,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-12",
+   "basinFillPct": 49.56,
+   "basinStoredMm3": 358.22,
+   "sameDayPreviousYearPct": 16.29,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 77.86,
+     "fillPct": 95.03
+    },
+    "ahl-souss": {
+     "storedMm3": 3.72,
+     "fillPct": 75.66
+    },
+    "aoulouz": {
+     "storedMm3": 58.77,
+     "fillPct": 66.06
+    },
+    "dkhila": {
+     "storedMm3": 0.22,
+     "fillPct": 94.87
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 135.87,
+     "fillPct": 46.71
+    },
+    "sidi-abdellah": {
+     "storedMm3": 6.48,
+     "fillPct": 61.89
+    },
+    "abdelmoumen": {
+     "storedMm3": 69.36,
+     "fillPct": 34.95
+    },
+    "imi-el-kheng": {
+     "storedMm3": 1.73,
+     "fillPct": 23.82
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 358.23,
+    "sumDiffMm3": 0.01,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-13",
+   "basinFillPct": 52.99,
+   "basinStoredMm3": 383.01,
+   "sameDayPreviousYearPct": 16.23,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 78.99,
+     "fillPct": 96.4
+    },
+    "ahl-souss": {
+     "storedMm3": 4.5,
+     "fillPct": 91.69
+    },
+    "aoulouz": {
+     "storedMm3": 71.27,
+     "fillPct": 80.11
+    },
+    "dkhila": {
+     "storedMm3": 0.22,
+     "fillPct": 94.87
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 143.23,
+     "fillPct": 49.24
+    },
+    "sidi-abdellah": {
+     "storedMm3": 7.14,
+     "fillPct": 68.28
+    },
+    "abdelmoumen": {
+     "storedMm3": 71.33,
+     "fillPct": 35.94
+    },
+    "imi-el-kheng": {
+     "storedMm3": 2.09,
+     "fillPct": 28.8
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 382.99,
+    "sumDiffMm3": -0.02,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-15",
+   "basinFillPct": 53.02,
+   "basinStoredMm3": 383.24,
+   "sameDayPreviousYearPct": 19.51,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 78.81,
+     "fillPct": 96.19
+    },
+    "ahl-souss": {
+     "storedMm3": 4.58,
+     "fillPct": 93.3
+    },
+    "aoulouz": {
+     "storedMm3": 71.65,
+     "fillPct": 80.54
+    },
+    "dkhila": {
+     "storedMm3": 0.19,
+     "fillPct": 80.75
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 144.24,
+     "fillPct": 49.59
+    },
+    "sidi-abdellah": {
+     "storedMm3": 5.31,
+     "fillPct": 50.71
+    },
+    "abdelmoumen": {
+     "storedMm3": 72.04,
+     "fillPct": 36.3
+    },
+    "imi-el-kheng": {
+     "storedMm3": 2.2,
+     "fillPct": 30.28
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 383.24,
+    "sumDiffMm3": 0.0,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-16",
+   "basinFillPct": 52.99,
+   "basinStoredMm3": 383.0,
+   "sameDayPreviousYearPct": 19.55,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 78.75,
+     "fillPct": 96.11
+    },
+    "ahl-souss": {
+     "storedMm3": 4.59,
+     "fillPct": 93.4
+    },
+    "aoulouz": {
+     "storedMm3": 71.75,
+     "fillPct": 80.65
+    },
+    "dkhila": {
+     "storedMm3": 0.16,
+     "fillPct": 69.34
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 144.24,
+     "fillPct": 49.59
+    },
+    "sidi-abdellah": {
+     "storedMm3": 4.86,
+     "fillPct": 46.49
+    },
+    "abdelmoumen": {
+     "storedMm3": 72.21,
+     "fillPct": 36.39
+    },
+    "imi-el-kheng": {
+     "storedMm3": 2.21,
+     "fillPct": 30.47
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 382.99,
+    "sumDiffMm3": -0.01,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-17",
+   "basinFillPct": 52.98,
+   "basinStoredMm3": 382.98,
+   "sameDayPreviousYearPct": 19.56,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 78.63,
+     "fillPct": 95.97
+    },
+    "ahl-souss": {
+     "storedMm3": 4.59,
+     "fillPct": 93.4
+    },
+    "aoulouz": {
+     "storedMm3": 71.8,
+     "fillPct": 80.7
+    },
+    "dkhila": {
+     "storedMm3": 0.16,
+     "fillPct": 70.92
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 144.24,
+     "fillPct": 49.59
+    },
+    "sidi-abdellah": {
+     "storedMm3": 4.78,
+     "fillPct": 45.66
+    },
+    "abdelmoumen": {
+     "storedMm3": 72.35,
+     "fillPct": 36.46
+    },
+    "imi-el-kheng": {
+     "storedMm3": 2.21,
+     "fillPct": 30.47
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 382.98,
+    "sumDiffMm3": 0.0,
+    "capacityStable": false,
+    "capacityOutliers": [
+     "dkhila"
+    ]
+   },
+   "transcribedBy": "visual read"
+  },
+  {
+   "date": "2026-11-18",
+   "basinFillPct": 53.0,
+   "basinStoredMm3": 383.13,
+   "sameDayPreviousYearPct": 19.56,
+   "dams": {
+    "moulay-abdellah": {
+     "storedMm3": 78.57,
+     "fillPct": 95.9,
+     "sameDay2025EstimatedPct": 55.5,
+     "sameDay2025EstimatedMm3": 45.47,
+     "uncertaintyPoints": 1.0,
+     "method": "lu sur graphique, +/-1 point"
+    },
+    "ahl-souss": {
+     "storedMm3": 4.59,
+     "fillPct": 93.4,
+     "sameDay2025EstimatedPct": 8.3,
+     "sameDay2025EstimatedMm3": 0.41,
+     "uncertaintyPoints": 1.0,
+     "method": "lu sur graphique, +/-1 point"
+    },
+    "aoulouz": {
+     "storedMm3": 71.89,
+     "fillPct": 80.81,
+     "sameDay2025EstimatedPct": 34.5,
+     "sameDay2025EstimatedMm3": 30.69,
+     "uncertaintyPoints": 1.0,
+     "method": "lu sur graphique, +/-1 point"
+    },
+    "dkhila": {
+     "storedMm3": 0.16,
+     "fillPct": 67.79,
+     "sameDay2025EstimatedPct": 76.0,
+     "sameDay2025EstimatedMm3": 0.18,
+     "uncertaintyPoints": 1.0,
+     "method": "lu sur graphique, +/-1 point"
+    },
+    "youssef-ben-tachfine": {
+     "storedMm3": 144.24,
+     "fillPct": 49.59,
+     "sameDay2025EstimatedPct": 12.7,
+     "sameDay2025EstimatedMm3": 36.94,
+     "uncertaintyPoints": 1.0,
+     "method": "lu sur graphique, +/-1 point"
+    },
+    "sidi-abdellah": {
+     "storedMm3": 4.8,
+     "fillPct": 45.92,
+     "sameDay2025EstimatedPct": null,
+     "uncertaintyPoints": null,
+     "note": "No yellow tick drawn in the bar for this dam on page 10 (likely at/near 0 or hidden at the bar origin); not estimated."
+    },
+    "abdelmoumen": {
+     "storedMm3": 72.44,
+     "fillPct": 36.5,
+     "sameDay2025EstimatedPct": 10.6,
+     "sameDay2025EstimatedMm3": 21.04,
+     "uncertaintyPoints": 1.0,
+     "method": "lu sur graphique, +/-1 point"
+    },
+    "imi-el-kheng": {
+     "storedMm3": 2.21,
+     "fillPct": 30.47,
+     "sameDay2025EstimatedPct": 20.1,
+     "sameDay2025EstimatedMm3": 1.46,
+     "uncertaintyPoints": 1.0,
+     "method": "lu sur graphique, +/-1 point"
+    },
+    "mokhtar-soussi": {
+     "storedMm3": 4.22,
+     "fillPct": 10.61,
+     "sameDay2025EstimatedPct": 10.3,
+     "sameDay2025EstimatedMm3": 4.1,
+     "uncertaintyPoints": 1.0,
+     "method": "lu sur graphique, +/-1 point"
+    }
+   },
+   "checks": {
+    "sumOk": true,
+    "sumOfDamsMm3": 383.12,
+    "sumDiffMm3": -0.01,
+    "capacityStable": true,
+    "capacityOutliers": []
+   },
+   "transcribedBy": "visual read",
+   "sameDay2025Check": {
+    "estimatedSumExcludingSidiAbdellahMm3": 140.3,
+    "printedRegion2025Pct": 19.56,
+    "printedRegion2025Mm3": 141.4,
+    "residualMm3": 1.1,
+    "note": "Residual (~1.2 Mm3) equals ~11 % of Sidi Abdellah capacity or the sum of per-dam +/-1 point errors (about +/-3 Mm3 combined); consistent with Sidi Abdellah tick absent/near 0."
+   }
+  }
+ ],
+ "capacitiesMm3": {
+  "moulay-abdellah": 81.93,
+  "ahl-souss": 4.91,
+  "aoulouz": 88.96,
+  "dkhila": 0.24,
+  "youssef-ben-tachfine": 290.87,
+  "sidi-abdellah": 10.45,
+  "abdelmoumen": 198.47,
+  "imi-el-kheng": 7.25,
+  "mokhtar-soussi": 39.77
+ },
+ "toleranceNote": "capacityStable uses +/-1 % (3 % for Dkhila, whose 0.13-0.22 Mm3 stock is rounding-limited), widened by the printing rounding of each pair.",
+ "capacitiesNote": "Derived as stored/fill from the 2026-11-18 bulletin (two-decimal precision, values checked against known truth). Small dams (Dkhila, Imi El Kheng, Ahl Souss) are rounding-limited. Sum = 722.85 vs printed 722.83.",
+ "missingDates": [
+  "2026-11-06",
+  "2026-11-10",
+  "2026-11-14",
+  "2026-11-19 (not yet published at fetch time)"
+ ]
+}

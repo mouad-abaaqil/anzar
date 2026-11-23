@@ -1,0 +1,218 @@
+[
+ {
+  "id": "youssef-ben-tachfine",
+  "bulletinDate": "2026-11-03",
+  "sceneDate": "2026-11-04",
+  "areaKm2": 8.4595,
+  "sceneId": "S2C_29RMP_20261104_0_L2A",
+  "validFraction": 1.0
+ },
+ {
+  "id": "youssef-ben-tachfine",
+  "bulletinDate": "2026-11-12",
+  "sceneDate": "2026-11-14",
+  "areaKm2": 8.8918,
+  "sceneId": "S2C_29RMP_20261114_0_L2A",
+  "validFraction": 0.9999
+ },
+ {
+  "id": "youssef-ben-tachfine",
+  "bulletinDate": "2026-11-13",
+  "sceneDate": "2026-11-14",
+  "areaKm2": 8.8918,
+  "sceneId": "S2C_29RMP_20261114_0_L2A",
+  "validFraction": 0.9999
+ },
+ {
+  "id": "youssef-ben-tachfine",
+  "bulletinDate": "2026-11-14",
+  "sceneDate": "2026-11-14",
+  "areaKm2": 8.8918,
+  "sceneId": "S2C_29RMP_20261114_0_L2A",
+  "validFraction": 0.9999
+ },
+ {
+  "id": "youssef-ben-tachfine",
+  "bulletinDate": "2026-11-15",
+  "sceneDate": "2026-11-14",
+  "areaKm2": 8.8918,
+  "sceneId": "S2C_29RMP_20261114_0_L2A",
+  "validFraction": 0.9999
+ },
+ {
+  "id": "youssef-ben-tachfine",
+  "bulletinDate": "2026-11-16",
+  "sceneDate": "2026-11-16",
+  "areaKm2": 8.6486,
+  "sceneId": "S2B_29RMP_20261116_0_L2A",
+  "validFraction": 0.9478
+ },
+ {
+  "id": "youssef-ben-tachfine",
+  "bulletinDate": "2026-11-17",
+  "sceneDate": "2026-11-16",
+  "areaKm2": 8.6486,
+  "sceneId": "S2B_29RMP_20261116_0_L2A",
+  "validFraction": 0.9478
+ },
+ {
+  "id": "youssef-ben-tachfine",
+  "bulletinDate": "2026-11-18",
+  "sceneDate": "2026-11-16",
+  "areaKm2": 8.6486,
+  "sceneId": "S2B_29RMP_20261116_0_L2A",
+  "validFraction": 0.9478
+ },
+ {
+  "id": "abdelmoumen",
+  "bulletinDate": "2026-10-31",
+  "sceneDate": "2026-10-30",
+  "areaKm2": 4.0241,
+  "sceneId": "S2B_29RMQ_20261030_0_L2A",
+  "validFraction": 0.9893
+ },
+ {
+  "id": "abdelmoumen",
+  "bulletinDate": "2026-11-03",
+  "sceneDate": "2026-11-04",
+  "areaKm2": 3.7928,
+  "sceneId": "S2C_29RMP_20261104_0_L2A",
+  "validFraction": 0.9314
+ },
+ {
+  "id": "abdelmoumen",
+  "bulletinDate": "2026-11-11",
+  "sceneDate": "2026-11-13",
+  "areaKm2": 4.1932,
+  "sceneId": "S2A_29RMQ_20261113_0_L2A",
+  "validFraction": 0.9747
+ },
+ {
+  "id": "abdelmoumen",
+  "bulletinDate": "2026-11-12",
+  "sceneDate": "2026-11-13",
+  "areaKm2": 4.1932,
+  "sceneId": "S2A_29RMQ_20261113_0_L2A",
+  "validFraction": 0.9747
+ },
+ {
+  "id": "abdelmoumen",
+  "bulletinDate": "2026-11-13",
+  "sceneDate": "2026-11-13",
+  "areaKm2": 4.1932,
+  "sceneId": "S2A_29RMQ_20261113_0_L2A",
+  "validFraction": 0.9747
+ },
+ {
+  "id": "abdelmoumen",
+  "bulletinDate": "2026-11-14",
+  "sceneDate": "2026-11-13",
+  "areaKm2": 4.1932,
+  "sceneId": "S2A_29RMQ_20261113_0_L2A",
+  "validFraction": 0.9747
+ },
+ {
+  "id": "abdelmoumen",
+  "bulletinDate": "2026-11-15",
+  "sceneDate": "2026-11-16",
+  "areaKm2": 4.3269,
+  "sceneId": "S2B_29RMQ_20261116_0_L2A",
+  "validFraction": 0.987
+ },
+ {
+  "id": "abdelmoumen",
+  "bulletinDate": "2026-11-16",
+  "sceneDate": "2026-11-16",
+  "areaKm2": 4.3269,
+  "sceneId": "S2B_29RMQ_20261116_0_L2A",
+  "validFraction": 0.987
+ },
+ {
+  "id": "abdelmoumen",
+  "bulletinDate": "2026-11-17",
+  "sceneDate": "2026-11-16",
+  "areaKm2": 4.3269,
+  "sceneId": "S2B_29RMQ_20261116_0_L2A",
+  "validFraction": 0.987
+ },
+ {
+  "id": "abdelmoumen",
+  "bulletinDate": "2026-11-18",
+  "sceneDate": "2026-11-16",
+  "areaKm2": 4.3269,
+  "sceneId": "S2B_29RMQ_20261116_0_L2A",
+  "validFraction": 0.987
+ },
+ {
+  "id": "aoulouz",
+  "bulletinDate": "2026-10-31",
+  "sceneDate": "2026-11-01",
+  "areaKm2": 2.2234,
+  "sceneId": "S2C_29RNP_20261101_0_L2A",
+  "validFraction": 0.9705
+ },
+ {
+  "id": "aoulouz",
+  "bulletinDate": "2026-11-03",
+  "sceneDate": "2026-11-01",
+  "areaKm2": 2.2234,
+  "sceneId": "S2C_29RNP_20261101_0_L2A",
+  "validFraction": 0.9705
+ },
+ {
+  "id": "aoulouz",
+  "bulletinDate": "2026-11-14",
+  "sceneDate": "2026-11-16",
+  "areaKm2": 4.3523,
+  "sceneId": "S2B_29RNQ_20261116_0_L2A",
+  "validFraction": 0.9708
+ },
+ {
+  "id": "aoulouz",
+  "bulletinDate": "2026-11-15",
+  "sceneDate": "2026-11-16",
+  "areaKm2": 4.3523,
+  "sceneId": "S2B_29RNQ_20261116_0_L2A",
+  "validFraction": 0.9708
+ },
+ {
+  "id": "aoulouz",
+  "bulletinDate": "2026-11-16",
+  "sceneDate": "2026-11-16",
+  "areaKm2": 4.3523,
+  "sceneId": "S2B_29RNQ_20261116_0_L2A",
+  "validFraction": 0.9708
+ },
+ {
+  "id": "aoulouz",
+  "bulletinDate": "2026-11-17",
+  "sceneDate": "2026-11-16",
+  "areaKm2": 4.3523,
+  "sceneId": "S2B_29RNQ_20261116_0_L2A",
+  "validFraction": 0.9708
+ },
+ {
+  "id": "aoulouz",
+  "bulletinDate": "2026-11-18",
+  "sceneDate": "2026-11-16",
+  "areaKm2": 4.3523,
+  "sceneId": "S2B_29RNQ_20261116_0_L2A",
+  "validFraction": 0.9708
+ },
+ {
+  "id": "moulay-abdellah",
+  "bulletinDate": "2026-10-31",
+  "sceneDate": "2026-10-30",
+  "areaKm2": 5.5944,
+  "sceneId": "S2B_29RMQ_20261030_0_L2A",
+  "validFraction": 1.0
+ },
+ {
+  "id": "moulay-abdellah",
+  "bulletinDate": "2026-11-03",
+  "sceneDate": "2026-11-04",
+  "areaKm2": 5.5791,
+  "sceneId": "S2C_29RMQ_20261104_0_L2A",
+  "validFraction": 1.0
+ }
+]

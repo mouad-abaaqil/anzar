@@ -1,0 +1,34 @@
+.anzar-map { position: relative; width: 100%; height: 100%; min-height: 360px; background: #e6e8db; overflow: hidden; font-family: var(--font-sans); }
+.anzar-map__canvas { position: absolute; inset: 0; }
+.anzar-map__status { position: absolute; inset: auto 0 50% 0; margin: 0 auto; width: fit-content; max-width: 80%; padding: 8px 14px; background: rgba(255,255,255,.92); border-radius: var(--radius); font-size: var(--fs-base); font-weight: 500; line-height: 1.4; color: var(--ink); text-align: center; }
+.anzar-map__status--error { color: var(--error); }
+.anzar-map__tip { position: absolute; z-index: 3; pointer-events: none; display: grid; gap: 2px; padding: 8px 10px; max-width: 260px; background: var(--anzar-night); color: var(--anzar-snow); border-radius: var(--radius); font-size: var(--fs-sm); line-height: 1.35; }
+.anzar-map__tip strong { font-weight: 600; }
+/* Camera toolbar: one compact group in the app tokens */
+.anzar-map__controls { position: absolute; z-index: var(--z-map); top: 12px; left: 12px; right: 56px; display: flex; flex-wrap: wrap; gap: 1px; width: fit-content; max-width: calc(100% - 68px); background: var(--line); border: 1px solid var(--line-strong); border-radius: var(--radius); overflow: hidden; }
+.anzar-map__controls button { flex: 1 1 auto; min-height: 36px; padding: 0 12px; border: 0; background: var(--white); color: var(--ink); font: inherit; font-size: var(--fs-sm); font-weight: 500; cursor: pointer; transition: background-color var(--dur-fast) var(--ease); }
+.anzar-map__controls button:hover:not(:disabled) { background: var(--surface-hover); }
+.anzar-map__controls button:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
+.anzar-map__controls button[aria-pressed="true"] { background: var(--anzar-accent-soft); color: var(--brand); }
+.anzar-map__controls button:disabled { color: var(--muted); cursor: not-allowed; }
+.anzar-map__legend { position: absolute; z-index: var(--z-map); left: 12px; bottom: 28px; max-width: 256px; padding: 10px 12px; background: rgba(255,255,255,.96); border: 1px solid var(--line); border-radius: var(--radius); font-size: var(--fs-sm); line-height: 1.35; color: var(--ink); }
+.anzar-map__legend-title { font-weight: 600; text-align: left; }
+.anzar-map__legend-toggle { display: flex; width: 100%; align-items: center; justify-content: space-between; gap: 10px; min-height: 28px; margin: 0 0 6px; padding: 0; border: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
+.anzar-map__legend-toggle:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.anzar-map__legend.is-collapsed .anzar-map__legend-toggle { margin: 0; }
+.anzar-map__sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.anzar-map__tour { position: absolute; z-index: var(--z-map); left: 50%; bottom: 28px; transform: translateX(-50%); margin: 0; padding: 6px 12px; background: var(--anzar-night); color: var(--anzar-snow); border-radius: var(--radius); font-size: var(--fs-sm); font-weight: 500; }
+.anzar-map__legend ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.anzar-map__legend li { display: flex; align-items: center; gap: 8px; }
+.anzar-map__legend i { flex: none; width: 16px; height: 16px; border-radius: var(--radius-sm); }
+/* Hatching: data marker for "not modelled", not decoration */
+.anzar-map__hatch { background: repeating-linear-gradient(135deg, #e4e7e1 0 3px, #8d948c 3px 4px); }
+.anzar-map__legend .anzar-map__dot { border-radius: 50%; background: rgba(18,80,143,.55); border: 1.5px solid #fff; outline: 1px solid rgba(18,80,143,.4); }
+.anzar-map__flux { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); display: grid; gap: 4px; }
+.anzar-map__flux strong { font-weight: 600; }
+.anzar-map__flux > span, .anzar-map__legend-note { font-size: var(--fs-xs); color: var(--muted); }
+.anzar-map__legend-note { margin: 8px 0 0; }
+.anzar-map__dam { width: var(--d, 10px); height: var(--d, 10px); padding: 0; border-radius: 50%; border: 1.5px solid #fff; background: rgba(18,80,143,.7); outline: 1px solid rgba(18,80,143,.5); cursor: pointer; }
+.anzar-map__dam:hover, .anzar-map__dam:focus-visible { background: var(--srm-blue); outline: 2px solid #fff; }
+@media (max-width: 760px), (pointer: coarse) { .anzar-map__controls button, .anzar-map__legend-toggle { min-height: var(--touch-min); } .anzar-map .maplibregl-ctrl-group button { width: 44px; height: 44px; } }
+@media (max-width: 600px) { .anzar-map__controls { left: 8px; top: 8px; } .anzar-map__controls button { padding: 0 10px; font-size: var(--fs-xs); } .anzar-map__legend { left: 8px; max-width: 200px; font-size: var(--fs-xs); } .anzar-map__legend-note, .anzar-map__flux > span { display: none; } }

@@ -1,0 +1,615 @@
+{
+  "source": {
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-18/ar/etat_global.pdf",
+    "title": "الحالة اليومية لحقينات السدود (Daily state of dam reservoirs)",
+    "bulletinDate": "2026-11-18",
+    "pages": 12,
+    "footerAttribution": "المصدر: وزارة التجهيز والماء والغابات (as printed on the infographic footer)",
+    "fetchedTo": "/tmp/srmsm-nat/etat_global.pdf",
+    "renderedWith": "pdftoppm -r 110 -png"
+  },
+  "note": "All values were read visually from rendered PNG pages. The PDF has no text layer (pdftotext returned no content). Values are transcribed from infographics and were not parsed from text. Checks performed: basin stored Mm3 sum to the national stored total (11,276.32 vs 11,276.31, rounding); basin capacities sum exactly to the national capacity (17,027.59); each basin's stored/capacity reproduces its printed fill %; each basin's dam stored values sum to the basin total (within 0.01 rounding). Arabic names are transcribed as printed. French names are the transcriber's own equivalents and are NOT printed in the bulletin; verify before publishing. The bulletin's ranking page (page 3) lists 9 basins; the Sahara basin is not shown and is not included in the national capacity. Dam names in French are transcriber equivalents; 'unverified' marks those needing a ministry dam list.",
+  "national": {
+    "transcribedFrom": "page 1 (fill %, same-day 2025 %), page 2 (stored, capacity, change vs same day 2025)",
+    "fillPct": 66.22,
+    "storedMm3": 11276.31,
+    "capacityMm3": 17027.59,
+    "sameDay2025Pct": 31.13,
+    "changeVsSameDay2025Pct": 112.7,
+    "changeVsSameDay2025Note": "Printed as +112.7% with the label 'comparison with the same day last year'. Read as a relative change of stored volume, not a percentage-point change.",
+    "flags": []
+  },
+  "basinRanking": {
+    "transcribedFrom": "page 3",
+    "note": "Ranking by fill %. The 2025 same-day markers on this page are unlabelled bars and are not transcribed; same-day values are taken from the individual basin pages.",
+    "order": [
+      {
+        "basinAr": "تانسيفت",
+        "fillPct": 81.0,
+        "storedMm3": 164.56
+      },
+      {
+        "basinAr": "أبي رقراق",
+        "fillPct": 76.11,
+        "storedMm3": 1121.41
+      },
+      {
+        "basinAr": "سبو",
+        "fillPct": 73.72,
+        "storedMm3": 3958.96
+      },
+      {
+        "basinAr": "اللوكوس",
+        "fillPct": 72.13,
+        "storedMm3": 1411.31
+      },
+      {
+        "basinAr": "ملوية",
+        "fillPct": 71.98,
+        "storedMm3": 504.96
+      },
+      {
+        "basinAr": "كير- زيز- غريس",
+        "fillPct": 59.9,
+        "storedMm3": 328.42
+      },
+      {
+        "basinAr": "أم الربيع",
+        "fillPct": 59.71,
+        "storedMm3": 2987.52
+      },
+      {
+        "basinAr": "سوس - ماسة",
+        "fillPct": 53.0,
+        "storedMm3": 383.13
+      },
+      {
+        "basinAr": "درعة - واد نون",
+        "fillPct": 39.69,
+        "storedMm3": 416.05
+      }
+    ]
+  },
+  "basins": [
+    {
+      "transcribedFrom": "page 4",
+      "basinAr": "أم الربيع",
+      "basinFr": "Oum Er-Rbia",
+      "fillPct": 59.71,
+      "storedMm3": 2987.52,
+      "capacityMm3": 5003.37,
+      "sameDay2025Pct": 8.69,
+      "dams": [
+        {
+          "nameAr": "سيدي إدريس",
+          "nameFr": "Sidi Driss",
+          "storedMm3": 0.54,
+          "fillPct": 97.88
+        },
+        {
+          "nameAr": "تيمينوتين",
+          "nameFr": "Timinoutine",
+          "storedMm3": 0.69,
+          "fillPct": 93.98
+        },
+        {
+          "nameAr": "مولاي يوسف",
+          "nameFr": "Moulay Youssef",
+          "storedMm3": 107.49,
+          "fillPct": 83.61
+        },
+        {
+          "nameAr": "أحمد الحنصالي",
+          "nameFr": "Ahmed El Hansali",
+          "storedMm3": 568.59,
+          "fillPct": 81.56
+        },
+        {
+          "nameAr": "الحسن الأول",
+          "nameFr": "Hassan I",
+          "storedMm3": 186.54,
+          "fillPct": 81.19
+        },
+        {
+          "nameAr": "بين الويدان",
+          "nameFr": "Bin El Ouidane",
+          "storedMm3": 1005.31,
+          "fillPct": 78.95
+        },
+        {
+          "nameAr": "س. سعيد معاشو",
+          "nameFr": "Sidi Said Maachou",
+          "storedMm3": 0.56,
+          "fillPct": 72.3
+        },
+        {
+          "nameAr": "الداورات",
+          "nameFr": "Daouarat (unverified)",
+          "storedMm3": 3.58,
+          "fillPct": 70.36
+        },
+        {
+          "nameAr": "أيت مسعود",
+          "nameFr": "Ait Messaoud",
+          "storedMm3": 4.43,
+          "fillPct": 50.4
+        },
+        {
+          "nameAr": "المسيرة",
+          "nameFr": "El Massira",
+          "storedMm3": 1108.63,
+          "fillPct": 41.84
+        },
+        {
+          "nameAr": "إمفوت",
+          "nameFr": "Imfout",
+          "storedMm3": 1.17,
+          "fillPct": 12.97,
+          "flags": [
+            "low-contrast label, read with moderate confidence"
+          ]
+        }
+      ]
+    },
+    {
+      "transcribedFrom": "page 5",
+      "basinAr": "اللوكوس",
+      "basinFr": "Loukkos",
+      "fillPct": 72.13,
+      "storedMm3": 1411.31,
+      "capacityMm3": 1956.55,
+      "sameDay2025Pct": 44.46,
+      "dams": [
+        {
+          "nameAr": "خروب",
+          "nameFr": "Kharroub",
+          "storedMm3": 167.62,
+          "fillPct": 88.81
+        },
+        {
+          "nameAr": "طنجة المتوسط",
+          "nameFr": "Tanger Med",
+          "storedMm3": 19.22,
+          "fillPct": 84.98
+        },
+        {
+          "nameAr": "الشريف الإدريسي",
+          "nameFr": "Chérif Idrissi",
+          "storedMm3": 110.87,
+          "fillPct": 83.09
+        },
+        {
+          "nameAr": "سمير",
+          "nameFr": "Samir",
+          "storedMm3": 35.69,
+          "fillPct": 79.24
+        },
+        {
+          "nameAr": "م. لحسن بن المهدي",
+          "nameFr": "Expansion of 'م.' unverified (possibly Moulay); Lahcen Ben Mehdi (unverified)",
+          "storedMm3": 23.32,
+          "fillPct": 78.92
+        },
+        {
+          "nameAr": "دار خروفة",
+          "nameFr": "Dar Khroufa",
+          "storedMm3": 369.39,
+          "fillPct": 77.81
+        },
+        {
+          "nameAr": "شفشاون",
+          "nameFr": "Chefchaouen",
+          "storedMm3": 8.74,
+          "fillPct": 74.79
+        },
+        {
+          "nameAr": "تاسع أبريل 1947",
+          "nameFr": "9 Avril 1947",
+          "storedMm3": 204.3,
+          "fillPct": 66.84
+        },
+        {
+          "nameAr": "وادي المخازن",
+          "nameFr": "Oued El Makhazine",
+          "storedMm3": 455.61,
+          "fillPct": 65.48
+        },
+        {
+          "nameAr": "النخلة",
+          "nameFr": "Nkhila",
+          "storedMm3": 2.33,
+          "fillPct": 55.24
+        },
+        {
+          "nameAr": "بن عبد الكريم الخطابي",
+          "nameFr": "Ben Abdelkrim El Khattabi",
+          "storedMm3": 3.83,
+          "fillPct": 36.4
+        },
+        {
+          "nameAr": "إبن بطوطة",
+          "nameFr": "Ibn Battouta",
+          "storedMm3": 9.42,
+          "fillPct": 32.3
+        },
+        {
+          "nameAr": "جمعة",
+          "nameFr": "Jamaa",
+          "storedMm3": 0.97,
+          "fillPct": 17.94,
+          "flags": [
+            "low-contrast label, read with moderate confidence"
+          ]
+        }
+      ]
+    },
+    {
+      "transcribedFrom": "page 6",
+      "basinAr": "ملوية",
+      "basinFr": "Moulouya",
+      "fillPct": 71.98,
+      "storedMm3": 504.96,
+      "capacityMm3": 701.49,
+      "sameDay2025Pct": 27.7,
+      "dams": [
+        {
+          "nameAr": "سد على واد زا",
+          "nameFr": "Barrage sur l'Oued Za (unverified; 'على' read as 'on')",
+          "storedMm3": 87.92,
+          "fillPct": 100.0,
+          "flags": [
+            "name transliteration uncertain; 'على' means 'on', not a person's name"
+          ]
+        },
+        {
+          "nameAr": "صفيصيف",
+          "nameFr": "Safsaf",
+          "storedMm3": 17.27,
+          "fillPct": 98.9
+        },
+        {
+          "nameAr": "الركيزة",
+          "nameFr": "Errekiza",
+          "storedMm3": 13.8,
+          "fillPct": 88.46
+        },
+        {
+          "nameAr": "تمالوت",
+          "nameFr": "Tamalout",
+          "storedMm3": 41.49,
+          "fillPct": 86.69
+        },
+        {
+          "nameAr": "محمد الخامس",
+          "nameFr": "Mohammed V",
+          "storedMm3": 121.81,
+          "fillPct": 73.84
+        },
+        {
+          "nameAr": "مشرع حمادي",
+          "nameFr": "Mechra Hammadi",
+          "storedMm3": 3.22,
+          "fillPct": 68.85
+        },
+        {
+          "nameAr": "الحسن الثاني",
+          "nameFr": "Hassan II",
+          "storedMm3": 215.99,
+          "fillPct": 61.07
+        },
+        {
+          "nameAr": "إنجيل",
+          "nameFr": "Engil (unverified)",
+          "storedMm3": 3.47,
+          "fillPct": 37.15
+        }
+      ]
+    },
+    {
+      "transcribedFrom": "page 7",
+      "basinAr": "سبو",
+      "basinFr": "Sebou",
+      "fillPct": 73.72,
+      "storedMm3": 3958.96,
+      "capacityMm3": 5370.33,
+      "sameDay2025Pct": 41.7,
+      "dams": [
+        {
+          "nameAr": "علال الفاسي",
+          "nameFr": "Allal El Fassi",
+          "storedMm3": 15.28,
+          "fillPct": 97.48
+        },
+        {
+          "nameAr": "القنصرة",
+          "nameFr": "Al Qansra",
+          "storedMm3": 187.9,
+          "fillPct": 91.72
+        },
+        {
+          "nameAr": "منع سبو",
+          "nameFr": "Mnaa Sebou (unverified)",
+          "storedMm3": 19.91,
+          "fillPct": 91.21
+        },
+        {
+          "nameAr": "الساهلة",
+          "nameFr": "Sahla",
+          "storedMm3": 63.59,
+          "fillPct": 89.36
+        },
+        {
+          "nameAr": "باب لوطا",
+          "nameFr": "Bab Louta",
+          "storedMm3": 29.43,
+          "fillPct": 85.36
+        },
+        {
+          "nameAr": "بوهودة",
+          "nameFr": "Bouhouda",
+          "storedMm3": 34.22,
+          "fillPct": 76.24
+        },
+        {
+          "nameAr": "الوحدة",
+          "nameFr": "El Wahda",
+          "storedMm3": 2575.3,
+          "fillPct": 74.6
+        },
+        {
+          "nameAr": "إدريس الأول",
+          "nameFr": "Idriss I",
+          "storedMm3": 770.65,
+          "fillPct": 71.68
+        },
+        {
+          "nameAr": "سيدي الشاهد",
+          "nameFr": "Sidi Chahed",
+          "storedMm3": 93.18,
+          "fillPct": 60.5
+        },
+        {
+          "nameAr": "أسفالو",
+          "nameFr": "Asfalou",
+          "storedMm3": 168.75,
+          "fillPct": 57.23
+        },
+        {
+          "nameAr": "ميشليفن",
+          "nameFr": "Michliffen",
+          "storedMm3": 0.75,
+          "fillPct": 54.63
+        }
+      ]
+    },
+    {
+      "transcribedFrom": "page 8",
+      "basinAr": "أبي رقراق",
+      "basinFr": "Bouregreg",
+      "fillPct": 76.11,
+      "storedMm3": 1121.41,
+      "capacityMm3": 1473.39,
+      "sameDay2025Pct": 46.78,
+      "dams": [
+        {
+          "nameAr": "تيداس",
+          "nameFr": "Tidas",
+          "storedMm3": 418.71,
+          "fillPct": 82.79
+        },
+        {
+          "nameAr": "تامسنا",
+          "nameFr": "Tamesna",
+          "storedMm3": 40.38,
+          "fillPct": 78.25
+        },
+        {
+          "nameAr": "محمد بن عبد الله",
+          "nameFr": "Mohammed Ben Abdellah",
+          "storedMm3": 642.23,
+          "fillPct": 74.38
+        },
+        {
+          "nameAr": "المالح",
+          "nameFr": "El Malh",
+          "storedMm3": 19.35,
+          "fillPct": 49.88
+        },
+        {
+          "nameAr": "الحمر",
+          "nameFr": "El Hamar",
+          "storedMm3": 0.74,
+          "fillPct": 5.34,
+          "flags": [
+            "low-contrast label, read with moderate confidence"
+          ]
+        }
+      ]
+    },
+    {
+      "transcribedFrom": "page 9",
+      "basinAr": "تانسيفت",
+      "basinFr": "Tensift",
+      "fillPct": 81.0,
+      "storedMm3": 164.56,
+      "capacityMm3": 203.17,
+      "sameDay2025Pct": 48.91,
+      "dams": [
+        {
+          "nameAr": "أبو العباس السبتي",
+          "nameFr": "Abou Abbas Sebti",
+          "storedMm3": 19.77,
+          "fillPct": 88.39
+        },
+        {
+          "nameAr": "مولاي عبد الرحمان",
+          "nameFr": "Moulay Abderrahmane",
+          "storedMm3": 50.03,
+          "fillPct": 83.86
+        },
+        {
+          "nameAr": "لالة تاكركوست",
+          "nameFr": "Lalla Takerkoust",
+          "storedMm3": 40.96,
+          "fillPct": 81.25
+        },
+        {
+          "nameAr": "يعقوب المنصور",
+          "nameFr": "Yacoub El Mansour",
+          "storedMm3": 44.51,
+          "fillPct": 76.8
+        },
+        {
+          "nameAr": "بن سليمان الجزولي",
+          "nameFr": "Ben Sliman El Jazouli",
+          "storedMm3": 9.28,
+          "fillPct": 72.72
+        }
+      ]
+    },
+    {
+      "transcribedFrom": "page 10",
+      "basinAr": "سوس - ماسة",
+      "basinFr": "Souss-Massa",
+      "fillPct": 53.0,
+      "storedMm3": 383.13,
+      "capacityMm3": 722.83,
+      "sameDay2025Pct": 19.56,
+      "dams": [
+        {
+          "nameAr": "مولاي عبد الله",
+          "nameFr": "Moulay Abdallah",
+          "storedMm3": 78.57,
+          "fillPct": 95.9
+        },
+        {
+          "nameAr": "أهل سوس",
+          "nameFr": "Ahl Souss",
+          "storedMm3": 4.59,
+          "fillPct": 93.4
+        },
+        {
+          "nameAr": "أولوز",
+          "nameFr": "Oulouz",
+          "storedMm3": 71.89,
+          "fillPct": 80.81
+        },
+        {
+          "nameAr": "الدخيلة",
+          "nameFr": "Dakhila",
+          "storedMm3": 0.16,
+          "fillPct": 67.79
+        },
+        {
+          "nameAr": "يوسف بن تاشفين",
+          "nameFr": "Youssef Ben Tachfine",
+          "storedMm3": 144.24,
+          "fillPct": 49.59
+        },
+        {
+          "nameAr": "سيدي عبد الله",
+          "nameFr": "Sidi Abdallah",
+          "storedMm3": 4.8,
+          "fillPct": 45.92
+        },
+        {
+          "nameAr": "عبد المومن",
+          "nameFr": "Abdelmoumen",
+          "storedMm3": 72.44,
+          "fillPct": 36.5
+        },
+        {
+          "nameAr": "إمي الخنك",
+          "nameFr": "Imi El Khenk (unverified)",
+          "storedMm3": 2.21,
+          "fillPct": 30.47,
+          "flags": [
+            "low-contrast label, read with moderate confidence"
+          ]
+        },
+        {
+          "nameAr": "المختار السوسي",
+          "nameFr": "Mokhtar Soussi",
+          "storedMm3": 4.22,
+          "fillPct": 10.61,
+          "flags": [
+            "low-contrast label, read with moderate confidence"
+          ]
+        }
+      ]
+    },
+    {
+      "transcribedFrom": "page 11",
+      "basinAr": "درعة - واد نون",
+      "basinFr": "Drâa-Oued Noun",
+      "fillPct": 39.69,
+      "storedMm3": 416.05,
+      "capacityMm3": 1048.18,
+      "sameDay2025Pct": 28.22,
+      "dams": [
+        {
+          "nameAr": "المنصور الذهبي",
+          "nameFr": "El Mansour Eddahbi",
+          "storedMm3": 229.04,
+          "fillPct": 51.44
+        },
+        {
+          "nameAr": "أكدز",
+          "nameFr": "Agdz",
+          "storedMm3": 105.17,
+          "fillPct": 42.97
+        },
+        {
+          "nameAr": "تويزكي الرمز",
+          "nameFr": "Touizgui Ramz (unverified)",
+          "storedMm3": 19.8,
+          "fillPct": 25.38,
+          "flags": [
+            "low-contrast label, read with moderate confidence"
+          ]
+        },
+        {
+          "nameAr": "مولاي علي الشريف",
+          "nameFr": "Moulay Ali Cherif",
+          "storedMm3": 62.04,
+          "fillPct": 22.14,
+          "flags": [
+            "low-contrast label, read with moderate confidence"
+          ]
+        }
+      ]
+    },
+    {
+      "transcribedFrom": "page 12",
+      "basinAr": "كير- زيز- غريس",
+      "basinFr": "Guir-Ziz-Ghriss",
+      "fillPct": 59.9,
+      "storedMm3": 328.42,
+      "capacityMm3": 548.28,
+      "sameDay2025Pct": 46.33,
+      "dams": [
+        {
+          "nameAr": "حسن الداخل",
+          "nameFr": "Hassan Dakhil",
+          "storedMm3": 228.61,
+          "fillPct": 79.5
+        },
+        {
+          "nameAr": "قدوسة",
+          "nameFr": "Qadousa",
+          "storedMm3": 96.55,
+          "fillPct": 43.07
+        },
+        {
+          "nameAr": "تودغى",
+          "nameFr": "Toudghi",
+          "storedMm3": 3.26,
+          "fillPct": 8.92,
+          "flags": [
+            "low-contrast label, read with moderate confidence"
+          ]
+        }
+      ]
+    }
+  ]
+}

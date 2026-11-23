@@ -1,0 +1,1839 @@
+{
+  "schema": "srmsm.dam_dimensions.v1",
+  "generated_on": "2026-11-19",
+  "convention": "Every field is {value, unit, source}. source is null when the value is absent. Source ids are in \"sources\". Null means not found in any source checked on 2026-11-19; it does not mean the dam has no such value.",
+  "units": {
+    "capacity": "Mm3 (million m3)",
+    "area": "km2",
+    "depth ratio": "Mm3/km2, numerically equal to mean depth in metres"
+  },
+  "sources": {
+    "GDW_v1_0": {
+      "name": "Global Dam Watch v1.0 (GDW), barriers layer, GDW_barriers_v1_0.dbf",
+      "url": "https://doi.org/10.6084/m9.figshare.25988293",
+      "file": "https://ndownloader.figshare.com/files/47913754 (GDW_v1_0_shp.zip)",
+      "date": "Figshare version published 2024-07-25; accessed 2026-11-19",
+      "licence": "CC BY 4.0 (Figshare metadata for the dataset)",
+      "note": "Version 1.0 was the one publicly downloadable from Figshare; the v1.3 named in the brief was not obtained. Missing values are -99 in the source. Coordinates taken from LAT_RIV/LONG_RIV because LAT_DAM/LONG_DAM are 0 for these rows."
+    },
+    "WIKI_FR_MOULAY_SOUSSI": {
+      "name": "Wikipedia FR, Barrage Mokhtar Soussi",
+      "url": "https://fr.wikipedia.org/wiki/Barrage_Mokhtar_Soussi",
+      "date": "article last modified 25 Mar 2026 (per fetch); accessed 2026-11-19",
+      "licence": "CC BY-SA 4.0 (Wikipedia default; not checked on the page)",
+      "note": "Read through a model-written summary of the fetched page."
+    },
+    "WIKI_FR_YBT": {
+      "name": "Wikipedia FR, Barrage Youssef Ben Tachfine",
+      "url": "https://fr.wikipedia.org/wiki/Barrage_Youssef_Ben_Tachfine",
+      "date": "undated; accessed 2026-11-19",
+      "licence": "CC BY-SA 4.0 (Wikipedia default; not checked on the page)",
+      "note": "Read through a model-written summary of the fetched page."
+    },
+    "RCC_DAMS_AOULOUZ": {
+      "name": "RCC Dams (rccdams.co.uk), Aoulouz record",
+      "url": "https://rccdams.co.uk/dams/aoulouz/",
+      "date": "undated; accessed 2026-11-19",
+      "licence": "not stated on the page"
+    },
+    "STRUCTURAE_AOULOUZ": {
+      "name": "Structurae, Barrage d'Aoulouz",
+      "url": "https://structurae.net/fr/ouvrages/barrage-d-aoulouz",
+      "date": "undated; accessed 2026-11-19",
+      "licence": "not stated on the page"
+    },
+    "STRUCTURAE_MOULAY_YOUSSEF": {
+      "name": "Structurae, Barrage Moulay Youssef",
+      "url": "https://structurae.net/fr/ouvrages/barrage-moulay-youssef",
+      "date": "undated; accessed 2026-11-19",
+      "licence": "not stated on the page"
+    },
+    "JICA_S2": {
+      "name": "JICA feasibility study on medium dams in rural areas, Vol. III, Table VI1.1 (cited as S2 in docs/research/01-dams-to-service-areas.md)",
+      "url": "https://openjicareport.jica.go.jp/pdf/11657632_15.pdf",
+      "date": "UNVERIFIED (early 2000s, inferred; report date not on extracted pages)",
+      "licence": "JICA report; reuse terms not checked"
+    },
+    "ABHSM_CP_2026": {
+      "name": "ABHSM board press release (Conseil d'administration)",
+      "url": "https://abhsm.njt-group.com/uploads/communiques_presse/1/attachment/fr/1781176181_sg8knkgm_cp-ca-abhsm-vfr-fin-f.pdf",
+      "date": "16 Jan 2026",
+      "licence": "not stated"
+    },
+    "MAP_MOULAY_SOUSSI": {
+      "name": "MAP article on Mokhtar Soussi dam (maroc.ma)",
+      "url": "https://www.maroc.ma/fr/actualites/taroudant-le-barrage-mokhtar-soussi-un-ouvrage-hydraulique-structurant-au-bassin-de-souss-massa",
+      "date": "3 Feb 2026",
+      "licence": "not stated",
+      "note": "Read through a model-written summary of the fetched page."
+    },
+    "INFOMEDIAIRE_AOULOUZ": {
+      "name": "Infomediaire, Taroudant: barrage Aoulouz (snippet only, not opened)",
+      "url": "https://www.infomediaire.net/?p=189134",
+      "date": "undated; snippet seen 2026-11-19",
+      "licence": "not stated",
+      "note": "Search snippet only."
+    },
+    "BIRDLIFE_MANSOUR": {
+      "name": "BirdLife Data Zone, IBA factsheet for Barrage Al Mansour Ad Dhabi",
+      "url": "https://datazone.birdlife.org/site/factsheet/barrage-al-mansour-ad-dhabi-iba-morocco/text",
+      "date": "undated; snippet seen 2026-11-19",
+      "licence": "not stated",
+      "note": "Used only for the 1972 formation date and location on the Draa."
+    }
+  },
+  "dams": [
+    {
+      "id": "aoulouz",
+      "name": "Aoulouz",
+      "basin": "Souss-Massa",
+      "gdw_name": "Aoulouz",
+      "river_as_sourced": "Souss",
+      "fields": {
+        "capacity_normal_Mm3": {
+          "value": 110,
+          "unit": "Mm3",
+          "source": {
+            "id": "RCC_DAMS_AOULOUZ",
+            "field": "Reservoir capacity"
+          },
+          "note": "RCC Dams \"110 m3x106\"; GDW CAP_MCM 110 (same value). Infomediaire snippet says 108 Mm3 (not opened). Existing note 01 says 108 (CIHEAM snippet)."
+        },
+        "dead_storage_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published in any source checked."
+        },
+        "regulated_volume_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published in any source checked."
+        },
+        "dam_height_m": {
+          "value": 79,
+          "unit": "m",
+          "source": {
+            "id": "RCC_DAMS_AOULOUZ",
+            "field": "Dam height"
+          },
+          "note": "Also in Structurae and GDW DAM_HGT_M (79)."
+        },
+        "crest_length_m": {
+          "value": 476,
+          "unit": "m",
+          "source": {
+            "id": "RCC_DAMS_AOULOUZ"
+          },
+          "note": "RCC Dams label is \"Length\", not explicitly crest length."
+        },
+        "crest_elevation_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published in any source checked."
+        },
+        "normal_level_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published in any source checked."
+        },
+        "reservoir_area_km2": {
+          "value": 3.261,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "AREA_SKM"
+          }
+        },
+        "catchment_km2": {
+          "value": 4466,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CATCH_SKM"
+          }
+        },
+        "river": {
+          "value": "Souss",
+          "unit": "",
+          "source": {
+            "id": "RCC_DAMS_AOULOUZ"
+          },
+          "note": "GDW RIVER field = \"Souss-Massa\"."
+        },
+        "year_completed": {
+          "value": 1991,
+          "unit": "year",
+          "source": {
+            "id": "RCC_DAMS_AOULOUZ"
+          },
+          "note": "RCC \"End of project 11/91\". Structurae gives 1990. GDW YEAR_DAM 1991."
+        },
+        "dam_type": {
+          "value": "Gravity dam, concrete",
+          "unit": "",
+          "source": {
+            "id": "RCC_DAMS_AOULOUZ"
+          },
+          "note": "Structurae also says \"barrage-poids en béton\"."
+        },
+        "purpose": {
+          "value": "Flood control; groundwater recharge; irrigation",
+          "unit": "",
+          "source": {
+            "id": "RCC_DAMS_AOULOUZ"
+          },
+          "note": "GDW MAIN_USE = Irrigation."
+        },
+        "latitude": {
+          "value": 30.69302,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "RCC_DAMS_AOULOUZ"
+          },
+          "note": "Dam point. Structurae DMS 30°41'34.29\"N gives 30.6929."
+        },
+        "longitude": {
+          "value": -8.137744,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "RCC_DAMS_AOULOUZ"
+          },
+          "note": "Dam point. Structurae DMS 8°8'17.62\"W gives -8.1382."
+        }
+      },
+      "gdw_raw": {
+        "CAP_MCM": 110.0,
+        "CAP_REP": 110.0,
+        "CAP_MIN": -99.0,
+        "CAP_MAX": -99.0,
+        "AREA_POLY": 3.261,
+        "AREA_REP": 0.5,
+        "DAM_HGT_M": 79,
+        "DAM_LEN_M": -99,
+        "ELEV_MASL": 751,
+        "CATCH_SKM": 4466,
+        "DEPTH_M": 33.7,
+        "YEAR_DAM": 1991,
+        "MAIN_USE": "Irrigation",
+        "DAM_TYPE": "Dam",
+        "QUALITY": "2: Good",
+        "LAT_RIV": 30.694654,
+        "LONG_RIV": -8.137799
+      },
+      "area_volume_ratio": {
+        "value": 33.73,
+        "unit": "Mm3/km2",
+        "basis": "GDW CAP_MCM / GDW AREA_SKM (both GDW, same record)",
+        "flags": [
+          "GDW AREA_REP is 0.5 km2 vs AREA_POLY 3.261 km2; area basis uncertain. GDW DEPTH_M 33.7 agrees with the ratio."
+        ],
+        "caveat": "Order-of-magnitude shape assumption only, not a measured bathymetric curve."
+      },
+      "conflicts": [
+        "Capacity 110 (RCC, GDW) vs 108 (Infomediaire snippet; existing note).",
+        "Completion 1990 (Structurae) vs 1991 (RCC, GDW).",
+        "Reservoir area: GDW polygon 3.261 km2 vs GDW reported area 0.5 km2.",
+        "Structurae lists dam volume 850,000 m3, which is a dam body volume and not reservoir storage."
+      ]
+    },
+    {
+      "id": "mokhtar_soussi",
+      "name": "Mokhtar Soussi",
+      "basin": "Souss-Massa",
+      "gdw_name": null,
+      "fields": {
+        "capacity_normal_Mm3": {
+          "value": 50,
+          "unit": "Mm3",
+          "source": {
+            "id": "WIKI_FR_MOULAY_SOUSSI",
+            "field": "Reservoir capacity (pre-raising, not the target)"
+          },
+          "note": "Pre-raising capacity. Raised capacity is 281 Mm3 (ABHSM 2026; Le360 PLF 2027 gives 280). The MAP article says the raise is \"sept fois sa capacité initiale\", which contradicts 281/50 = 5.6. Raising not completed: commissioning target early 2027."
+        },
+        "capacity_raised_target_Mm3": {
+          "value": 281,
+          "unit": "Mm3",
+          "source": {
+            "id": "ABHSM_CP_2026",
+            "field": "Capacity after raising (target)"
+          },
+          "note": "Target after raising, not yet commissioned."
+        },
+        "dead_storage_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published in any source checked."
+        },
+        "dam_height_m": {
+          "value": 62,
+          "unit": "m",
+          "source": {
+            "id": "WIKI_FR_MOULAY_SOUSSI",
+            "field": "Dam height"
+          },
+          "note": "Stated as \"hauteur sur fondation\"."
+        },
+        "crest_length_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "note": "Not published in any source checked."
+        },
+        "crest_elevation_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published in any source checked."
+        },
+        "normal_level_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published in any source checked."
+        },
+        "reservoir_area_km2": {
+          "value": 8.74,
+          "unit": "km2",
+          "source": {
+            "id": "MAP_MOULAY_SOUSSI"
+          },
+          "note": "Stated as \"c. 874 ha\" for the surface after raising. Not confirmed at normal retention level of the raised dam."
+        },
+        "catchment_km2": {
+          "value": null,
+          "unit": "km2",
+          "source": null,
+          "note": "Not published in any source checked. MAP gives mean annual inflow 133 Mm3/yr (not a catchment area)."
+        },
+        "river": {
+          "value": "Aouzioua",
+          "unit": "",
+          "source": {
+            "id": "WIKI_FR_MOULAY_SOUSSI"
+          }
+        },
+        "year_completed": {
+          "value": 2001,
+          "unit": "year",
+          "source": {
+            "id": "WIKI_FR_MOULAY_SOUSSI"
+          },
+          "note": "Commissioned 2001 after 72 months of construction."
+        },
+        "dam_type": {
+          "value": "Earth/rockfill (enrochement) with concrete upstream face",
+          "unit": "",
+          "source": {
+            "id": "WIKI_FR_MOULAY_SOUSSI"
+          }
+        },
+        "purpose": {
+          "value": "Irrigation (citrus, Sebt El Guerdane and Ouled Teima)",
+          "unit": "",
+          "source": {
+            "id": "WIKI_FR_MOULAY_SOUSSI"
+          },
+          "note": "Article citation for the 10,000 ha is marked as needed."
+        },
+        "latitude": {
+          "value": 30.73472,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "WIKI_FR_MOULAY_SOUSSI"
+          },
+          "note": "Converted from DMS 30°44′05″N."
+        },
+        "longitude": {
+          "value": -7.98,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "WIKI_FR_MOULAY_SOUSSI"
+          },
+          "note": "Converted from DMS 7°58′48″W."
+        }
+      },
+      "area_volume_ratio": {
+        "value": 32.15,
+        "unit": "Mm3/km2",
+        "basis": "Raised target capacity 281 Mm3 (ABHSM) / surface after raising c. 874 ha (MAP). Pre-raising pair not available (no surface).",
+        "flags": [
+          "PROVISIONAL: planned raised state, not commissioned; capacity sources conflict (50 base vs 281 target). Surface is from a fetched summary, not normal level."
+        ],
+        "caveat": "Order-of-magnitude shape assumption only, not a measured bathymetric curve."
+      },
+      "conflicts": [
+        "Capacity: 50 Mm3 (Wikipedia FR, MAP base) vs 281 Mm3 (ABHSM target; Le360 280). MAP also says \"sept fois\" (7x)."
+      ]
+    },
+    {
+      "id": "abdelmoumen",
+      "name": "Abdelmoumen",
+      "basin": "Souss-Massa",
+      "gdw_name": "Abdelmoumen",
+      "fields": {
+        "capacity_normal_Mm3": {
+          "value": 216.0,
+          "unit": "Mm3",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CAP_MCM"
+          }
+        },
+        "dead_storage_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published in any source checked."
+        },
+        "regulated_volume_Mm3": {
+          "value": 68.5,
+          "unit": "Mm3",
+          "source": {
+            "id": "JICA_S2"
+          },
+          "note": "JICA regulated volume. Not dead storage."
+        },
+        "dam_height_m": {
+          "value": 94,
+          "unit": "m",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "DAM_HGT_M"
+          }
+        },
+        "crest_length_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "note": "GDW DAM_LEN_M missing (-99)."
+        },
+        "crest_elevation_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published in any source checked."
+        },
+        "normal_level_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published in any source checked."
+        },
+        "reservoir_area_km2": {
+          "value": 3.702,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "AREA_SKM"
+          }
+        },
+        "catchment_km2": {
+          "value": 1313,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CATCH_SKM"
+          }
+        },
+        "river": {
+          "value": "Issen",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          },
+          "note": "GDW RIVER field."
+        },
+        "year_completed": {
+          "value": 1981,
+          "unit": "year",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "YEAR_DAM"
+          }
+        },
+        "dam_type": {
+          "value": "Concrete (C), per JICA code",
+          "unit": "",
+          "source": {
+            "id": "JICA_S2"
+          },
+          "note": "JICA code \"C\"; GDW DAM_TYPE = \"Dam\"."
+        },
+        "purpose": {
+          "value": "Hydro, irrigation, drinking water (JICA codes E, I, AEPI); GDW MAIN_USE = Irrigation",
+          "unit": "",
+          "source": {
+            "id": "JICA_S2"
+          }
+        },
+        "latitude": {
+          "value": 30.677083,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "GDW_v1_0"
+          },
+          "note": "River point from GDW (dam point not given)."
+        },
+        "longitude": {
+          "value": -9.20222,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "GDW_v1_0"
+          },
+          "note": "River point from GDW (dam point not given)."
+        }
+      },
+      "area_volume_ratio": {
+        "value": 58.35,
+        "unit": "Mm3/km2",
+        "basis": "GDW CAP_MCM / GDW AREA_SKM",
+        "flags": [
+          "GDW AREA_REP 8.0 km2 vs AREA_POLY 3.702 km2."
+        ],
+        "caveat": "Order-of-magnitude shape assumption only, not a measured bathymetric curve."
+      },
+      "conflicts": [
+        "Capacity: GDW 216 and JICA 216 (present capacity) vs search snippets 198.4 and 142.8 (existing note 01, unresolved).",
+        "Area: GDW polygon 3.702 km2 vs reported 8.0 km2."
+      ]
+    },
+    {
+      "id": "youssef_ben_tachfine",
+      "name": "Youssef Ben Tachfine",
+      "basin": "Souss-Massa",
+      "gdw_name": "Youssf Ben Tachfine",
+      "fields": {
+        "capacity_normal_Mm3": {
+          "value": 320.0,
+          "unit": "Mm3",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CAP_MCM"
+          }
+        },
+        "capacity_wikipedia_Mm3": {
+          "value": 303.5,
+          "unit": "Mm3",
+          "source": {
+            "id": "WIKI_FR_YBT"
+          },
+          "note": "\"Volume\" 303.5 Mm3 on the article."
+        },
+        "dead_storage_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published in any source checked."
+        },
+        "dam_height_m": {
+          "value": 85,
+          "unit": "m",
+          "source": {
+            "id": "WIKI_FR_YBT"
+          },
+          "note": "Stated as river-bed height. GDW DAM_HGT_M also 85."
+        },
+        "crest_length_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "note": "GDW DAM_LEN_M missing (-99)."
+        },
+        "crest_elevation_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published in any source checked."
+        },
+        "normal_level_m_ngm": {
+          "value": 96,
+          "unit": "m",
+          "source": {
+            "id": "WIKI_FR_YBT"
+          },
+          "note": "Wikipedia lists a \"reservoir altitude\" of 96 m. Not clear whether this is normal level, bed level or another reference. Treat as unverified. GDW ELEV_MASL is 97 (DEM-derived minimum)."
+        },
+        "reservoir_area_km2": {
+          "value": 6.171,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "AREA_SKM"
+          }
+        },
+        "catchment_km2": {
+          "value": 3878,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CATCH_SKM"
+          }
+        },
+        "river": {
+          "value": "Oued Massa (Massa)",
+          "unit": "",
+          "source": {
+            "id": "WIKI_FR_YBT"
+          }
+        },
+        "year_completed": {
+          "value": 1972,
+          "unit": "year",
+          "source": {
+            "id": "WIKI_FR_YBT"
+          },
+          "note": "GDW YEAR_DAM 1972."
+        },
+        "dam_type": {
+          "value": "Embankment (barrage en remblai)",
+          "unit": "",
+          "source": {
+            "id": "WIKI_FR_YBT"
+          }
+        },
+        "purpose": {
+          "value": "Irrigation, drinking water, industrial water",
+          "unit": "",
+          "source": {
+            "id": "WIKI_FR_YBT"
+          }
+        },
+        "latitude": {
+          "value": 29.84556,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "WIKI_FR_YBT"
+          },
+          "note": "Converted from DMS 29°50′44″N. GDW river point 29.8443."
+        },
+        "longitude": {
+          "value": -9.49444,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "WIKI_FR_YBT"
+          },
+          "note": "Converted from DMS 9°29′40″W. GDW river point -9.4929."
+        }
+      },
+      "area_volume_ratio": {
+        "value": 51.86,
+        "unit": "Mm3/km2",
+        "basis": "GDW CAP_MCM 320 / GDW AREA_SKM 6.171 (same source). Cross-source alternative: Wikipedia 303.5 / GDW 6.171 = 49.2.",
+        "flags": [
+          "Capacity conflict (320 GDW vs 303.5 Wikipedia). GDW CAP_MIN 300."
+        ],
+        "caveat": "Order-of-magnitude shape assumption only, not a measured bathymetric curve."
+      },
+      "conflicts": [
+        "Capacity: 320 Mm3 (GDW CAP_MCM) vs 303.5 Mm3 (Wikipedia FR, JICA/CIHEAM snippets 303).",
+        "Reservoir altitude 96 m (Wikipedia) vs 97 m (GDW ELEV_MASL)."
+      ]
+    },
+    {
+      "id": "dkhila",
+      "name": "Dkhila",
+      "basin": "Souss-Massa",
+      "gdw_name": null,
+      "fields": {
+        "capacity_normal_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Only JICA present capacity 0.7 Mm3 (table S2). Press fill reports (search snippets, Mar 2025 0.158 Mm3 = 79%) would imply about 0.2 Mm3 but that is arithmetic, not a stated capacity, and was not used."
+        },
+        "dead_storage_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published."
+        },
+        "dam_height_m": {
+          "value": 32,
+          "unit": "m",
+          "source": {
+            "id": "JICA_S2"
+          },
+          "note": "JICA table, earth-fill (B), start 1986."
+        },
+        "crest_length_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "note": "Not published in any source checked."
+        },
+        "crest_elevation_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published."
+        },
+        "normal_level_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published."
+        },
+        "reservoir_area_km2": {
+          "value": null,
+          "unit": "km2",
+          "source": null,
+          "note": "Not published."
+        },
+        "catchment_km2": {
+          "value": null,
+          "unit": "km2",
+          "source": null,
+          "note": "Not published."
+        },
+        "river": {
+          "value": null,
+          "unit": "",
+          "source": null,
+          "note": "Not published. Note 01 says it is on the Issen (Abdelmoumen)."
+        },
+        "year_completed": {
+          "value": 1986,
+          "unit": "year",
+          "source": {
+            "id": "JICA_S2"
+          },
+          "note": "JICA start year."
+        },
+        "dam_type": {
+          "value": "Earth-fill (code B)",
+          "unit": "",
+          "source": {
+            "id": "JICA_S2"
+          }
+        },
+        "purpose": {
+          "value": "Downstream regulation of Abdelmoumen flow (JICA text); function code BC not explained",
+          "unit": "",
+          "source": {
+            "id": "JICA_S2"
+          }
+        },
+        "latitude": {
+          "value": null,
+          "unit": "deg",
+          "source": null,
+          "note": "Not published."
+        },
+        "longitude": {
+          "value": null,
+          "unit": "deg",
+          "source": null,
+          "note": "Not published."
+        }
+      },
+      "area_volume_ratio": {
+        "value": null,
+        "unit": "Mm3/km2",
+        "basis": "not computed: capacity or area not sourced",
+        "flags": [
+          "Capacity 0.7 Mm3 (JICA) is not paired with any sourced surface."
+        ]
+      },
+      "conflicts": [
+        "JICA present capacity 0.7 Mm3 vs press-derived arithmetic about 0.2 Mm3 (not a source value)."
+      ]
+    },
+    {
+      "id": "ahl_souss",
+      "name": "Ahl Souss",
+      "basin": "Souss-Massa",
+      "gdw_name": null,
+      "fields": {
+        "capacity_normal_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "No published capacity found. Search summaries give about 4.7 Mm3 (derived from a fill level, not stated) and about 5 Mm3 (snippet, lavieeco). Not used."
+        },
+        "dead_storage_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published."
+        },
+        "dam_height_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "note": "Not published."
+        },
+        "crest_length_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "note": "Not published."
+        },
+        "crest_elevation_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published."
+        },
+        "normal_level_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published."
+        },
+        "reservoir_area_km2": {
+          "value": null,
+          "unit": "km2",
+          "source": null,
+          "note": "Not published."
+        },
+        "catchment_km2": {
+          "value": null,
+          "unit": "km2",
+          "source": null,
+          "note": "Not published."
+        },
+        "river": {
+          "value": null,
+          "unit": "",
+          "source": null,
+          "note": "Not published."
+        },
+        "year_completed": {
+          "value": null,
+          "unit": "year",
+          "source": null,
+          "note": "Not published."
+        },
+        "dam_type": {
+          "value": null,
+          "unit": "",
+          "source": null,
+          "note": "Not published."
+        },
+        "purpose": {
+          "value": null,
+          "unit": "",
+          "source": null,
+          "note": "Only a qualitative mention in the 2026 ABHSM-era press (existing note 01)."
+        },
+        "latitude": {
+          "value": null,
+          "unit": "deg",
+          "source": null,
+          "note": "Not published."
+        },
+        "longitude": {
+          "value": null,
+          "unit": "deg",
+          "source": null,
+          "note": "Not published."
+        }
+      },
+      "area_volume_ratio": {
+        "value": null,
+        "unit": "Mm3/km2",
+        "basis": "not computed: capacity or area not sourced",
+        "flags": []
+      },
+      "conflicts": [
+        "Capacity 4.7 Mm3 (derived) vs about 5 Mm3 (snippet). Neither is a published value."
+      ]
+    },
+    {
+      "id": "imi_el_kheng",
+      "name": "Imi El Kheng",
+      "basin": "Souss-Massa",
+      "gdw_name": null,
+      "fields": {
+        "capacity_normal_Mm3": {
+          "value": 12,
+          "unit": "Mm3",
+          "source": {
+            "id": "JICA_S2",
+            "field": "Present capacity"
+          },
+          "note": "JICA \"present capacity\". Not verified against a normal retention level."
+        },
+        "regulated_volume_Mm3": {
+          "value": 4.5,
+          "unit": "Mm3",
+          "source": {
+            "id": "JICA_S2"
+          }
+        },
+        "dead_storage_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published."
+        },
+        "dam_height_m": {
+          "value": 39,
+          "unit": "m",
+          "source": {
+            "id": "JICA_S2"
+          }
+        },
+        "crest_length_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "note": "Not published."
+        },
+        "crest_elevation_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published."
+        },
+        "normal_level_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published."
+        },
+        "reservoir_area_km2": {
+          "value": 10.0,
+          "unit": "km2",
+          "source": {
+            "id": "JICA_S2"
+          },
+          "note": "JICA \"surface area\" 1,000 ha. SUSPECT: 12 Mm3 over 10 km2 implies mean depth 1.2 m for a 39 m dam. The 1,000 ha is probably not the reservoir surface (could be the irrigated area). Do not use until checked."
+        },
+        "catchment_km2": {
+          "value": null,
+          "unit": "km2",
+          "source": null,
+          "note": "Not published."
+        },
+        "river": {
+          "value": "Oued Berhil",
+          "unit": "",
+          "source": {
+            "id": "JICA_S2"
+          },
+          "note": "Named in existing note 01."
+        },
+        "year_completed": {
+          "value": 1993,
+          "unit": "year",
+          "source": {
+            "id": "JICA_S2"
+          },
+          "note": "JICA \"BCR, 1993\" start year."
+        },
+        "dam_type": {
+          "value": "Code BCR (meaning not verified)",
+          "unit": "",
+          "source": {
+            "id": "JICA_S2"
+          }
+        },
+        "purpose": {
+          "value": "Irrigation; groundwater recharge (codes I, AN; AN meaning unverified)",
+          "unit": "",
+          "source": {
+            "id": "JICA_S2"
+          }
+        },
+        "latitude": {
+          "value": null,
+          "unit": "deg",
+          "source": null,
+          "note": "Not published."
+        },
+        "longitude": {
+          "value": null,
+          "unit": "deg",
+          "source": null,
+          "note": "Not published."
+        }
+      },
+      "area_volume_ratio": {
+        "value": 1.2,
+        "unit": "Mm3/km2",
+        "basis": "JICA present capacity 12 Mm3 / JICA surface 1,000 ha",
+        "flags": [
+          "SUSPECT: surface value probably not a reservoir surface; ratio 1.2 is not usable."
+        ],
+        "caveat": "Order-of-magnitude shape assumption only, not a measured bathymetric curve."
+      },
+      "conflicts": [
+        "Surface 1,000 ha (JICA) is implausibly large for 12 Mm3 at 39 m height."
+      ]
+    },
+    {
+      "id": "moulay_abdellah",
+      "name": "Moulay Abdellah",
+      "basin": "Souss-Massa",
+      "gdw_name": "Moulay Abdellah",
+      "fields": {
+        "capacity_normal_Mm3": {
+          "value": 110.0,
+          "unit": "Mm3",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CAP_MCM"
+          }
+        },
+        "dead_storage_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published."
+        },
+        "dam_height_m": {
+          "value": 65,
+          "unit": "m",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "DAM_HGT_M"
+          }
+        },
+        "crest_length_m": {
+          "value": 325,
+          "unit": "m",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "DAM_LEN_M"
+          }
+        },
+        "crest_elevation_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published."
+        },
+        "normal_level_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published. GDW ELEV_MASL 170 is a DEM-derived reservoir-surface minimum, not a normal level."
+        },
+        "reservoir_area_km2": {
+          "value": 5.859,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "AREA_SKM"
+          }
+        },
+        "catchment_km2": {
+          "value": 1248,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CATCH_SKM"
+          }
+        },
+        "river": {
+          "value": "Ougar",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "year_completed": {
+          "value": 2004,
+          "unit": "year",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "YEAR_DAM"
+          }
+        },
+        "dam_type": {
+          "value": "Dam (GDW DAM_TYPE)",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "purpose": {
+          "value": "Water supply (GDW MAIN_USE)",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "latitude": {
+          "value": 30.757751,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "GDW_v1_0"
+          },
+          "note": "River point from GDW."
+        },
+        "longitude": {
+          "value": -9.68823,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "GDW_v1_0"
+          },
+          "note": "River point from GDW."
+        }
+      },
+      "area_volume_ratio": {
+        "value": 18.77,
+        "unit": "Mm3/km2",
+        "basis": "GDW CAP_MCM / GDW AREA_SKM",
+        "flags": [],
+        "caveat": "Order-of-magnitude shape assumption only, not a measured bathymetric curve."
+      },
+      "conflicts": [
+        "Not in JICA (2002 onward dam). Existing note 01 gives no capacity."
+      ]
+    },
+    {
+      "id": "sidi_abdellah",
+      "name": "Sidi Abdellah",
+      "basin": "Souss-Massa (Ouaar, per existing note)",
+      "gdw_name": null,
+      "fields": {
+        "capacity_normal_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Only JICA regulated volume 10 Mm3 (planned in the JICA text). Not a normal-level capacity."
+        },
+        "regulated_volume_Mm3": {
+          "value": 10,
+          "unit": "Mm3",
+          "source": {
+            "id": "JICA_S2"
+          },
+          "note": "Regulated volume; mean annual supply 8.2 Mm3/yr."
+        },
+        "dead_storage_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published."
+        },
+        "dam_height_m": {
+          "value": 65,
+          "unit": "m",
+          "source": {
+            "id": "JICA_S2"
+          }
+        },
+        "crest_length_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "note": "Not published."
+        },
+        "crest_elevation_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published."
+        },
+        "normal_level_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published."
+        },
+        "reservoir_area_km2": {
+          "value": null,
+          "unit": "km2",
+          "source": null,
+          "note": "Not published."
+        },
+        "catchment_km2": {
+          "value": null,
+          "unit": "km2",
+          "source": null,
+          "note": "Not published."
+        },
+        "river": {
+          "value": "Ouaar",
+          "unit": "",
+          "source": {
+            "id": "JICA_S2"
+          },
+          "note": "Per existing note 01."
+        },
+        "year_completed": {
+          "value": 1965,
+          "unit": "year",
+          "source": {
+            "id": "JICA_S2"
+          },
+          "note": "Start year as listed in JICA table, UNVERIFIED. JICA text describes the dam as programmed, not built."
+        },
+        "dam_type": {
+          "value": "Earth-fill (code E)",
+          "unit": "",
+          "source": {
+            "id": "JICA_S2"
+          }
+        },
+        "purpose": {
+          "value": "Recharge of the Sebt El Guerdane aquifer (JICA text)",
+          "unit": "",
+          "source": {
+            "id": "JICA_S2"
+          }
+        },
+        "latitude": {
+          "value": null,
+          "unit": "deg",
+          "source": null,
+          "note": "Not published."
+        },
+        "longitude": {
+          "value": null,
+          "unit": "deg",
+          "source": null,
+          "note": "Not published."
+        }
+      },
+      "area_volume_ratio": {
+        "value": null,
+        "unit": "Mm3/km2",
+        "basis": "not computed: capacity or area not sourced",
+        "flags": [
+          "Name collision: GDW \"Sidi Mohamed Ben Abdellah\" is a different dam on the Bou Regreg; do not match by name."
+        ]
+      },
+      "conflicts": [
+        "JICA lists it as a table entry but the text says programmed, not built; current status unverified."
+      ]
+    },
+    {
+      "id": "lalla_takerkoust",
+      "name": "Lalla Takerkoust",
+      "basin": "Tensift",
+      "gdw_name": "Lalla Takerkoust",
+      "fields": {
+        "capacity_normal_Mm3": {
+          "value": 96.0,
+          "unit": "Mm3",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CAP_MCM"
+          }
+        },
+        "dead_storage_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published."
+        },
+        "dam_height_m": {
+          "value": 71,
+          "unit": "m",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "DAM_HGT_M"
+          }
+        },
+        "crest_length_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "note": "GDW DAM_LEN_M missing (-99)"
+        },
+        "crest_elevation_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published."
+        },
+        "normal_level_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published. GDW ELEV_MASL is a DEM-derived minimum of the reservoir surface."
+        },
+        "reservoir_area_km2": {
+          "value": 4.789,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "AREA_SKM"
+          }
+        },
+        "catchment_km2": {
+          "value": 1699,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CATCH_SKM"
+          }
+        },
+        "river": {
+          "value": "N'Fis",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "year_completed": {
+          "value": 1935,
+          "unit": "year",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "YEAR_DAM"
+          }
+        },
+        "dam_type": {
+          "value": "Dam",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "purpose": {
+          "value": "Irrigation",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "latitude": {
+          "value": 31.354407,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "GDW_v1_0"
+          },
+          "note": "River point from GDW."
+        },
+        "longitude": {
+          "value": -8.136903,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "GDW_v1_0"
+          },
+          "note": "River point from GDW."
+        }
+      },
+      "area_volume_ratio": {
+        "value": 20.05,
+        "unit": "Mm3/km2",
+        "basis": "GDW CAP_MCM / GDW AREA_SKM",
+        "flags": [],
+        "caveat": "Order-of-magnitude shape assumption only, not a measured bathymetric curve."
+      },
+      "conflicts": [
+        "No second source opened. Wikipedia FR URL (guessed title) returned 404."
+      ]
+    },
+    {
+      "id": "moulay_youssef",
+      "name": "Moulay Youssef",
+      "basin": "Tensift",
+      "gdw_name": "Moulay Youssef",
+      "fields": {
+        "capacity_normal_Mm3": {
+          "value": 200.0,
+          "unit": "Mm3",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CAP_MCM"
+          }
+        },
+        "dead_storage_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published."
+        },
+        "dam_height_m": {
+          "value": 100,
+          "unit": "m",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "DAM_HGT_M"
+          }
+        },
+        "crest_length_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "note": "GDW DAM_LEN_M missing (-99)"
+        },
+        "crest_elevation_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published."
+        },
+        "normal_level_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published. GDW ELEV_MASL is a DEM-derived minimum of the reservoir surface."
+        },
+        "reservoir_area_km2": {
+          "value": 3.618,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "AREA_SKM"
+          }
+        },
+        "catchment_km2": {
+          "value": 1405,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CATCH_SKM"
+          }
+        },
+        "river": {
+          "value": "Tessaout",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "year_completed": {
+          "value": 1969,
+          "unit": "year",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "YEAR_DAM"
+          }
+        },
+        "dam_type": {
+          "value": "Dam",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "purpose": {
+          "value": "Irrigation",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "latitude": {
+          "value": 31.64584,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "STRUCTURAE_MOULAY_YOUSSEF"
+          },
+          "note": "Converted from DMS."
+        },
+        "longitude": {
+          "value": -7.26065,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "STRUCTURAE_MOULAY_YOUSSEF"
+          },
+          "note": "Converted from DMS."
+        }
+      },
+      "area_volume_ratio": {
+        "value": 55.28,
+        "unit": "Mm3/km2",
+        "basis": "GDW CAP_MCM / GDW AREA_SKM",
+        "flags": [],
+        "caveat": "Order-of-magnitude shape assumption only, not a measured bathymetric curve."
+      },
+      "conflicts": [
+        "Height 100 m matches Structurae. Structurae year 1970 vs GDW 1969. Structurae coordinates 31°38′45″N 7°15′38″W match the GDW river point."
+      ]
+    },
+    {
+      "id": "sidi_driss",
+      "name": "Sidi Driss",
+      "basin": "Tadla (Lakhdar), listed by GDW under Tadla-Azilal",
+      "gdw_name": "Sidi Driss",
+      "fields": {
+        "capacity_normal_Mm3": {
+          "value": 7.0,
+          "unit": "Mm3",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CAP_MCM"
+          }
+        },
+        "dead_storage_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published."
+        },
+        "dam_height_m": {
+          "value": 42,
+          "unit": "m",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "DAM_HGT_M"
+          }
+        },
+        "crest_length_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "note": "GDW DAM_LEN_M missing (-99)"
+        },
+        "crest_elevation_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published."
+        },
+        "normal_level_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published. GDW ELEV_MASL is a DEM-derived minimum of the reservoir surface."
+        },
+        "reservoir_area_km2": {
+          "value": 4.583,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "AREA_SKM"
+          }
+        },
+        "catchment_km2": {
+          "value": 1683,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CATCH_SKM"
+          }
+        },
+        "river": {
+          "value": "Lakhdar",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "year_completed": {
+          "value": 1984,
+          "unit": "year",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "YEAR_DAM"
+          }
+        },
+        "dam_type": {
+          "value": "Dam",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "purpose": {
+          "value": "not given",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "latitude": {
+          "value": 31.815268,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "GDW_v1_0"
+          },
+          "note": "River point from GDW."
+        },
+        "longitude": {
+          "value": -6.821715,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "GDW_v1_0"
+          },
+          "note": "River point from GDW."
+        }
+      },
+      "area_volume_ratio": {
+        "value": 1.53,
+        "unit": "Mm3/km2",
+        "basis": "GDW CAP_MCM / GDW AREA_SKM",
+        "flags": [
+          "SUSPECT: capacity 7 Mm3 vs 42 m height; GDW AREA_REP is 10 km2."
+        ],
+        "caveat": "Order-of-magnitude shape assumption only, not a measured bathymetric curve."
+      },
+      "conflicts": [
+        "Capacity 7 Mm3 with 42 m height and 4.6 km2 area looks inconsistent. GDW DEPTH_M 1.5. Check before use."
+      ]
+    },
+    {
+      "id": "mansour_eddahbi",
+      "name": "Mansour Eddahbi",
+      "basin": "Draa-Oued Noun",
+      "gdw_name": "Mansour Eddahbi",
+      "fields": {
+        "capacity_normal_Mm3": {
+          "value": 592.0,
+          "unit": "Mm3",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CAP_MCM"
+          }
+        },
+        "dead_storage_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published."
+        },
+        "dam_height_m": {
+          "value": 70,
+          "unit": "m",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "DAM_HGT_M"
+          }
+        },
+        "crest_length_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "note": "GDW DAM_LEN_M missing (-99)"
+        },
+        "crest_elevation_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published."
+        },
+        "normal_level_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published. GDW ELEV_MASL is a DEM-derived minimum of the reservoir surface."
+        },
+        "reservoir_area_km2": {
+          "value": 33.506,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "AREA_SKM"
+          }
+        },
+        "catchment_km2": {
+          "value": 14962,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CATCH_SKM"
+          }
+        },
+        "river": {
+          "value": "Draa",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "year_completed": {
+          "value": 1972,
+          "unit": "year",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "YEAR_DAM"
+          }
+        },
+        "dam_type": {
+          "value": "Dam",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "purpose": {
+          "value": "Irrigation",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "latitude": {
+          "value": 30.914573,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "GDW_v1_0"
+          },
+          "note": "River point from GDW."
+        },
+        "longitude": {
+          "value": -6.760788,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "GDW_v1_0"
+          },
+          "note": "River point from GDW."
+        }
+      },
+      "area_volume_ratio": {
+        "value": 17.67,
+        "unit": "Mm3/km2",
+        "basis": "GDW CAP_MCM / GDW AREA_SKM",
+        "flags": [
+          "GDW CAP_MCM 592 vs press 445-530 Mm3: ratio using 500 Mm3 would be 14.9 Mm3/km2."
+        ],
+        "caveat": "Order-of-magnitude shape assumption only, not a measured bathymetric curve."
+      },
+      "conflicts": [
+        "Capacity: GDW 592 (CAP_MCM; CAP_MIN 560) vs 500, 530, 445.3 Mm3 (search snippets, existing note 02; not opened).",
+        "Area: GDW polygon 33.5 km2 vs GDW reported 49 km2.",
+        "Formed 1972 on the Draa (BirdLife IBA factsheet)."
+      ]
+    },
+    {
+      "id": "hassan_addakhil",
+      "name": "Hassan Addakhil",
+      "basin": "Ziz (Meknes-Tafilalet admin unit in GDW)",
+      "gdw_name": "Hassan Addakhil",
+      "fields": {
+        "capacity_normal_Mm3": {
+          "value": 380.0,
+          "unit": "Mm3",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CAP_MCM"
+          }
+        },
+        "dead_storage_Mm3": {
+          "value": null,
+          "unit": "Mm3",
+          "source": null,
+          "note": "Not published."
+        },
+        "dam_height_m": {
+          "value": 85,
+          "unit": "m",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "DAM_HGT_M"
+          }
+        },
+        "crest_length_m": {
+          "value": null,
+          "unit": "m",
+          "source": null,
+          "note": "GDW DAM_LEN_M missing (-99)"
+        },
+        "crest_elevation_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published."
+        },
+        "normal_level_m_ngm": {
+          "value": null,
+          "unit": "m NGM",
+          "source": null,
+          "note": "Not published. GDW ELEV_MASL is a DEM-derived minimum of the reservoir surface."
+        },
+        "reservoir_area_km2": {
+          "value": 5.343,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "AREA_SKM"
+          }
+        },
+        "catchment_km2": {
+          "value": 4404,
+          "unit": "km2",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "CATCH_SKM"
+          }
+        },
+        "river": {
+          "value": "Ziz",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "year_completed": {
+          "value": 1971,
+          "unit": "year",
+          "source": {
+            "id": "GDW_v1_0",
+            "field": "YEAR_DAM"
+          }
+        },
+        "dam_type": {
+          "value": "Dam",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "purpose": {
+          "value": "Irrigation",
+          "unit": "",
+          "source": {
+            "id": "GDW_v1_0"
+          }
+        },
+        "latitude": {
+          "value": 31.995304,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "GDW_v1_0"
+          },
+          "note": "River point from GDW."
+        },
+        "longitude": {
+          "value": -4.461314,
+          "unit": "deg (WGS84)",
+          "source": {
+            "id": "GDW_v1_0"
+          },
+          "note": "River point from GDW."
+        }
+      },
+      "area_volume_ratio": {
+        "value": 71.12,
+        "unit": "Mm3/km2",
+        "basis": "GDW CAP_MCM / GDW AREA_SKM",
+        "flags": [],
+        "caveat": "Order-of-magnitude shape assumption only, not a measured bathymetric curve."
+      },
+      "conflicts": [
+        "Capacity: GDW CAP_MCM 380 vs CAP_REP 369."
+      ]
+    }
+  ],
+  "unnamed_gdw_records_in_souss_massa_draa_admin_unit": [
+    {
+      "GDW_ID": 9284,
+      "CAP_MCM": 18.7,
+      "AREA_SKM": 1.183,
+      "DAM_HGT_M": -99,
+      "LAT_RIV": 30.669545,
+      "LONG_RIV": -8.531476,
+      "note": "Unnamed in GDW. Not matched to any dam in the brief."
+    },
+    {
+      "GDW_ID": 39012,
+      "CAP_MCM": 40.0,
+      "AREA_SKM": 2.423,
+      "DAM_HGT_M": -99,
+      "LAT_RIV": 30.734116,
+      "LONG_RIV": -7.979799,
+      "note": "Unnamed in GDW. Not matched to any dam in the brief."
+    }
+  ],
+  "not_retrieved": [
+    "HydroLAKES (polygon areas and volumes; the GDW HYLAK_ID column links to it, but the HydroLAKES file was not downloaded in this pass).",
+    "OSM reservoir polygons (Overpass query returned a non-JSON response).",
+    "ICOLD register (not reached).",
+    "Direction Generale de l'Hydraulique registre (not reached).",
+    "JICA tables for Abdelmoumen beyond the existing note, and Mansour Eddahbi, Lalla Takerkoust, Moulay Youssef, Sidi Driss, Hassan Addakhil (no second source opened)."
+  ]
+}

@@ -1,0 +1,289 @@
+{
+ "note": "Indicative points, not a delineated watershed. grid_* is the cell Open-Meteo actually returned for the model.",
+ "model": "era5",
+ "dam_site_reference": {
+  "youssef_ben_tachfine": {
+   "grid_lat": 29.75,
+   "grid_lon": -9.5,
+   "elevation_m": 108.0
+  }
+ },
+ "dams": {
+  "youssef_ben_tachfine": {
+   "dam_lat": 29.84556,
+   "dam_lon": -9.49444,
+   "gdw_catchment_km2": 3878,
+   "points": [
+    {
+     "id": "p1",
+     "requested_lat": 29.95,
+     "requested_lon": -9.3,
+     "grid_lat": 30.0,
+     "grid_lon": -9.25,
+     "elevation_m": 592.0
+    },
+    {
+     "id": "p2",
+     "requested_lat": 30.05,
+     "requested_lon": -9.15,
+     "grid_lat": 30.0,
+     "grid_lon": -9.25,
+     "elevation_m": 615.0
+    },
+    {
+     "id": "p3",
+     "requested_lat": 29.85,
+     "requested_lon": -9.1,
+     "grid_lat": 29.75,
+     "grid_lon": -9.0,
+     "elevation_m": 1200.0
+    },
+    {
+     "id": "p4",
+     "requested_lat": 29.75,
+     "requested_lon": -8.9,
+     "grid_lat": 29.75,
+     "grid_lon": -9.0,
+     "elevation_m": 1310.0
+    },
+    {
+     "id": "p5",
+     "requested_lat": 29.65,
+     "requested_lon": -9.25,
+     "grid_lat": 29.75,
+     "grid_lon": -9.25,
+     "elevation_m": 979.0
+    },
+    {
+     "id": "p6",
+     "requested_lat": 29.95,
+     "requested_lon": -8.85,
+     "grid_lat": 30.0,
+     "grid_lon": -8.75,
+     "elevation_m": 1288.0
+    },
+    {
+     "id": "p7",
+     "requested_lat": 29.8,
+     "requested_lon": -8.6,
+     "grid_lat": 29.75,
+     "grid_lon": -8.5,
+     "elevation_m": 1547.0
+    },
+    {
+     "id": "p8",
+     "requested_lat": 29.6,
+     "requested_lon": -9.0,
+     "grid_lat": 29.5,
+     "grid_lon": -9.0,
+     "elevation_m": 1291.0
+    }
+   ]
+  },
+  "abdelmoumen": {
+   "dam_lat": 30.677083,
+   "dam_lon": -9.20222,
+   "gdw_catchment_km2": 1313,
+   "points": [
+    {
+     "id": "p1",
+     "requested_lat": 30.72,
+     "requested_lon": -9.05,
+     "grid_lat": 30.75,
+     "grid_lon": -9.0,
+     "elevation_m": 1628.0
+    },
+    {
+     "id": "p2",
+     "requested_lat": 30.8,
+     "requested_lon": -8.95,
+     "grid_lat": 30.75,
+     "grid_lon": -9.0,
+     "elevation_m": 1657.0
+    },
+    {
+     "id": "p3",
+     "requested_lat": 30.85,
+     "requested_lon": -9.1,
+     "grid_lat": 30.75,
+     "grid_lon": -9.0,
+     "elevation_m": 875.0
+    },
+    {
+     "id": "p4",
+     "requested_lat": 30.7,
+     "requested_lon": -8.75,
+     "grid_lat": 30.75,
+     "grid_lon": -8.75,
+     "elevation_m": 1175.0
+    },
+    {
+     "id": "p5",
+     "requested_lat": 30.65,
+     "requested_lon": -8.9,
+     "grid_lat": 30.75,
+     "grid_lon": -9.0,
+     "elevation_m": 672.0
+    },
+    {
+     "id": "p6",
+     "requested_lat": 30.9,
+     "requested_lon": -8.8,
+     "grid_lat": 31.0,
+     "grid_lon": -8.75,
+     "elevation_m": 2264.0
+    },
+    {
+     "id": "p7",
+     "requested_lat": 30.75,
+     "requested_lon": -8.6,
+     "grid_lat": 30.75,
+     "grid_lon": -8.5,
+     "elevation_m": 1091.0
+    },
+    {
+     "id": "p8",
+     "requested_lat": 30.6,
+     "requested_lon": -8.7,
+     "grid_lat": 30.5,
+     "grid_lon": -8.75,
+     "elevation_m": 377.0
+    }
+   ]
+  },
+  "aoulouz": {
+   "dam_lat": 30.69302,
+   "dam_lon": -8.137744,
+   "gdw_catchment_km2": 4466,
+   "points": [
+    {
+     "id": "p1",
+     "requested_lat": 30.85,
+     "requested_lon": -8.3,
+     "grid_lat": 30.75,
+     "grid_lon": -8.25,
+     "elevation_m": 1675.0
+    },
+    {
+     "id": "p2",
+     "requested_lat": 30.95,
+     "requested_lon": -8.05,
+     "grid_lat": 31.0,
+     "grid_lon": -8.0,
+     "elevation_m": 2618.0
+    },
+    {
+     "id": "p3",
+     "requested_lat": 30.75,
+     "requested_lon": -7.85,
+     "grid_lat": 30.75,
+     "grid_lon": -7.75,
+     "elevation_m": 1287.0
+    },
+    {
+     "id": "p4",
+     "requested_lat": 30.6,
+     "requested_lon": -7.95,
+     "grid_lat": 30.5,
+     "grid_lon": -8.0,
+     "elevation_m": 1815.0
+    },
+    {
+     "id": "p5",
+     "requested_lat": 30.55,
+     "requested_lon": -8.3,
+     "grid_lat": 30.5,
+     "grid_lon": -8.25,
+     "elevation_m": 714.0
+    },
+    {
+     "id": "p6",
+     "requested_lat": 30.9,
+     "requested_lon": -8.55,
+     "grid_lat": 31.0,
+     "grid_lon": -8.5,
+     "elevation_m": 2496.0
+    },
+    {
+     "id": "p7",
+     "requested_lat": 30.7,
+     "requested_lon": -8.45,
+     "grid_lat": 30.75,
+     "grid_lon": -8.5,
+     "elevation_m": 594.0
+    },
+    {
+     "id": "p8",
+     "requested_lat": 30.45,
+     "requested_lon": -7.75,
+     "grid_lat": 30.5,
+     "grid_lon": -7.75,
+     "elevation_m": 1669.0
+    }
+   ]
+  },
+  "moulay_abdellah": {
+   "dam_lat": 30.757751,
+   "dam_lon": -9.68823,
+   "gdw_catchment_km2": 1248,
+   "points": [
+    {
+     "id": "p1",
+     "requested_lat": 30.78,
+     "requested_lon": -9.5,
+     "grid_lat": 30.75,
+     "grid_lon": -9.5,
+     "elevation_m": 568.0
+    },
+    {
+     "id": "p2",
+     "requested_lat": 30.9,
+     "requested_lon": -9.45,
+     "grid_lat": 31.0,
+     "grid_lon": -9.5,
+     "elevation_m": 672.0
+    },
+    {
+     "id": "p3",
+     "requested_lat": 30.65,
+     "requested_lon": -9.5,
+     "grid_lat": 30.75,
+     "grid_lon": -9.5,
+     "elevation_m": 1085.0
+    },
+    {
+     "id": "p4",
+     "requested_lat": 30.95,
+     "requested_lon": -9.6,
+     "grid_lat": 31.0,
+     "grid_lon": -9.5,
+     "elevation_m": 839.0
+    },
+    {
+     "id": "p5",
+     "requested_lat": 30.62,
+     "requested_lon": -9.35,
+     "grid_lat": 30.5,
+     "grid_lon": -9.25,
+     "elevation_m": 694.0
+    },
+    {
+     "id": "p6",
+     "requested_lat": 30.85,
+     "requested_lon": -9.3,
+     "grid_lat": 30.75,
+     "grid_lon": -9.25,
+     "elevation_m": 1135.0
+    },
+    {
+     "id": "p7",
+     "requested_lat": 30.72,
+     "requested_lon": -9.4,
+     "grid_lat": 30.75,
+     "grid_lon": -9.5,
+     "elevation_m": 1516.0
+    }
+   ]
+  }
+ }
+}

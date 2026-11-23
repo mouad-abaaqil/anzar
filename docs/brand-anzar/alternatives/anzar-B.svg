@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-labelledby="title desc">
+  <title id="title">Anzar — Losange-source</title>
+  <desc id="desc">Deux angles ouverts dessinent une goutte facettée ; un trait central marque le niveau de la ressource.</desc>
+  <path fill="#0A1B2A" d="M0 0H128V128H0Z"/>
+  <path fill="#5FD4E6" d="M20 60L64 10L108 60L98 69L64 30L30 69Z"/>
+  <path fill="#5FD4E6" d="M24 80L64 103L104 80L112 91L64 119L16 91Z"/>
+  <path fill="#D9A441" d="M46 70H82V82H46Z"/>
+</svg>

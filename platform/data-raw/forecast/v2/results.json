@@ -1,0 +1,914 @@
+{
+ "dams": [
+  {
+   "id": "youssef-ben-tachfine",
+   "name": "Youssef Ben Tachfine",
+   "capacityMm3": 290.87,
+   "fit": {
+    "k": 16.15531,
+    "b": 1.0,
+    "bLow": 1.0,
+    "bHigh": 2.0,
+    "kLow": 16.15531,
+    "kHigh": 1.86895,
+    "rmseLog": 0.026,
+    "nPairs": 10,
+    "n2025CalibrationPairs": 0,
+    "pairs": [
+     {
+      "bulletin": "2026-11-02",
+      "scene": "2026-11-04",
+      "areaKm2": 8.4595,
+      "volumeMm3": 135.34,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-03",
+      "scene": "2026-11-04",
+      "areaKm2": 8.4595,
+      "volumeMm3": 135.25,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-04",
+      "scene": "2026-11-04",
+      "areaKm2": 8.4595,
+      "volumeMm3": 135.25,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-05",
+      "scene": "2026-11-04",
+      "areaKm2": 8.4595,
+      "volumeMm3": 135.25,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-12",
+      "scene": "2026-11-14",
+      "areaKm2": 8.8918,
+      "volumeMm3": 135.87,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-13",
+      "scene": "2026-11-14",
+      "areaKm2": 8.8918,
+      "volumeMm3": 143.23,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-15",
+      "scene": "2026-11-14",
+      "areaKm2": 8.8918,
+      "volumeMm3": 144.24,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-16",
+      "scene": "2026-11-16",
+      "areaKm2": 8.6486,
+      "volumeMm3": 144.24,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-17",
+      "scene": "2026-11-16",
+      "areaKm2": 8.6486,
+      "volumeMm3": 144.24,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-18",
+      "scene": "2026-11-16",
+      "areaKm2": 8.6486,
+      "volumeMm3": 144.24,
+      "group": "2026 bulletin"
+     }
+    ],
+    "maxCleanAreaKm2": 8.8918,
+    "saturationRule": "area >= 95% of max clean area -> volume reported as [V(area), capacity], flag saturated",
+    "anchorUsed": false
+   },
+   "estimated": true,
+   "identified": false
+  },
+  {
+   "id": "abdelmoumen",
+   "name": "Abdelmoumen",
+   "capacityMm3": 198.47,
+   "fit": {
+    "k": 10.32589,
+    "b": 1.32,
+    "bLow": 1.27,
+    "bHigh": 1.37,
+    "kLow": 10.64942,
+    "kHigh": 10.0122,
+    "rmseLog": 0.026,
+    "nPairs": 14,
+    "n2025CalibrationPairs": 3,
+    "pairs": [
+     {
+      "bulletin": "2026-10-29",
+      "scene": "2026-10-30",
+      "areaKm2": 4.0241,
+      "volumeMm3": 65,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-10-30",
+      "scene": "2026-10-30",
+      "areaKm2": 4.0241,
+      "volumeMm3": 64.93,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-10-31",
+      "scene": "2026-10-30",
+      "areaKm2": 4.0241,
+      "volumeMm3": 64.89,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-01",
+      "scene": "2026-10-30",
+      "areaKm2": 4.0241,
+      "volumeMm3": 64.76,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-11",
+      "scene": "2026-11-13",
+      "areaKm2": 4.1932,
+      "volumeMm3": 64.76,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-12",
+      "scene": "2026-11-13",
+      "areaKm2": 4.1932,
+      "volumeMm3": 69.36,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-13",
+      "scene": "2026-11-13",
+      "areaKm2": 4.1932,
+      "volumeMm3": 71.33,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-15",
+      "scene": "2026-11-16",
+      "areaKm2": 4.3269,
+      "volumeMm3": 72.04,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-16",
+      "scene": "2026-11-16",
+      "areaKm2": 4.3269,
+      "volumeMm3": 72.21,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-17",
+      "scene": "2026-11-16",
+      "areaKm2": 4.3269,
+      "volumeMm3": 72.35,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-18",
+      "scene": "2026-11-16",
+      "areaKm2": 4.3269,
+      "volumeMm3": 72.44,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-10-29",
+      "date": "2025-10-29",
+      "scene": [
+       "2025-11-01"
+      ],
+      "areaKm2": 0.8347,
+      "volumeMm3": 7.94,
+      "group": "2025 tick (calibration)"
+     },
+     {
+      "bulletin": "2026-11-04",
+      "date": "2025-11-04",
+      "scene": [
+       "2025-11-01"
+      ],
+      "areaKm2": 0.8347,
+      "volumeMm3": 7.94,
+      "group": "2025 tick (calibration)"
+     },
+     {
+      "bulletin": "2026-11-12",
+      "date": "2025-11-12",
+      "scene": [
+       "2025-11-11"
+      ],
+      "areaKm2": 0.7975,
+      "volumeMm3": 7.94,
+      "group": "2025 tick (calibration)"
+     }
+    ],
+    "maxCleanAreaKm2": 4.3405,
+    "saturationRule": "area >= 95% of max clean area -> volume reported as [V(area), capacity], flag saturated",
+    "anchorUsed": false
+   },
+   "estimated": true,
+   "identified": true
+  },
+  {
+   "id": "aoulouz",
+   "name": "Aoulouz",
+   "capacityMm3": 88.96,
+   "fit": {
+    "k": 7.67321,
+    "b": 1.52,
+    "bLow": 1.42,
+    "bHigh": 1.62,
+    "kLow": 8.64085,
+    "kHigh": 6.81393,
+    "rmseLog": 0.001,
+    "nPairs": 5,
+    "n2025CalibrationPairs": 1,
+    "pairs": [
+     {
+      "bulletin": "2026-11-15",
+      "scene": "2026-11-16",
+      "areaKm2": 4.3523,
+      "volumeMm3": 71.65,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-16",
+      "scene": "2026-11-16",
+      "areaKm2": 4.3523,
+      "volumeMm3": 71.75,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-17",
+      "scene": "2026-11-16",
+      "areaKm2": 4.3523,
+      "volumeMm3": 71.8,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-18",
+      "scene": "2026-11-16",
+      "areaKm2": 4.3523,
+      "volumeMm3": 71.89,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-12",
+      "date": "2025-11-12",
+      "scene": [
+       "2025-11-11"
+      ],
+      "areaKm2": 2.471,
+      "volumeMm3": 30.34,
+      "group": "2025 tick (calibration)"
+     }
+    ],
+    "maxCleanAreaKm2": 5.0299,
+    "saturationRule": "area >= 95% of max clean area -> volume reported as [V(area), capacity], flag saturated",
+    "anchorUsed": false
+   },
+   "estimated": true,
+   "identified": true
+  },
+  {
+   "id": "moulay-abdellah",
+   "name": "Moulay Abdellah",
+   "capacityMm3": 81.93,
+   "fit": {
+    "k": 4.28926,
+    "b": 1.6,
+    "bLow": 1.0,
+    "bHigh": 2.0,
+    "kLow": 12.04141,
+    "kHigh": 2.15535,
+    "rmseLog": 0.001,
+    "nPairs": 8,
+    "n2025CalibrationPairs": 0,
+    "pairs": [
+     {
+      "bulletin": "2026-10-29",
+      "scene": "2026-10-30",
+      "areaKm2": 5.5944,
+      "volumeMm3": 67.5,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-10-30",
+      "scene": "2026-10-30",
+      "areaKm2": 5.5944,
+      "volumeMm3": 67.47,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-10-31",
+      "scene": "2026-10-30",
+      "areaKm2": 5.5944,
+      "volumeMm3": 67.41,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-01",
+      "scene": "2026-10-30",
+      "areaKm2": 5.5944,
+      "volumeMm3": 67.3,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-02",
+      "scene": "2026-11-04",
+      "areaKm2": 5.5791,
+      "volumeMm3": 67.25,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-03",
+      "scene": "2026-11-04",
+      "areaKm2": 5.5791,
+      "volumeMm3": 67.14,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-04",
+      "scene": "2026-11-04",
+      "areaKm2": 5.5791,
+      "volumeMm3": 67.08,
+      "group": "2026 bulletin"
+     },
+     {
+      "bulletin": "2026-11-05",
+      "scene": "2026-11-04",
+      "areaKm2": 5.5791,
+      "volumeMm3": 67.03,
+      "group": "2026 bulletin"
+     }
+    ],
+    "maxCleanAreaKm2": 6.1548,
+    "saturationRule": "area >= 95% of max clean area -> volume reported as [V(area), capacity], flag saturated",
+    "anchorUsed": false
+   },
+   "estimated": true,
+   "identified": false
+  }
+ ],
+ "validation": [
+  {
+   "name": "Youssef Ben Tachfine, repère 2025 du bulletin 2026-11-01",
+   "dam": "youssef-ben-tachfine",
+   "date": "2025-11-01",
+   "official": 37.52,
+   "officialSource": "bulletin 2026-11-01 tick 12.9 % x 290.87 Mm3 (+/-1 point)",
+   "officialUncertaintyMm3": 2.91,
+   "estimated": 54.62,
+   "estimatedLow": 20.1,
+   "estimatedHigh": 56.26,
+   "errorMm3": 17.1,
+   "errorPct": 45.6,
+   "errorPctOfCapacity": 5.9,
+   "insideBand": true,
+   "withinOfficialUncertainty": false,
+   "saturated": false,
+   "areaKm2": 3.381,
+   "sceneOffsetDays": [
+    -10,
+    7
+   ],
+   "matchRadiusDays": 10,
+   "usedInCalibration": false,
+   "timingCaveat": false
+  },
+  {
+   "name": "Abdelmoumen, repère 2025 du bulletin 2026-11-01",
+   "dam": "abdelmoumen",
+   "date": "2025-11-01",
+   "official": 7.74,
+   "officialSource": "bulletin 2026-11-01 tick 3.9 % x 198.47 Mm3 (+/-1 point)",
+   "officialUncertaintyMm3": 1.98,
+   "estimated": 8.13,
+   "estimatedLow": 7.5,
+   "estimatedHigh": 8.79,
+   "errorMm3": 0.39,
+   "errorPct": 5.1,
+   "errorPctOfCapacity": 0.2,
+   "insideBand": true,
+   "withinOfficialUncertainty": true,
+   "saturated": false,
+   "areaKm2": 0.835,
+   "sceneOffsetDays": [
+    0
+   ],
+   "matchRadiusDays": 3,
+   "usedInCalibration": false,
+   "timingCaveat": false
+  },
+  {
+   "name": "Aoulouz, repère 2025 du bulletin 2026-11-01",
+   "dam": "aoulouz",
+   "date": "2025-11-01",
+   "official": 31.85,
+   "officialSource": "bulletin 2026-11-01 tick 35.8 % x 88.96 Mm3 (+/-1 point)",
+   "officialUncertaintyMm3": 0.89,
+   "estimated": 31.64,
+   "estimatedLow": 29.36,
+   "estimatedHigh": 33.85,
+   "errorMm3": -0.21,
+   "errorPct": -0.7,
+   "errorPctOfCapacity": -0.2,
+   "insideBand": true,
+   "withinOfficialUncertainty": true,
+   "saturated": false,
+   "areaKm2": 2.54,
+   "sceneOffsetDays": [
+    -10,
+    10
+   ],
+   "matchRadiusDays": 10,
+   "usedInCalibration": false,
+   "timingCaveat": false
+  },
+  {
+   "name": "moulay-abdellah 2025-11-01",
+   "official": 35.97,
+   "estimated": null,
+   "note": "aucune scène propre à ≤10 jours",
+   "usedInCalibration": false
+  },
+  {
+   "name": "Youssef Ben Tachfine, repère 2025 du bulletin 2026-11-08",
+   "dam": "youssef-ben-tachfine",
+   "date": "2025-11-08",
+   "official": 37.52,
+   "officialSource": "bulletin 2026-11-08 tick 12.9 % x 290.87 Mm3 (+/-1 point)",
+   "officialUncertaintyMm3": 2.91,
+   "estimated": 54.21,
+   "estimatedLow": 19.8,
+   "estimatedHigh": 55.84,
+   "errorMm3": 16.69,
+   "errorPct": 44.5,
+   "errorPctOfCapacity": 5.7,
+   "insideBand": true,
+   "withinOfficialUncertainty": false,
+   "saturated": false,
+   "areaKm2": 3.356,
+   "sceneOffsetDays": [
+    0
+   ],
+   "matchRadiusDays": 3,
+   "usedInCalibration": false,
+   "timingCaveat": false
+  },
+  {
+   "name": "Abdelmoumen, repère 2025 du bulletin 2026-11-08",
+   "dam": "abdelmoumen",
+   "date": "2025-11-08",
+   "official": 7.74,
+   "officialSource": "bulletin 2026-11-08 tick 3.9 % x 198.47 Mm3 (+/-1 point)",
+   "officialUncertaintyMm3": 1.98,
+   "estimated": 7.66,
+   "estimatedLow": 7.04,
+   "estimatedHigh": 8.3,
+   "errorMm3": -0.08,
+   "errorPct": -1.0,
+   "errorPctOfCapacity": -0.0,
+   "insideBand": true,
+   "withinOfficialUncertainty": true,
+   "saturated": false,
+   "areaKm2": 0.797,
+   "sceneOffsetDays": [
+    3
+   ],
+   "matchRadiusDays": 3,
+   "usedInCalibration": false,
+   "timingCaveat": false
+  },
+  {
+   "name": "Aoulouz, repère 2025 du bulletin 2026-11-08",
+   "dam": "aoulouz",
+   "date": "2025-11-08",
+   "official": 30.87,
+   "officialSource": "bulletin 2026-11-08 tick 34.7 % x 88.96 Mm3 (+/-1 point)",
+   "officialUncertaintyMm3": 0.89,
+   "estimated": 30.35,
+   "estimatedLow": 28.08,
+   "estimatedHigh": 32.56,
+   "errorMm3": -0.52,
+   "errorPct": -1.7,
+   "errorPctOfCapacity": -0.6,
+   "insideBand": true,
+   "withinOfficialUncertainty": true,
+   "saturated": false,
+   "areaKm2": 2.471,
+   "sceneOffsetDays": [
+    3
+   ],
+   "matchRadiusDays": 3,
+   "usedInCalibration": false,
+   "timingCaveat": false
+  },
+  {
+   "name": "moulay-abdellah 2025-11-08",
+   "official": 35.72,
+   "estimated": null,
+   "note": "aucune scène propre à ≤10 jours",
+   "usedInCalibration": false
+  },
+  {
+   "name": "Youssef Ben Tachfine, repère 2025 du bulletin 2026-11-16",
+   "dam": "youssef-ben-tachfine",
+   "date": "2025-11-16",
+   "official": 37.52,
+   "officialSource": "bulletin 2026-11-16 tick 12.9 % x 290.87 Mm3 (+/-1 point)",
+   "officialUncertaintyMm3": 2.91,
+   "estimated": 54.21,
+   "estimatedLow": 19.8,
+   "estimatedHigh": 55.84,
+   "errorMm3": 16.69,
+   "errorPct": 44.5,
+   "errorPctOfCapacity": 5.7,
+   "insideBand": true,
+   "withinOfficialUncertainty": false,
+   "saturated": false,
+   "areaKm2": 3.356,
+   "sceneOffsetDays": [
+    -8
+   ],
+   "matchRadiusDays": 10,
+   "usedInCalibration": false,
+   "timingCaveat": true,
+   "timingNote": "scène antérieure à la crue de 2025-11-13..16 (les repères montent), écart de date et non de modèle ; comparaison non concluante"
+  },
+  {
+   "name": "Abdelmoumen, repère 2025 du bulletin 2026-11-16",
+   "dam": "abdelmoumen",
+   "date": "2025-11-16",
+   "official": 21.24,
+   "officialSource": "bulletin 2026-11-16 tick 10.7 % x 198.47 Mm3 (+/-1 point)",
+   "officialUncertaintyMm3": 1.98,
+   "estimated": 7.66,
+   "estimatedLow": 7.04,
+   "estimatedHigh": 8.3,
+   "errorMm3": -13.58,
+   "errorPct": -63.9,
+   "errorPctOfCapacity": -6.8,
+   "insideBand": false,
+   "withinOfficialUncertainty": false,
+   "saturated": false,
+   "areaKm2": 0.797,
+   "sceneOffsetDays": [
+    -5
+   ],
+   "matchRadiusDays": 10,
+   "usedInCalibration": false,
+   "timingCaveat": true,
+   "timingNote": "scène antérieure à la crue de 2025-11-13..16 (les repères montent), écart de date et non de modèle ; comparaison non concluante"
+  },
+  {
+   "name": "Aoulouz, repère 2025 du bulletin 2026-11-16",
+   "dam": "aoulouz",
+   "date": "2025-11-16",
+   "official": 30.6,
+   "officialSource": "bulletin 2026-11-16 tick 34.4 % x 88.96 Mm3 (+/-1 point)",
+   "officialUncertaintyMm3": 0.89,
+   "estimated": 30.35,
+   "estimatedLow": 28.08,
+   "estimatedHigh": 32.56,
+   "errorMm3": -0.25,
+   "errorPct": -0.8,
+   "errorPctOfCapacity": -0.3,
+   "insideBand": true,
+   "withinOfficialUncertainty": true,
+   "saturated": false,
+   "areaKm2": 2.471,
+   "sceneOffsetDays": [
+    -5
+   ],
+   "matchRadiusDays": 10,
+   "usedInCalibration": false,
+   "timingCaveat": true,
+   "timingNote": "scène antérieure à la crue de 2025-11-13..16 (les repères montent), écart de date et non de modèle ; comparaison non concluante"
+  },
+  {
+   "name": "Moulay Abdellah, repère 2025 du bulletin 2026-11-16",
+   "dam": "moulay-abdellah",
+   "date": "2025-11-16",
+   "official": 45.23,
+   "officialSource": "bulletin 2026-11-16 tick 55.2 % x 81.93 Mm3 (+/-1 point)",
+   "officialUncertaintyMm3": 0.82,
+   "estimated": 38.04,
+   "estimatedLow": 31.04,
+   "estimatedHigh": 48.52,
+   "errorMm3": -7.19,
+   "errorPct": -15.9,
+   "errorPctOfCapacity": -8.8,
+   "insideBand": true,
+   "withinOfficialUncertainty": false,
+   "saturated": false,
+   "areaKm2": 3.912,
+   "sceneOffsetDays": [
+    8
+   ],
+   "matchRadiusDays": 10,
+   "usedInCalibration": false,
+   "timingCaveat": false
+  },
+  {
+   "name": "Youssef Ben Tachfine, repère 2025 du bulletin 2026-11-18",
+   "dam": "youssef-ben-tachfine",
+   "date": "2025-11-18",
+   "official": 37.52,
+   "officialSource": "bulletin 2026-11-18 tick 12.9 % x 290.87 Mm3 (+/-1 point)",
+   "officialUncertaintyMm3": 2.91,
+   "estimated": 54.15,
+   "estimatedLow": 19.76,
+   "estimatedHigh": 55.78,
+   "errorMm3": 16.63,
+   "errorPct": 44.3,
+   "errorPctOfCapacity": 5.7,
+   "insideBand": true,
+   "withinOfficialUncertainty": false,
+   "saturated": false,
+   "areaKm2": 3.352,
+   "sceneOffsetDays": [
+    -10,
+    10
+   ],
+   "matchRadiusDays": 10,
+   "usedInCalibration": false,
+   "timingCaveat": false
+  },
+  {
+   "name": "Abdelmoumen, repère 2025 du bulletin 2026-11-18",
+   "dam": "abdelmoumen",
+   "date": "2025-11-18",
+   "official": 21.24,
+   "officialSource": "bulletin 2026-11-18 tick 10.7 % x 198.47 Mm3 (+/-1 point)",
+   "officialUncertaintyMm3": 1.98,
+   "estimated": 7.66,
+   "estimatedLow": 7.04,
+   "estimatedHigh": 8.3,
+   "errorMm3": -13.58,
+   "errorPct": -63.9,
+   "errorPctOfCapacity": -6.8,
+   "insideBand": false,
+   "withinOfficialUncertainty": false,
+   "saturated": false,
+   "areaKm2": 0.797,
+   "sceneOffsetDays": [
+    -7
+   ],
+   "matchRadiusDays": 10,
+   "usedInCalibration": false,
+   "timingCaveat": true,
+   "timingNote": "scène antérieure à la crue de 2025-11-13..16 (les repères montent), écart de date et non de modèle ; comparaison non concluante"
+  },
+  {
+   "name": "Aoulouz, repère 2025 du bulletin 2026-11-18",
+   "dam": "aoulouz",
+   "date": "2025-11-18",
+   "official": 30.6,
+   "officialSource": "bulletin 2026-11-18 tick 34.4 % x 88.96 Mm3 (+/-1 point)",
+   "officialUncertaintyMm3": 0.89,
+   "estimated": 29.87,
+   "estimatedLow": 27.61,
+   "estimatedHigh": 32.08,
+   "errorMm3": -0.73,
+   "errorPct": -2.4,
+   "errorPctOfCapacity": -0.8,
+   "insideBand": true,
+   "withinOfficialUncertainty": true,
+   "saturated": false,
+   "areaKm2": 2.445,
+   "sceneOffsetDays": [
+    -7,
+    10
+   ],
+   "matchRadiusDays": 10,
+   "usedInCalibration": false,
+   "timingCaveat": false
+  },
+  {
+   "name": "Moulay Abdellah, repère 2025 du bulletin 2026-11-18",
+   "dam": "moulay-abdellah",
+   "date": "2025-11-18",
+   "official": 45.23,
+   "officialSource": "bulletin 2026-11-18 tick 55.2 % x 81.93 Mm3 (+/-1 point)",
+   "officialUncertaintyMm3": 0.82,
+   "estimated": 38.04,
+   "estimatedLow": 31.04,
+   "estimatedHigh": 48.52,
+   "errorMm3": -7.19,
+   "errorPct": -15.9,
+   "errorPctOfCapacity": -8.8,
+   "insideBand": true,
+   "withinOfficialUncertainty": false,
+   "saturated": false,
+   "areaKm2": 3.912,
+   "sceneOffsetDays": [
+    6
+   ],
+   "matchRadiusDays": 10,
+   "usedInCalibration": false,
+   "timingCaveat": false
+  },
+  {
+   "name": "Région, repère 2025 du bulletin 2026-11-01",
+   "date": "2025-11-01",
+   "official": 120.06,
+   "estimated": null,
+   "note": "3/4 grands barrages avec scène propre à ≤10 j",
+   "usedInCalibration": false
+  },
+  {
+   "name": "Région, repère 2025 du bulletin 2026-11-08",
+   "date": "2025-11-08",
+   "official": 118.4,
+   "estimated": null,
+   "note": "3/4 grands barrages avec scène propre à ≤10 j",
+   "usedInCalibration": false
+  },
+  {
+   "name": "Région, même jour 2025 (bulletin 2026-11-16)",
+   "date": "2025-11-16",
+   "official": 141.31,
+   "officialSource": "bulletin : % imprimé même jour 2025 x 722,83",
+   "estimated": 136.42,
+   "estimatedLow": 92.12,
+   "estimatedHigh": 151.38,
+   "errorMm3": -4.89,
+   "errorPct": -3.5,
+   "insideBand": true,
+   "composition": "4 grands barrages (satellite) + petits barrages lus sur graphique (Sidi Abdellah sans repère, non compté)",
+   "breakdownMm3": {
+    "youssef-ben-tachfine": 16.69,
+    "abdelmoumen": -13.58,
+    "aoulouz": -0.25,
+    "moulay-abdellah": -7.19
+   },
+   "usedInCalibration": false
+  },
+  {
+   "name": "Région, même jour 2025 (bulletin 2026-11-18)",
+   "date": "2025-11-18",
+   "official": 141.39,
+   "officialSource": "bulletin : % imprimé même jour 2025 x 722,83",
+   "estimated": 135.86,
+   "estimatedLow": 91.59,
+   "estimatedHigh": 150.82,
+   "errorMm3": -5.53,
+   "errorPct": -3.9,
+   "insideBand": true,
+   "composition": "4 grands barrages (satellite) + petits barrages lus sur graphique (Sidi Abdellah sans repère, non compté)",
+   "breakdownMm3": {
+    "youssef-ben-tachfine": 16.63,
+    "abdelmoumen": -13.58,
+    "aoulouz": -0.73,
+    "moulay-abdellah": -7.19
+   },
+   "usedInCalibration": false
+  },
+  {
+   "name": "Région, presse 2025-06-11",
+   "date": "2025-06-11",
+   "official": 150.57,
+   "estimated": null,
+   "note": "3/4 grands barrages avec scène propre à ≤7 j",
+   "press": true,
+   "usedInCalibration": false
+  }
+ ],
+ "thresholdTest": {
+  "youssef-ben-tachfine": {
+   "ndwi>0": {
+    "n": 43,
+    "medianAbsLogDevFromNeighbours": 0.0086,
+    "p90": 0.0497,
+    "scenesKept": 191
+   },
+   "ndwi>0.1": {
+    "n": 41,
+    "medianAbsLogDevFromNeighbours": 0.0095,
+    "p90": 0.0479,
+    "scenesKept": 178
+   }
+  },
+  "abdelmoumen": {
+   "ndwi>0": {
+    "n": 29,
+    "medianAbsLogDevFromNeighbours": 0.0113,
+    "p90": 0.0461,
+    "scenesKept": 178
+   },
+   "ndwi>0.1": {
+    "n": 29,
+    "medianAbsLogDevFromNeighbours": 0.0163,
+    "p90": 0.0612,
+    "scenesKept": 175
+   }
+  },
+  "aoulouz": {
+   "ndwi>0": {
+    "n": 19,
+    "medianAbsLogDevFromNeighbours": 0.0122,
+    "p90": 0.047,
+    "scenesKept": 150
+   },
+   "ndwi>0.1": {
+    "n": 17,
+    "medianAbsLogDevFromNeighbours": 0.0196,
+    "p90": 0.096,
+    "scenesKept": 145
+   }
+  },
+  "moulay-abdellah": {
+   "ndwi>0": {
+    "n": 25,
+    "medianAbsLogDevFromNeighbours": 0.004,
+    "p90": 0.0544,
+    "scenesKept": 169
+   },
+   "ndwi>0.1": {
+    "n": 24,
+    "medianAbsLogDevFromNeighbours": 0.0062,
+    "p90": 0.0396,
+    "scenesKept": 159
+   }
+  }
+ },
+ "cleaning": {
+  "youssef-ben-tachfine": {
+   "raw": 208,
+   "kept": 191,
+   "removed": {
+    "coreValidFraction<0.95": 10,
+    "duplicateTile": 0,
+    "neighbourJump>35%": 7,
+    "cloud>30%": 0
+   },
+   "thresholdUsed": "NDWI>0"
+  },
+  "abdelmoumen": {
+   "raw": 207,
+   "kept": 178,
+   "removed": {
+    "coreValidFraction<0.95": 10,
+    "duplicateTile": 12,
+    "neighbourJump>35%": 7,
+    "cloud>30%": 0
+   },
+   "thresholdUsed": "NDWI>0"
+  },
+  "aoulouz": {
+   "raw": 207,
+   "kept": 150,
+   "removed": {
+    "coreValidFraction<0.95": 23,
+    "duplicateTile": 32,
+    "neighbourJump>35%": 2,
+    "cloud>30%": 1
+   },
+   "thresholdUsed": "NDWI>0"
+  },
+  "moulay-abdellah": {
+   "raw": 195,
+   "kept": 169,
+   "removed": {
+    "coreValidFraction<0.95": 22,
+    "duplicateTile": 0,
+    "neighbourJump>35%": 4,
+    "cloud>30%": 0
+   },
+   "thresholdUsed": "NDWI>0"
+  }
+ },
+ "status": "experimental",
+ "generatedAt": "2026-11-19T16:17:52+00:00",
+ "label": "estimation satellite calée sur les bulletins, non officielle",
+ "split": "role fixed a priori: calibration = 2026-10-29, 11-04, 11-12 ticks (plus all 2026 pairs); heldout = 11-01, 11-08, 11-16 (even ranks) and 11-18 (the v1 validation date). 11-16 and 11-18 ticks are nearly identical so not independent.",
+ "recommendation": {
+  "aoulouz": "estimable (b identifié par 2026 + 2025 ; erreurs held-out -2.4 a -0.7 %, dans la bande) ; garder la plage saturé quand la surface est a moins de 5 % du maximum",
+  "abdelmoumen": "estimable seulement avec reserve : calage 2025 sur 3 points a surface ~0.8 km2 ; les erreurs 11-16/11-18 viennent d une scene anterieure a la crue (non concluant) ; 2026 toujours sature",
+  "youssef-ben-tachfine": "non estime : aucun point 2025 dans le calage (aucune scene a +/-3 j des reperes de calage) donc b non identifie (b=1 en bord de grille) ; erreur held-out +44 a +46 %",
+  "moulay-abdellah": "non estime : aucune scene propre en 2025 dans la fenetre des reperes, b non identifie (bande large) ; erreur held-out -15.9 % avec 1 scene a +6/+8 j",
+  "region": "afficher le total regional officiel (bulletin) ; ne pas afficher de total satellite : l erreur -3.9 % tient a une compensation YBT +16.6 / Abdelmoumen -13.6 Mm3"
+ },
+ "caveats": [
+  "Estimation satellite non officielle ; aucune valeur inventee.",
+  "Repere 2025 lus sur graphique, +/-1 point ; coherents (<=0.2 point) avec la lecture du 2026-11-18 et somme des 9 barrages a 0.6-1.3 Mm3 du total imprime (Sidi Abdellah sans repere).",
+  "Les reperes 2025 varient peu avant la crue du 13-16 nov. 2025 : peu d information independante par date ; 11-16 et 11-18 quasi identiques.",
+  "Echantillon held-out tres mince (scenes Sentinel-2 rares dans la fenetre 2025) ; erreurs en Mm3 et % dans validation, avec indicateurs insideBand et timingCaveat.",
+  "Scene isolee a nuages >30 % (Aoulouz 2026-11-01) exclue du calage : regle de qualite posee a posteriori de la lecture du probleme, pas reglee sur les erreurs."
+ ]
+}
