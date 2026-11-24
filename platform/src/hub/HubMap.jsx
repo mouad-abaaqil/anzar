@@ -16,6 +16,7 @@ const DEM = 'https://tiles.mapterhorn.com/tilejson.json';
 const NATIONAL_BOUNDS = [[-17.3, 20.6], [-0.9, 36.0]];
 const NATIONAL = { bearing: -6, pitch: 45 };
 const SRC = 'hub-regions';
+const LINES = 'hub-region-lines'; // contours : sources de LIGNES (un contour tiré d'un polygone dessine aussi les bords artificiels du découpage en tuiles : traits droits au milieu des régions)
 // Contrôles MapLibre en français.
 const MAP_LOCALE = {
   'NavigationControl.ZoomIn': 'Zoom avant',
@@ -116,6 +117,22 @@ function buildRegions(geo, styles, names) {
       return { ...f, properties: { id, name: names[id] || f.properties.name, color: s.color, op: s.op, kind: s.kind } };
     }),
   };
+}
+
+// Contours des régions en lignes (anneaux des polygones), avec le style de la région.
+function buildLines(geo, styles) {
+  const feats = [];
+  for (const f of geo.features) {
+    const id = f.properties.id;
+    const polys = f.geometry.type === 'Polygon' ? [f.geometry.coordinates] : f.geometry.coordinates;
+    for (const poly of polys) for (const ring of poly) feats.push({ type: 'Feature', properties: { id, kind: styles[id]?.kind }, geometry: { type: 'LineString', coordinates: ring } });
+  }
+  return { type: 'FeatureCollection', features: feats };
+}
+
+// État de survol posé sur les polygones (remplissage) ET sur les lignes (contours).
+function setHover(map, id, hover) {
+  for (const source of [SRC, LINES]) map.setFeatureState({ source, id }, { hover });
 }
 
 async function getJson(url) {
@@ -451,26 +468,27 @@ const HubMap = forwardRef(function HubMap({
         // Régions : voile drapé sous l'eau (rivières et retenues restent bleu vif), contours au-dessus.
         const styles = regionTargets(geo, latest.current.metricByRegion, latest.current.hl, latest.current.mode === 'story');
         shownStylesRef.current = styles;
-        map.addSource(SRC, { type: 'geojson', data: buildRegions(geo, styles, namesRef.current), promoteId: 'id', buffer: 0 });
+        map.addSource(SRC, { type: 'geojson', data: buildRegions(geo, styles, namesRef.current), promoteId: 'id' }); // buffer par défaut : un buffer nul laisse des jointures de tuiles visibles dans le remplissage
+        map.addSource(LINES, { type: 'geojson', data: buildLines(geo, styles), promoteId: 'id' });
         map.addLayer({ id: 'hub-fill', type: 'fill', source: SRC, paint: {
           'fill-color': ['get', 'color'],
           'fill-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], ['min', 0.66, ['+', ['get', 'op'], 0.14]], ['get', 'op']],
           'fill-opacity-transition': { duration: 250 },
         } }, waterLayer);
-        map.addLayer({ id: 'hub-outline', type: 'line', source: SRC, paint: {
+        map.addLayer({ id: 'hub-outline', type: 'line', source: LINES, paint: {
           'line-color': colors.mapBoundary, 'line-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 0.9, 0.4],
           'line-width': ['case', ['boolean', ['feature-state', 'hover'], false], 2.2, 0.9],
         } });
-        map.addLayer({ id: 'hub-na-dash', type: 'line', source: SRC, filter: ['==', ['get', 'kind'], 'na'], paint: {
-          'line-color': colors.bandNa, 'line-width': 1.4, 'line-dasharray': [2, 2],
+        map.addLayer({ id: 'hub-na-dash', type: 'line', source: LINES, filter: ['==', ['get', 'kind'], 'na'], paint: {
+          'line-color': colors.bandNa, 'line-width': 1, 'line-opacity': 0.7, 'line-dasharray': [2, 2],
         } });
-        map.addLayer({ id: 'hub-flux-dash', type: 'line', source: SRC, filter: ['==', ['get', 'kind'], 'flux'], paint: {
-          'line-color': colors.flux3, 'line-width': 1.4, 'line-dasharray': [4, 2],
+        map.addLayer({ id: 'hub-flux-dash', type: 'line', source: LINES, filter: ['==', ['get', 'kind'], 'flux'], paint: {
+          'line-color': colors.flux3, 'line-width': 1, 'line-opacity': 0.7, 'line-dasharray': [4, 2],
         } });
-        map.addLayer({ id: 'hub-selected-casing', type: 'line', source: SRC, filter: ['==', ['get', 'id'], ''], paint: {
+        map.addLayer({ id: 'hub-selected-casing', type: 'line', source: LINES, filter: ['==', ['get', 'id'], ''], paint: {
           'line-color': colors.mapSelectionCasing, 'line-width': 5.5,
         } });
-        map.addLayer({ id: 'hub-selected', type: 'line', source: SRC, filter: ['==', ['get', 'id'], ''], paint: {
+        map.addLayer({ id: 'hub-selected', type: 'line', source: LINES, filter: ['==', ['get', 'id'], ''], paint: {
           'line-color': colors.mapSelection, 'line-width': 3,
         } });
 
@@ -490,9 +508,9 @@ const HubMap = forwardRef(function HubMap({
           if (!f) return;
           const id = f.properties.id;
           if (hoverRef.current !== id) {
-            if (hoverRef.current) map.setFeatureState({ source: SRC, id: hoverRef.current }, { hover: false });
+            if (hoverRef.current) setHover(map, hoverRef.current, false);
             hoverRef.current = id;
-            map.setFeatureState({ source: SRC, id }, { hover: true });
+            setHover(map, id, true);
           }
           map.getCanvas().style.cursor = 'pointer';
           const entry = latest.current.metricByRegion[id];
@@ -503,7 +521,7 @@ const HubMap = forwardRef(function HubMap({
           setTip(t => (t?.dam || t?.link ? t : { x: e.point.x, y: e.point.y, title: f.properties.name, lines, region: true }));
         });
         map.on('mouseleave', 'hub-fill', () => {
-          if (hoverRef.current) map.setFeatureState({ source: SRC, id: hoverRef.current }, { hover: false });
+          if (hoverRef.current) setHover(map, hoverRef.current, false);
           hoverRef.current = null;
           map.getCanvas().style.cursor = '';
           setTip(t => (t?.region ? null : t));
@@ -546,7 +564,7 @@ const HubMap = forwardRef(function HubMap({
     const to = regionTargets(geo, metricByRegion, hl, story);
     const from = shownStylesRef.current || to;
     cancelAnimationFrame(tweenRef.current);
-    const set = s => { shownStylesRef.current = s; map.getSource(SRC)?.setData(buildRegions(geo, s, namesRef.current)); };
+    const set = s => { shownStylesRef.current = s; map.getSource(SRC)?.setData(buildRegions(geo, s, namesRef.current)); map.getSource(LINES)?.setData(buildLines(geo, s)); };
     const changed = Object.keys(to).some(id => !from[id] || from[id].color !== to[id].color || from[id].op !== to[id].op || from[id].kind !== to[id].kind);
     if (!changed) return undefined;
     if (reduced()) { set(to); return undefined; }
