@@ -1,0 +1,323 @@
+{
+  "title": "Sensibilisation : chiffres du chapitre « Comprendre l'eau »",
+  "generatedAt": "2026-11-24",
+  "derivedFrom": "platform/data-raw/awareness/awareness-facts.json (curation : statuts « verifie » et « secondaire » seulement ; « non-verifie » exclu)",
+  "research": "docs/research/14-video-secheresse.md",
+  "statusLegend": {
+    "verifie": "Lu dans un document de l'institution qui le produit (pour les copies hébergées par l'auteur de la vidéo, la mention figure dans sourceName).",
+    "secondaire": "Chiffre rapporté par la presse ou un tiers, non lu à la source primaire : affiché avec la mention « source secondaire »."
+  },
+  "mention": "Chiffres vérifiés par Anzar auprès des sources primaires ; inspiré des enquêtes de Mustapha Swinga (série « الجفاف في المغرب ») dont la vidéo n'est pas une source officielle.",
+  "inspiration": {
+    "author": "Mustapha Swinga",
+    "series": "الجفاف في المغرب",
+    "episode": "جفاف المغرب : واش فعلاً كين حل ؟ (épisode 2, tourné en août 2024)",
+    "url": "https://www.youtube.com/watch?v=TUACReYT3gI",
+    "note": "Inspiration, pas une source : aucun chiffre n'est repris de la vidéo sans source primaire ou secondaire lue."
+  },
+  "caveats": [
+    "Chiffres datés (2016 à 2024 pour la plupart) : ils ne décrivent pas la situation du jour ; le bulletin des barrages repris par Anzar est daté séparément.",
+    "Les scénarios (écart 2050) ne sont pas des prévisions.",
+    "Les nappes ne sont pas modélisées dans Anzar."
+  ],
+  "facts": [
+    {
+      "id": "dotation-par-habitant",
+      "theme": "secheresse",
+      "claimFr": "Chaque Marocain dispose en moyenne de 606 m³ d'eau renouvelable par an, contre 2 560 en 1960 ; le seuil de pénurie est 1 000.",
+      "value": {
+        "1960": 2560,
+        "2005": 731,
+        "2015": 645,
+        "2023": 606,
+        "seuil_penurie": 1000
+      },
+      "unit": "m³ par habitant et par an",
+      "period": "1960-2023",
+      "status": "verifie",
+      "sourceName": "Ministère de l'Équipement et de l'Eau, « Les nouvelles inflexions de la politique de l'eau », conférence ENSA, 1 févr. 2024 (copie hébergée par l'auteur de la vidéo)",
+      "sourceUrl": "https://drive.google.com/file/d/1KeGxQ0iTalwELBBNA9oF36Z4W6rs2iLw/view",
+      "readDate": "2026-11-24",
+      "passage": "Dotation Actuelle : 606 m3/hab./an inférieure à 1000 m3/hab./an reconnue comme seuil de pénurie d'eau."
+    },
+    {
+      "id": "apports-barrages-2017-2023",
+      "theme": "secheresse",
+      "claimFr": "Les apports d'eau aux barrages ont chuté depuis 2017-2018 : 10,3 milliards de m³ cette année-là, puis entre 1,95 et 6,0 milliards chaque année jusqu'en 2022-2023.",
+      "value": {
+        "2017-18": 10.3,
+        "2018-19": 6,
+        "2019-20": 3.8,
+        "2020-21": 5.3,
+        "2021-22": 1.95,
+        "2022-23": 3.9
+      },
+      "unit": "milliards de m³ par année hydrologique",
+      "period": "2017-2018 à 2022-2023",
+      "status": "verifie",
+      "sourceName": "Ministère de l'Équipement et de l'Eau, « وضعية الموارد المائية ببلادنا », présentation à la commission parlementaire, 24 janv. 2024 (copie hébergée par l'auteur de la vidéo)",
+      "sourceUrl": "https://drive.google.com/file/d/1kPN76BlChAAFpXhu4z4jBjcnKbKDsWtT/view",
+      "readDate": "2026-11-24",
+      "passage": "تطور الواردات المائية السنوية للسدود منذ 2017-2018 : 10,3 ; 6,0 ; 3,8 ; 5,3 ; 1,95 ; 3,9"
+    },
+    {
+      "id": "apports-moyennes-reference",
+      "theme": "secheresse",
+      "claimFr": "Les apports moyens aux barrages valent 11,5 milliards de m³ par an sur 1945-2023, contre 7,2 sur les dix dernières années et 5,2 sur 2017-2023.",
+      "value": {
+        "1945-2023": 11.5,
+        "dix dernieres annees": 7.2,
+        "2017-2023": 5.2
+      },
+      "unit": "milliards de m³ par an",
+      "period": "1945-2023",
+      "status": "verifie",
+      "sourceName": "Ministère de l'Équipement et de l'Eau, « وضعية الموارد المائية ببلادنا », présentation à la commission parlementaire, 24 janv. 2024 (copie hébergée par l'auteur de la vidéo)",
+      "sourceUrl": "https://drive.google.com/file/d/1kPN76BlChAAFpXhu4z4jBjcnKbKDsWtT/view",
+      "readDate": "2026-11-24",
+      "passage": "تطور الواردات المائية السنوية للسدود منذ 2017-2018 : 11,5 ; 7,2 ; 5,2"
+    },
+    {
+      "id": "ecart-offre-demande",
+      "theme": "secheresse",
+      "claimFr": "L'écart entre offre et demande d'eau est estimé à 1,8 milliard de m³ par an ; il pourrait atteindre 7 milliards en 2050 avec le changement climatique et sans les mesures du Plan national de l'eau.",
+      "value": {
+        "actuel": 1.8,
+        "2050_avec_climat": 7
+      },
+      "unit": "milliards de m³ par an",
+      "period": "estimation actuelle (note 2023) et 2050",
+      "status": "verifie",
+      "sourceName": "Banque mondiale, CCDR du Maroc, Note technique « Pénurie d'eau et sécheresses » (fichier daté mars 2023 dans l'URL)",
+      "sourceUrl": "https://thedocs.worldbank.org/en/doc/6a3d44142e06fc24d37485df7ed31824-0280012023/original/Rapport-Pe-nurie-deau-et-se-cheresses-mar23.pdf",
+      "readDate": "2026-11-24",
+      "passage": "L'écart entre l'offre et la demande en eau est actuellement estimé à 1,8 milliard de m3/an à l'échelon national"
+    },
+    {
+      "id": "envasement-barrages",
+      "theme": "barrages",
+      "claimFr": "L'envasement réduit la capacité des barrages : environ 100 millions de tonnes de sédiments par an, dont 60 % se déposent dans les retenues.",
+      "value": {
+        "sediments_Mt_par_an": 100,
+        "part_dans_retenues_pct": 60,
+        "grands_barrages_envases_2040": "près de 20",
+        "moitie_des_retenues_perdent_50pct_en": 2050
+      },
+      "unit": "millions de tonnes par an",
+      "period": "estimations, horizon 2040-2050",
+      "status": "verifie",
+      "sourceName": "Banque mondiale, CCDR du Maroc, Note technique « Pénurie d'eau et sécheresses » (fichier daté mars 2023 dans l'URL)",
+      "sourceUrl": "https://thedocs.worldbank.org/en/doc/6a3d44142e06fc24d37485df7ed31824-0280012023/original/Rapport-Pe-nurie-deau-et-se-cheresses-mar23.pdf",
+      "readDate": "2026-11-24",
+      "passage": "près de 20 réservoirs ou grands barrages seront complètement envasés d'ici à 2040 ; ii) près de la moitié des réservoirs de barrage auront perdu à peu près 50 % de leur capacité en 2050"
+    },
+    {
+      "id": "evaporation-barrages",
+      "theme": "barrages",
+      "claimFr": "Selon une diapo ministérielle, l'eau qui s'évapore représente 1,5 million de m³ par jour (périmètre non précisé sur la diapo).",
+      "value": 1.5,
+      "unit": "millions de m³ par jour",
+      "period": "janvier 2024",
+      "status": "verifie",
+      "sourceName": "Ministère de l'Équipement et de l'Eau, « وضعية الموارد المائية ببلادنا », présentation à la commission parlementaire, 24 janv. 2024 (copie hébergée par l'auteur de la vidéo)",
+      "sourceUrl": "https://drive.google.com/file/d/1kPN76BlChAAFpXhu4z4jBjcnKbKDsWtT/view",
+      "readDate": "2026-11-24",
+      "passage": "معدل تبخر حجم المياه في اليوم = 1,5 مليون م3/اليوم"
+    },
+    {
+      "id": "priorite-eau-potable-loi",
+      "theme": "gouvernance",
+      "claimFr": "En cas de pénurie, la loi 36-15 donne la priorité à l'approvisionnement des populations en eau potable (article 126), en tenant compte des besoins du cheptel.",
+      "value": null,
+      "unit": null,
+      "period": "loi de 2016",
+      "status": "verifie",
+      "sourceName": "Dahir 1.16.113 portant exécution de la loi 36-15 relative à l'eau, B.O. n° 6494 du 25 août 2016 (copie hébergée par l'auteur de la vidéo)",
+      "sourceUrl": "https://drive.google.com/file/d/1GbwWWkk5vH6sifg5zUwx8e9fWAabFcK_/view",
+      "readDate": "2026-11-24",
+      "passage": "مع إعطاء الأولوية لتزويد السكان بالكميات الضرورية من الماء الصالح للشرب مع الأخذ بعين الاعتبار حاجيات القطيع من الماء"
+    },
+    {
+      "id": "priorite-aep-puis-irrigation",
+      "theme": "gouvernance",
+      "claimFr": "En 2024, le ministère indique donner la priorité à l'eau potable selon la réserve disponible, puis fixer les programmes d'irrigation avec le ministère de l'Agriculture.",
+      "value": null,
+      "unit": null,
+      "period": "janvier 2024",
+      "status": "verifie",
+      "sourceName": "Ministère de l'Équipement et de l'Eau, « Les nouvelles inflexions de la politique de l'eau », conférence ENSA, 1 févr. 2024 (copie hébergée par l'auteur de la vidéo)",
+      "sourceUrl": "https://drive.google.com/file/d/1KeGxQ0iTalwELBBNA9oF36Z4W6rs2iLw/view",
+      "readDate": "2026-11-24",
+      "passage": "Donner la priorité à l'eau potable en fonction de la réserve d'eau disponible, puis déterminer les programmes d'approvisionnement en eau d'irrigation"
+    },
+    {
+      "id": "nappes-surexploitation",
+      "theme": "nappes",
+      "claimFr": "Les prélèvements dans les nappes (environ 5 milliards de m³ par an) dépassent de 28 % (1,1 milliard) leur renouvellement ; elles fournissent près de 35 % de l'eau agricole.",
+      "value": {
+        "prelevements_Gm3": 5,
+        "excedent_Gm3": 1.1,
+        "excedent_pct": 28,
+        "part_irrigation_pct": 35
+      },
+      "unit": "milliards de m³ par an",
+      "period": "estimation, note 2023",
+      "status": "verifie",
+      "sourceName": "Banque mondiale, CCDR du Maroc, Note technique « Pénurie d'eau et sécheresses » (fichier daté mars 2023 dans l'URL)",
+      "sourceUrl": "https://thedocs.worldbank.org/en/doc/6a3d44142e06fc24d37485df7ed31824-0280012023/original/Rapport-Pe-nurie-deau-et-se-cheresses-mar23.pdf",
+      "readDate": "2026-11-24",
+      "passage": "Dans l'ensemble, les prélèvements d'eau souterraine s'élèvent à environ cinq milliards de m3 par an, ce qui dépasse de 28 % [...] le niveau estimatif des sources d'eau souterraine renouvelables"
+    },
+    {
+      "id": "nappes-potentiel",
+      "theme": "nappes",
+      "claimFr": "Le Maroc compte 130 nappes (32 profondes, 98 superficielles) dont le potentiel exploitable est évalué à 4 milliards de m³ par an.",
+      "value": {
+        "nappes": 130,
+        "profondes": 32,
+        "superficielles": 98,
+        "potentiel_Gm3": 4
+      },
+      "unit": "milliards de m³ par an",
+      "period": "état juin 2023",
+      "status": "verifie",
+      "sourceName": "Ministère de l'Équipement et de l'Eau, DGH, « L'hydraulique en chiffres », juin 2023 (copie hébergée par l'auteur de la vidéo)",
+      "sourceUrl": "https://drive.google.com/file/d/1fUTcQ5zRMFeRNfxtPrkejlK1-YdUaHIb/view",
+      "readDate": "2026-11-24",
+      "passage": "130 nappes aquifères, dont 32 nappes profondes et 98 nappes superficielles. Le potentiel des ressources en eau souterraines est évalué à 4 Milliards m3/an actuellement."
+    },
+    {
+      "id": "interconnexion-sebou-bouregreg",
+      "theme": "eau-potable",
+      "claimFr": "Le transfert Sebou vers Bouregreg a apporté 151 millions de m³ entre le 28 août 2023 et le 31 janvier 2024 ; la tranche urgente vise 300 à 400 millions de m³ par an (6 milliards de DH).",
+      "value": {
+        "transfere_Mm3": 151.112,
+        "periode": "2023-08-28 au 2024-01-31",
+        "capacite_annuelle_Mm3": "300 à 400",
+        "cout_milliards_DH": 6
+      },
+      "unit": "millions de m³",
+      "period": "2023-2024",
+      "status": "verifie",
+      "sourceName": "Ministère de l'Équipement et de l'Eau, « Les nouvelles inflexions de la politique de l'eau », conférence ENSA, 1 févr. 2024 (copie hébergée par l'auteur de la vidéo)",
+      "sourceUrl": "https://drive.google.com/file/d/1KeGxQ0iTalwELBBNA9oF36Z4W6rs2iLw/view",
+      "readDate": "2026-11-24",
+      "passage": "Réalisation de la Tranche urgente du transfert du Sebou vers le Bouregreg : Apports transfert du BGS à SMBA: 151,112 Mm3 du 28/8/2023 au 31/01/2024"
+    },
+    {
+      "id": "dessalement-parc-2023",
+      "theme": "dessalement",
+      "claimFr": "Début 2024 le Maroc comptait 15 stations de dessalement d'eau de mer (192 millions de m³ par an) ; l'objectif est de 1,46 milliard de m³ par an en 2030.",
+      "value": {
+        "stations_2023": 15,
+        "capacite_2023_Mm3": 192,
+        "stations_2021": 12,
+        "capacite_2021_Mm3": 145,
+        "objectif_2030_Mm3": 1460
+      },
+      "unit": "millions de m³ par an",
+      "period": "2023 et objectif 2030",
+      "status": "verifie",
+      "sourceName": "Ministère de l'Équipement et de l'Eau, « Les nouvelles inflexions de la politique de l'eau », conférence ENSA, 1 févr. 2024 (copie hébergée par l'auteur de la vidéo)",
+      "sourceUrl": "https://drive.google.com/file/d/1KeGxQ0iTalwELBBNA9oF36Z4W6rs2iLw/view",
+      "readDate": "2026-11-24",
+      "passage": "2023 : 15 stations de dessalement de l'eau de mer d'une capacité de production de 192 Mm3/an [...] 2030 : [...] Capacité de production totale : 1,460 Milliards de m3/an"
+    },
+    {
+      "id": "prix-eau-dessalee-irrigation",
+      "theme": "dessalement",
+      "claimFr": "Selon la presse, à Chtouka l'eau dessalée destinée à l'irrigation est facturée environ 5,60 DH/m³ contre 1,50 DH pour l'eau de barrage ; son coût réel dépasserait 10 DH.",
+      "value": {
+        "facture_DH_m3": 5.6,
+        "barrage_DH_m3": 1.5,
+        "cout_reel_DH_m3": 10.2
+      },
+      "unit": "DH par m³",
+      "period": "article du 5 novembre 2026",
+      "status": "secondaire",
+      "sourceName": "Bladi.net, 5 novembre 2026, citant un reportage du Monde",
+      "sourceUrl": "https://www.bladi.net/tuyau-centimetres-sauve-tomates-agriculteur-agadir,124794.html",
+      "readDate": "2026-11-24",
+      "passage": "facturé 5,60 dirhams aux agriculteurs de la région, contre 1,50 dirham pour l'eau provenant des barrages"
+    },
+    {
+      "id": "reutilisation-eaux-usees",
+      "theme": "reutilisation",
+      "claimFr": "Fin 2022, 32 millions de m³ par an d'eaux usées épurées étaient réutilisés (dont 19 pour 28 golfs) ; l'objectif est 100 millions fin 2027.",
+      "value": {
+        "reutilise_2022_Mm3": 32,
+        "golfs_Mm3": 19,
+        "objectif_2027_Mm3": 100
+      },
+      "unit": "millions de m³ par an",
+      "period": "fin 2022, objectif 2027",
+      "status": "verifie",
+      "sourceName": "Ministère de l'Équipement et de l'Eau, « Les nouvelles inflexions de la politique de l'eau », conférence ENSA, 1 févr. 2024 (copie hébergée par l'auteur de la vidéo)",
+      "sourceUrl": "https://drive.google.com/file/d/1KeGxQ0iTalwELBBNA9oF36Z4W6rs2iLw/view",
+      "readDate": "2026-11-24",
+      "passage": "Situation à fin 2022 : Volume réutilisé des eaux épurées : 32 Mm3/an [...] 28 golfs réutilisent 19 Mm3/an"
+    },
+    {
+      "id": "rendement-reseaux-aep",
+      "theme": "eau-potable",
+      "claimFr": "Le rendement des réseaux d'eau potable est de 77 % aujourd'hui ; l'objectif est 78 % en 2027 et 80 % en 2030.",
+      "value": {
+        "2027": 78,
+        "2030": 80,
+        "actuel": 77
+      },
+      "unit": "% d'eau distribuée sur eau produite (rendement)",
+      "period": "janvier 2024",
+      "status": "verifie",
+      "sourceName": "Ministère de l'Équipement et de l'Eau, « Les nouvelles inflexions de la politique de l'eau », conférence ENSA, 1 févr. 2024 (copie hébergée par l'auteur de la vidéo)",
+      "sourceUrl": "https://drive.google.com/file/d/1KeGxQ0iTalwELBBNA9oF36Z4W6rs2iLw/view",
+      "readDate": "2026-11-24",
+      "passage": "Amélioration des rendements des réseaux de distribution d'AEP : 77% actuellement à 78% en 2027 et 80% en 2030."
+    },
+    {
+      "id": "gestes-mesures-locales",
+      "theme": "gestes",
+      "claimFr": "Lors de la sécheresse, des mesures locales ont visé l'arrosage des espaces verts, le lavage des rues, le remplissage des piscines et la recherche de fuites.",
+      "value": null,
+      "unit": null,
+      "period": "depuis octobre 2021, bilan janvier 2024",
+      "status": "verifie",
+      "sourceName": "Ministère de l'Équipement et de l'Eau, « وضعية الموارد المائية ببلادنا », présentation à la commission parlementaire, 24 janv. 2024 (copie hébergée par l'auteur de la vidéo)",
+      "sourceUrl": "https://drive.google.com/file/d/1kPN76BlChAAFpXhu4z4jBjcnKbKDsWtT/view",
+      "readDate": "2026-11-24",
+      "passage": "منع الأنشطة المتعلقة بسقي المساحات الخضراء والحدائق وتنظيف الشوارع والساحات العمومية وملء المسابح وسقي المزروعات المستنزفة للماء"
+    },
+    {
+      "id": "demande-par-secteur-2020",
+      "theme": "agriculture",
+      "claimFr": "La demande en eau est estimée à 16,28 milliards de m³ par an (2020) : 14,53 pour l'agriculture (89 %), 1,75 pour eau potable, industrie et tourisme réunis (11 %).",
+      "value": {
+        "total": 16.28,
+        "agriculture": 14.53,
+        "agriculture_pct": 89.26,
+        "AEPIT": 1.75,
+        "AEPIT_pct": 10.74
+      },
+      "unit": "milliards de m³ par an",
+      "period": "demande 2020",
+      "status": "verifie",
+      "sourceName": "IRES, « Quel avenir de l'eau au Maroc ? », rapport de synthèse, 17 mars 2022",
+      "sourceUrl": "https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf",
+      "readDate": "2026-11-24",
+      "passage": "14,53 Milliards de m3/an pour l'Agriculture, soit 89,26% de la demande en eau globale du Maroc et 1,75 Milliards de m3/an d'Eau Potable, Industrielle et Touristique"
+    },
+    {
+      "id": "goutte-a-goutte-paradoxe",
+      "theme": "agriculture",
+      "claimFr": "Passer au goutte-à-goutte n'a pas réduit la consommation d'eau d'irrigation des exploitations : les agriculteurs ont souvent intensifié ou changé de cultures plus gourmandes.",
+      "value": null,
+      "unit": null,
+      "period": "bilan 2023",
+      "status": "verifie",
+      "sourceName": "Banque mondiale, CCDR du Maroc, Note technique « Pénurie d'eau et sécheresses » (fichier daté mars 2023 dans l'URL)",
+      "sourceUrl": "https://thedocs.worldbank.org/en/doc/6a3d44142e06fc24d37485df7ed31824-0280012023/original/Rapport-Pe-nurie-deau-et-se-cheresses-mar23.pdf",
+      "readDate": "2026-11-24",
+      "passage": "la conversion vers des systèmes d'irrigation modernes n'a pas permis de réduire la consommation d'eau d'irrigation au niveau des exploitations"
+    }
+  ]
+}

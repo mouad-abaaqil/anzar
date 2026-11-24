@@ -234,6 +234,7 @@ export const CHAPTERS = [
   { id: 'contexte', label: 'Contexte' },
   { id: 'probleme', label: 'Problématique' },
   { id: 'barrages', label: 'Barrages' },
+  { id: 'comprendre', label: 'Comprendre' },
   { id: 'chiffres', label: 'Chiffres' },
   { id: 'essayez', label: 'Essayez' },
 ];
@@ -249,6 +250,14 @@ export const STORY_STOPS = [
   { id: 'sud', chapter: 'probleme', label: 'Le Sud', center: [-13.4, 25.8], zoom: 4.9, pitch: 50, bearing: 16, duration: 3400, highlightRegionIds: ['laayoune-sakia-el-hamra', 'dakhla-oued-ed-dahab'] },
   { id: 'climat', chapter: 'probleme', label: 'Le climat', center: [-7.0, 31.0], zoom: 4.8, pitch: 34, bearing: 0, duration: 3000, highlightRegionIds: [] },
   { id: 'barrages', chapter: 'barrages', label: 'Où sont les barrages', center: [-6.4, 31.9], zoom: 6.5, pitch: 64, bearing: 24, duration: 3600, highlightRegionIds: [], revealDams: true, flyAlongAtlas: true, orbit: { degreesPerSec: 2, maxSeconds: 30 } },
+  // Comprendre l'eau (sensibilisation, Awareness.jsx) : Atlas, bassins du nord, un barrage de l'Atlas, plaine du Souss
+  // (nappes, non modélisées), Sebou → Bouregreg (aucune conduite tracée : la carte ne montre que la zone), vue d'ensemble.
+  { id: 'comprendre-rare', chapter: 'comprendre', label: 'Moins de 1 000 m³ par habitant', center: [-5.6, 31.9], zoom: 5.9, pitch: 60, bearing: -28, duration: 3200, highlightRegionIds: [] },
+  { id: 'comprendre-irreguliere', chapter: 'comprendre', label: 'Des apports irréguliers', center: [-6.2, 33.2], zoom: 6.0, pitch: 48, bearing: 12, duration: 3200, highlightRegionIds: [], showDams: true },
+  { id: 'comprendre-barrage', chapter: 'comprendre', label: 'Un barrage n’est pas un robinet', center: [-6.464, 32.106], zoom: 9.4, pitch: 60, bearing: -20, duration: 3600, highlightRegionIds: [], showDams: true, orbit: { degreesPerSec: 1.5, maxSeconds: 25 } },
+  { id: 'comprendre-nappes', chapter: 'comprendre', label: 'Les nappes', center: [-9.0, 30.4], zoom: 7.8, pitch: 52, bearing: 10, duration: 3400, highlightRegionIds: ['souss-massa'] },
+  { id: 'comprendre-solutions', chapter: 'comprendre', label: 'Les solutions', center: [-6.5, 34.1], zoom: 7.6, pitch: 50, bearing: -10, duration: 3400, highlightRegionIds: ['rabat-sale-kenitra'], showDams: true },
+  { id: 'comprendre-agir', chapter: 'comprendre', label: 'Agir', center: [-7.2, 31.6], zoom: 5.2, pitch: 36, bearing: 0, duration: 3000, highlightRegionIds: [] },
   { id: 'chiffres', chapter: 'chiffres', label: 'En chiffres', center: [-7.0, 31.6], zoom: 5.1, pitch: 40, bearing: -8, duration: 3000, highlightRegionIds: [] },
   { id: 'essayez', chapter: 'essayez', label: 'Essayez', center: [-8.9, 30.3], zoom: 6.2, pitch: 55, bearing: -15, duration: 3000, highlightRegionIds: ['souss-massa'] },
 ];

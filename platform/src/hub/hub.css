@@ -103,6 +103,12 @@ body { margin: 0; background: var(--az-bg); color: var(--az-text); font-family: 
   .hub-layer--panel > .pn-shell { width: 100%; height: 58%; border-left: 0; border-top: var(--az-hairline) solid var(--az-line-strong); border-radius: var(--az-r-lg) var(--az-r-lg) 0 0; }
 }
 
+/* Très petits écrans : le lien « Accueil » cède la place à « Comprendre » (le logo Anzar ramène déjà à l'accueil),
+   pour que le sélecteur de région garde son nom lisible. */
+@media (max-width: 480px) {
+  .hub-nav__link--home { display: none; }
+}
+
 /* Contenu de SourcesPage (ancien balisage) habillé avec les tokens, dans le tiroir. */
 .hub-sources { display: flex; flex-direction: column; gap: var(--az-sp-5); color: var(--az-text-muted); font-size: var(--az-fs-small); }
 .hub-sources .sources-page { display: flex; flex-direction: column; gap: var(--az-sp-5); }

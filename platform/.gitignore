@@ -6,3 +6,5 @@ dist/
 coverage/
 playwright-report/
 test-results/
+# Documents téléchargés depuis les dossiers publics de l'auteur de la vidéo (tiers, ~94 Mo) : à retélécharger, pas à versionner
+data-raw/awareness/source-files/

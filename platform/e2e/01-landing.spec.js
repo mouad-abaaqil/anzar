@@ -13,7 +13,7 @@ test.describe('landing', () => {
     expect.soft(ox.scrollWidth, 'débordement horizontal ' + JSON.stringify(ox)).toBeLessThanOrEqual(ox.inner);
 
     // Accueil : chaque section vient dans la fenêtre à tour de rôle (défilement du document).
-    for (const id of ['contexte', 'ecarts', 'demande', 'sud', 'climat', 'barrages', 'chiffres', 'essayez']) {
+    for (const id of ['contexte', 'ecarts', 'demande', 'sud', 'climat', 'barrages', 'comprendre-rare', 'comprendre-irreguliere', 'comprendre-barrage', 'comprendre-nappes', 'comprendre-solutions', 'comprendre-agir', 'chiffres', 'essayez']) {
       await scrollToStep(page, 'sty-t-' + id);
       const h = page.locator('#sty-t-' + id);
       await expect(h, 'titre ' + id).toBeVisible();

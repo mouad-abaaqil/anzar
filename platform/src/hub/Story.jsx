@@ -15,6 +15,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Button, MicroLabel, ProvenanceChip } from '../design';
 import MiniSim from './MiniSim.jsx';
+import AwarenessChapter from './Awareness.jsx';
 import WaterFx, { Bubbles, LevelGauge, Sea, Surface, WaterLine, Wave, useReducedMotion, useTouchRipples } from './WaterFx.jsx';
 import { watchActivity } from './water/clock.js';
 import { hubHash } from './routes.js';
@@ -580,6 +581,9 @@ export default function Story({ data, onEnter, flyToStop, mapFeatures, regionId:
           )}
         </div>
       </Section>
+
+      {/* ---------- Comprendre l'eau (sensibilisation) : six étapes, Awareness.jsx ---------- */}
+      <AwarenessChapter Section={Section} ctx={ctx} bulletinDate={bulletinDate} onEnter={() => enter()} onTry={() => goTo('essayez')} />
 
       {/* ---------- 04 En chiffres ---------- */}
       <Section

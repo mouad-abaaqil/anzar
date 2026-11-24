@@ -19,6 +19,7 @@ const lazyModule = key => (modules[key] ? lazy(modules[key]) : null);
 const HubMap = lazyModule('./HubMap.jsx');
 const Story = lazyModule('./Story.jsx');
 const PanelShell = lazyModule('./panel/PanelShell.jsx');
+const AwarenessSources = lazy(() => import('./Awareness.jsx').then(m => ({ default: m.AwarenessSources })));
 const OpenDataSources = lazy(() => import('./panel/ExtraBlocks.jsx').then(m => ({ default: m.OpenDataSources })));
 
 const FALLBACK_SCENARIO = { hydrology: 'normal', popGrowth: null, demandReductionPct: 0, addedDesalMm3: 0, reusePct: 0, rainChangePct: null, year: 2035 };
@@ -127,6 +128,28 @@ export default function HubApp({ route }) {
   useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }, [mode]);
 
   // Sur l'accueil, « Accueil » ne change pas l'adresse : retour en haut de page.
+  // « Comprendre » : défilement doux jusqu'au chapitre de sensibilisation (#comprendre) ; depuis une autre vue, retour à
+  // l'accueil puis défilement dès que le chapitre est monté.
+  const wantUnderstand = useRef(false);
+  const scrollToUnderstand = () => {
+    const el = document.getElementById('comprendre');
+    if (!el) return false;
+    const still = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+    el.scrollIntoView({ behavior: still ? 'auto' : 'smooth', block: 'start' });
+    return true;
+  };
+  const toUnderstand = e => {
+    e.preventDefault();
+    if (route.view === 'story' && scrollToUnderstand()) return;
+    wantUnderstand.current = true;
+    if (route.view !== 'story') window.location.hash = '#/';
+  };
+  useEffect(() => {
+    if (mode !== 'story' || route.view !== 'story' || data.status !== 'ready' || !wantUnderstand.current) return undefined;
+    let n = 0;
+    const t = setInterval(() => { if (scrollToUnderstand() || ++n > 60) { wantUnderstand.current = false; clearInterval(t); } }, 150);
+    return () => clearInterval(t);
+  }, [mode, route.view, data.status]);
   const toTopOnStory = e => { if (route.view === 'story') { e.preventDefault(); window.scrollTo({ top: 0 }); } };
   const enter = id => go({ view: 'explore', regionId: id || DEFAULT_REGION_ID, tab: 'today' });
   const selectRegion = id => { if (id && (id !== regionId || mode === 'story')) go({ view: 'explore', regionId: id, tab: mode === 'explore' ? tab : 'today' }); };
@@ -165,8 +188,9 @@ export default function HubApp({ route }) {
           <span className="hub-brand__name">Anzar</span>
         </a>
         <nav className="hub-nav" aria-label="Navigation principale">
-          <a className="hub-nav__link" href="#/" aria-current={mode === 'story' && route.view !== 'sources' ? 'page' : undefined} onClick={toTopOnStory}>Accueil</a>
+          <a className="hub-nav__link hub-nav__link--home" href="#/" aria-current={mode === 'story' && route.view !== 'sources' ? 'page' : undefined} onClick={toTopOnStory}>Accueil</a>
           <a className="hub-nav__link" href={hubHash({ view: 'explore', regionId, tab })} aria-current={mode === 'explore' && route.view !== 'sources' ? 'page' : undefined}><span className="hub-nav__long">Tableau de bord</span><span className="hub-nav__short" aria-hidden="true">Tableau</span></a>
+          <a className="hub-nav__link" href="#/" onClick={toUnderstand}><span className="hub-nav__long">Comprendre</span><span className="hub-nav__short">Enjeux</span></a>
           <a className="hub-nav__link" href="#/sources" aria-current={route.view === 'sources' ? 'page' : undefined}>Sources</a>
         </nav>
         <div className="hub-bar__actions">
@@ -248,6 +272,7 @@ export default function HubApp({ route }) {
               onExport={() => download(JSON.stringify({ sources }, null, 2), 'anzar-sources.json')}
             />
             <Suspense fallback={null}><OpenDataSources data={data} regionId={regionId} /></Suspense>
+            <Suspense fallback={null}><AwarenessSources /></Suspense>
             <p className="hub-sources__note" id="hub-marques">Anzar est un prototype indépendant issu d’un stage à la RAMSA, pas un portail officiel. Les logos des opérateurs sont des marques de leurs titulaires. Les prévisions et le climat viennent d’Open-Meteo (modélisé, gratuit, usage non commercial).</p>
             <p className="hub-sources__note">Pages annexes, hors parcours principal : <a href="#/app/quality">qualité de l’eau</a> · <a href="#/app/cycle">cycle de l’eau</a> (Souss-Massa). {STATIC_BUILD ? SERVER_ONLY_NOTICE + '.' : ''}</p>
           </div>
