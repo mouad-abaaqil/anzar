@@ -35,7 +35,7 @@ test.describe('mobile 390x844', () => {
     expect.soft(await innerOverflow(page), 'débordement dans un conteneur à défilement (MiniSim)').toEqual([]);
     for (const id of ['contexte', 'ecarts', 'demande', 'sud', 'climat', 'barrages', 'chiffres']) {
       await page.evaluate(i => document.getElementById('sty-t-' + i)?.closest('section').scrollIntoView({ block: 'start' }), id);
-      expect.soft(await innerOverflow(page), 'débordement dans .sty-scroll à l’étape ' + id).toEqual([]);
+      expect.soft(await innerOverflow(page), 'débordement interne à l’étape ' + id).toEqual([]);
     }
     const small = await smallTargets(page, '.msim button, .msim input[type=range]');
     expect.soft(small, 'cibles < 44 px (MiniSim)').toEqual([]);
@@ -56,7 +56,12 @@ test.describe('mobile 390x844', () => {
     test.info().annotations.push({ type: 'info', description: 'panneau ' + JSON.stringify(box) + ' ; haut du panneau ' + sel.panelTop + ' px sur ' + sel.vh + ' (la carte visible = au-dessus)' });
     expect.soft(box.y, 'le panneau occupe le bas de l’écran').toBeGreaterThan(844 * 0.25);
     expect.soft(box.width).toBeLessThanOrEqual(390);
-    const small = await smallTargets(page, '.hub-bar a, .hub-bar button, .pn-shell [role=tab], .pn-shell .az-region__trigger, .pn-shell .pn-intro button');
+    // Barre basse toujours visible, sous le panneau (ne le recouvre pas).
+    const foot = await page.evaluate(() => { const f = document.querySelector('.hub-foot')?.getBoundingClientRect(); const p = document.querySelector('.pn-shell')?.getBoundingClientRect(); return f && p && { footTop: Math.round(f.top), footBottom: Math.round(f.bottom), panelBottom: Math.round(p.bottom), vh: innerHeight }; });
+    expect.soft(foot && foot.footBottom, 'barre basse collée au bas de l’écran ' + JSON.stringify(foot)).toBe(844);
+    expect.soft(foot && foot.panelBottom <= foot.footTop + 1, 'le panneau ne passe pas sous la barre basse ' + JSON.stringify(foot)).toBe(true);
+    await expect(page.locator('.hub-foot')).toContainText(/Prototype indépendant/);
+    const small = await smallTargets(page, '.hub-foot a, .hub-bar a, .hub-bar button, .pn-shell [role=tab], .pn-shell .az-region__trigger, .pn-shell .pn-intro button');
     expect.soft(small, 'cibles < 44 px (tableau de bord)').toEqual([]);
     for (const [name, hash] of [['Demain', /tomorrow$/], ['Ensemble', /together$/], ['Aujourd’hui', /souss-massa$/]]) {
       await page.getByRole('tab', { name }).tap();

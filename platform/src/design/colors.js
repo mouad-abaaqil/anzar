@@ -81,4 +81,8 @@ export const colors = Object.freeze({
   mapSelection: '#fab61f',
   mapSelectionCasing: '#0a2540',
   mapLight: '#ffffff',
+  mapField: '#7cbf5a',
+  mapFieldOrchard: '#3f8f3c',
+  mapFieldVine: '#9aa83a',
+  mapFieldVeil: '#57b24a',
 });

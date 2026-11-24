@@ -50,13 +50,14 @@ test.describe('interactions du tableau de bord', () => {
     const box = await page.locator('.maplibregl-canvas').first().boundingBox();
     const before = await page.evaluate(() => location.hash);
     let landed = null;
-    outer: for (const fy of [0.35, 0.5, 0.65, 0.8, 0.2]) {
-      for (const fx of [0.2, 0.35, 0.5, 0.1, 0.6]) {
+    outer: // Grille large (la région active occupe le centre : on cherche aussi ses voisines) ; on s'arrête au premier changement.
+    for (const fy of [0.35, 0.2, 0.5, 0.65, 0.8, 0.12, 0.9]) {
+      for (const fx of [0.2, 0.35, 0.5, 0.1, 0.6, 0.05, 0.28, 0.43, 0.55, 0.65]) {
         const x = box.x + box.width * fx, y = box.y + box.height * fy;
         const target = await page.evaluate(([px, py]) => document.elementFromPoint(px, py)?.className?.toString() || '', [x, y]);
         if (!/maplibregl-canvas/.test(target)) continue;
         await page.mouse.click(x, y);
-        await page.waitForTimeout(700);
+        await page.waitForTimeout(500);
         const h = await page.evaluate(() => location.hash);
         if (h !== before) { landed = h; break outer; }
       }
@@ -70,8 +71,8 @@ test.describe('interactions du tableau de bord', () => {
     await page.goto('/#/r/oriental/together');
     await waitDashboard(page);
     await page.getByRole('button', { name: /Partager/ }).click();
-    await expect(page.locator('.hub-live')).toContainText(/Lien copié|Copie impossible/);
-    const live = await page.locator('.hub-live').innerText();
+    await expect(page.locator('.hub-toast')).toHaveText('Lien copié.');
+    const live = await page.locator('.hub-toast').innerText();
     const clip = await page.evaluate(() => navigator.clipboard.readText()).catch(e => 'ERR ' + e.message);
     test.info().annotations.push({ type: 'info', description: live + ' | presse-papiers: ' + clip });
     expect(live).toMatch(/Lien copié/);

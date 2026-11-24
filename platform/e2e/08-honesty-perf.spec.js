@@ -20,6 +20,13 @@ test.describe('contenu honnête', () => {
     await scrollToStep(page, 'sty-t-essayez');
     await expect(page.locator('.msim__legal')).toContainText(/pas un relevé en direct/i);
     await expect(page.locator('.msim__legal')).toContainText(/pas une prédiction/i);
+    // Pied de page : mentions obligatoires.
+    const foot = page.locator('footer.sty-foot');
+    await foot.scrollIntoViewIfNeeded();
+    await expect(foot).toContainText(/prototype indépendant issu d’un stage à la RAMSA/i);
+    await expect(foot).toContainText(/pas un portail officiel/i);
+    await expect(foot).toContainText(/Open-Meteo/);
+    await expect(foot).toContainText(/marques de leurs titulaires/i);
   });
 
   test('tableau de bord : bulletin daté et prototype indépendant', async ({ page }) => {
@@ -29,6 +36,7 @@ test.describe('contenu honnête', () => {
     expect.soft(t).toMatch(/pas un relevé en direct/i);
     expect.soft(t).toMatch(/Prototype indépendant/i);
     expect.soft(t).toMatch(/pas un portail officiel/i);
+    await expect(page.locator('.hub-foot')).toContainText(/pas un portail officiel/i);
     await page.getByRole('tab', { name: 'Demain' }).click();
     await expect(page.locator('.pn-shell')).toContainText(/pas une prédiction/i);
     await page.getByRole('tab', { name: 'Ensemble' }).click();

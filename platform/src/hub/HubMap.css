@@ -48,6 +48,8 @@
   .hub-dam-wrap.is-ripple::after { animation: none; }
 }
 .hub-map.is-dams-off .hub-dam-wrap { visibility: hidden; }
+/* Globe lointain : les barrages n'ont pas de sens à cette échelle. */
+.hub-map.is-far .hub-dam-wrap { visibility: hidden; }
 .hub-map.is-story .hub-dam-wrap { pointer-events: none; }
 .hub-map.is-dams-faint .hub-dam { opacity: 0.55; }
 
@@ -79,7 +81,11 @@
 .hub-map__sw--dam.is-unknown { width: 10px; height: 10px; margin-inline: 6px; border-style: dotted; border-color: var(--az-text-muted); }
 .hub-map__sw--solid { height: 0; border-top: 2px solid var(--az-accent); }
 .hub-map__sw--dash { height: 0; border-top: 2px dashed var(--az-accent); }
+.hub-map__sw--field { border-radius: 2px; background: var(--az-map-field); box-shadow: inset 0 -4px 0 var(--az-map-field-orchard); }
 .hub-map__sw--faint { height: 0; border-top: 2px solid color-mix(in srgb, var(--az-accent) 40%, transparent); }
+/* Récit avec champs en 3D : mention de source et limite (la légende est masquée en récit). */
+.hub-map__fields-note { position: absolute; top: var(--az-sp-4); right: var(--az-margin, 16px); z-index: var(--az-z-sticky); display: flex; flex-direction: column; gap: var(--az-sp-1); max-width: min(320px, calc(100% - 2 * var(--az-margin, 16px))); margin: 0; padding: var(--az-sp-2) var(--az-sp-3); background: color-mix(in srgb, var(--az-surface-1) 90%, transparent); border: 1px solid var(--az-line); border-radius: var(--az-r-sm); font-size: var(--az-fs-micro); color: var(--az-text-muted); pointer-events: none; }
+.hub-map__fields-note span:first-child { color: var(--az-text); font-weight: 600; }
 /* Le récit porte son propre texte : pas de légende par-dessus. */
 .hub-map.is-story .hub-map__legend { display: none; }
 @media (max-width: 599px) {

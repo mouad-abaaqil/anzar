@@ -1,41 +1,50 @@
-// Récit d'entrée d'Anzar (landing) : CONTEXTE → PROBLÉMATIQUE → BARRAGES → CHIFFRES → ESSAYEZ, posé sur la carte
-// persistante (HubMap) qu'il pilote. Contrat : docs/HUB_CONTRACT.md. Props :
-// - data : useHubData() (chargé ici si absent) ; regionId : région de départ ;
-// - onEnter(regionId) : ouvre le tableau de bord ; flyToStop(stop) : caméra (absent ou sans WebGL : le récit reste complet).
-//   Les effets de carte voyagent dans le stop (revealDams, flyAlongAtlas, orbit : voir stops.js), lus par HubMap.
-// Tous les chiffres viennent de stops.js (lus dans public/data/*.json). Mouvement : IntersectionObserver (--p par
-// étape) et défilement (barre de progression) ; motifs d'eau en rafale courte (WaterFx) ; rien sous reduced-motion.
+// Page d'accueil d'Anzar (landing) : OUVERTURE (globe puis plongeon vers le Maroc) → CONTEXTE → PROBLÉMATIQUE
+// (écarts, usages de l'eau, Sud, climat) → BARRAGES → CHIFFRES → ESSAYEZ → pied de page. Posée sur la carte persistante
+// (HubMap, fixe derrière la page) qu'elle pilote. Contrat : docs/HUB_CONTRACT.md. Props :
+// - data : useHubData() (chargé ici si absent) ; regionId : région de départ ; onShare() : partage du lien ;
+// - onEnter(regionId) : ouvre le tableau de bord ; flyToStop(stop) : caméra (absent ou sans WebGL : la page reste complète) ;
+// - mapFeatures : { fields } capacités annoncées par la carte (mention « parcelles en 3D » seulement si elle sait les montrer).
+// Mise en page : vraies sections web sur la grille (colonne de contenu à gauche, carte visible à droite ; bandeau de carte
+// au-dessus de chaque section sur mobile). Défilement NATIF du document : aucun conteneur imbriqué, aucun snap, aucun
+// gestionnaire de molette. Étape active : IntersectionObserver (bande centrale) ; caméra : un seul vol après un court délai.
+// Tous les chiffres viennent de stops.js (lus dans public/data/*.json) ; chaque chiffre n'apparaît que dans une section.
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { Share2 } from 'lucide-react';
 import { Button, MicroLabel, ProvenanceChip } from '../design';
 import MiniSim from './MiniSim.jsx';
 import WaterFx, { LevelGauge, Wave, useReducedMotion } from './WaterFx.jsx';
+import { hubHash } from './routes.js';
 import {
-  CHAPTERS, STORY_STOPS, basinSpread, climateFacts, damCounts, demandFacts, fmt, frDate, keyFigures,
-  nationalFacts, regionStop, southDesal, southLinks,
+  CHAPTERS, HERO_DIVE, HERO_DIVE_DELAY_MS, STORY_STOPS, basinSpread, climateFacts, damCounts, demandFacts, fmt, frDate,
+  keyFigures, nationalFacts, regionStop, southDesal, southLinks,
 } from './stops.js';
 import './Story.css';
 
-const THRESHOLDS = Array.from({ length: 21 }, (_, i) => i / 20);
 const LEGAL = 'Prototype indépendant issu d’un stage à la RAMSA. Pas un portail officiel.';
 const pct = (v, d = 1) => fmt(v, d) + ' %';
+const MOBILE = 899;
 
-// Décale le centre demandé pour que la cible tombe dans la zone libre de la carte : à droite du texte sur grand
-// écran, au-dessus sur mobile. Approximation Web Mercator (tuiles de 512 px). Pour le héros, HubMap ajoute déjà
-// son propre cadrage (marge à gauche et en haut) : décalage plus court à droite, plus long vers le haut sur mobile.
+// Décale le centre demandé pour que la cible tombe dans la zone de carte visible : à droite de la colonne de contenu
+// sur grand écran, dans le bandeau du haut sur mobile. Approximation Web Mercator (tuiles de 512 px). Héros : HubMap
+// ajoute déjà son propre cadrage (marge gauche de 14 % au-delà de 600 px, zoom + 0,55). Globe : pas de décalage.
 function framed(stop) {
-  if (typeof window === 'undefined' || !stop?.center) return stop?.center;
+  if (typeof window === 'undefined' || !stop?.center || stop.globe) return stop?.center;
   const w = window.innerWidth, h = window.innerHeight;
+  // Seule l'étape 'hero' reçoit le cadrage propre de HubMap (heroFraming) ; le plongeon est cadré ici en entier.
   const hero = stop.id === 'hero';
   const [lon, lat] = stop.center;
-  // Héros : HubMap vole à zoom + 0,55 avec une marge haute de 18 % et gauche de 14 % (≥ 600 px).
   const degPerPx = 360 / (512 * Math.pow(2, stop.zoom + (hero ? 0.55 : 0)));
-  if (w > 760) return [lon - (hero ? 0.15 : 0.22) * w * degPerPx, lat];
+  if (w > MOBILE) {
+    const col = document.querySelector('.sty-hero__panel')?.getBoundingClientRect().width || w * 0.5;
+    const shift = Math.max(0, col / 2 - (hero && w >= 600 ? 0.07 * w : 0));
+    return [lon - shift * degPerPx, lat];
+  }
   // Vertical : avec l'inclinaison, un pixel d'écran couvre 1 / cos(pitch) fois plus de sol près du centre.
   const tilt = 1 / Math.max(0.35, Math.cos(((stop.pitch || 0) * Math.PI) / 180));
   return [lon, lat - (hero ? 0.42 : 0.24) * tilt * h * degPerPx * Math.cos((lat * Math.PI) / 180)];
 }
 const MOBILE_HERO_ZOOM_OUT = 0.9;
-const forViewport = stop => (stop?.id === 'hero' && typeof window !== 'undefined' && window.innerWidth <= 760 ? { ...stop, zoom: stop.zoom - MOBILE_HERO_ZOOM_OUT } : stop);
+const forViewport = stop => (stop?.id === HERO_DIVE.id && typeof window !== 'undefined' && window.innerWidth <= 760 ? { ...stop, zoom: stop.zoom - MOBILE_HERO_ZOOM_OUT } : stop);
 
 function useStoryData(data) {
   const [own, setOwn] = useState(null);
@@ -87,20 +96,51 @@ function Count({ value, decimals = 0, run, reduced, className = 'sty-num' }) {
   );
 }
 
-export default function Story({ data, onEnter, flyToStop, regionId: initialRegionId }) {
+/** Section web : colonne de contenu sur la grille + fenêtre de carte (à droite, ou bandeau au-dessus sur mobile).
+ *  Composant de module (et non défini dans Story) : sinon React le remonterait à chaque rendu (compteurs, MiniSim). */
+function Section({ ctx, id, tone = 'light', title, lead, mapNote, children, after }) {
+  const i = ctx.idx(id);
+  return (
+    <section
+      ref={el => { if (el) ctx.refs.current[i] = el; }}
+      data-index={i}
+      aria-labelledby={'sty-t-' + id}
+      className={'sty-sec sty-sec--' + tone + (ctx.run(id) ? ' is-seen' : '') + (ctx.activeId === id ? ' is-active' : '')}
+    >
+      <div className="sty-sec__map" aria-hidden="true">
+        {mapNote && <MicroLabel tone="muted" className="sty-sec__mapnote">{mapNote}</MicroLabel>}
+      </div>
+      <div className={'sty-sec__col' + (tone === 'deep' ? ' az-deep az-deep--flat' : '')}>
+        <div className="sty-sec__inner">
+          <header className="sty-sec__head">
+            {ctx.kicker(id)}
+            <h2 id={'sty-t-' + id} className="sty-title">{title}</h2>
+            {lead && <p className="sty-lead">{lead}</p>}
+          </header>
+          {children}
+          {after}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export default function Story({ data, onEnter, onShare, flyToStop, mapFeatures, regionId: initialRegionId }) {
   const d = useStoryData(data);
   const ready = d.status === 'ready';
   const damFill = useDamFill();
   const prefersReduced = useReducedMotion();
-  const reduced = prefersReduced || typeof IntersectionObserver === 'undefined';
+  const noIO = typeof IntersectionObserver === 'undefined';
+  const reduced = prefersReduced || noIO;
   const [active, setActive] = useState(0);
   const [seen, setSeen] = useState(() => new Set([0]));
+  const [atEnd, setAtEnd] = useState(false);
+  const [dived, setDived] = useState(false);
   const [regionId, setRegionId] = useState(initialRegionId || 'souss-massa');
   useEffect(() => { if (initialRegionId) setRegionId(initialRegionId); }, [initialRegionId]);
-  const scrollRef = useRef(null);
   const progressRef = useRef(null);
+  const footRef = useRef(null);
   const refs = useRef([]);
-  const ratios = useRef([]);
   const flyRef = useRef(flyToStop);
   flyRef.current = flyToStop;
 
@@ -122,62 +162,76 @@ export default function Story({ data, onEnter, flyToStop, regionId: initialRegio
   const bulletinDate = frDate(nat?.date || d?.bulletin?.date);
   const bulletinChip = { status: 'sourced', source: 'Bulletin du ministère de l’Équipement et de l’Eau', date: bulletinDate, note: 'Instantané public daté, pas un relevé en direct.' };
 
-  // Étape active (la plus visible) et --p (0..1) par section.
+  // Étape active : la section qui coupe la bande centrale de la fenêtre. Sections vues : apparition une seule fois.
   useEffect(() => {
     const els = refs.current.filter(Boolean);
-    if (!els.length || typeof IntersectionObserver === 'undefined') return undefined;
-    let raf = 0;
-    const io = new IntersectionObserver(entries => {
+    if (!els.length || noIO) return undefined;
+    const band = new IntersectionObserver(entries => {
+      for (const e of entries) if (e.isIntersecting) setActive(Number(e.target.dataset.index));
+    }, { rootMargin: '-45% 0px -54% 0px', threshold: 0 });
+    const reveal = new IntersectionObserver(entries => {
       for (const e of entries) {
+        if (!e.isIntersecting) continue;
         const i = Number(e.target.dataset.index);
-        ratios.current[i] = e.intersectionRatio;
-        e.target.style.setProperty('--p', Math.min(1, e.intersectionRatio * 1.7).toFixed(3));
+        setSeen(s => (s.has(i) ? s : new Set(s).add(i)));
+        reveal.unobserve(e.target);
       }
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        let best = 0, bestR = -1;
-        ratios.current.forEach((r, i) => { if (r > bestR + 0.001) { best = i; bestR = r; } });
-        setActive(best);
-        setSeen(s => (s.has(best) ? s : new Set(s).add(best)));
-      });
-    }, { root: scrollRef.current, threshold: THRESHOLDS });
-    els.forEach(el => io.observe(el));
-    return () => { io.disconnect(); cancelAnimationFrame(raf); };
-  }, [ready]);
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+    els.forEach(el => { band.observe(el); reveal.observe(el); });
+    const foot = footRef.current;
+    const end = foot ? new IntersectionObserver(([e]) => setAtEnd(e.isIntersecting), { threshold: 0 }) : null;
+    if (foot) end.observe(foot);
+    return () => { band.disconnect(); reveal.disconnect(); end?.disconnect(); };
+  }, [ready, noIO]);
 
-  // Barre de progression liée au défilement (une écriture de style par image, sans rendu React).
+  // Barre de progression liée au défilement du document (une écriture de style par image, sans rendu React).
   useEffect(() => {
-    const sc = scrollRef.current;
-    if (!sc) return undefined;
     let raf = 0;
     const on = () => {
       if (raf) return;
       raf = requestAnimationFrame(() => {
         raf = 0;
-        const max = sc.scrollHeight - sc.clientHeight;
-        progressRef.current?.style.setProperty('--sty-progress', (max > 0 ? sc.scrollTop / max : 0).toFixed(4));
+        const de = document.documentElement;
+        const max = de.scrollHeight - window.innerHeight;
+        progressRef.current?.style.setProperty('--sty-progress', (max > 0 ? Math.min(1, window.scrollY / max) : 0).toFixed(4));
       });
     };
-    sc.addEventListener('scroll', on, { passive: true });
+    window.addEventListener('scroll', on, { passive: true });
+    window.addEventListener('resize', on, { passive: true });
     on();
-    return () => { sc.removeEventListener('scroll', on); cancelAnimationFrame(raf); };
+    return () => { window.removeEventListener('scroll', on); window.removeEventListener('resize', on); cancelAnimationFrame(raf); };
   }, []);
 
   const fly = useCallback(raw => {
     const stop = forViewport(raw);
     if (!stop || typeof flyRef.current !== 'function') return;
-    try { flyRef.current({ ...stop, center: framed(stop), duration: reduced ? 0 : stop.duration, orbit: reduced ? null : stop.orbit || null }); } catch { /* carte indisponible */ }
+    // Sous reduced-motion : aucune rotation (false pour une étape globe, que HubMap ferait sinon tourner par défaut).
+    try { flyRef.current({ ...stop, center: framed(stop), duration: reduced ? 0 : stop.duration, orbit: reduced ? (stop.globe ? false : null) : stop.orbit || null }); } catch { /* carte indisponible */ }
   }, [reduced]);
 
-  // Caméra et couches : un mouvement par changement d'étape.
-  // Délai court : un défilement rapide qui traverse plusieurs étapes ne lance qu'un vol (CPU, WebGL).
+  // Ouverture : globe (si la carte sait l'afficher : mapFeatures.globe), puis plongeon vers le Maroc au premier défilement
+  // ou après un court moment sans geste. Sans globe (pas de WebGL, carte plus ancienne) ou sous reduced-motion : la carte
+  // se pose directement sur le Maroc, sans attente ni rotation.
+  const globeOk = !!mapFeatures?.globe && !reduced;
   useEffect(() => {
-    const t = setTimeout(() => fly(STORY_STOPS[active]), active === 0 ? 0 : 350);
-    // Héros : la carte peut finir de charger après ce premier vol et reprendre son cadrage par défaut ;
-    // on renvoie le même arrêt une fois chargée (tant que le lecteur n'a pas quitté le héros).
-    const again = active === 0 ? [2200, 5500].map(ms => setTimeout(() => fly(STORY_STOPS[0]), ms)) : [];
+    if (dived || !globeOk) return undefined;
+    const t = setTimeout(() => setDived(true), HERO_DIVE_DELAY_MS);
+    const onScroll = () => { if (window.scrollY > 24) setDived(true); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => { clearTimeout(t); window.removeEventListener('scroll', onScroll); };
+  }, [dived, globeOk]);
+  const heroStop = dived || !globeOk ? HERO_DIVE : STORY_STOPS[0];
+
+  // Caméra et couches : un seul vol par changement d'étape, après un court délai (un défilement rapide qui traverse
+  // plusieurs étapes ne lance qu'un vol : jamais de vols empilés).
+  useEffect(() => {
+    const stop = active === 0 ? heroStop : STORY_STOPS[active];
+    const t = setTimeout(() => fly(stop), active === 0 ? 0 : 350);
+    // Héros sans globe : la carte peut finir de charger après ce premier vol ; on renvoie le même arrêt une fois chargée.
+    // (Avec globe, HubMap rejoue l'étape en attente à la fin du chargement : aucun renvoi, donc aucun vol interrompu.)
+    const again = active === 0 && !globeOk ? [2200, 5500].map(ms => setTimeout(() => fly(stop), ms)) : [];
     return () => { clearTimeout(t); again.forEach(clearTimeout); };
-  }, [active, fly]);
+  }, [active, fly, heroStop, globeOk]);
 
   const pickRegion = id => {
     setRegionId(id);
@@ -189,14 +243,11 @@ export default function Story({ data, onEnter, flyToStop, regionId: initialRegio
     refs.current[i]?.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'start' });
   };
   // Second argument : réglages de la mini-simulation (HubApp peut les reprendre comme scénario de départ).
+  // « Accueil » sur l'accueil : l'adresse ne change pas, on remonte en haut de page.
+  const toTop = e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }); };
   const enter = (id, scenario) => onEnter?.(id || regionId, scenario);
-  const run = id => seen.has(STORY_STOPS.findIndex(s => s.id === id));
-  const isActive = id => STORY_STOPS[active]?.id === id;
-  const sec = id => ({
-    ref: el => { refs.current[STORY_STOPS.findIndex(s => s.id === id)] = el; },
-    'data-index': STORY_STOPS.findIndex(s => s.id === id),
-    'aria-labelledby': 'sty-t-' + id,
-  });
+  const run = id => reduced || seen.has(STORY_STOPS.findIndex(s => s.id === id));
+  const idx = id => STORY_STOPS.findIndex(s => s.id === id);
   const chapterOf = id => STORY_STOPS.find(s => s.id === id)?.chapter;
   const chapterNo = id => CHAPTERS.findIndex(c => c.id === chapterOf(id)) + 1;
   const kicker = id => (
@@ -205,57 +256,71 @@ export default function Story({ data, onEnter, flyToStop, regionId: initialRegio
     </MicroLabel>
   );
 
+  const ctx = { refs, idx, run, kicker, activeId: STORY_STOPS[active]?.id };
   const activeChapter = STORY_STOPS[active]?.chapter;
   const spreadDouble = facts.spread && facts.spread.hi.fillPct / facts.spread.lo.fillPct >= 2;
+  const dem = facts.demand;
+  const year = new Date().getFullYear();
+  const dashHash = hubHash({ view: 'explore', regionId, tab: 'today' });
+  const iresChip = dem ? { status: dem.status, source: 'IRES, L’avenir de l’eau au Maroc (Département de l’Eau)', url: dem.source, date: dem.date } : null;
 
   return (
-    <div className={'sty' + (reduced ? ' sty--still' : '')} data-step={STORY_STOPS[active]?.id}>
+    <div className={'sty' + (reduced ? ' sty--still' : ' sty--anim')} data-step={STORY_STOPS[active]?.id}>
       <div className="sty-progress" ref={progressRef} aria-hidden="true"><span /></div>
 
-      <div className="sty-scroll" ref={scrollRef} tabIndex={0} role="region" aria-label="Récit : défilez pour avancer">
-        {/* ---------- Héros « profondeur » : la carte reste visible à droite (en haut sur mobile). ---------- */}
-        <section className="sty-hero" {...sec('hero')}>
-          <div className="sty-hero__panel az-deep az-deep--flat">
-            <WaterFx mode="rain" play={!reduced} className="sty-hero__fx" />
-            <div className="sty-hero__top">
-              <MicroLabel tone="accent">Observatoire de l’eau du Maroc</MicroLabel>
-              <MicroLabel tone="muted">{bulletinDate ? 'Bulletin du ' + bulletinDate : 'Données ouvertes'}</MicroLabel>
+      {/* ---------- Ouverture « profondeur » : la Terre en 3D à droite (en haut sur mobile), puis plongeon. ---------- */}
+      <section className={'sty-hero' + (heroStop === HERO_DIVE ? ' is-dived' : '')} ref={el => { refs.current[0] = el; }} data-index={0} aria-labelledby="sty-t-hero">
+        <div className="sty-hero__panel az-deep az-deep--flat">
+          <WaterFx mode="rain" play={!reduced} className="sty-hero__fx" />
+          <div className="sty-hero__top">
+            <MicroLabel tone="accent">Observatoire de l’eau du Maroc</MicroLabel>
+            <MicroLabel tone="muted">{bulletinDate ? 'Bulletin du ' + bulletinDate : 'Données ouvertes'}</MicroLabel>
+          </div>
+          <div className="sty-hero__mid">
+            <h1 id="sty-t-hero" className="sty-hero__title">Combien d’<span className="az-accent">eau</span> nous reste-t-il&nbsp;?</h1>
+            <p className="sty-hero__lead">Barrages, pluie, dessalement. Région par région.</p>
+            <div className="sty-hero__cta">
+              <Button variant="primary" size="lg" onClick={() => enter()}>Explorer le tableau de bord</Button>
+              <Button variant="secondary" size="lg" onClick={() => goTo('chiffres')}>Voir les chiffres</Button>
             </div>
-            <div className="sty-hero__mid">
-              <h1 id="sty-t-hero" className="sty-hero__title">Combien d’<span className="az-accent">eau</span> nous reste-t-il&nbsp;?</h1>
-              <p className="sty-hero__lead">Barrages, pluie, dessalement. Région par région.</p>
-              <div className="sty-hero__cta">
-                <Button variant="primary" size="lg" onClick={() => enter()}>Explorer le tableau de bord</Button>
-                <Button variant="secondary" size="lg" onClick={() => goTo('chiffres')}>Voir les chiffres</Button>
-              </div>
-            </div>
-            <div className="sty-hero__bottom">
+          </div>
+          <div className="sty-hero__bottom">
+            <div className="sty-hero__row">
               <button type="button" className="sty-hero__scroll" onClick={() => goTo('contexte')}>
                 <span className="sty-hero__drop" aria-hidden="true" />
                 <MicroLabel tone="muted">Défiler pour comprendre</MicroLabel>
               </button>
-              <p className="sty-legal">{LEGAL}</p>
+              {onShare && (
+                <Button variant="ghost" size="sm" className="sty-hero__share" onClick={onShare} icon={<Share2 size={18} />} aria-label="Partager : copier le lien de la page d’accueil">Partager</Button>
+              )}
             </div>
-            <Wave side="right" className="sty-hero__edge" />
-            <Wave side="top" className="sty-hero__edge-m" />
+            <p className="sty-legal">{LEGAL}</p>
           </div>
-          <div className="sty-hero__map" aria-hidden="true">
-            <MicroLabel tone="muted" className="sty-hero__coord">Relief de l’Atlas · carte 3D</MicroLabel>
-          </div>
-        </section>
+          <Wave side="right" className="sty-hero__edge" />
+          <Wave side="top" className="sty-hero__edge-m" />
+        </div>
+        <div className="sty-hero__map" aria-hidden="true">
+          <MicroLabel tone="muted" className="sty-hero__coord">{heroStop === HERO_DIVE ? 'Relief de l’Atlas · carte 3D' : 'La Terre · relief en 3D'}</MicroLabel>
+        </div>
+      </section>
 
-        {/* ---------- 01 Contexte ---------- */}
-        <section className={'sty-step' + (isActive('contexte') ? ' is-active' : '')} {...sec('contexte')}>
-          <div className="sty-card">
-            {kicker('contexte')}
-            <h2 id="sty-t-contexte" className="sty-title">Un pays d’eau rare et irrégulière.</h2>
-            {nat && (
+      {/* ---------- 01 Contexte ---------- */}
+      <Section
+        ctx={ctx}
+        id="contexte"
+        title="Un pays d’eau rare et irrégulière."
+        lead={nat?.ratio >= 2 ? 'En un an, le niveau a plus que doublé. Une bonne année ne fait pas une réserve.' : 'D’une année à l’autre, tout peut changer.'}
+        after={nat && <MicroLabel tone="faint" as="p" className="sty-caveat">Bulletin du {bulletinDate} · instantané daté, pas un relevé en direct</MicroLabel>}
+      >
+        {nat && (
+          <div className="sty-grid">
+            <article className="sty-card">
               <div className="sty-level">
                 <LevelGauge
                   pct={nat.fillPct}
                   ghostPct={nat.lastYearPct}
                   ghostLabel={nat.lastYearPct != null ? 'il y a un an' : ''}
-                  run={run('contexte') || reduced}
+                  run={run('contexte')}
                   label={'Remplissage national ' + pct(nat.fillPct, 2) + (nat.lastYearPct != null ? ', contre environ ' + pct(nat.lastYearPct, 0) + ' un an plus tôt' : '')}
                 />
                 <div className="sty-level__text">
@@ -264,196 +329,253 @@ export default function Story({ data, onEnter, flyToStop, regionId: initialRegio
                     <span className="sty-unit">%</span>
                   </p>
                   <p className="sty-figure__label">des barrages remplis <ProvenanceChip {...bulletinChip} /></p>
-                  {nat.lastYearPct != null && (
-                    <p className="sty-figure__sub">
-                      Un an plus tôt : <span className="sty-nowrap">≈ {pct(nat.lastYearPct, 0)}</span> <ProvenanceChip status="derived" source="Variation sur un an imprimée au bulletin" date={bulletinDate} note={nat.lastYearNote || ''} />
-                    </p>
-                  )}
                 </div>
               </div>
-            )}
-            <p className="sty-line">{nat?.ratio >= 2 ? 'En un an, le niveau a plus que doublé. Une bonne année ne fait pas une réserve.' : 'D’une année à l’autre, tout peut changer.'}</p>
-            {nat && <MicroLabel tone="faint" as="p" className="sty-caveat">Bulletin du {bulletinDate} · instantané daté, pas un relevé en direct</MicroLabel>}
-          </div>
-        </section>
-
-        {/* ---------- 02 Problématique : écarts ---------- */}
-        <section className={'sty-step' + (isActive('ecarts') ? ' is-active' : '')} {...sec('ecarts')}>
-          <div className="sty-card">
-            {kicker('ecarts')}
-            <h2 id="sty-t-ecarts" className="sty-title">{spreadDouble ? 'D’un bassin à l’autre, du simple au double.' : 'D’un bassin à l’autre, des écarts nets.'}</h2>
-            {facts.spread && (
-              <ol className={'sty-basins' + (run('ecarts') || reduced ? ' is-run' : '')} aria-label="Remplissage par bassin">
-                {[...facts.spread.rows].reverse().map((b, i) => (
-                  <li key={b.name} className={b === facts.spread.lo || b === facts.spread.hi ? 'is-edge' : ''} style={{ '--v': b.fillPct / 100, '--i': i }}>
-                    <span className="sty-basins__name">{b.name}</span>
-                    <span className="sty-basins__bar" aria-hidden="true"><span /></span>
-                    <span className="sty-basins__val">{pct(b.fillPct)}</span>
-                  </li>
-                ))}
-              </ol>
-            )}
-            {facts.spread && <MicroLabel tone="faint" as="p" className="sty-caveat">Remplissage par bassin · bulletin du {bulletinDate} <ProvenanceChip {...bulletinChip} /></MicroLabel>}
-          </div>
-        </section>
-
-        {/* ---------- Problématique : qui consomme ---------- */}
-        <section className={'sty-step' + (isActive('demande') ? ' is-active' : '')} {...sec('demande')}>
-          <div className="sty-card">
-            {kicker('demande')}
-            <h2 id="sty-t-demande" className="sty-title">Les champs boivent l’essentiel.</h2>
-            {facts.demand && (
-              <>
-                <p className="sty-figure">
-                  <Count value={facts.demand.agriSharePct} decimals={0} run={run('demande')} reduced={reduced} />
-                  <span className="sty-unit">%</span>
-                </p>
-                <p className="sty-figure__label">
-                  de l’eau demandée va à l’agriculture ({facts.demand.year})
-                  {' '}<ProvenanceChip status={facts.demand.status} source="IRES, L’avenir de l’eau au Maroc (Département de l’Eau)" url={facts.demand.source} date={facts.demand.date} />
-                </p>
-                <div className={'sty-split' + (run('demande') || reduced ? ' is-run' : '')} style={{ '--v': facts.demand.agriSharePct / 100 }} aria-hidden="true">
-                  <span className="sty-split__a" /><span className="sty-split__b" />
-                </div>
-                <p className="sty-line">Villes, industrie et tourisme se partagent le reste.</p>
-              </>
+            </article>
+            {nat.lastYearPct != null && (
+              <article className="sty-card">
+                <MicroLabel tone="muted" as="p">Un an plus tôt</MicroLabel>
+                <p className="sty-figure sty-figure--sm"><span className="sty-num">≈ {fmt(nat.lastYearPct, 0)}</span><span className="sty-unit">%</span></p>
+                <p className="sty-figure__label">même jour, l’an dernier <ProvenanceChip status="derived" source="Variation sur un an imprimée au bulletin" date={bulletinDate} note={nat.lastYearNote || ''} /></p>
+              </article>
             )}
           </div>
-        </section>
+        )}
+      </Section>
 
-        {/* ---------- Problématique : le Sud ---------- */}
-        <section className={'sty-step' + (isActive('sud') ? ' is-active' : '')} {...sec('sud')}>
-          <div className="sty-card">
-            {kicker('sud')}
-            <h2 id="sty-t-sud" className="sty-title">{facts.south?.physicalCount === 0 ? 'Au Sud, ni barrage suivi ni liaison.' : 'Le Sud, un cas à part.'}</h2>
-            {facts.desal && (
-              <>
-                <p className="sty-figure">
-                  <Count value={facts.desal.valueMm3} decimals={1} run={run('sud')} reduced={reduced} />
-                  <span className="sty-unit">Mm³/an</span>
-                </p>
-                <p className="sty-figure__label">
-                  de capacité de dessalement, {facts.desal.regionName}
-                  {' '}<ProvenanceChip
-                    status={facts.desal.status}
-                    source="Policy Center for the New South (somme des usines citées)"
-                    url={facts.desal.source}
-                    date={facts.desal.dataYear ? 'données ' + facts.desal.dataYear : facts.desal.date}
-                    note="Capacité installée, pas une production mesurée."
-                  />
-                </p>
-              </>
-            )}
-            {facts.desal?.cityShare && (
-              <p className="sty-figure__sub">
-                Ville de Laâyoune : <span className="sty-nowrap">{fmt(facts.desal.cityShare.pct, 0)} %</span> de l’eau potable dessalée
-                {' '}<ProvenanceChip status={facts.desal.cityShare.status} source="EcoActu (ONEE)" url={facts.desal.cityShare.source} date={facts.desal.cityShare.date} note="Capacité installée de la ville, pas une consommation ; le reste vient des nappes." />
-              </p>
-            )}
-            {facts.south && <p className="sty-line">{facts.south.sentence} Aucun barrage de ces régions au bulletin : dessalement et nappes (non modélisées).</p>}
-          </div>
-        </section>
-
-        {/* ---------- Problématique : le climat ---------- */}
-        <section className={'sty-step' + (isActive('climat') ? ' is-active' : '')} {...sec('climat')}>
-          <div className="sty-card">
-            {kicker('climat')}
-            <h2 id="sty-t-climat" className="sty-title">Demain, moins de pluie&nbsp;?</h2>
-            {facts.climate && (
-              <>
-                <p className="sty-figure">
-                  <Count value={facts.climate.drier} run={run('climat')} reduced={reduced} />
-                  <span className="sty-unit">/ {facts.climate.total} bassins</span>
-                </p>
-                <p className="sty-figure__label">
-                  avec moins de pluie projetée{facts.climate.projection ? ' en ' + facts.climate.projection.join('-') : ''}{facts.climate.reference ? ' qu’en ' + facts.climate.reference.join('-') : ''}
-                  {' '}<ProvenanceChip status="derived" source="Compte Anzar sur les médianes Open-Meteo (CMIP6)" url={facts.climate.source} date={facts.climate.fetchedAt ? frDate(facts.climate.fetchedAt) : ''} note="Projection modélisée (médiane des modèles), proche RCP8.5. Pas une prévision." />
-                </p>
-                {facts.climate.exceptions.length > 0 && (
-                  <p className="sty-line">
-                    Exception : {facts.climate.exceptions.map(e => e.name + ' (' + (e.medianPct > 0 ? '+' : '') + fmt(e.medianPct, 1) + ' %' + (e.nModels ? ', ' + e.nModels + ' modèles seulement' : '') + ')').join(', ')}.
-                  </p>
-                )}
-                <MicroLabel tone="faint" as="p" className="sty-caveat">Projection modélisée CMIP6 · pas une prévision</MicroLabel>
-              </>
-            )}
-          </div>
-        </section>
-
-        {/* ---------- 03 Où sont les barrages ---------- */}
-        <section className={'sty-step sty-step--dams' + (isActive('barrages') ? ' is-active' : '')} {...sec('barrages')}>
-          <div className="sty-card sty-card--fx">
-            <WaterFx mode="ripples" play={isActive('barrages')} points={[[0.18, 0.42], [0.62, 0.58], [0.86, 0.3]]} />
-            {kicker('barrages')}
-            <h2 id="sty-t-barrages" className="sty-title">Au pied de l’Atlas, les barrages.</h2>
-            <div className="sty-pair">
-              {dams.readCount != null && (
-                <div>
-                  <p className="sty-figure"><Count value={dams.readCount} run={run('barrages')} reduced={reduced} /></p>
-                  <p className="sty-figure__label">
-                    barrages lus au bulletin{dams.readDate ? ' du ' + frDate(dams.readDate) : ''}{dams.matchedCount != null ? ', dont' : ''}
-                    {' '}<ProvenanceChip status="sourced" source="Bulletin du ministère, lu page par page" url={dams.readSource} date={frDate(dams.readDate)} note="Stock et taux lus visuellement ; sommes vérifiées par bassin." />
-                  </p>
-                </div>
-              )}
-              {(dams.matchedCount ?? dams.locatedCount) != null && (
-                <div>
-                  <p className="sty-figure sty-figure--sm"><Count value={dams.matchedCount ?? dams.locatedCount} run={run('barrages')} reduced={reduced} /></p>
-                  <p className="sty-figure__label">{dams.matchedCount != null ? 'placés sur la carte avec leur taux de remplissage' : 'barrages localisés sur la carte'}</p>
-                </div>
-              )}
-            </div>
-            <p className="sty-line">
-              {dams.placedCount != null
-                ? 'La carte compte ' + dams.placedCount + ' barrages localisés (OpenStreetMap, Wikidata) : chaque cercle est un barrage, vide quand le bulletin n’a pas de taux apparié.'
-                : 'Chaque cercle sur le relief est un barrage.'}
-            </p>
-          </div>
-        </section>
-
-        {/* ---------- 04 En chiffres ---------- */}
-        <section className={'sty-step sty-step--wide' + (isActive('chiffres') ? ' is-active' : '')} {...sec('chiffres')}>
-          <div className="sty-card sty-card--wide">
-            {kicker('chiffres')}
-            <h2 id="sty-t-chiffres" className="sty-title">L’eau du Maroc, en chiffres.</h2>
-            <ul className={'sty-tiles' + (run('chiffres') || reduced ? ' is-run' : '')}>
-              {facts.figures.map((f, i) => (
-                <li key={f.id} className="sty-tile" style={{ '--i': i }}>
-                  <p className="sty-figure sty-figure--tile">
-                    <Count value={f.value} decimals={f.decimals} run={run('chiffres')} reduced={reduced} />
-                    {f.unit && <span className="sty-unit">{f.unit}</span>}
-                  </p>
-                  <p className="sty-figure__label">{f.label} <ProvenanceChip {...(f.bulletin ? bulletinChip : { status: f.status, source: f.note, url: f.source })} /></p>
-                  <span className="sty-tile__water" aria-hidden="true" />
+      {/* ---------- 02 Problématique : écarts ---------- */}
+      <Section
+        ctx={ctx}
+        id="ecarts"
+        tone="sky"
+        title={spreadDouble ? 'D’un bassin à l’autre, du simple au double.' : 'D’un bassin à l’autre, des écarts nets.'}
+        lead="Le remplissage varie fortement selon les bassins."
+        after={facts.spread && <MicroLabel tone="faint" as="p" className="sty-caveat">Remplissage par bassin · bulletin du {bulletinDate} <ProvenanceChip {...bulletinChip} /></MicroLabel>}
+      >
+        {facts.spread && (
+          <article className="sty-card">
+            <ol className={'sty-basins' + (run('ecarts') ? ' is-run' : '')} aria-label="Remplissage par bassin">
+              {[...facts.spread.rows].reverse().map((b, i) => (
+                <li key={b.name} className={b === facts.spread.lo || b === facts.spread.hi ? 'is-edge' : ''} style={{ '--v': b.fillPct / 100, '--i': i }}>
+                  <span className="sty-basins__name">{b.name}</span>
+                  <span className="sty-basins__bar" aria-hidden="true"><span /></span>
+                  <span className="sty-basins__val">{pct(b.fillPct)}</span>
                 </li>
               ))}
+            </ol>
+          </article>
+        )}
+      </Section>
+
+      {/* ---------- Problématique : à quoi sert l'eau (champs en 3D sur la carte) ---------- */}
+      <Section
+        ctx={ctx}
+        id="demande"
+        tone="deep"
+        title="À quoi sert l’eau ?"
+        lead="Les champs boivent l’essentiel."
+        mapNote={mapFeatures?.fields ? 'Plaine du Tadla (Béni Mellal-Khénifra) · parcelles agricoles OpenStreetMap en 3D, hauteur symbolique' : 'Plaine agricole du Tadla (Béni Mellal-Khénifra)'}
+        after={dem && (
+          <MicroLabel tone="faint" as="p" className="sty-caveat">
+            Demande nationale {dem.year}, Département de l’Eau cité par l’IRES · l’eau potable, l’industrie et le tourisme forment un seul poste dans la source
+          </MicroLabel>
+        )}
+      >
+        {dem && (
+          <div className={'sty-grid sty-uses' + (run('demande') ? ' is-run' : '')}>
+            <article className="sty-card sty-use" style={{ '--v': dem.agriSharePct / 100 }}>
+              <span className="sty-use__col" aria-hidden="true"><span /></span>
+              <div className="sty-use__text">
+                <MicroLabel tone="muted" as="p">Agriculture</MicroLabel>
+                <p className="sty-figure">
+                  <Count value={dem.agriSharePct} decimals={0} run={run('demande')} reduced={reduced} />
+                  <span className="sty-unit">%</span>
+                </p>
+                <p className="sty-figure__label">{fmt(dem.agriMm3, 0)} Mm³ en {dem.year} <ProvenanceChip {...iresChip} /></p>
+              </div>
+            </article>
+            {dem.other && (
+              <article className="sty-card sty-use" style={{ '--v': dem.other.sharePct / 100 }}>
+                <span className="sty-use__col" aria-hidden="true"><span /></span>
+                <div className="sty-use__text">
+                  <MicroLabel tone="muted" as="p">Eau potable, industrie, tourisme</MicroLabel>
+                  <p className="sty-figure sty-figure--sm"><span className="sty-num">{fmt(dem.other.sharePct, 0)}</span><span className="sty-unit">%</span></p>
+                  <p className="sty-figure__label">{fmt(dem.other.value, 0)} Mm³ en {dem.year} <ProvenanceChip {...iresChip} /></p>
+                </div>
+              </article>
+            )}
+          </div>
+        )}
+        {dem?.projection2050 && (
+          <p className="sty-line">
+            En 2050, l’IRES projette <span className="sty-nowrap">{fmt(dem.projection2050.agriMm3, 0)} Mm³</span> pour l’agriculture et <span className="sty-nowrap">{fmt(dem.projection2050.otherMm3, 0)} Mm³</span> pour le reste.
+            {' '}<ProvenanceChip status="sourced" source="IRES, projection 2050" url={dem.projection2050.source} date={dem.projection2050.date} note="Projection publiée, pas une mesure." />
+          </p>
+        )}
+      </Section>
+
+      {/* ---------- Problématique : le Sud ---------- */}
+      <Section
+        ctx={ctx}
+        id="sud"
+        title={facts.south?.physicalCount === 0 ? 'Au Sud, ni barrage suivi ni liaison.' : 'Le Sud, un cas à part.'}
+        lead={facts.south ? facts.south.sentence + ' Aucun barrage de ces régions au bulletin : dessalement et nappes (non modélisées).' : null}
+      >
+        {facts.desal && (
+          <div className="sty-grid">
+            <article className="sty-card">
+              <MicroLabel tone="muted" as="p">Dessalement · {facts.desal.regionName}</MicroLabel>
+              <p className="sty-figure">
+                <Count value={facts.desal.valueMm3} decimals={1} run={run('sud')} reduced={reduced} />
+                <span className="sty-unit">Mm³/an</span>
+              </p>
+              <p className="sty-figure__label">
+                de capacité installée
+                {' '}<ProvenanceChip
+                  status={facts.desal.status}
+                  source="Policy Center for the New South (somme des usines citées)"
+                  url={facts.desal.source}
+                  date={facts.desal.dataYear ? 'données ' + facts.desal.dataYear : facts.desal.date}
+                  note="Capacité installée, pas une production mesurée."
+                />
+              </p>
+            </article>
+            {facts.desal.cityShare && (
+              <article className="sty-card">
+                <MicroLabel tone="muted" as="p">Ville de Laâyoune</MicroLabel>
+                <p className="sty-figure sty-figure--sm"><span className="sty-num">{fmt(facts.desal.cityShare.pct, 0)}</span><span className="sty-unit">%</span></p>
+                <p className="sty-figure__label">
+                  de l’eau potable dessalée
+                  {' '}<ProvenanceChip status={facts.desal.cityShare.status} source="EcoActu (ONEE)" url={facts.desal.cityShare.source} date={facts.desal.cityShare.date} note="Capacité installée de la ville, pas une consommation ; le reste vient des nappes." />
+                </p>
+              </article>
+            )}
+          </div>
+        )}
+      </Section>
+
+      {/* ---------- Problématique : le climat ---------- */}
+      <Section
+        ctx={ctx}
+        id="climat"
+        tone="sky"
+        title="Demain, moins de pluie ?"
+        lead="Projection des modèles climatiques, bassin par bassin."
+        after={facts.climate && <MicroLabel tone="faint" as="p" className="sty-caveat">Projection modélisée CMIP6 · pas une prévision</MicroLabel>}
+      >
+        {facts.climate && (
+          <div className="sty-grid">
+            <article className="sty-card">
+              <p className="sty-figure">
+                <Count value={facts.climate.drier} run={run('climat')} reduced={reduced} />
+                <span className="sty-unit">/ {facts.climate.total} bassins</span>
+              </p>
+              <p className="sty-figure__label">
+                avec moins de pluie projetée{facts.climate.projection ? ' en ' + facts.climate.projection.join('-') : ''}{facts.climate.reference ? ' qu’en ' + facts.climate.reference.join('-') : ''}
+                {' '}<ProvenanceChip status="derived" source="Compte Anzar sur les médianes Open-Meteo (CMIP6)" url={facts.climate.source} date={facts.climate.fetchedAt ? frDate(facts.climate.fetchedAt) : ''} note="Projection modélisée (médiane des modèles), proche RCP8.5. Pas une prévision." />
+              </p>
+            </article>
+            {facts.climate.exceptions.length > 0 && (
+              <article className="sty-card">
+                <MicroLabel tone="muted" as="p">Exception</MicroLabel>
+                <p className="sty-line">
+                  {facts.climate.exceptions.map(e => e.name + ' (' + (e.medianPct > 0 ? '+' : '') + fmt(e.medianPct, 1) + ' %' + (e.nModels ? ', ' + e.nModels + ' modèles seulement' : '') + ')').join(', ')}.
+                </p>
+              </article>
+            )}
+          </div>
+        )}
+      </Section>
+
+      {/* ---------- 03 Où sont les barrages ---------- */}
+      <Section
+        ctx={ctx}
+        id="barrages"
+        tone="deep"
+        title="Au pied de l’Atlas, les barrages."
+        lead={dams.placedCount != null
+          ? 'La carte compte ' + dams.placedCount + ' barrages localisés (OpenStreetMap, Wikidata) : chaque cercle est un barrage, vide quand le bulletin n’a pas de taux apparié.'
+          : 'Chaque cercle sur le relief est un barrage.'}
+        mapNote="Relief de l’Atlas · barrages localisés"
+      >
+        <div className="sty-grid sty-grid--fx">
+          <WaterFx mode="ripples" play={STORY_STOPS[active]?.id === 'barrages'} points={[[0.18, 0.42], [0.62, 0.58], [0.86, 0.3]]} />
+          {dams.readCount != null && (
+            <article className="sty-card">
+              <p className="sty-figure"><Count value={dams.readCount} run={run('barrages')} reduced={reduced} /></p>
+              <p className="sty-figure__label">
+                barrages lus au bulletin{dams.readDate ? ' du ' + frDate(dams.readDate) : ''}{dams.matchedCount != null ? ', dont' : ''}
+                {' '}<ProvenanceChip status="sourced" source="Bulletin du ministère, lu page par page" url={dams.readSource} date={frDate(dams.readDate)} note="Stock et taux lus visuellement ; sommes vérifiées par bassin." />
+              </p>
+            </article>
+          )}
+          {(dams.matchedCount ?? dams.locatedCount) != null && (
+            <article className="sty-card">
+              <p className="sty-figure sty-figure--sm"><Count value={dams.matchedCount ?? dams.locatedCount} run={run('barrages')} reduced={reduced} /></p>
+              <p className="sty-figure__label">{dams.matchedCount != null ? 'placés sur la carte avec leur taux de remplissage' : 'barrages localisés sur la carte'}</p>
+            </article>
+          )}
+        </div>
+      </Section>
+
+      {/* ---------- 04 En chiffres ---------- */}
+      <Section
+        ctx={ctx}
+        id="chiffres"
+        title="L’eau du Maroc, en chiffres."
+        after={facts.figures.some(f => f.bulletin) && <MicroLabel tone="faint" as="p" className="sty-caveat">Stock, capacité et bassins : bulletin du {bulletinDate} · instantané daté, pas un relevé en direct</MicroLabel>}
+      >
+        <ul className={'sty-grid sty-tiles' + (run('chiffres') ? ' is-run' : '')}>
+          {facts.figures.map((f, i) => (
+            <li key={f.id} className="sty-card sty-tile" style={{ '--i': i }}>
+              <p className="sty-figure sty-figure--tile">
+                <Count value={f.value} decimals={f.decimals} run={run('chiffres')} reduced={reduced} />
+                {f.unit && <span className="sty-unit">{f.unit}</span>}
+              </p>
+              <p className="sty-figure__label">{f.label} <ProvenanceChip {...(f.bulletin ? bulletinChip : { status: f.status, source: f.note, url: f.source })} /></p>
+              <span className="sty-tile__water" aria-hidden="true" />
+            </li>
+          ))}
+        </ul>
+      </Section>
+
+      {/* ---------- 05 Essayez ---------- */}
+      <Section ctx={ctx} id="essayez" tone="sky" title="À vous de jouer." lead="Une région, deux leviers : voyez la réserve bouger.">
+        <article className="sty-card">
+          {ready && <MiniSim data={d} regionId={regionId} onRegion={pickRegion} onOpen={enter} />}
+        </article>
+      </Section>
+
+      {/* ---------- Pied de page : toujours atteignable en fin de défilement ---------- */}
+      <footer className="sty-foot az-deep" ref={footRef}>
+        <Wave side="top" className="sty-foot__wave" />
+        <div className="sty-foot__inner">
+          <div className="sty-foot__brand">
+            <img src="/brand/anzar/logo-on-deep.svg" alt="Anzar" height="28" />
+            <p className="sty-foot__tag">Observatoire de l’eau du Maroc · prototype</p>
+            {onShare && <Button variant="secondary" size="sm" onClick={onShare} icon={<Share2 size={18} />} aria-label="Partager : copier le lien de la page d’accueil">Partager</Button>}
+          </div>
+          <nav className="sty-foot__nav" aria-label="Pied de page">
+            <MicroLabel tone="muted" as="p">Navigation</MicroLabel>
+            <ul>
+              <li><a href="#/" onClick={toTop}>Accueil</a></li>
+              <li><a href={dashHash}>Tableau de bord</a></li>
+              <li><a href="#/sources">Sources et méthode</a></li>
             </ul>
-            {facts.figures.some(f => f.bulletin) && <MicroLabel tone="faint" as="p" className="sty-caveat">Stock, capacité et bassins : bulletin du {bulletinDate} · instantané daté, pas un relevé en direct</MicroLabel>}
+          </nav>
+          <div className="sty-foot__legal">
+            <MicroLabel tone="muted" as="p">Mentions</MicroLabel>
+            <p>Anzar est un prototype indépendant issu d’un stage à la RAMSA. Ce n’est pas un portail officiel.</p>
+            <p>Chiffres publics datés, pas un relevé en direct. Chaque jeu de données porte sa source, sa date et sa licence : voir <a href="#/sources">Sources et méthode</a>.</p>
+            <p>Prévisions et climat : Open-Meteo (modélisé, usage non commercial).</p>
+            <p>Les logos de la SRM Souss-Massa et des autres SRM sont des marques de leurs titulaires.</p>
           </div>
-        </section>
+        </div>
+        <p className="sty-foot__copy">© {year} Anzar · prototype indépendant</p>
+      </footer>
 
-        {/* ---------- 05 Essayez ---------- */}
-        <section className={'sty-step sty-step--wide' + (isActive('essayez') ? ' is-active' : '')} {...sec('essayez')}>
-          <div className="sty-card sty-card--sim">
-            {kicker('essayez')}
-            <h2 id="sty-t-essayez" className="sty-title">À vous de jouer.</h2>
-            {ready && <MiniSim data={d} regionId={regionId} onRegion={pickRegion} onOpen={enter} />}
-          </div>
-        </section>
-
-        <footer className="sty-foot az-deep">
-          <Wave side="top" className="sty-foot__wave" />
-          <div className="sty-foot__inner">
-            <img src="/brand/anzar/logo-on-deep.svg" alt="Anzar" height="24" />
-            <p className="sty-legal">{LEGAL} Chiffres datés, pas un relevé en direct.</p>
-            <a className="sty-foot__link az-micro" href="#/sources">Sources et méthode</a>
-          </div>
-        </footer>
-      </div>
-
-
-      {/* Rail des chapitres */}
-      <nav className={'sty-rail' + (active > 0 ? ' is-on' : '')} aria-label="Chapitres du récit">
+      {/* Rail des chapitres (masqué sur le pied de page pour ne jamais le recouvrir) */}
+      <nav className={'sty-rail' + (active > 0 && !atEnd ? ' is-on' : '')} aria-label="Chapitres de la page d’accueil">
         <ol>
           {CHAPTERS.map((c, k) => {
             const first = STORY_STOPS.find(s => s.chapter === c.id);

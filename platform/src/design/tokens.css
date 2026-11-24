@@ -119,6 +119,11 @@
   --az-map-selection: #fab61f;
   --az-map-selection-casing: #0a2540;
   --az-map-light: #ffffff;
+  /* Terres agricoles cartographiées (OSM landcover=farmland) : verts « culture », voile national et extrusions */
+  --az-map-field: #7cbf5a;
+  --az-map-field-orchard: #3f8f3c;
+  --az-map-field-vine: #9aa83a;
+  --az-map-field-veil: #57b24a;
 
   /* Fonts (OFL, @fontsource, imported in src/main.jsx) */
   --az-font-display: 'IBM Plex Sans Condensed', 'Arial Narrow', system-ui, sans-serif;

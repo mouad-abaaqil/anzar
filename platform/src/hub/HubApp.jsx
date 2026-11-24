@@ -1,4 +1,5 @@
-// Racine du hub Anzar : barre haute, état partagé, carte persistante, récit ou panneau, tiroir Sources.
+// Racine du hub Anzar : barre haute, état partagé, carte persistante, accueil ou panneau, tiroir Sources, pied de page.
+// Accueil : défilement natif du document (la carte reste fixe derrière). Tableau de bord : vue fixe avec une fine barre basse.
 // Contrat : docs/HUB_CONTRACT.md. Les modules des autres agents sont chargés si présents (import.meta.glob),
 // sinon un espace réservé s'affiche : l'application ne casse jamais faute d'un fichier.
 import { Component, Suspense, lazy, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
@@ -24,6 +25,55 @@ const FALLBACK_SCENARIO = { hydrology: 'normal', popGrowth: null, demandReductio
 const focusTarget = id => e => { e.preventDefault(); document.getElementById(id)?.focus(); };
 const go = route => { window.location.hash = hubHash(route); };
 
+// Partage robuste : Web Share (écran tactile), sinon presse-papiers (contexte sécurisé), sinon execCommand('copy')
+// sur un champ caché, sinon 'manual' (petite fenêtre avec le lien sélectionné). -> 'shared' | 'copied' | 'aborted' | 'manual'
+export async function shareLink({ url, title, text }) {
+  const coarse = typeof window.matchMedia === 'function' && window.matchMedia('(pointer: coarse)').matches;
+  if (coarse && typeof navigator.share === 'function' && (!navigator.canShare || navigator.canShare({ url }))) {
+    try { await navigator.share({ title, text, url }); return 'shared'; }
+    catch (e) { return e?.name === 'AbortError' ? 'aborted' : 'manual'; } // geste utilisateur consommé : fenêtre directe
+  }
+  if (window.isSecureContext && navigator.clipboard?.writeText) {
+    try { await navigator.clipboard.writeText(url); return 'copied'; } catch { /* refus ou indisponible : repli */ }
+  }
+  try {
+    const ta = document.createElement('textarea');
+    ta.value = url;
+    ta.setAttribute('readonly', '');
+    ta.className = 'hub-copybuf';
+    document.body.appendChild(ta);
+    ta.select();
+    ta.setSelectionRange(0, url.length);
+    const ok = document.execCommand?.('copy');
+    ta.remove();
+    if (ok) return 'copied';
+  } catch { /* repli suivant */ }
+  return 'manual';
+}
+
+function ShareBox({ url, onClose }) {
+  const ref = useRef(null);
+  const input = useRef(null);
+  useEffect(() => {
+    const dlg = ref.current;
+    if (!dlg) return;
+    if (url && !dlg.open) { try { dlg.showModal(); } catch { dlg.setAttribute('open', ''); } }
+    if (!url && dlg.open) dlg.close();
+    if (url) requestAnimationFrame(() => { input.current?.focus(); input.current?.select(); });
+  }, [url]);
+  return (
+    <dialog ref={ref} className="hub-sharebox" aria-labelledby="hub-sharebox-t" onClose={onClose} onCancel={onClose}>
+      <h2 id="hub-sharebox-t" className="hub-sharebox__title">Copier le lien</h2>
+      <p className="hub-sharebox__text">La copie automatique n’est pas disponible ici. Le lien est sélectionné : copiez-le (Ctrl+C, ⌘C ou appui long).</p>
+      <label className="hub-sharebox__label">
+        <span>Lien de cette vue</span>
+        <input ref={input} type="text" readOnly value={url || ''} onFocus={e => e.target.select()} />
+      </label>
+      <div className="hub-sharebox__actions"><Button variant="secondary" size="sm" onClick={onClose}>Fermer</Button></div>
+    </dialog>
+  );
+}
+
 class Guard extends Component {
   state = { failed: false };
   static getDerivedStateFromError() { return { failed: true }; }
@@ -46,7 +96,7 @@ export default function HubApp({ route }) {
   const data = useHubData();
   const mapRef = useRef(null);
   const pendingStop = useRef(null);
-  // Le tiroir Sources se superpose à la dernière vue (récit ou exploration).
+  // Le tiroir Sources se superpose à la dernière vue (accueil ou exploration).
   const last = useRef({ view: 'story', regionId: DEFAULT_REGION_ID, tab: 'today' });
   if (route.view === 'explore') last.current = route;
   else if (route.view === 'story') last.current = { ...last.current, view: 'story' };
@@ -89,27 +139,39 @@ export default function HubApp({ route }) {
   }, [mode, tab]);
 
   // Caméra : handle impératif de la carte, appel différé si la carte n'est pas encore montée.
+  // Chaque étape allume ou éteint les parcelles agricoles 3D (showFields, si la carte le sait : code gardé).
+  const [mapFeatures, setMapFeatures] = useState({ fields: false, globe: false });
+  const applyStop = (handle, stop) => {
+    handle.flyToStop?.(stop);
+    handle.showFields?.(!!stop?.showFields);
+  };
   const setMap = useCallback(handle => {
     mapRef.current = handle;
+    const caps = { fields: !!handle?.showFields, globe: !!handle?.showGlobe };
+    setMapFeatures(f => (f.fields === caps.fields && f.globe === caps.globe ? f : caps));
     if (handle && pendingStop.current) {
-      try { handle.flyToStop?.(pendingStop.current); } catch (e) { console.warn('[hub] caméra', e); }
+      try { applyStop(handle, pendingStop.current); } catch (e) { console.warn('[hub] caméra', e); }
       pendingStop.current = null;
     }
   }, []);
   const flyToStop = useCallback(stop => {
     try {
-      if (mapRef.current?.flyToStop) mapRef.current.flyToStop(stop); else pendingStop.current = stop;
+      if (mapRef.current?.flyToStop) applyStop(mapRef.current, stop); else pendingStop.current = stop;
     } catch (e) { console.warn('[hub] caméra', e); }
   }, []);
   const prevMode = useRef(mode);
   useEffect(() => {
     try {
-      if (mode === 'explore') mapRef.current?.flyToRegion?.(regionId);
+      if (mode === 'explore') { mapRef.current?.showFields?.(false); mapRef.current?.flyToRegion?.(regionId); }
       else if (prevMode.current === 'explore') mapRef.current?.resetView?.();
     } catch (e) { console.warn('[hub] caméra', e); }
     prevMode.current = mode;
   }, [mode, regionId]);
+  // Changement de vue : retour en haut du document, sans animation (la règle scroll-behavior: smooth ne s'applique pas).
+  useEffect(() => { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }, [mode]);
 
+  // Sur l'accueil, « Accueil » ne change pas l'adresse : retour en haut de page.
+  const toTopOnStory = e => { if (route.view === 'story') { e.preventDefault(); window.scrollTo({ top: 0 }); } };
   const enter = id => go({ view: 'explore', regionId: id || DEFAULT_REGION_ID, tab: 'today' });
   const selectRegion = id => { if (id && (id !== regionId || mode === 'story')) go({ view: 'explore', regionId: id, tab: mode === 'explore' ? tab : 'today' }); };
   const setTab = next => go({ view: 'explore', regionId, tab: next });
@@ -119,19 +181,31 @@ export default function HubApp({ route }) {
     document.title = 'Anzar · L’eau du Maroc';
   }, []);
 
-  // Annonce (lecteurs d'écran) des changements de région et d'onglet ; copie du lien de la vue.
+  // Annonce (lecteurs d'écran) des changements de région et d'onglet ; partage du lien de la vue.
   const [announce, setAnnounce] = useState('');
   const regionName = regionList.find(r => r.id === regionId)?.name;
   const tabLabel = { today: 'Aujourd’hui', tomorrow: 'Demain', together: 'Ensemble' }[tab];
   useEffect(() => {
-    setAnnounce(mode === 'explore' && regionName ? regionName + ', onglet ' + tabLabel : mode === 'story' ? 'Récit' : '');
+    setAnnounce(mode === 'explore' && regionName ? regionName + ', onglet ' + tabLabel : mode === 'story' ? 'Accueil' : '');
   }, [mode, regionName, tabLabel]);
-  const [copied, setCopied] = useState('');
+  const [toast, setToast] = useState('');
+  const [shareBox, setShareBox] = useState(null);
+  const toastTimer = useRef(0);
+  useEffect(() => () => clearTimeout(toastTimer.current), []);
+  const notify = msg => {
+    clearTimeout(toastTimer.current);
+    setToast(msg);
+    toastTimer.current = setTimeout(() => setToast(''), 3500);
+  };
   const share = async () => {
-    const url = window.location.href;
-    try { await navigator.clipboard.writeText(url); setCopied('Lien copié.'); }
-    catch { setCopied('Copie impossible : copiez l’adresse du navigateur.'); }
-    setTimeout(() => setCopied(''), 3500);
+    // Adresse canonique de la vue : région et onglet en exploration, accueil sinon.
+    const route = mode === 'explore' ? { view: 'explore', regionId, tab } : { view: 'story' };
+    const url = window.location.origin + window.location.pathname + window.location.search + hubHash(route);
+    const text = mode === 'explore' && regionName ? 'Anzar : ' + regionName + ', onglet ' + tabLabel : 'Anzar : l’eau du Maroc, région par région';
+    const res = await shareLink({ url, title: 'Anzar · L’eau du Maroc', text });
+    if (res === 'copied') notify('Lien copié.');
+    else if (res === 'shared') notify('Lien partagé.');
+    else if (res === 'manual') setShareBox(url);
   };
 
   const sources = data.status === 'ready' ? data.region?.sources || [] : [];
@@ -150,12 +224,12 @@ export default function HubApp({ route }) {
       {mode === 'explore' && <a className="hub-skip" href="#hub-panel" onClick={focusTarget('hub-panel')}>Aller au panneau</a>}
       {mode === 'explore' && <a className="hub-skip" href="#hub-map" onClick={focusTarget('hub-map')}>Aller à la carte</a>}
       <header className="hub-bar">
-        <a className="hub-brand" href="#/" aria-label="Anzar, retour au récit">
+        <a className="hub-brand" href="#/" aria-label="Anzar, retour à l’accueil" onClick={toTopOnStory}>
           <img src="/brand/anzar/mark.svg" alt="" width="28" height="28" />
           <span className="hub-brand__name">Anzar</span>
         </a>
         <nav className="hub-nav" aria-label="Navigation principale">
-          <a className="hub-nav__link" href="#/" aria-current={mode === 'story' && route.view !== 'sources' ? 'page' : undefined}>Récit</a>
+          <a className="hub-nav__link" href="#/" aria-current={mode === 'story' && route.view !== 'sources' ? 'page' : undefined} onClick={toTopOnStory}>Accueil</a>
           <a className="hub-nav__link" href={hubHash({ view: 'explore', regionId, tab })} aria-current={mode === 'explore' && route.view !== 'sources' ? 'page' : undefined}><span className="hub-nav__long">Tableau de bord</span><span className="hub-nav__short" aria-hidden="true">Tableau</span></a>
           <a className="hub-nav__link" href="#/sources" aria-current={route.view === 'sources' ? 'page' : undefined}>Sources</a>
         </nav>
@@ -166,11 +240,13 @@ export default function HubApp({ route }) {
             </div>
           )}
           {mode === 'explore' && regionName && <span className="hub-bar__active" title="Région active">{regionName}</span>}
-          {mode === 'explore' && <Button variant="secondary" size="sm" onClick={share} icon={<Share2 size={18} />} aria-label="Partager : copier le lien de cette vue (région et onglet)"><span className="hub-share__label">Partager</span></Button>}
+          <Button variant="secondary" size="sm" className="hub-share" onClick={share} icon={<Share2 size={18} />} aria-label={mode === 'explore' ? 'Partager : copier le lien de cette vue (région et onglet)' : 'Partager : copier le lien de la page d’accueil'}><span className="hub-share__label">Partager</span></Button>
         </div>
       </header>
 
-      <div className="hub-live" role="status" aria-live="polite">{copied || announce}</div>
+      <div className="hub-live" role="status" aria-live="polite">{announce}</div>
+      <div className={'hub-toast' + (toast ? ' is-on' : '')} role="status" aria-live="polite" aria-atomic="true">{toast}</div>
+      <ShareBox url={shareBox} onClose={() => setShareBox(null)} />
       <main id="hub-main" className="hub-stage" tabIndex={-1}>
         <div className="hub-mapwrap">
           {HubMap ? (
@@ -203,8 +279,8 @@ export default function HubApp({ route }) {
         {data.status === 'ready' && mode === 'story' && (
           <div className="hub-layer hub-layer--story">
             {Story ? (
-              <Guard name="Récit"><Suspense fallback={null}><Story data={data} regionId={regionId} onEnter={enter} flyToStop={flyToStop} /></Suspense></Guard>
-            ) : <Placeholder name="Récit" />}
+              <Guard name="Accueil"><Suspense fallback={null}><Story data={data} regionId={regionId} onEnter={enter} onShare={share} flyToStop={flyToStop} mapFeatures={mapFeatures} /></Suspense></Guard>
+            ) : <Placeholder name="Accueil" />}
           </div>
         )}
         {data.status === 'ready' && mode === 'explore' && (
@@ -220,6 +296,16 @@ export default function HubApp({ route }) {
         )}
       </main>
 
+      {mode === 'explore' && (
+        <footer className="hub-foot">
+          <p className="hub-foot__note">Prototype indépendant<span className="hub-foot__more"> · pas un portail officiel</span></p>
+          <nav className="hub-foot__nav" aria-label="Mentions">
+            <a href="#/sources">Sources</a>
+            <a href="#/sources" title="Les logos des SRM et des opérateurs sont des marques de leurs titulaires (détail dans Sources et méthode).">Marques</a>
+          </nav>
+        </footer>
+      )}
+
       <Sheet open={route.view === 'sources'} onClose={closeSources} label="Méthode" title="Sources et méthode">
         {route.view === 'sources' && (
           <div className="hub-sources">
@@ -229,7 +315,7 @@ export default function HubApp({ route }) {
               onExport={() => download(JSON.stringify({ sources }, null, 2), 'anzar-sources.json')}
             />
             <Suspense fallback={null}><OpenDataSources data={data} regionId={regionId} /></Suspense>
-            <p className="hub-sources__note">Anzar est un prototype indépendant issu d’un stage à la RAMSA, pas un portail officiel. Les logos des opérateurs sont des marques de leurs titulaires. Les prévisions et le climat viennent d’Open-Meteo (modélisé, gratuit, usage non commercial).</p>
+            <p className="hub-sources__note" id="hub-marques">Anzar est un prototype indépendant issu d’un stage à la RAMSA, pas un portail officiel. Les logos des opérateurs sont des marques de leurs titulaires. Les prévisions et le climat viennent d’Open-Meteo (modélisé, gratuit, usage non commercial).</p>
             <p className="hub-sources__note">Pages annexes, hors parcours principal : <a href="#/app/quality">qualité de l’eau</a> · <a href="#/app/cycle">cycle de l’eau</a> (Souss-Massa). {STATIC_BUILD ? SERVER_ONLY_NOTICE + '.' : ''}</p>
           </div>
         )}

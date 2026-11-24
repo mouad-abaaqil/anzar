@@ -5,6 +5,8 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import { colors, Legend, MicroLabel, BANDS } from '../design/index.js';
 import { joinDamFill, damSize, damTooltip, fillLevel, frDay, fr } from './damsData.js';
 import { drawableLinks, arcPoints, linkStyle, linkTip, distToPolyline } from './layers/links.js';
+import { FIELDS_ZOOM, FIELDS_LAYER_IDS, FIELDS_LEGEND, fieldsLayers, fieldsPaint, fieldsTransition, fieldsWanted } from './layers/fields.js';
+import { GLOBE_PROJECTION, MERCATOR, MAP_MIN_ZOOM, ATMOSPHERE_BLEND, GLOBE_CAMERA, GLOBE_SPIN, GLOBE_ZOOM, MOROCCO_FADE, fadeByZoom, showDamsAt, isGlobeStop } from './layers/globe.js';
 import './HubMap.css';
 
 // Ne pas retirer : MapLibre 6 charge son worker par cette URL.
@@ -38,6 +40,23 @@ const ATLAS_PATH = [
   { center: [-6.55, 31.8], zoom: 7.5, pitch: 66, bearing: 42 },
   { center: [-5.2, 32.75], zoom: 7.0, pitch: 60, bearing: 18 },
 ];
+
+const ZERO_PAD = { top: 0, bottom: 0, left: 0, right: 0 };
+const globeCamera = (s, padding = ZERO_PAD) => ({
+  center: s?.center || GLOBE_CAMERA.center, zoom: s?.zoom ?? GLOBE_CAMERA.zoom,
+  pitch: s?.pitch ?? GLOBE_CAMERA.pitch, bearing: s?.bearing ?? GLOBE_CAMERA.bearing, padding,
+});
+// Cadrage d'une étape globe : framing 'right' décale le globe dans la moitié droite (texte du récit à gauche, grand écran).
+function globeFraming(el, framing) {
+  const w = el?.clientWidth || 1200;
+  if (framing === 'right' && w >= 760) return { ...ZERO_PAD, left: Math.round(w * 0.5) };
+  return ZERO_PAD;
+}
+// Repasse en Mercator pur quand la caméra est au-dessus du seuil (l'expression de projection y rend déjà plan : pas de saut).
+function settleProjection(map, projRef) {
+  if (!map || projRef.current !== 'globe' || map.getZoom() < GLOBE_ZOOM.mercator) return;
+  try { map.setProjection(MERCATOR); projRef.current = 'mercator'; } catch { /* garde l'expression */ }
+}
 
 const reduced = () => typeof window !== 'undefined' && !!window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
 const channels = hex => { const n = parseInt(hex.slice(1, 7), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; };
@@ -209,11 +228,20 @@ const HubMap = forwardRef(function HubMap({
   const [legendOpen, setLegendOpen] = useState(false);
   const [storyDams, setStoryDams] = useState('faint'); // récit : 'hidden' | 'faint' | 'shown'
   const [data, setData] = useState({ dams: null, links: null, region: null, fill: null });
+  const [far, setFar] = useState(false);
+  const [nearFields, setNearFields] = useState(false); // zoom où les terres agricoles existent dans les tuiles (≥ 7)
+  const [fieldsCmd, setFieldsCmd] = useState(null); // null : suit layers.fields ; booléen : showFields / étape du récit
+  const fieldsAnimRef = useRef(true);
+  const fieldsTimerRef = useRef(0);
+  const projRef = useRef('mercator');
+  const readyRef = useRef(false);
+  const pendingStopRef = useRef(null);
 
   const story = mode === 'story';
   const showDams = layers?.dams !== false && (!story || storyDams !== 'hidden');
   const showLinks = layers?.links !== false;
-  latest.current = { regionId, onSelectRegion, metricByRegion, mode, insets, hl };
+  const fieldsOn = fieldsWanted(fieldsCmd, layers, story);
+  latest.current = { regionId, onSelectRegion, metricByRegion, mode, insets, hl, fieldsOn };
 
   const padding = useCallback(() => {
     const w = wrapRef.current?.clientWidth || 1000;
@@ -242,7 +270,8 @@ const HubMap = forwardRef(function HubMap({
 
   // Rotation lente du cap : une seule animation linéaire longue (pas de boucle image par image),
   // arrêtée par toute interaction, un nouveau vol, l'onglet masqué ou reduced-motion.
-  const orbit = useCallback(({ degreesPerSec = 1.5, maxSeconds = 60 } = {}) => {
+  // spin : le globe tourne (la longitude du centre avance) au lieu du cap.
+  const orbit = useCallback(({ degreesPerSec = 1.5, maxSeconds = 60, spin = false } = {}) => {
     const map = mapRef.current;
     stopOrbit();
     if (!map || reduced() || !degreesPerSec) return stopOrbit;
@@ -265,7 +294,10 @@ const HubMap = forwardRef(function HubMap({
     function done() { if (orbitRef.current?.map === map) { orbitRef.current = null; detach(); } }
     orbitRef.current = { map, cleanup: () => { detach(); map.stop(); } };
     map.once('moveend', done);
-    map.rotateTo(map.getBearing() + degreesPerSec * maxSeconds, { duration: maxSeconds * 1000, easing: t => t, essential: false });
+    if (spin) {
+      const c = map.getCenter();
+      map.easeTo({ center: [c.lng + degreesPerSec * maxSeconds, c.lat], duration: maxSeconds * 1000, easing: t => t, essential: false });
+    } else map.rotateTo(map.getBearing() + degreesPerSec * maxSeconds, { duration: maxSeconds * 1000, easing: t => t, essential: false });
     return stopOrbit;
   }, [stopOrbit]);
 
@@ -313,12 +345,12 @@ const HubMap = forwardRef(function HubMap({
     // toujours explicite (celui du héros du récit resterait sinon sur la caméra).
     const pad = padding();
     const cam = map.cameraForBounds(wide, { padding: pad, maxZoom: 7, bearing: -8, pitch });
-    if (cam) move({ center: wide.getCenter(), zoom: cam.zoom, bearing: -8, pitch, padding: pad }, 1800);
+    if (cam) move({ center: wide.getCenter(), zoom: cam.zoom, bearing: -8, pitch, padding: pad }, 1800, () => settleProjection(mapRef.current, projRef));
   }, [move, padding]);
 
   const resetView = useCallback(() => {
     setHl(new Set());
-    move({ ...nationalRef.current, padding: { top: 0, bottom: 0, left: 0, right: 0 } }, 1800);
+    move({ ...nationalRef.current, padding: ZERO_PAD }, 1800, () => settleProjection(mapRef.current, projRef));
   }, [move]);
 
   // ——— Barrages : apparition un à un, du plus grand au plus petit ———
@@ -340,6 +372,30 @@ const HubMap = forwardRef(function HubMap({
     runReveal(duration);
   }, [runReveal]);
 
+  // ——— Globe : projection globe → Mercator selon le zoom (layers/globe.js) ———
+  const enterGlobe = useCallback(() => {
+    const map = mapRef.current;
+    if (!map || projRef.current === 'globe') return;
+    try { map.setProjection(GLOBE_PROJECTION); projRef.current = 'globe'; } catch { /* reste en Mercator */ }
+  }, []);
+  const spinGlobe = useCallback(opt => orbit({ ...GLOBE_SPIN, ...(typeof opt === 'object' ? opt : {}), spin: true }), [orbit]);
+  const showGlobe = useCallback(({ spin = true, duration = 2600, camera } = {}) => {
+    enterGlobe();
+    // Tableau de bord : le globe est centré dans l'espace laissé par le panneau ; récit : plein cadre.
+    move(globeCamera(camera, latest.current.mode === 'story' ? ZERO_PAD : padding()), duration, spin ? () => spinGlobe(spin) : null);
+  }, [enterGlobe, move, spinGlobe, padding]);
+  // Plongeon du globe vers le cadrage national ; la projection repasse en Mercator pur à l'arrivée (rendu déjà plan).
+  const diveToMorocco = useCallback(({ duration = 4200, camera } = {}) => {
+    const pad = latest.current.mode === 'story' ? ZERO_PAD : padding();
+    move(camera ? { padding: pad, ...camera } : { ...nationalRef.current, padding: pad }, duration, () => settleProjection(mapRef.current, projRef));
+  }, [move, padding]);
+
+  // ——— Terres agricoles en 3D (layers/fields.js) ———
+  const showFields = useCallback(({ on = true, animate = true } = {}) => {
+    fieldsAnimRef.current = animate !== false;
+    setFieldsCmd(!!on);
+  }, []);
+
   const flyToStop = useCallback(stop => {
     if (!stop) return;
     setHl(new Set(stop.highlightRegionIds || []));
@@ -347,26 +403,40 @@ const HubMap = forwardRef(function HubMap({
     if (stop.showDams === false) setStoryDams('hidden');
     else if (stop.revealDams || stop.showDams) setStoryDams('shown');
     else setStoryDams('faint');
+    // Champs en 3D : seulement sur une étape qui porte showFields.
+    fieldsAnimRef.current = true;
+    setFieldsCmd(!!stop.showFields);
+    // Carte pas encore chargée : l'étape est rejouée à la fin du chargement (une étape globe y est posée directement).
+    if (!readyRef.current) { pendingStopRef.current = stop; return; }
     if (stop.revealDams) runReveal(typeof stop.revealDams === 'number' ? stop.revealDams : 2600);
     if (stop.flyAlongAtlas) { flyAlongAtlas().then(ok => { if (ok && stop.orbit) orbit(); }); return; }
+    if (isGlobeStop(stop)) {
+      enterGlobe();
+      move(globeCamera(stop, globeFraming(wrapRef.current, stop.framing)), stop.duration, stop.orbit === false ? null : () => spinGlobe(stop.orbit));
+      return;
+    }
     // Accroche : le Maroc plus grand et poussé vers le bas pour laisser le titre respirer.
     const hero = stop.id === 'hero';
     const hf = heroFraming(wrapRef.current);
-    const pad = hero ? hf.padding : { top: 0, bottom: 0, left: 0, right: 0 };
+    const pad = hero ? hf.padding : ZERO_PAD;
     const cam = { center: stop.center, zoom: stop.zoom + (hero ? hf.zoomBy : 0), pitch: stop.pitch ?? 50, bearing: stop.bearing ?? 0, padding: pad };
-    move(cam, stop.duration, stop.orbit ? () => orbit(typeof stop.orbit === 'object' ? stop.orbit : undefined) : null);
-  }, [move, orbit, flyAlongAtlas, runReveal]);
+    move(cam, stop.duration, () => {
+      settleProjection(mapRef.current, projRef);
+      if (stop.orbit) orbit(typeof stop.orbit === 'object' ? stop.orbit : undefined);
+    });
+  }, [move, orbit, flyAlongAtlas, runReveal, enterGlobe, spinGlobe]);
 
   // Hors production : poignée exposée pour les captures de contrôle (revealDams, orbit, flyAlongAtlas).
   useEffect(() => {
     if (import.meta.env.MODE === 'production') return undefined;
-    window.__hubMapApi = { revealDams, orbit, stopOrbit, flyAlongAtlas, flyToStop };
+    window.__hubMapApi = { revealDams, orbit, stopOrbit, flyAlongAtlas, flyToStop, showFields, showGlobe, diveToMorocco };
     return () => { delete window.__hubMapApi; };
-  }, [revealDams, orbit, stopOrbit, flyAlongAtlas, flyToStop]);
+  }, [revealDams, orbit, stopOrbit, flyAlongAtlas, flyToStop, showFields, showGlobe, diveToMorocco]);
 
   useImperativeHandle(ref, () => ({
-    flyToStop, flyToRegion, resetView, revealDams, orbit, stopOrbit, flyAlongAtlas, getMap: () => mapRef.current,
-  }), [flyToStop, flyToRegion, resetView, revealDams, orbit, stopOrbit, flyAlongAtlas]);
+    flyToStop, flyToRegion, resetView, revealDams, orbit, stopOrbit, flyAlongAtlas, showFields, showGlobe, diveToMorocco,
+    getMap: () => mapRef.current,
+  }), [flyToStop, flyToRegion, resetView, revealDams, orbit, stopOrbit, flyAlongAtlas, showFields, showGlobe, diveToMorocco]);
 
   // ——— Données (les fichiers absents valent null) ———
   // Dépend seulement des objets fournis (pas des booléens qui changent avec l'onglet) : pas de rechargement ni de
@@ -412,7 +482,7 @@ const HubMap = forwardRef(function HubMap({
       map = new maplibregl.Map({
         container: canvasHostRef.current, style: baseStyle, bounds: NATIONAL_BOUNDS,
         fitBoundsOptions: { padding: padding(), bearing: NATIONAL.bearing, pitch: NATIONAL.pitch },
-        minZoom: 2, maxZoom: 12, maxPitch: 75, attributionControl: { compact: true }, locale: MAP_LOCALE,
+        minZoom: MAP_MIN_ZOOM, maxZoom: 12, maxPitch: 75, attributionControl: { compact: true }, locale: MAP_LOCALE,
         canvasContextAttributes: { antialias: true },
       });
     } catch { setStatus('nogl'); return undefined; }
@@ -439,6 +509,11 @@ const HubMap = forwardRef(function HubMap({
           const hf = heroFraming(wrapRef.current);
           map.jumpTo(latest.current.mode === 'story' ? { ...nationalRef.current, zoom: nationalRef.current.zoom + hf.zoomBy, padding: hf.padding } : nationalRef.current);
         }
+        // Récit ouvert sur une étape globe : le globe est posé directement (pas de vol depuis le Maroc à l'ouverture).
+        if (isGlobeStop(pendingStopRef.current)) {
+          try { map.setProjection(GLOBE_PROJECTION); projRef.current = 'globe'; } catch { /* Mercator */ }
+          map.jumpTo(globeCamera(pendingStopRef.current, globeFraming(wrapRef.current, pendingStopRef.current.framing)));
+        }
 
         const styleLayers = map.getStyle().layers;
         const afterBackground = styleLayers.find(l => l.type !== 'background')?.id;
@@ -461,7 +536,7 @@ const HubMap = forwardRef(function HubMap({
         try {
           map.setSky({
             'sky-color': colors.sky, 'horizon-color': colors.surface1, 'fog-color': colors.bg,
-            'sky-horizon-blend': 0.6, 'horizon-fog-blend': 0.7, 'fog-ground-blend': 0.35, 'atmosphere-blend': 0,
+            'sky-horizon-blend': 0.6, 'horizon-fog-blend': 0.7, 'fog-ground-blend': 0.35, 'atmosphere-blend': ATMOSPHERE_BLEND,
           });
         } catch { /* ciel par défaut */ }
 
@@ -472,34 +547,35 @@ const HubMap = forwardRef(function HubMap({
         map.addSource(LINES, { type: 'geojson', data: buildLines(geo, styles), promoteId: 'id' });
         map.addLayer({ id: 'hub-fill', type: 'fill', source: SRC, paint: {
           'fill-color': ['get', 'color'],
-          'fill-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], ['min', 0.66, ['+', ['get', 'op'], 0.14]], ['get', 'op']],
+          // Fondu selon le zoom : rien au globe lointain (layers/globe.js), inchangé au cadrage national.
+          'fill-opacity': fadeByZoom(['case', ['boolean', ['feature-state', 'hover'], false], ['min', 0.66, ['+', ['get', 'op'], 0.14]], ['get', 'op']]),
           'fill-opacity-transition': { duration: 250 },
         } }, waterLayer);
         map.addLayer({ id: 'hub-outline', type: 'line', source: LINES, paint: {
-          'line-color': colors.mapBoundary, 'line-opacity': ['case', ['boolean', ['feature-state', 'hover'], false], 0.9, 0.4],
+          'line-color': colors.mapBoundary, 'line-opacity': fadeByZoom(['case', ['boolean', ['feature-state', 'hover'], false], 0.9, 0.4]),
           'line-width': ['case', ['boolean', ['feature-state', 'hover'], false], 2.2, 0.9],
         } });
         map.addLayer({ id: 'hub-na-dash', type: 'line', source: LINES, filter: ['==', ['get', 'kind'], 'na'], paint: {
-          'line-color': colors.bandNa, 'line-width': 1, 'line-opacity': 0.7, 'line-dasharray': [2, 2],
+          'line-color': colors.bandNa, 'line-width': 1, 'line-opacity': fadeByZoom(0.7), 'line-dasharray': [2, 2],
         } });
         map.addLayer({ id: 'hub-flux-dash', type: 'line', source: LINES, filter: ['==', ['get', 'kind'], 'flux'], paint: {
-          'line-color': colors.flux3, 'line-width': 1, 'line-opacity': 0.7, 'line-dasharray': [4, 2],
+          'line-color': colors.flux3, 'line-width': 1, 'line-opacity': fadeByZoom(0.7), 'line-dasharray': [4, 2],
         } });
         map.addLayer({ id: 'hub-selected-casing', type: 'line', source: LINES, filter: ['==', ['get', 'id'], ''], paint: {
-          'line-color': colors.mapSelectionCasing, 'line-width': 5.5,
+          'line-color': colors.mapSelectionCasing, 'line-width': 5.5, 'line-opacity': fadeByZoom(1),
         } });
         map.addLayer({ id: 'hub-selected', type: 'line', source: LINES, filter: ['==', ['get', 'id'], ''], paint: {
-          'line-color': colors.mapSelection, 'line-width': 3,
+          'line-color': colors.mapSelection, 'line-width': 3, 'line-opacity': fadeByZoom(1),
         } });
 
         map.addSource('hub-label-src', { type: 'geojson', data: buildLabels(geo, namesRef.current, latest.current.mode === 'story' ? null : latest.current.regionId) });
-        map.addLayer({ id: 'hub-labels', type: 'symbol', source: 'hub-label-src', layout: {
+        map.addLayer({ id: 'hub-labels', type: 'symbol', source: 'hub-label-src', minzoom: MOROCCO_FADE[1] - 0.2, layout: {
           'text-field': ['get', 'name'], 'text-font': labelFont, 'text-transform': 'uppercase', 'text-letter-spacing': 0.12,
           'text-size': ['case', ['==', ['get', 'sel'], 1], 15, 10.5], 'text-max-width': 7,
           'symbol-sort-key': ['case', ['==', ['get', 'sel'], 1], 0, 1], 'text-pitch-alignment': 'viewport',
         }, paint: {
           'text-color': colors.mapLabel, 'text-halo-color': colors.mapHalo, 'text-halo-width': 1.6,
-          'text-opacity': ['case', ['==', ['get', 'sel'], 1], 1, 0.78],
+          'text-opacity': fadeByZoom(['case', ['==', ['get', 'sel'], 1], 1, 0.78]),
         } });
 
         map.on('mousemove', 'hub-fill', e => {
@@ -531,6 +607,7 @@ const HubMap = forwardRef(function HubMap({
           const id = e.features?.[0]?.properties.id;
           if (id) latest.current.onSelectRegion?.(id);
         });
+        readyRef.current = true;
         setStatus('ready');
       } catch (err) {
         if (import.meta.env.MODE !== 'production') console.warn('[carte]', err);
@@ -550,6 +627,9 @@ const HubMap = forwardRef(function HubMap({
       if (import.meta.env.MODE !== 'production' && window.__hubMap === map) delete window.__hubMap;
       markersRef.current.forEach(m => m.remove());
       markersRef.current = [];
+      window.clearTimeout(fieldsTimerRef.current);
+      readyRef.current = false;
+      projRef.current = 'mercator';
       map.remove();
       mapRef.current = null;
       geoRef.current = null;
@@ -599,6 +679,77 @@ const HubMap = forwardRef(function HubMap({
     if (regionId) flyToRegion(regionId);
   }, [regionId, status, story, flyToRegion]);
 
+  // Étape demandée avant la fin du chargement : rejouée une fois la carte prête.
+  useEffect(() => {
+    if (status !== 'ready' || !pendingStopRef.current) return;
+    const s = pendingStopRef.current;
+    pendingStopRef.current = null;
+    flyToStop(s);
+  }, [status, flyToStop]);
+
+  // ——— Terres agricoles : ajout à la demande, fondu d'opacité (transition MapLibre, aucune boucle), retrait après fondu ———
+  const fieldsProp = layers?.fields === true;
+  const fieldsPropSeen = useRef(fieldsProp);
+  useEffect(() => {
+    if (fieldsPropSeen.current === fieldsProp) return; // pas au montage : une étape a pu être posée avant
+    fieldsPropSeen.current = fieldsProp;
+    setFieldsCmd(null);
+  }, [fieldsProp]);
+
+  // Globe lointain : barrages masqués (état mis à jour seulement au franchissement du seuil).
+  const farRef = useRef(false);
+  const nearRef = useRef(false);
+  useEffect(() => {
+    const map = mapRef.current;
+    if (status !== 'ready' || !map) return undefined;
+    const onZoom = () => {
+      const z = map.getZoom();
+      const f = !showDamsAt(z); if (f !== farRef.current) { farRef.current = f; setFar(f); }
+      const n = z >= FIELDS_ZOOM.veilMin; if (n !== nearRef.current) { nearRef.current = n; setNearFields(n); }
+    };
+    onZoom();
+    map.on('zoom', onZoom);
+    return () => map.off('zoom', onZoom);
+  }, [status]);
+  useEffect(() => {
+    const map = mapRef.current;
+    if (status !== 'ready' || !map) return undefined;
+    const animate = fieldsAnimRef.current;
+    fieldsAnimRef.current = true;
+    let raf = 0;
+    const paint = on => {
+      for (const [id, [prop, value]] of Object.entries(fieldsPaint(on))) if (map.getLayer(id)) map.setPaintProperty(id, prop, value);
+    };
+    const ensure = () => {
+      if (!latest.current.fieldsOn || map.getLayer(FIELDS_LAYER_IDS[1]) || !map.getSource('openmaptiles')) return false;
+      const [veil, ext] = fieldsLayers(colors, { animate, reducedMotion: reduced() });
+      map.addLayer(veil, map.getLayer('hub-outline') ? 'hub-outline' : undefined);
+      map.addLayer(ext, map.getLayer('hub-labels') ? 'hub-labels' : undefined);
+      return true;
+    };
+    window.clearTimeout(fieldsTimerRef.current);
+    const tr = fieldsTransition(animate, reduced());
+    if (fieldsOn) {
+      const added = ensure();
+      for (const id of FIELDS_LAYER_IDS) {
+        const prop = map.getLayer(id)?.type === 'fill' ? 'fill-opacity-transition' : 'fill-extrusion-opacity-transition';
+        if (map.getLayer(id)) map.setPaintProperty(id, prop, tr);
+      }
+      // Couche tout juste ajoutée (opacité 0) : la valeur cible est posée à l'image suivante pour que la transition joue.
+      if (added) raf = requestAnimationFrame(() => paint(true)); else paint(true);
+    } else if (map.getLayer(FIELDS_LAYER_IDS[1])) {
+      paint(false);
+      fieldsTimerRef.current = window.setTimeout(() => {
+        if (latest.current.fieldsOn || !mapRef.current) return;
+        for (const id of FIELDS_LAYER_IDS) if (map.getLayer(id)) map.removeLayer(id);
+      }, tr.duration + 60);
+    }
+    // Changement de style : la couche est rajoutée si elle est demandée.
+    const onStyle = () => { if (ensure()) paint(true); };
+    map.on('styledata', onStyle);
+    return () => { cancelAnimationFrame(raf); map.off('styledata', onStyle); };
+  }, [fieldsOn, status]);
+
   // Étape du récit (optionnelle : le parent peut aussi appeler flyToStop).
   useEffect(() => { if (status === 'ready' && storyStop) flyToStop(storyStop); }, [storyStop, status, flyToStop]);
 
@@ -608,7 +759,7 @@ const HubMap = forwardRef(function HubMap({
     if (!map) return;
     const hs = ['scrollZoom', 'boxZoom', 'dragRotate', 'dragPan', 'keyboard', 'doubleClickZoom', 'touchZoomRotate', 'touchPitch'];
     for (const h of hs) (story ? map[h].disable() : map[h].enable());
-    if (story) { setTip(null); setPinned(null); } else { setStoryDams('faint'); stopOrbit(); }
+    if (story) { setTip(null); setPinned(null); } else { setStoryDams('faint'); setFieldsCmd(null); stopOrbit(); }
   }, [story, status, stopOrbit]);
 
   // ——— Barrages : petits réservoirs HTML (niveau d'eau = taux de remplissage lu) ———
@@ -698,6 +849,8 @@ const HubMap = forwardRef(function HubMap({
     const draw = () => {
       ctx.clearRect(0, 0, cv.width, cv.height);
       const proj = [];
+      // Globe lointain : pas d'arcs (map.project n'a pas de sens sur la face cachée du globe).
+      if (!showDamsAt(map.getZoom())) { arcsRef.current = proj; return; }
       for (const a of arcs) {
         const poly = a.pts.map(p => { const s = map.project(p); return [s.x, s.y]; });
         proj.push({ link: a.link, poly });
@@ -774,7 +927,7 @@ const HubMap = forwardRef(function HubMap({
   return (
     <div
       ref={wrapRef}
-      className={'hub-map' + (story ? ' is-story' : '') + (showDams ? '' : ' is-dams-off') + (story && storyDams === 'faint' ? ' is-dams-faint' : '')}
+      className={'hub-map' + (story ? ' is-story' : '') + (showDams ? '' : ' is-dams-off') + (story && storyDams === 'faint' ? ' is-dams-faint' : '') + (far ? ' is-far' : '')}
       id="hub-map" tabIndex={-1} role="region" aria-label="Carte nationale de l'eau au Maroc"
     >
       <div ref={canvasHostRef} className="hub-map__canvas" />
@@ -816,6 +969,10 @@ const HubMap = forwardRef(function HubMap({
           )}
         </div>
       )}
+      {story && fieldsOn && nearFields && status === 'ready' && (
+        // Récit : la légende est masquée, la mention de source et la limite restent visibles avec les champs.
+        <p className="hub-map__fields-note"><span>{FIELDS_LEGEND.label}</span><span>{FIELDS_LEGEND.note}</span></p>
+      )}
       {legend !== false && status === 'ready' && (
         <aside className={'hub-map__legend' + (legendOpen ? ' is-open' : '')} aria-label="Légende de la carte">
           <button type="button" className="hub-map__legend-toggle" aria-expanded={legendOpen} onClick={() => setLegendOpen(o => !o)}>
@@ -838,6 +995,8 @@ const HubMap = forwardRef(function HubMap({
                 {showDams && joined.unmatchedFill.length > 0 && (
                   <li className="hub-map__note">{joined.unmatchedFill.length + ' barrages du bulletin non placés (nom non apparié).'}</li>
                 )}
+                {fieldsOn && <li><i className="hub-map__sw hub-map__sw--field" aria-hidden="true" />{FIELDS_LEGEND.label}</li>}
+                {fieldsOn && <li className="hub-map__note">{FIELDS_LEGEND.note}</li>}
                 {showLinks && arcs.length > 0 && <li><i className="hub-map__sw hub-map__sw--solid" aria-hidden="true" />Liaison en service (schéma, pas le tracé)</li>}
                 {showLinks && arcs.length > 0 && <li><i className="hub-map__sw hub-map__sw--dash" aria-hidden="true" />En construction ou planifiée</li>}
                 {showLinks && arcs.some(a => a.link.verified === false) && <li><i className="hub-map__sw hub-map__sw--faint" aria-hidden="true" />Atténuée : non vérifiée</li>}

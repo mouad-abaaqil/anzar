@@ -21,6 +21,19 @@ test.describe('axe', () => {
     test('tableau de bord ' + tab, async ({ page }) => { await page.goto('/#/r/souss-massa' + hash); await waitDashboard(page); await page.waitForTimeout(1500); await audit(page, 'dashboard-' + tab); });
   }
   test('tableau de bord Dakhla (flux)', async ({ page }) => { await page.goto('/#/r/dakhla-oued-ed-dahab'); await waitDashboard(page); await page.waitForTimeout(1500); await audit(page, 'dashboard-dakhla'); });
+  test('landing, toutes sections révélées jusqu’au pied de page', async ({ page }) => {
+    await page.goto('/#/');
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    await page.locator('body').click({ position: { x: 5, y: 200 } });
+    for (let i = 0; i < 30; i++) {
+      await page.keyboard.press('PageDown');
+      await page.waitForTimeout(250);
+      if (await page.evaluate(() => Math.ceil(scrollY + innerHeight) >= document.documentElement.scrollHeight - 2)) break;
+    }
+    await expect(page.locator('footer.sty-foot')).toBeInViewport();
+    await page.waitForTimeout(1500);
+    await audit(page, 'landing-fin');
+  });
   test('tiroir Sources', async ({ page }) => { await page.goto('/#/sources'); await expect(page.locator('dialog.az-sheet[open]')).toBeVisible(); await page.waitForTimeout(1500); await audit(page, 'sources'); });
 });
 
@@ -47,7 +60,7 @@ test.describe('clavier', () => {
     const seen = await tabThrough(page, 18);
     const texts = seen.map(s => s.text);
     test.info().annotations.push({ type: 'info', description: 'ordre : ' + texts.join(' > ') });
-    for (const want of [/Récit/i, /Tableau/i, /Sources/i, /Région|Souss/i]) expect.soft(texts.some(t => want.test(t)), 'atteint ' + want).toBe(true);
+    for (const want of [/Accueil/i, /Tableau/i, /Sources/i, /Région|Souss/i]) expect.soft(texts.some(t => want.test(t)), 'atteint ' + want).toBe(true);
     const invisible = seen.filter(s => !s.visible).map(s => s.text + ' (' + s.cls + ')');
     expect.soft(invisible, 'éléments focalisés sans indicateur visible (outline/box-shadow)').toEqual([]);
   });
@@ -78,7 +91,7 @@ test.describe('clavier', () => {
     await expect.poll(() => page.evaluate(() => location.hash)).toMatch(/tomorrow$/);
   });
 
-  test('prefers-reduced-motion : récit sans animation, chiffres finaux', async ({ page }) => {
+  test('prefers-reduced-motion : accueil sans animation, chiffres finaux', async ({ page }) => {
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.goto('/#/');
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
@@ -92,7 +105,7 @@ test.describe('clavier', () => {
     expect.soft(info.still, 'classe sty--still (reduced) appliquée').toBe(true);
     expect.soft(info.count, 'animations en cours : ' + info.running.join(', ')).toBe(0);
     // La caméra MapLibre (orbite, flyTo) n'est pas une animation CSS : deux captures du canvas à 2 s d'écart.
-    await page.evaluate(() => document.querySelector('.sty-scroll')?.scrollTo(0, 0));
+    await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
     await waitMap(page, 8000);
     const clip = { x: 700, y: 120, width: 700, height: 600 };
     const s1 = await page.screenshot({ clip });

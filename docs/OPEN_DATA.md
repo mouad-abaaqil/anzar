@@ -72,4 +72,12 @@ Demande ouverte pour Mouad : lesquels de ces comptes veut-il créer ? Aucun n'es
 - JRC Global Surface Water : tuiles et GeoTIFF publics ; utile pour contrôler les polygones de retenues.
 - NASA POWER : second avis de pluie sur le même point.
 - Open-Meteo ensemble : bande d'incertitude de la prévision de pluie.
-- ESA WorldCover : à retester avec l'adresse exacte du jeu avant de l'utiliser.
+- ESA WorldCover : à retester avec l'adresse exacte du jeu avant de l'utiliser (24/11/2026 : le WMTS Terrascope `services.terrascope.be/wmts/v2` ne répondait pas, aucune tuile XYZ ouverte vérifiée).
+
+## Terres agricoles en 3D (carte, branché le 24/11/2026)
+
+- **Source** : couche `landcover` (`class=farmland`, sous-classes farmland, orchard, vineyard, plant_nursery) des tuiles vectorielles OpenFreeMap (schéma OpenMapTiles), déjà chargées par le fond de carte : aucune requête ni clé supplémentaire. Données © contributeurs OpenStreetMap, licence **ODbL** (attribution affichée par la carte). Code : `platform/src/hub/layers/fields.js`, tests `platform/tests/fields-layer.test.mjs`.
+- **Mesuré le 24/11/2026** (lecture des tuiles, part de la tuile couverte par farmland) : rien aux zooms ≤ 6 ; un polygone fusionné par tuile au zoom 7 ; au zoom 11, Gharb ≈ 83 %, Tadla ≈ 90 %, Saïss ≈ 55 % (+ 6 % vergers), Haouz ≈ 10 % de vergers ; Chtouka-Aït Baha < 2 % à 20 % selon la tuile (les serres y sont cartographiées en `building=greenhouse`, ~5 000 objets OSM via Overpass, mais la couche `building` des tuiles n'a pas de type : impossible de les isoler).
+- **Affichage** : voile vert doux dès le zoom 7, extrusions à partir du zoom ~10,2 (hauteur symbolique, plus forte au zoom bas pour rester lisible). Zones cartographiées et généralisées par les tuiles, pas des parcelles cadastrales.
+- **Limites** : couverture OSM inégale ; ne dit **rien** de l'irrigation réelle, de la culture en place ni d'un volume d'eau par parcelle.
+

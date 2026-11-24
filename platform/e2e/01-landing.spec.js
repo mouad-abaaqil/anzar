@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { BAD_TEXT, overflowX, scrollToStep, visibleText, waitMap, watchConsole } from './helpers.js';
 
 test.describe('landing', () => {
-  test('titre, CTA, carte, console propre, pas de débordement, récit complet', async ({ page }) => {
+  test('titre, CTA, carte, console propre, pas de débordement, accueil complet', async ({ page }) => {
     const errors = watchConsole(page);
     await page.goto('/#/');
     await expect(page.getByRole('heading', { level: 1 })).toContainText('Combien d’eau nous reste-t-il');
@@ -12,7 +12,7 @@ test.describe('landing', () => {
     const ox = await overflowX(page);
     expect.soft(ox.scrollWidth, 'débordement horizontal ' + JSON.stringify(ox)).toBeLessThanOrEqual(ox.inner);
 
-    // Récit : chaque section vient au premier plan à tour de rôle.
+    // Accueil : chaque section vient dans la fenêtre à tour de rôle (défilement du document).
     for (const id of ['contexte', 'ecarts', 'demande', 'sud', 'climat', 'barrages', 'chiffres', 'essayez']) {
       await scrollToStep(page, 'sty-t-' + id);
       const h = page.locator('#sty-t-' + id);

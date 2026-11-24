@@ -59,8 +59,14 @@ export function demandFacts(d) {
   const agri = g?.agriculture2020Mm3, total = g?.demand2020Mm3;
   if (!finite(agri?.value) || !finite(total?.value) || total.value <= 0) return null;
   const share = finite(agri.sharePct) ? agri.sharePct : (agri.value / total.value) * 100;
+  const other = g?.aepit2020Mm3;
+  const a50 = g?.agriculture2050Mm3, o50 = g?.aepit2050Mm3;
   return {
     agriSharePct: share,
+    agriMm3: agri.value,
+    // Eau potable + industrie + tourisme : un seul poste dans la source (pas de détail par usage).
+    other: finite(other?.value) ? { value: other.value, sharePct: finite(other.sharePct) ? other.sharePct : (other.value / total.value) * 100, note: other.note || null } : null,
+    projection2050: finite(a50?.value) && finite(o50?.value) ? { agriMm3: a50.value, otherMm3: o50.value, source: a50.source || null, date: a50.date || null } : null,
     totalMm3: total.value,
     year: 2020,
     source: agri.source || total.source || null,
@@ -162,12 +168,11 @@ export function damCounts(d, damFill) {
 export function keyFigures(d) {
   const n = nationalFacts(d);
   const dem = demandFacts(d);
-  const spread = basinSpread(d);
   const out = [];
   if (n?.storedMm3 != null) out.push({ id: 'stock', value: n.storedMm3, decimals: 0, unit: 'Mm³', label: 'dans les barrages', status: 'sourced', bulletin: true, note: 'Bulletin du ' + frDate(n.date) });
   if (n?.capacityMm3 != null) out.push({ id: 'capacite', value: n.capacityMm3, decimals: 0, unit: 'Mm³', label: 'de capacité totale', status: 'sourced', bulletin: true, note: 'Bulletin du ' + frDate(n.date) });
   if (dem) out.push({ id: 'demande', value: dem.totalMm3, decimals: 0, unit: 'Mm³/an', label: 'de demande (' + dem.year + ')', status: dem.status, note: 'IRES 2022, Département de l’Eau' , source: dem.source });
-  if (spread) out.push({ id: 'bassins', value: spread.rows.length, decimals: 0, unit: '', label: 'grands bassins suivis', status: 'sourced', bulletin: true, note: 'Bulletin du ' + frDate(bulletinOf(d)?.date) });
+  // Le nombre de bassins n'est pas repris ici : il figure déjà dans la section Climat (« N / 9 bassins »).
   return out;
 }
 
@@ -222,7 +227,8 @@ export function regionStop(d, regionId) {
  * Chaque étape est aussi un arrêt caméra pour HubMap.flyToStop : { center, zoom, pitch, bearing, duration, highlightRegionIds }.
  * Indications lues par HubMap.flyToStop (ignorées par une carte qui ne les connaît pas) : revealDams (apparition des
  * barrages un à un), flyAlongAtlas (survol du relief de l'Atlas), orbit { degreesPerSec, maxSeconds } (rotation lente
- * après le vol, arrêtée par toute interaction).
+ * après le vol, arrêtée par toute interaction), showFields (parcelles agricoles OpenStreetMap extrudées en 3D),
+ * globe (vue globe avec relief mondial, ouverture). Une carte qui ne connaît pas ces drapeaux les ignore.
  */
 export const CHAPTERS = [
   { id: 'contexte', label: 'Contexte' },
@@ -233,13 +239,20 @@ export const CHAPTERS = [
 ];
 
 export const STORY_STOPS = [
-  { id: 'hero', chapter: null, label: 'Anzar', center: [-7.4, 30.4], zoom: 4.9, pitch: 52, bearing: -14, duration: 2600, highlightRegionIds: [], orbit: { degreesPerSec: 1.2, maxSeconds: 40 } },
+  // Ouverture : la Terre en globe (relief mondial), rotation lente ; puis plongeon vers le Maroc (HERO_DIVE).
+  { id: 'hero', chapter: null, label: 'Anzar', globe: true, framing: 'right', center: [-4, 24], zoom: 1.7, pitch: 12, bearing: 0, duration: 2000, highlightRegionIds: [], orbit: { degreesPerSec: 3, maxSeconds: 40 } },
   { id: 'contexte', chapter: 'contexte', label: 'Rare et irrégulière', center: [-6.6, 32.0], zoom: 5.3, pitch: 50, bearing: -18, duration: 3000, highlightRegionIds: [] },
   { id: 'ecarts', chapter: 'probleme', label: 'Écarts entre bassins', center: [-7.0, 31.4], zoom: 5.4, pitch: 46, bearing: 6, duration: 3000, highlightRegionIds: [] },
-  { id: 'demande', chapter: 'probleme', label: 'Qui consomme', center: [-8.2, 32.3], zoom: 6.2, pitch: 58, bearing: -24, duration: 3000, highlightRegionIds: ['casablanca-settat', 'marrakech-safi', 'beni-mellal-khenifra'] },
+  // À quoi sert l'eau : survol de la plaine agricole du Tadla (Béni Mellal-Khénifra), parcelles OpenStreetMap en 3D (showFields).
+  // Le relief des parcelles n'est lisible qu'à partir du zoom ~11 ; Chtouka (serres) est trop pauvre dans les tuiles.
+  { id: 'demande', chapter: 'probleme', label: 'À quoi sert l’eau', center: [-6.69, 32.5], zoom: 11.3, pitch: 62, bearing: 25, duration: 3400, highlightRegionIds: [], showFields: true },
   { id: 'sud', chapter: 'probleme', label: 'Le Sud', center: [-13.4, 25.8], zoom: 4.9, pitch: 50, bearing: 16, duration: 3400, highlightRegionIds: ['laayoune-sakia-el-hamra', 'dakhla-oued-ed-dahab'] },
   { id: 'climat', chapter: 'probleme', label: 'Le climat', center: [-7.0, 31.0], zoom: 4.8, pitch: 34, bearing: 0, duration: 3000, highlightRegionIds: [] },
   { id: 'barrages', chapter: 'barrages', label: 'Où sont les barrages', center: [-6.4, 31.9], zoom: 6.5, pitch: 64, bearing: 24, duration: 3600, highlightRegionIds: [], revealDams: true, flyAlongAtlas: true, orbit: { degreesPerSec: 2, maxSeconds: 30 } },
   { id: 'chiffres', chapter: 'chiffres', label: 'En chiffres', center: [-7.0, 31.6], zoom: 5.1, pitch: 40, bearing: -8, duration: 3000, highlightRegionIds: [] },
   { id: 'essayez', chapter: 'essayez', label: 'Essayez', center: [-8.9, 30.3], zoom: 6.2, pitch: 55, bearing: -15, duration: 3000, highlightRegionIds: ['souss-massa'] },
 ];
+
+/** Plongeon de l'ouverture : du globe vers le Maroc (au premier défilement ou après un court moment sans geste). */
+export const HERO_DIVE = { id: 'hero-dive', chapter: null, label: 'Maroc', globe: false, center: [-7.4, 30.4], zoom: 4.9, pitch: 52, bearing: -14, duration: 4200, highlightRegionIds: [], orbit: { degreesPerSec: 1.2, maxSeconds: 40 } };
+export const HERO_DIVE_DELAY_MS = 6000;
