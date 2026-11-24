@@ -2,7 +2,7 @@
 
 **Lis `HANDOFF.md` d'abord** (but, façon de travailler, état, limites, suite). Index de la documentation : `docs/README.md`. Journal ancien : `docs/HISTORY.md`.
 
-- But : **Anzar**, observatoire national de l'eau du Maroc (barrages, pluie, dessalement, autosuffisance par région, scénarios, sensibilisation), carte 3D, interface en **français**. Propriétaire francophone, veut de l'autonomie et de la vitesse. En ligne : https://anzar.abq.capital ; dépôt privé : github.com/mouad-abaaqil/anzar.
+- But : **Anzar**, observatoire national de l'eau du Maroc (barrages, pluie, dessalement, autosuffisance par région, scénarios, sensibilisation), carte 3D, interface en **français**. Propriétaire francophone, veut de l'autonomie et de la vitesse. En ligne : https://anzar.abq.capital ; dépôt public (MIT) : github.com/mouad-abaaqil/anzar ; commits signés avec l'adresse noreply GitHub, ne jamais publier l'e-mail personnel.
 - Application : `platform/` (React 19 / Vite 7 / MapLibre 6). Lancer : `cd platform && npm ci && npm run build && npx vite preview`. Tests : `npm test` (164), `npm run check:design`, Playwright `e2e/` **un fichier à la fois**. Déployer : `sh scripts/deploy.sh` (Worker Cloudflare, accord requis).
 - Données : `platform/public/data/*.json` (sources, dates, licences dans chaque fichier) ; brutes et scripts : `platform/data-raw/`, `platform/pipeline/`. Matériel d'origine du stage : `legacy/` (à préserver, non utilisé par l'app).
 - **Sous-agents : Sonnet (Opus pour la conception), pas Haiku. Appelle réellement l'advisor avant de conclure. Arrête les sous-agents terminés.**
