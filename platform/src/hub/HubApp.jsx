@@ -9,6 +9,7 @@ import { download } from '../lib/format.js';
 import { regionPoint } from '../lib/openData.js';
 import SourcesPage from '../pages/SourcesPage.jsx';
 import { useHubData } from './data.js';
+import { REPO_URL } from './links.js';
 import { DEFAULT_REGION_ID, hubHash } from './routes.js';
 import { SERVER_ONLY_NOTICE, STATIC_BUILD } from './panel/serverApi.js';
 import './hub.css';
@@ -258,6 +259,7 @@ export default function HubApp({ route }) {
           <p className="hub-foot__note">Prototype indépendant<span className="hub-foot__more"> · pas un portail officiel</span></p>
           <nav className="hub-foot__nav" aria-label="Mentions">
             <a href="#/sources">Sources</a>
+            <a href={REPO_URL} target="_blank" rel="noopener noreferrer" title="Code source sur GitHub (nouvel onglet)" aria-label="Code source sur GitHub (s’ouvre dans un nouvel onglet)">GitHub</a>
             <a href="#/sources" title="Les logos des SRM et des opérateurs sont des marques de leurs titulaires (détail dans Sources et méthode).">Marques</a>
           </nav>
         </footer>

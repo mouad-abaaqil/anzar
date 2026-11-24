@@ -15,6 +15,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Button, MicroLabel, ProvenanceChip } from '../design';
 import MiniSim from './MiniSim.jsx';
+import { REPO_URL } from './links.js';
 import AwarenessChapter from './Awareness.jsx';
 import WaterFx, { Bubbles, LevelGauge, Sea, Surface, WaterLine, Wave, useReducedMotion, useTouchRipples } from './WaterFx.jsx';
 import { watchActivity } from './water/clock.js';
@@ -627,13 +628,14 @@ export default function Story({ data, onEnter, flyToStop, mapFeatures, regionId:
               <li><a href="#/" onClick={toTop}>Accueil</a></li>
               <li><a href={dashHash}>Tableau de bord</a></li>
               <li><a href="#/sources">Sources et méthode</a></li>
+              <li><a href={REPO_URL} target="_blank" rel="noopener noreferrer" aria-label="Code source sur GitHub (s’ouvre dans un nouvel onglet)">Code source · GitHub</a></li>
             </ul>
           </nav>
           <div className="sty-foot__legal">
             <MicroLabel tone="muted" as="p">Mentions</MicroLabel>
             <p>Anzar est un prototype indépendant issu d’un stage à la RAMSA. Ce n’est pas un portail officiel.</p>
             <p>Chiffres publics datés, pas un relevé en direct. Chaque jeu de données porte sa source, sa date et sa licence : voir <a href="#/sources">Sources et méthode</a>.</p>
-            <p>Prévisions et climat : Open-Meteo (modélisé, usage non commercial).</p>
+            <p>Prévisions et climat : Open-Meteo (modélisé, usage non commercial). Code ouvert (MIT) : <a href={REPO_URL} target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
             <p>Les logos de la SRM Souss-Massa et des autres SRM sont des marques de leurs titulaires.</p>
           </div>
         </div>

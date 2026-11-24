@@ -10,6 +10,17 @@
 </p>
 
 <p align="center">
+  <a href="#le-problème">Le problème</a> ·
+  <a href="#comprendre-leau">Comprendre l'eau</a> ·
+  <a href="#le-tableau-de-bord">Tableau de bord</a> ·
+  <a href="#les-données">Données</a> ·
+  <a href="#limites-connues">Limites</a> ·
+  <a href="#lancer-en-local">Lancer en local</a> ·
+  <a href="#licences-et-marques">Licences</a> ·
+  <a href="#in-english">English</a>
+</p>
+
+<p align="center">
   <img src="docs/screenshots/01-landing-hero.png" alt="Anzar : page d'accueil, relief 3D du Maroc et question centrale" />
 </p>
 
@@ -140,9 +151,11 @@ Le détail, les clés éventuelles et les comptes gratuits à créer sont dans [
 - Le moteur de bilan n'additionne pas encore toute l'irrigation « autre » de Souss-Massa (614 Mm³/an) : la demande agricole y est sous-estimée.
 - Les apports récents de Souss-Massa valent environ 0,22 fois la moyenne de long terme : le scénario « normal » est trop optimiste. Les facteurs sec / normal / humide ne sont pas recalés.
 - Le lien Sebou→Bouregreg est documenté mais non dessiné : sa prise d'eau n'est localisée dans aucune source lue.
-- 98 grands barrages n'ont pas de coordonnée sourcée (Bin el Ouidane compris) ; seuls 42 sont joints à leur remplissage.
+- 98 grands barrages n'ont pas de coordonnée sourcée (Bin el Ouidane compris) ; seuls 43 sont joints à leur remplissage.
 - Les logos des SRM appartiennent à leurs titulaires, sans licence de réutilisation.
 - Open-Meteo gratuit est limité à un usage non commercial.
+- Tous les tests navigateur ont tourné en rendu logiciel : la fluidité de la 3D reste à confirmer sur un vrai GPU et un téléphone.
+- Plusieurs faits de sensibilisation ont été lus dans des copies hébergées par l'auteur d'une vidéo (documents d'institutions), pas sur les sites officiels : le site le dit et chaque fait est marqué.
 
 ## Sous le capot
 
@@ -150,13 +163,15 @@ React 19, Vite 7, MapLibre GL 6 (relief 3D), polices IBM Plex, aucune bibliothè
 
 ```
 platform/
-  src/hub/          récit d'entrée, carte 3D persistante, panneau à 3 onglets
+  src/hub/          accueil (Story, Awareness « Comprendre l'eau », MiniSim), carte 3D persistante (HubMap),
+                    panneau à 3 onglets (panel/), animations d'eau (WaterFx, water/)
   src/design/       tokens, kit de composants, couleurs pour la carte
   src/lib/balance.js  moteur de bilan et de scénarios (fonctions pures, testées)
   public/data/      jeux de données (sources, dates, licences dans chaque fichier)
   data-raw/         données brutes datées et notes de recherche
   pipeline/         scripts de collecte
-  e2e/              tests Playwright (parcours complets et captures)
+  e2e/              13 specs Playwright (parcours, 12 régions, mobile, sans WebGL, accessibilité, honnêteté, défilement)
+  tests/            164 tests unitaires et de données (Node)
 docs/               design, contrats de données, recherche
 ```
 
@@ -172,9 +187,9 @@ npm run dev                          # développement (la carte charge lentement
 ### Tester
 
 ```bash
-npm test                 # tests unitaires et de données
+npm test                 # 164 tests unitaires et de données
 npm run check:design     # couleurs, polices, contrastes AA
-npx playwright test e2e/01-landing.spec.js   # parcours navigateur, un fichier à la fois
+npx playwright test e2e/01-landing.spec.js   # parcours navigateur : UN fichier à la fois (le rendu 3D logiciel est gourmand en CPU)
 npm run e2e:shots        # régénère docs/screenshots/
 ```
 
@@ -188,9 +203,22 @@ cd platform && sh scripts/deploy.sh
 
 L'API Node/SQLite (compte, analyses importées, qualité de l'eau) n'est pas déployée : ces pages annexes affichent « Disponible uniquement dans la version serveur ».
 
+## Licences et marques
+
+- **Code** : [MIT](LICENSE).
+- **Données** : chaque jeu de `platform/public/data/` porte sa source, sa date de lecture et sa licence ; OpenStreetMap et Wikidata/Wikipédia sont réutilisés sous leurs licences (ODbL, CC0, CC BY-SA), Open-Meteo gratuit est limité à un usage non commercial (voir [`docs/OPEN_DATA.md`](docs/OPEN_DATA.md) et [`docs/OPEN_SOURCE.md`](docs/OPEN_SOURCE.md)).
+- **Polices** : IBM Plex (SIL OFL 1.1).
+- **Logos des SRM** (`platform/public/brand/operators/`) : **marques de leurs titulaires, hors de la licence MIT**, sans licence de réutilisation ; ils servent à identifier l'opérateur de chaque région. Si vous êtes titulaire d'une de ces marques et souhaitez son retrait, ouvrez une issue.
+- Anzar est un prototype **indépendant**, sans lien officiel avec la RAMSA, la SRM-SM, ni aucun opérateur ou ministère cité.
+
 ## Pour reprendre le projet
 
-Lire [`HANDOFF.md`](HANDOFF.md), puis [`CLAUDE.md`](CLAUDE.md) et [`docs/README.md`](docs/README.md). Le matériel d'origine du stage (carnet, classeur) est préservé dans `legacy/`.
+Lire [`HANDOFF.md`](HANDOFF.md) (état, limites, déploiement, suite), puis [`CLAUDE.md`](CLAUDE.md) et l'index [`docs/README.md`](docs/README.md). Le matériel d'origine du stage (carnet, classeur) est préservé dans `legacy/`. Les issues et propositions sont bienvenues, surtout sur les **limites connues** ci-dessus (moteur de bilan, coordonnées des barrages manquants).
+
+## In English
+
+**Anzar** is an independent, open-source prototype of a **national water observatory for Morocco**: a full-screen 3D map (Mapterhorn terrain, MapLibre GL) showing dated dam fill levels read from the ministry's bulletin, regional water balance and 10-year scenarios, documented water links between basins, and an awareness chapter on why water is scarce (606 m³ per person per year, erratic dam inflows, aquifers pumped faster than they refill, and the limits of each solution). Every figure carries its status (*sourced*, *derived* or *hypothesis*), its source and its date; nothing is presented as a live reading, no pipeline route or transferable volume is invented, and scenarios are not forecasts. French-language UI. Live at <https://anzar.abq.capital>. Not an official portal. Code under MIT; SRM logos are their owners' trademarks and are excluded from that licence.
+
 
 ---
 
