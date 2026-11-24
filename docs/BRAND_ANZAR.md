@@ -3,6 +3,8 @@
 **Nom** : Anzar (Anzar / Anẓar, dieu amazigh de la pluie ; « pluie » en tachelhit). **Tagline** : « L’eau du Maroc, relief par relief. »
 **Statut** : prototype indépendant, issu d’un stage à la RAMSA. Pas un portail officiel. SRM-SM garde ses couleurs (#12508F, #FAB61F, #57B24A) dans la vue Souss-Massa.
 
+> **Palette de référence : [DESIGN_ANZAR_V2.md](DESIGN_ANZAR_V2.md)** (thème clair « eau »). Le logo adopté est le symbole « Horizon commun » (arc, crête de l'Atlas, deux niveaux d'eau), fond transparent ; maquettes A/B/C et brief Codex dans `brand-anzar/`. La section « Palette » ci-dessous décrit la première version sombre, remplacée.
+
 ## Disponibilité (vérifiée le 23 nov. 2026, whois/dig + une recherche web)
 - Preuve d'enregistrement (serveurs DNS ou registrar) : anzar.ma (NS genious.net), anzar.io (NameCheap, créé 2021), anzar.app (NS Porkbun). anzar.earth et anzar.eco : mon whois n'a renvoyé que l'enregistrement du TLD (pas de serveur DNS), **statut inconnu**, à tester chez un registrar. Les .water n'ont pas été testés.
 - Recherche web : pas de marque d'eau ou d'environnement trouvée sous ce nom. Usages existants non liés à l'eau : Anzart.ma (concept store d'art, 2017) et Anẓaṛ (cosmétiques naturels, anzarcosmetic.com). Pas de recherche INPI/OMPIC : **aucune vérification de dépôt de marque**.

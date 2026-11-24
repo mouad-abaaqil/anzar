@@ -1,20 +1,27 @@
 # Documentation
 
-Lire d'abord [`../HANDOFF.md`](../HANDOFF.md) (but, façon de travailler, état, suite).
+Ordre de lecture : [`../HANDOFF.md`](../HANDOFF.md) (état, façon de travailler, suite) → [`../CLAUDE.md`](../CLAUDE.md) → cet index.
 
+## Anzar (l'application)
 | Document | Contenu |
 | --- | --- |
-| [HISTORY.md](HISTORY.md) | journal détaillé du développement, décisions et résultats chiffrés |
-| [DESIGN_ANZAR.md](DESIGN_ANZAR.md) | **système de design de la refonte** (thème sombre, tokens, typographie, bandes, provenance, écriture, contrôle `npm run check:design`) |
-| [DESIGN_SPEC.md](DESIGN_SPEC.md) | spécification de design (couleurs du logo, typographie, composants, interdits) |
-| [FORECAST_SCHEMAS.md](FORECAST_SCHEMAS.md) | schémas de `storage-reconstruction.json` et `fill-forecast.json` |
-| [BRAND.md](BRAND.md) | provenance du logo SRM-SM, palette mesurée, contexte RAMSA |
-| [RESEARCH.md](RESEARCH.md) | première recherche : sources régionales, assainissement, réutilisation |
-| [OPEN_SOURCE.md](OPEN_SOURCE.md) | moteur cartographique, fonds de carte, relief, attributions, contraintes |
-| [ANZAR_CONTRACT.md](ANZAR_CONTRACT.md) | contrat de données et d'API d'Anzar (autosuffisance, scénarios), règles d'honnêteté |
-| [BRAND_ANZAR.md](BRAND_ANZAR.md) | nom, tagline, palette, logo, disponibilité du nom Anzar |
-| [OPEN_DATA.md](OPEN_DATA.md) | inventaire des données ouvertes (licence, clé requise ou non, utilisé ou non), comptes gratuits à créer |
-| [research/10-anzar-demand-data.md](research/10-anzar-demand-data.md) | sources de la demande, de la population et du dessalement par région (données d'Anzar) |
-| [research/](research/) | notes de recherche 01 à 09 (barrages et zones desservies, transferts, demande et pluie, géodonnées et méthodes, opérateurs et logos des 12 régions, historique des stocks, dimensions des barrages, eau par satellite, bulletin national et dessalement) — écrites en partie par des sous-agents : lire les mentions UNVERIFIED |
+| [ANZAR_CONTRACT.md](ANZAR_CONTRACT.md) | contrat de données et d'API (bilan hydrique, scénarios) et **règles d'honnêteté** |
+| [HUB_CONTRACT.md](HUB_CONTRACT.md) | architecture du hub : carte 3D persistante, récit d'entrée, panneau à trois onglets, routes |
+| [DESIGN_ANZAR.md](DESIGN_ANZAR.md) | système de design : grille, typographie, mouvement, états, provenance, écriture, contrôle `npm run check:design` (sa règle « thème sombre » est remplacée par la V2) |
+| [DESIGN_ANZAR_V2.md](DESIGN_ANZAR_V2.md) | **palette et thème actuels** : clair « eau » dérivé des couleurs des SRM, sections « profondeur », directives pour la carte |
+| [BRAND_ANZAR.md](BRAND_ANZAR.md) | nom, tagline, logo, disponibilité du nom ; maquettes du logo dans [brand-anzar/](brand-anzar/) |
+| [OPEN_DATA.md](OPEN_DATA.md) | inventaire des données ouvertes : licence, clé requise ou non, utilisées ou non |
+| [OPEN_SOURCE.md](OPEN_SOURCE.md) | moteur cartographique, fonds de carte, relief, polices, attributions et contraintes |
+| [FORECAST_SCHEMAS.md](FORECAST_SCHEMAS.md) | schémas de `storage-reconstruction.json` et `fill-forecast.json` (estimation satellite, usage restreint) |
+| [screenshots/](screenshots/) | captures du README, régénérées par `npm run e2e:shots` |
 
-Registre machine des sources : `../platform/public/data/region.json` (installations, instantanés) et `regions.json` (12 régions, opérateurs). Données brutes : `../platform/data-raw/README.md`. Scripts : `../platform/pipeline/README.md`.
+## Recherche et historique
+| Document | Contenu |
+| --- | --- |
+| [research/](research/README.md) | **14 notes de recherche**, avec sources et mentions UNVERIFIED |
+| [RESEARCH.md](RESEARCH.md) | première recherche : sources régionales, assainissement, réutilisation |
+| [BRAND.md](BRAND.md) | provenance du logo SRM-SM, palette mesurée, contexte RAMSA |
+| [HISTORY.md](HISTORY.md) | journal du développement (jusqu'au 19 nov. 2026 : l'ère SRM-SM) |
+| [archive/](archive/) | documents remplacés (ancienne spec de design SRM-SM) |
+
+Registres machine : `../platform/public/data/` (chaque fichier porte ses sources, dates et licences). Données brutes datées : `../platform/data-raw/` (un README par dossier). Scripts : `../platform/pipeline/`.

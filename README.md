@@ -43,6 +43,28 @@ La page d'accueil contient déjà un mini-tableau de bord : choisissez une régi
   <img src="docs/screenshots/06-essayez.png" width="49%" alt="Le mini-simulateur de la page d'accueil" />
 </p>
 
+## Comprendre l'eau
+
+Au-delà des chiffres du jour, Anzar explique pourquoi l'eau manque et ce qui peut changer, avec des visuels simples et des faits **vérifiés à la source primaire**, datés, chacun avec sa pastille de provenance :
+
+- **606 m³ d'eau renouvelable par habitant et par an** (2023), contre 2 560 en 1960 et un seuil de pénurie de 1 000 ;
+- des **apports aux barrages** qui passent de 10,3 à 1,95 milliards de m³ entre 2017-18 et 2021-22, contre 11,5 en moyenne depuis 1945 ;
+- « un barrage plein n'est pas un robinet ouvert » : envasement, évaporation, et priorité légale à l'eau potable (loi 36-15, article 126) ;
+- **les nappes** : environ 5 milliards de m³ pompés pour 4 de renouvelables, soit +28 % (non modélisées dans Anzar, et le site le dit) ;
+- les solutions et leurs limites chiffrées : transfert Sebou→Bouregreg, dessalement, réutilisation, rendement des réseaux ;
+- des gestes réalistes, avec l'honnêteté de rappeler que l'agriculture pèse près de neuf dixièmes de la demande.
+
+<p align="center">
+  <img src="docs/screenshots/15-comprendre-606.png" width="49%" alt="Moins de 1 000 m³ par habitant" />
+  <img src="docs/screenshots/16-comprendre-apports.png" width="49%" alt="Une bonne année ne referme pas le déficit : apports aux barrages 2017-2023" />
+</p>
+<p align="center">
+  <img src="docs/screenshots/17-comprendre-nappes.png" width="49%" alt="Sous nos pieds, on puise plus qu'il ne revient" />
+  <img src="docs/screenshots/18-mobile-comprendre-barrage.png" width="24%" alt="Un barrage plein n'est pas un robinet ouvert, sur mobile" />
+</p>
+
+Ce chapitre s'inspire de la série d'enquêtes de Mustapha Swinga sur la sécheresse au Maroc (épisode « جفاف المغرب : واش فعلاً كين حل ؟ »). La vidéo n'est **pas** une source officielle : ses chiffres ont été retrouvés dans les documents des institutions (ministère de l'Équipement et de l'Eau, IRES, HCP, Banque mondiale, loi 36-15…), et 14 divergences avec la vidéo sont documentées dans [`docs/research/14-video-secheresse.md`](docs/research/14-video-secheresse.md).
+
 ## Le tableau de bord
 
 Une carte au centre, un panneau à trois onglets. Choisissez une région en cliquant sur la carte ou dans le sélecteur.

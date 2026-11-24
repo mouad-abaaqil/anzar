@@ -1,3 +1,5 @@
+> **Archive.** Spécification de l'ancienne application SRM-SM (thème clair bleu SRM-SM, avant Anzar). Remplacée par `docs/DESIGN_ANZAR.md` (grille, typographie, mouvement) et `docs/DESIGN_ANZAR_V2.md` (palette et thème actuels). Conservée pour l'historique.
+
 # Spécification de design — poste de travail ERP SRM-SM
 
 Direction : outil de travail dense et calme, type ERP/terminal d'exploitation. Pas de décor, pas de dégradés, pas d'ombres lumineuses, pas d'emoji, pas de phrases d'ambiance. Chaque élément porte une donnée, une action ou une source.
