@@ -67,7 +67,6 @@ body { margin: 0; background: var(--az-bg); color: var(--az-text); font-family: 
   .hub-bar .az-region__name { font-size: var(--az-fs-small); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .hub-bar .az-region__text { min-width: 0; }
   .hub-bar .az-region__chev { margin-left: 0; }
-  .hub-bar .az-region__pop { position: fixed; top: calc(var(--hub-bar-h) + var(--az-sp-1)); left: var(--az-sp-3); right: var(--az-sp-3); width: auto; }
   .hub-layer--panel { align-items: flex-end; }
   .hub-layer--panel > .pn-shell { width: 100%; height: 58%; border-left: 0; border-top: var(--az-hairline) solid var(--az-line-strong); border-radius: var(--az-r-lg) var(--az-r-lg) 0 0; }
 }

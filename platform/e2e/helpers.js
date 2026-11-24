@@ -75,5 +75,5 @@ export async function scrollToStep(page, headingId) {
 export async function pickRegion(page, scopeSelector, name) {
   const scope = page.locator(scopeSelector).first();
   await scope.locator('.az-region__trigger').click();
-  await scope.locator('.az-region__item', { hasText: name }).first().click();
+  await page.locator('.az-region__pop .az-region__item', { hasText: name }).first().click();
 }

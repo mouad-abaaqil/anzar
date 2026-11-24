@@ -55,11 +55,11 @@ test.describe('landing', () => {
     await sim.getByRole('button', { name: 'Réinitialiser' }).click();
     // Région
     await sim.locator('.az-region__trigger').click();
-    await sim.locator('.az-region__item', { hasText: 'Béni Mellal' }).first().click();
+    await page.locator('.az-region__pop .az-region__item', { hasText: 'Béni Mellal' }).first().click();
     await expect.poll(async () => (await read()).num + (await read()).unit, { message: 'changement de région' }).not.toBe(a.num + a.unit);
     // Région sans barrage : unité de flux
     await sim.locator('.az-region__trigger').click();
-    await sim.locator('.az-region__item', { hasText: 'Dakhla' }).first().click();
+    await page.locator('.az-region__pop .az-region__item', { hasText: 'Dakhla' }).first().click();
     await expect.poll(async () => (await read()).unit).toMatch(/dessalée/);
     const txt = await sim.innerText();
     expect(txt).not.toMatch(BAD_TEXT);

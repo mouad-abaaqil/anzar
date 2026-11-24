@@ -240,12 +240,8 @@
 .az-region__chev { margin-left: auto; color: var(--az-text-muted); }
 .az-region__trigger[aria-expanded='true'] { border-color: var(--az-accent); }
 .az-region__pop {
-  position: absolute;
+  position: fixed; /* rendu dans <body> ; left/top/bottom/width/maxHeight posés par RegionSwitcher */
   z-index: var(--az-z-popover);
-  top: calc(100% + var(--az-sp-2));
-  left: 0;
-  width: min(720px, calc(100vw - 2 * var(--az-margin)));
-  max-height: min(70vh, 560px);
   overflow: auto;
   padding: var(--az-sp-3);
   background: var(--az-surface-2);
@@ -423,7 +419,6 @@
   .az-sheet__body { padding-bottom: calc(var(--az-sp-5) + env(safe-area-inset-bottom)); }
   .az-region__trigger { min-width: 0; }
   .az-region { display: block; }
-  .az-region__pop { width: 100%; }
 }
 
 /* Deep section ("profondeur"): SRM-blue hero / story band. Remaps the base tokens so every

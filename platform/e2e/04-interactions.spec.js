@@ -28,7 +28,7 @@ test.describe('interactions du tableau de bord', () => {
     await page.goto('/#/r/souss-massa');
     await waitDashboard(page);
     await page.locator('.pn-shell .az-region__trigger').click();
-    await page.locator('.pn-shell .az-region__item', { hasText: 'Oriental' }).click();
+    await page.locator('.az-region__pop .az-region__item', { hasText: 'Oriental' }).click();
     await expect(page).toHaveURL(/#\/r\/oriental$/);
     await expect(page.locator('.pn-shell .az-region__name')).toContainText('Oriental');
     await expect(page.locator('.hub-bar__active')).toContainText('Oriental');
@@ -36,7 +36,7 @@ test.describe('interactions du tableau de bord', () => {
     await page.getByRole('tab', { name: 'Demain' }).click();
     await expect(page).toHaveURL(/#\/r\/oriental\/tomorrow$/);
     await page.locator('.pn-shell .az-region__trigger').click();
-    await page.locator('.pn-shell .az-region__item', { hasText: 'Fès' }).click();
+    await page.locator('.az-region__pop .az-region__item', { hasText: 'Fès' }).click();
     await expect(page).toHaveURL(/#\/r\/fes-meknes\/tomorrow$/);
   });
 
