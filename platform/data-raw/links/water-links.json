@@ -1,0 +1,611 @@
+[
+  {
+    "capacity": {
+      "value": 15,
+      "unit": "m3/s"
+    },
+    "readDate": "2026-11-23",
+    "id": "sebou-bouregreg-phase1",
+    "kind": "transfert-inter-bassins",
+    "from": {
+      "name": "Bassin du Sebou (prise)",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Barrage Sidi Mohamed Ben Abdellah (bassin du Bouregreg)",
+      "lat": null,
+      "lon": null
+    },
+    "status": "en service",
+    "regionIds": [
+      "rabat-sale-kenitra"
+    ],
+    "sourceUrl": "https://fr.le360.ma/economie/mix-hydrique-comment-le-maroc-pousse-plus-loin-linterconnexion-des-bassins_5WN7TUNYB5BXZPWF4HRBZPOJHY/",
+    "sourceTitle": "Le360, Mix hydrique : comment le Maroc pousse plus loin l'interconnexion des bassins (17/04/2026)",
+    "verified": true,
+    "note": "15 m3/s, coût environ 6 milliards MAD, conduite métallique de 3,20 m de diamètre, environ 953 Mm3 transférés d'août 2023 à décembre 2025 (ministre N. Baraka, cité). Longueur 67 km, lancement décembre 2022, mise en service progressive à partir du 28/08/2023, débit initial 3 m3/s : Le360 29/08/2026 (voir lien phase 2). Hespress 26/03/2025 : 67 km, 2 stations de pompage. Le360 29/08/2026 : le volume annuel transféré a dépassé 560 Mm3. Point de prise exact non publié dans les sources lues. regionIds = région de l'ouvrage d'arrivée cité (Bouregreg) ; la prise côté Sebou n'est pas localisée dans les sources lues."
+  },
+  {
+    "capacity": {
+      "value": 800,
+      "unit": "Mm3/an (total cumulé visé environ 1 200 Mm3/an)"
+    },
+    "readDate": "2026-11-23",
+    "id": "sebou-bouregreg-phase2-extension",
+    "kind": "transfert-inter-bassins",
+    "from": {
+      "name": "Bassin du Sebou / liaison Sebou-Bouregreg",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Bassin de l'Oum Er-Rbia (Settat, Berrechid, sud de Casablanca)",
+      "lat": null,
+      "lon": null
+    },
+    "status": "planifié",
+    "regionIds": [
+      "rabat-sale-kenitra",
+      "casablanca-settat",
+      "beni-mellal-khenifra"
+    ],
+    "sourceUrl": "https://fr.le360.ma/societe/300-km-de-trace-et-800-millions-de-m-par-an-ce-que-represente-le-projet-dinterconnexion-sebou-oum_WPJGYONNL5BCDL26FRALDLGFGQ/",
+    "sourceTitle": "Le360, 300 km de tracé et 800 millions de m3 par an : le projet d'interconnexion Sebou-Oum Er-Rbia (29/08/2026)",
+    "verified": true,
+    "note": "Décrit comme 'dans le pipe', sans date de travaux ni de mise en service. Longueur : près de 300 km (Le360 29/08/2026) contre environ 210 km (Le360 17/04/2026) : CONFLIT, sections peut-être différentes. Débits : Sebou-Bouregreg porté à 45 m3/s et Bouregreg-Oum Er-Rbia 30 m3/s via le barrage Sidi Mohamed Ben Abdellah (Hespress 26/03/2025, https://fr.hespress.com/417090-417090.html, lu). Lancement prévu fin 2026 (Le360 17/04/2026). Bénéficiaires cités : eau potable Settat, Berrechid ; irrigation environ 176 000 ha. Montage PPP (Hespress)."
+  },
+  {
+    "capacity": null,
+    "readDate": "2026-11-23",
+    "id": "extension-vers-al-massira",
+    "kind": "transfert-inter-bassins",
+    "from": {
+      "name": "Réseau Sebou - Oum Er-Rbia (phase 2)",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Barrage Al Massira",
+      "lat": 32.4753,
+      "lon": -7.6375
+    },
+    "status": "planifié",
+    "regionIds": [
+      "casablanca-settat",
+      "marrakech-safi"
+    ],
+    "sourceUrl": "https://fr.le360.ma/societe/300-km-de-trace-et-800-millions-de-m-par-an-ce-que-represente-le-projet-dinterconnexion-sebou-oum_WPJGYONNL5BCDL26FRALDLGFGQ/",
+    "sourceTitle": "Le360, 29/08/2026 ('phase ultérieure' vers Al Massira)",
+    "verified": true,
+    "note": "Seule mention lue : une 'phase ultérieure' d'extension en direction d'Al Massira, sans date ni débit. Marrakech n'est pas nommée dans cet article. Coordonnées Al Massira : 32°28'31\"N 7°38'15\"O (https://en.wikipedia.org/wiki/Al_Massira_Dam, lu, conversion décimale par arithmétique). Les chiffres '30 m3/s, 209,6 km' pour Bouregreg-Al Massira vus en extrait de recherche (Le Matin) n'ont pas été lus : UNVERIFIED."
+  },
+  {
+    "capacity": null,
+    "readDate": "2026-11-23",
+    "id": "laou-loukkos-sebou-phase3",
+    "kind": "transfert-inter-bassins",
+    "from": {
+      "name": "Bassins du Laou et du Loukkos",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Bassin du Sebou",
+      "lat": null,
+      "lon": null
+    },
+    "status": "planifié",
+    "regionIds": [
+      "tanger-tetouan-al-hoceima",
+      "fes-meknes",
+      "rabat-sale-kenitra"
+    ],
+    "sourceUrl": "https://www.lavieeco.com/videos/info-en-images-les-travaux-dinterconnexion-des-barrages-oued-el-makhazine-et-dar-khrofa-touchent-a-leur-fin/",
+    "sourceTitle": "La Vie Éco, Les travaux d'interconnexion Oued El-Makhazine - Dar Khrofa touchent à leur fin (31/01/2025)",
+    "verified": true,
+    "note": "Débit 20 à 30 m3/s (La Vie Éco, 31/01/2025, lu) ; environ 1 200 Mm3/an à terme (Le360 17/04/2026, lu). Phase 3 planifiée, sans date. Le360 17/04/2026 (lu) : environ 1,2 milliard de m3/an à terme, eau potable et irrigation (Doukkala, Chaouia, Tadla). Le360 PLF 2027 (26/10/2026, lu) : barrage Tfer conçu pour 400 Mm3/an transférables depuis les bassins du Laou et du Loukkos, appel d'offres en cours (voir lien suivant)."
+  },
+  {
+    "capacity": {
+      "value": 400,
+      "unit": "Mm3/an transférables (conçu pour)"
+    },
+    "readDate": "2026-11-23",
+    "id": "tfer-transfert-laou-loukkos",
+    "kind": "projet",
+    "from": {
+      "name": "Barrage Tfer (bassins Laou/Loukkos)",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Destination non précisée dans la source (transfert hors bassins Laou/Loukkos)",
+      "lat": null,
+      "lon": null
+    },
+    "status": "planifié",
+    "regionIds": [
+      "tanger-tetouan-al-hoceima"
+    ],
+    "sourceUrl": "https://fr.le360.ma/economie/plf-2027-barrages-dessalement-irrigation-les-projets-programmes-region-par-region_NUISKHV4VVFJBO6U7A3IVRYDFA/",
+    "sourceTitle": "Le360, PLF 2027 : barrages, dessalement, irrigation, projets région par région (26/10/2026)",
+    "verified": true,
+    "note": "Barrage Tfer : 1 307,5 MDH, appel d'offres en cours ; conçu pour 400 Mm3/an transférables depuis les bassins du Laou et du Loukkos (PLF 2027, lu). La source ne nomme pas le Sebou : le rapprochement avec la phase 3 Laou-Loukkos-Sebou est une inférence, non établie."
+  },
+  {
+    "capacity": {
+      "value": 100,
+      "unit": "Mm3 à transférer (volume cible, pas un débit)"
+    },
+    "readDate": "2026-11-23",
+    "id": "makhazine-dar-khrofa",
+    "kind": "adduction",
+    "from": {
+      "name": "Barrage Oued El Makhazine (Loukkos)",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Barrage Dar Khrofa",
+      "lat": null,
+      "lon": null
+    },
+    "status": "en construction",
+    "regionIds": [
+      "tanger-tetouan-al-hoceima"
+    ],
+    "sourceUrl": "https://www.lavieeco.com/videos/info-en-images-les-travaux-dinterconnexion-des-barrages-oued-el-makhazine-et-dar-khrofa-touchent-a-leur-fin/",
+    "sourceTitle": "La Vie Éco, 31/01/2025",
+    "verified": true,
+    "note": "96 % d'avancement au 29/01/2025, mise en service 'prévue pour février' (2025) : mise en service NON confirmée dans ce que j'ai lu, d'où 'en construction' (dernier état connu, vieux de près de 2 ans). Coût 820 MDH, PNAEPI 2020-2027. Débit 3,2 m3/s : extrait Médias24 non lu (UNVERIFIED). Phase 1 de la même source : Dar Khrofa vers station El Hachef, 75 Mm3/an, mise en service 2021."
+  },
+  {
+    "capacity": {
+      "value": 75,
+      "unit": "Mm3/an"
+    },
+    "readDate": "2026-11-23",
+    "id": "dar-khrofa-el-hachef",
+    "kind": "adduction",
+    "from": {
+      "name": "Barrage Dar Khrofa",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Station de traitement El Hachef",
+      "lat": null,
+      "lon": null
+    },
+    "status": "en service",
+    "regionIds": [
+      "tanger-tetouan-al-hoceima"
+    ],
+    "sourceUrl": "https://www.lavieeco.com/videos/info-en-images-les-travaux-dinterconnexion-des-barrages-oued-el-makhazine-et-dar-khrofa-touchent-a-leur-fin/",
+    "sourceTitle": "La Vie Éco, 31/01/2025 ('phase 1, mise en service 2021')",
+    "verified": true,
+    "note": "Longueur et débit instantané non publiés dans la source."
+  },
+  {
+    "capacity": {
+      "value": 38,
+      "unit": "m3/s max ; jusqu'à 600 Mm3/an"
+    },
+    "readDate": "2026-11-23",
+    "id": "allal-al-fassi-idriss-1er",
+    "kind": "cascade",
+    "from": {
+      "name": "Barrage Allal Al Fassi (haut Sebou)",
+      "lat": 33.9314,
+      "lon": -4.6772
+    },
+    "to": {
+      "name": "Barrage Idriss 1er (oued Inaouen)",
+      "lat": 34.1614,
+      "lon": -4.7492
+    },
+    "status": "en service",
+    "regionIds": [
+      "fes-meknes"
+    ],
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Barrage_Allal_Al_Fassi",
+    "sourceTitle": "Wikipédia FR, Barrage Allal Al Fassi (révision du 17/06/2026)",
+    "verified": true,
+    "note": "Galerie de Matmata : tunnel de 15,45 km, 4,5 m de diamètre, prise en rive droite à 850 m en amont du barrage, centrale de trois groupes, environ 240 MW mise en service 1994, eau turbinée restituée dans la retenue d'Idriss 1er. Barrage Allal Al Fassi mis en service 1990. Coordonnées lues en DMS : Allal Al Fassi 33°55'53\"N 4°40'38\"O ; Idriss 1er 34°09'41\"N 4°44'57\"O (https://fr.wikipedia.org/wiki/Barrage_d'Idriss_I, lu), converties en décimal par arithmétique. Idriss 1er peut recevoir jusqu'à 600 Mm3 du haut Sebou (même page). Conversion en pompage-turbinage à l'étude par l'ONEE (2026)."
+  },
+  {
+    "capacity": {
+      "value": 2000,
+      "unit": "l/s environ"
+    },
+    "readDate": "2026-11-23",
+    "id": "idriss-1er-fes-meknes-adduction",
+    "kind": "adduction",
+    "from": {
+      "name": "Barrage Idriss 1er",
+      "lat": 34.1614,
+      "lon": -4.7492
+    },
+    "to": {
+      "name": "Fès et Meknès (station de traitement)",
+      "lat": null,
+      "lon": null
+    },
+    "status": "en service",
+    "regionIds": [
+      "fes-meknes"
+    ],
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Barrage_d'Idriss_I",
+    "sourceTitle": "Wikipédia FR, Barrage d'Idriss I",
+    "verified": true,
+    "note": "Conduite d'environ 100 km, près de 2 000 l/s ; la page ne donne pas de date de mise en service de cette prise ('nouvelle prise')."
+  },
+  {
+    "capacity": null,
+    "readDate": "2026-11-23",
+    "id": "ouergha-lben-inaouen",
+    "kind": "projet",
+    "from": {
+      "name": "Sous-bassin de l'Ouergha (Al Wahda, Bab Ouender)",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Barrage Idriss 1er (oued Inaouen), via l'oued Lben",
+      "lat": null,
+      "lon": null
+    },
+    "status": "planifié",
+    "regionIds": [
+      "fes-meknes"
+    ],
+    "sourceUrl": "https://fr.le360.ma/economie/mix-hydrique-comment-le-maroc-pousse-plus-loin-linterconnexion-des-bassins_5WN7TUNYB5BXZPWF4HRBZPOJHY/",
+    "sourceTitle": "Le360, 17/04/2026",
+    "verified": true,
+    "note": "Seulement une étude (appel d'offres de 1,02 MDH) d'un transfert unidirectionnel Ouergha vers Inaouen ; options directes ou via Bab Ouandar/Sidi Abbou. Aucune capacité ni date. Même source : étude Sahla-Bouhouda (surélévation de Bouhouda programmée ; excédents de Bouhouda récupérés à Al Wahda)."
+  },
+  {
+    "capacity": null,
+    "readDate": "2026-11-23",
+    "id": "hassan-ii-mohamed-v-moulouya",
+    "kind": "cascade",
+    "from": {
+      "name": "Barrage Hassan II (Midelt)",
+      "lat": 32.7916,
+      "lon": -4.76837
+    },
+    "to": {
+      "name": "Barrage Mohamed V",
+      "lat": 34.66306,
+      "lon": -2.93833
+    },
+    "status": "en service",
+    "regionIds": [
+      "oriental",
+      "draa-tafilalet"
+    ],
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Barrage_Hassan_II",
+    "sourceTitle": "Wikipédia FR, Barrage Hassan II ; Wikidata Q2884951 ; Wikipédia EN, Mohamed V Dam",
+    "verified": false,
+    "note": "Lien sémantique : Hassan II mis en eau en 2000, décidé à cause de l'envasement du barrage Mohamed V 'principal barrage sur la Moulouya' (fr.wikipedia). Wikidata place Hassan II sur la Moulouya (32.7916, -4.76837) ; la page FR le dit sur 'l'oued Za', à 54 km en amont de Taourirt : CONFLIT, d'où verified=false. Aucune page lue ne décrit un débit ni un ouvrage de liaison. Mohamed V : 34°39'47\"N 2°56'18\"O, 730 Mm3 (en.wikipedia, lu). L'extrait de recherche (inauguration Hassan II à Midelt, 100 Mm3/an régularisés, protège Mohamed V) provient de pages aujourdhui.ma/lematin.ma non lues (illisible / 403)."
+  },
+  {
+    "capacity": {
+      "value": 1,
+      "unit": "m3/s"
+    },
+    "readDate": "2026-11-23",
+    "id": "aoulouz-sidi-boushab-agadir",
+    "kind": "adduction",
+    "from": {
+      "name": "Barrage Aoulouz (conduite à Sebt El Guerdane)",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Station de traitement Sidi Boushab (barrage Abdelmoumen), Grand Agadir",
+      "lat": null,
+      "lon": null
+    },
+    "status": "en construction",
+    "regionIds": [
+      "souss-massa"
+    ],
+    "sourceUrl": "https://lavieeco.com/economie/souss-massa-les-mesures-durgence-pour-renforcer-loffre-en-eau",
+    "sourceTitle": "La Vie Éco, Souss-Massa : les mesures d'urgence pour renforcer l'offre en eau (article de 2020, date exacte non lue)",
+    "verified": false,
+    "note": "Dernier statut LU : travaux démarrés en janvier (2020), mise en service planifiée juillet 2020 ; l'article n'est pas daté dans ma lecture et aucune page lue ne confirme la mise en service, d'où 'en construction' (dernier état connu, probablement dépassé). Conduite d'eau brute de 50 km, 1 m3/s, 198 MDH, de Sebt El Guerdane (conduite issue d'Aoulouz) vers la station Sidi Boushab (Abdelmoumen). Un extrait de recherche non lu donne 49 km pour un canal similaire."
+  },
+  {
+    "capacity": {
+      "value": 200,
+      "unit": "l/s (station de traitement)"
+    },
+    "readDate": "2026-11-23",
+    "id": "aoulouz-taroudant-onee",
+    "kind": "adduction",
+    "from": {
+      "name": "Barrage Aoulouz",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Ville de Taroudant",
+      "lat": null,
+      "lon": null
+    },
+    "status": "en service",
+    "regionIds": [
+      "souss-massa"
+    ],
+    "sourceUrl": "https://medias24.com/2021/10/14/taroudante-lonee-acheve-le-renforcement-de-lalimentation-en-eau-potable-a-partir-du-barrage-aoulouz/",
+    "sourceTitle": "Médias24, Taroudant : l'ONEE achève le renforcement de l'alimentation en eau potable à partir du barrage Aoulouz (14/10/2021)",
+    "verified": false,
+    "note": "Extrait de recherche seulement (Médias24, MAP, LesEco : HTTP 403 à la lecture) : station 200 l/s, conduite d'environ 80 km, 315 MDH, achèvement annoncé le 14/10/2021. À confirmer."
+  },
+  {
+    "capacity": {
+      "value": 150000,
+      "unit": "m3/jour eau potable au démarrage (environ 1,74 m3/s, conversion)"
+    },
+    "readDate": "2026-11-23",
+    "id": "dessalement-agadir-ramsa",
+    "kind": "adduction",
+    "from": {
+      "name": "Station de dessalement d'Agadir (Chtouka)",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Entrée de la ville d'Agadir (RAMSA)",
+      "lat": null,
+      "lon": null
+    },
+    "status": "en service",
+    "regionIds": [
+      "souss-massa"
+    ],
+    "sourceUrl": "https://fnh.ma/article/actualites-marocaines/l-onee-securise-l-alimentation-en-eau-potable-du-grand-agadir",
+    "sourceTitle": "FNH, L'ONEE sécurise l'alimentation en eau potable du Grand Agadir (03/02/2022)",
+    "verified": true,
+    "note": "Conduite de 44 km ; essais finaux début 29/01/2022 puis mise en exploitation progressive ; 400 000 m3/jour à terme, moitié eau potable moitié irrigation. Statut actuel non relu depuis 2022."
+  },
+  {
+    "capacity": {
+      "value": 3.2,
+      "unit": "m3/s (près de 100 Mm3/an)"
+    },
+    "readDate": "2026-11-23",
+    "id": "safi-dessalement-marrakech",
+    "kind": "adduction",
+    "from": {
+      "name": "Station de dessalement de Safi (OCP)",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Grand Marrakech (réservoir de régulation près de 44 Oulad Dlim)",
+      "lat": null,
+      "lon": null
+    },
+    "status": "en construction",
+    "regionIds": [
+      "marrakech-safi"
+    ],
+    "sourceUrl": "https://latribunedemarrakech.com/eau-dessalee-safi-marrakech/",
+    "sourceTitle": "La Tribune de Marrakech, Eau dessalée de Safi : ce que le nouveau corridor change pour Marrakech (31/07/2026)",
+    "verified": true,
+    "note": "Conduite acier de 185,3 km, trois stations de pompage puis gravité, 4,2 milliards MAD. Mise en service annoncée pour fin juillet 2026 mais 'activation effective reste à confirmer' à la date de la page ; je n'ai pas lu de confirmation postérieure, d'où 'en construction' (à vérifier)."
+  },
+  {
+    "capacity": {
+      "value": 2.5,
+      "unit": "m3/s d'eau traitée (nominal) ; 630 l/s d'eau industrielle OCP"
+    },
+    "readDate": "2026-11-23",
+    "id": "al-massira-marrakech",
+    "kind": "adduction",
+    "from": {
+      "name": "Prise d'eau du barrage Al Massira (conduite DN 2000)",
+      "lat": 32.4753,
+      "lon": -7.6375
+    },
+    "to": {
+      "name": "Benguerir, Marrakech et Tamansourt (+ eau industrielle OCP)",
+      "lat": null,
+      "lon": null
+    },
+    "status": "en service",
+    "regionIds": [
+      "casablanca-settat",
+      "marrakech-safi"
+    ],
+    "sourceUrl": "https://www.afdb.org/sites/default/files/documents/projects-and-operations/maroc_-approvisionnement_en_eau_de_la_region_de_marrakech_-_rapport_dachevement_de_projet.pdf",
+    "sourceTitle": "Banque africaine de développement, Maroc - Approvisionnement en eau de la région de Marrakech, rapport d'achèvement de projet (19/12/2022)",
+    "verified": true,
+    "note": "Lu en PDF (pdftotext). Prise sur le barrage Al Massira, station de débourbage (pompage 3 500 l/s, conduites DN 1800 mm), station de pompage et conduite d'eau traitée jusqu'à Marrakech, 3 stations de pompage. Mise en service partielle : eau brute environ 1 200 l/s le 08/11/2019 ; OCP 15/11/2019 ; Benguerir (environ 10 km) 27/10/2020 ; Marrakech et Tamansourt environ 500 l/s le 27/03/2022. Débit nominal 2,5 m3/s 'prévu vers juillet 2023' : mise en service au débit nominal NON confirmée dans ce que j'ai lu. Longueur totale de conduite non lue. Le rapport recommande aussi (2011) un transfert complémentaire Oum Er-Rbia vers Tensift : recommandation, pas un ouvrage. Wikipédia EN (lu) : eau d'Al Massira réservée à des villes dont Marrakech (2024)."
+  },
+  {
+    "capacity": {
+      "value": 37,
+      "unit": "Mm3/an (30 irrigation, 7 eau potable)"
+    },
+    "readDate": "2026-11-23",
+    "id": "dakhla-dessalement-bir-anzarane",
+    "kind": "projet",
+    "from": {
+      "name": "Station de dessalement de Dakhla (Bir Anzarane)",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Périmètre irrigué de 5 000 ha et eau potable (destinataires non nommés)",
+      "lat": null,
+      "lon": null
+    },
+    "status": "en construction",
+    "regionIds": [
+      "dakhla-oued-ed-dahab"
+    ],
+    "sourceUrl": "https://fr.le360.ma/economie/la-station-de-dessalement-de-dakhla-a-97-de-realisation_K4LXFWTWKBBGBBHECL2TAKXIPU/",
+    "sourceTitle": "Le360, La station de dessalement de Dakhla à 97 % de réalisation (31/10/2026)",
+    "verified": true,
+    "note": "Station 97 %, réseau d'irrigation 99 % (130 km), parc éolien de 60 MW opérationnel, 2,6 milliards MAD. Local au Sud : aucune liaison avec un autre bassin ou barrage. PLF 2027 (Le360 26/10/2026, lu) : conduite d'alimentation depuis la station, 450 MDH dont 50 MDH en 2027 ; parc éolien 60 MW achevé en 2025 (1 061 MDH)."
+  },
+  {
+    "capacity": {
+      "value": 97,
+      "unit": "Mm3 (capacité totale citée)"
+    },
+    "readDate": "2026-11-23",
+    "id": "guelmim-sidi-ifni-tan-tan-dessalement",
+    "kind": "projet",
+    "from": {
+      "name": "Trois stations de dessalement (Sidi Ifni, Guelmim, Tan-Tan)",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Sidi Ifni, Guelmim, Tan-Tan et environs",
+      "lat": null,
+      "lon": null
+    },
+    "status": "planifié",
+    "regionIds": [
+      "guelmim-oued-noun",
+      "souss-massa"
+    ],
+    "sourceUrl": "https://www.atalayar.com/en/articulo/society/three-desalination-plants-are-planned-for-sidi-ifni-guelmim-and-tan-tan/20241120103247207833.html",
+    "sourceTitle": "Atalayar, Three desalination plants are planned for Sidi Ifni, Guelmim and Tan Tan (20/11/2024)",
+    "verified": false,
+    "note": "Extrait de recherche seulement (HTTP 403). Unité (m3/an ?) et statut par station non confirmés. Le Matin via recherche : nouvelles stations Oriental, Souss-Massa, Tanger, Guelmim, Tan-Tan, Rabat prévues 2029-2030 (non lu). PLF 2027 (lu) pour Guelmim-Oued Noun : seul projet hydraulique = dévasement du petit barrage Ouin Koura, 10 MDH."
+  },
+  {
+    "capacity": null,
+    "readDate": "2026-11-23",
+    "id": "bouhouda-al-wahda",
+    "kind": "cascade",
+    "from": {
+      "name": "Barrage Bouhouda",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Barrage Al Wahda (Ouergha)",
+      "lat": 34.59833,
+      "lon": -5.1975
+    },
+    "status": "en service",
+    "regionIds": [
+      "fes-meknes",
+      "rabat-sale-kenitra"
+    ],
+    "sourceUrl": "https://fr.le360.ma/economie/mix-hydrique-comment-le-maroc-pousse-plus-loin-linterconnexion-des-bassins_5WN7TUNYB5BXZPWF4HRBZPOJHY/",
+    "sourceTitle": "Le360, 17/04/2026",
+    "verified": true,
+    "note": "La source dit que Bouhouda reçoit des apports supérieurs à sa capacité et déverse souvent ces volumes, 'récupérés en aval au barrage Al Wahda' : relation amont-aval par déversement, pas un ouvrage de transfert, aucun débit. Surélévation de Bouhouda programmée (44,7 vers 600 Mm3, proposée, PLF 2027) ; étude Sahla-Bouhouda en appel d'offres. Al Wahda : 34°35'54\"N 5°11'51\"O (en.wikipedia, lu). Région d'Al Wahda : province d'Ouezzane (Wikipédia EN), rattachée ici à Rabat-Salé-Kénitra par moi, sans source."
+  },
+  {
+    "capacity": {
+      "value": 125,
+      "unit": "Mm3/an"
+    },
+    "readDate": "2026-11-23",
+    "id": "mdez-plaine-du-saiss",
+    "kind": "projet",
+    "from": {
+      "name": "Barrage M'dez",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Plaine du Saïss (irrigation)",
+      "lat": null,
+      "lon": null
+    },
+    "status": "en construction",
+    "regionIds": [
+      "fes-meknes"
+    ],
+    "sourceUrl": "https://fr.le360.ma/economie/plf-2027-barrages-dessalement-irrigation-les-projets-programmes-region-par-region_NUISKHV4VVFJBO6U7A3IVRYDFA/",
+    "sourceTitle": "Le360, PLF 2027 : barrages, dessalement, irrigation, projets région par région (26/10/2026)",
+    "verified": true,
+    "note": "Projet de sauvetage de la plaine du Saïss, 9 000 MDH, 30 000 ha, 81 % financier, 90 % physique. Sources et rôle exacts du M'dez non détaillés."
+  },
+  {
+    "capacity": {
+      "value": 72,
+      "unit": "m3/s (capacité d'adduction citée)"
+    },
+    "readDate": "2026-11-23",
+    "id": "koudiat-borna-gharb",
+    "kind": "projet",
+    "from": {
+      "name": "Barrage Koudiat Borna",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Périmètre hydro-agricole du Gharb",
+      "lat": null,
+      "lon": null
+    },
+    "status": "planifié",
+    "regionIds": [
+      "rabat-sale-kenitra"
+    ],
+    "sourceUrl": "https://fr.le360.ma/economie/plf-2027-barrages-dessalement-irrigation-les-projets-programmes-region-par-region_NUISKHV4VVFJBO6U7A3IVRYDFA/",
+    "sourceTitle": "Le360, PLF 2027 : barrages, dessalement, irrigation, projets région par région (26/10/2026)",
+    "verified": true,
+    "note": "Barrage livré en 2025 (96 Mm3/an en moyenne). Gharb : 7 000 MDH, 30 000 ha, alimenté par l'eau de Koudiat Borna. Avancement du réseau non indiqué dans l'extrait, d'où 'planifié' (ligne budgétaire) ; à vérifier."
+  },
+  {
+    "capacity": null,
+    "readDate": "2026-11-23",
+    "id": "laayoune-prise-eau-dessalement",
+    "kind": "projet",
+    "from": {
+      "name": "Mer (prise d'eau de la station de dessalement de Laâyoune)",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Station de dessalement de Laâyoune",
+      "lat": null,
+      "lon": null
+    },
+    "status": "en construction",
+    "regionIds": [
+      "laayoune-sakia-el-hamra"
+    ],
+    "sourceUrl": "https://fr.le360.ma/economie/plf-2027-barrages-dessalement-irrigation-les-projets-programmes-region-par-region_NUISKHV4VVFJBO6U7A3IVRYDFA/",
+    "sourceTitle": "Le360, PLF 2027 : barrages, dessalement, irrigation, projets région par région (26/10/2026)",
+    "verified": true,
+    "note": "Prise d'eau : 850 MDH, 12 % d'avancement physique. Aucun lien avec un barrage ou un autre bassin."
+  },
+  {
+    "capacity": null,
+    "readDate": "2026-11-23",
+    "id": "rabat-dessalee-collecteur",
+    "kind": "projet",
+    "from": {
+      "name": "Station de dessalement (Rabat-Salé-Kénitra, localisation non précisée)",
+      "lat": null,
+      "lon": null
+    },
+    "to": {
+      "name": "Destination non précisée (station + collecteur)",
+      "lat": null,
+      "lon": null
+    },
+    "status": "planifié",
+    "regionIds": [
+      "rabat-sale-kenitra"
+    ],
+    "sourceUrl": "https://fr.le360.ma/economie/plf-2027-barrages-dessalement-irrigation-les-projets-programmes-region-par-region_NUISKHV4VVFJBO6U7A3IVRYDFA/",
+    "sourceTitle": "Le360, PLF 2027 : barrages, dessalement, irrigation, projets région par région (26/10/2026)",
+    "verified": true,
+    "note": "'Transfert d'eau dessalée (station et collecteur)' : 6 197 MDH dont 3 099 MDH en 2027. Ni débit ni tracé."
+  }
+]

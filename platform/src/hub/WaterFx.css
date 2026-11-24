@@ -1,0 +1,55 @@
+/* Motifs d'eau (WaterFx.jsx). Tokens --az-* uniquement. */
+.wfx { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+
+/* Jauge réservoir : niveau qui monte une fois (transform, aucune boucle). */
+.wfx-gauge { --wfx-level: 0; --wfx-ghost: 0; width: clamp(76px, 9vw, 104px); flex: none; }
+.wfx-gauge__tank {
+  position: relative;
+  height: clamp(132px, 18vh, 176px);
+  border: 2px solid var(--az-accent);
+  border-top-width: 0;
+  border-radius: 0 0 var(--az-r-lg) var(--az-r-lg);
+  overflow: hidden;
+  background: linear-gradient(180deg, transparent 0%, var(--az-water-soft) 100%);
+}
+.wfx-gauge__water {
+  position: absolute;
+  inset: 0;
+  color: var(--az-water);
+  background: var(--az-water);
+  transform: translateY(100%);
+  transition: transform 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
+.wfx-gauge.is-run .wfx-gauge__water { transform: translateY(calc((1 - var(--wfx-level)) * 100%)); }
+.wfx-gauge__surface { position: absolute; left: 0; bottom: 100%; width: 100%; height: 10px; display: block; }
+.wfx-gauge__tick { position: absolute; left: 0; width: 8px; height: var(--az-hairline); background: var(--az-line-control); }
+.wfx-gauge__ghost {
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: calc(var(--wfx-ghost) * 100%);
+  border-top: 2px dashed var(--az-text);
+  opacity: 0;
+  transition: opacity var(--az-dur-3) var(--az-ease-out) 1.4s;
+}
+.wfx-gauge.is-run .wfx-gauge__ghost { opacity: 1; }
+.wfx-gauge__legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--az-sp-2);
+  font-family: var(--az-font-mono);
+  font-size: 0.6875rem;
+  color: var(--az-text-muted);
+  white-space: nowrap;
+}
+.wfx-gauge__legend::before { content: ''; width: 14px; border-top: 2px dashed var(--az-text); }
+
+.wfx-wave { display: block; pointer-events: none; }
+.wfx-wave--top, .wfx-wave--bottom { width: 100%; height: clamp(16px, 3vw, 40px); }
+.wfx-wave--top { transform: scaleY(-1); }
+.wfx-wave--right { width: clamp(18px, 2.4vw, 36px); height: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  .wfx-gauge__water, .wfx-gauge__ghost { transition: none; }
+}

@@ -1,85 +1,86 @@
 {
-  "date": "2026-11-18",
-  "sourceId": "maa-2026-11-18",
+  "date": "2026-11-23",
+  "sourceId": "maa-2026-11-23",
   "national": {
-    "fillPct": 66.22,
-    "storedMm3": 11276.31,
+    "fillPct": 66.09,
+    "storedMm3": 11253.5,
     "capacityMm3": 17027.59,
-    "sameDay2025Pct": 31.13
+    "sameDay2025Pct": 31.22,
+    "sameDay2025Note": "dérivé du +111,7 % imprimé (66,09 / 2,117)"
   },
   "basins": [
     {
       "name": "Oum Er-Rbia",
       "nameAr": "أم الربيع",
-      "fillPct": 59.71,
-      "storedMm3": 2987.52,
+      "fillPct": 59.75,
+      "storedMm3": 2989.47,
       "capacityMm3": 5003.37,
-      "sameDay2025Pct": 8.69
+      "sameDay2025Pct": 8.78
     },
     {
       "name": "Loukkos",
       "nameAr": "اللوكوس",
-      "fillPct": 72.13,
-      "storedMm3": 1411.31,
+      "fillPct": 71.99,
+      "storedMm3": 1408.46,
       "capacityMm3": 1956.55,
-      "sameDay2025Pct": 44.46
+      "sameDay2025Pct": 44.51
     },
     {
       "name": "Moulouya",
       "nameAr": "ملوية",
-      "fillPct": 71.98,
-      "storedMm3": 504.96,
+      "fillPct": 70.96,
+      "storedMm3": 497.78,
       "capacityMm3": 701.49,
-      "sameDay2025Pct": 27.7
+      "sameDay2025Pct": 27.74
     },
     {
       "name": "Sebou",
       "nameAr": "سبو",
-      "fillPct": 73.72,
-      "storedMm3": 3958.96,
+      "fillPct": 73.29,
+      "storedMm3": 3935.98,
       "capacityMm3": 5370.33,
-      "sameDay2025Pct": 41.7
+      "sameDay2025Pct": 41.78
     },
     {
       "name": "Bouregreg",
       "nameAr": "أبي رقراق",
-      "fillPct": 76.11,
-      "storedMm3": 1121.41,
+      "fillPct": 76.32,
+      "storedMm3": 1124.55,
       "capacityMm3": 1473.39,
-      "sameDay2025Pct": 46.78
+      "sameDay2025Pct": 47.37
     },
     {
       "name": "Tensift",
       "nameAr": "تانسيفت",
-      "fillPct": 81.0,
-      "storedMm3": 164.56,
+      "fillPct": 81.51,
+      "storedMm3": 165.59,
       "capacityMm3": 203.17,
-      "sameDay2025Pct": 48.91
+      "sameDay2025Pct": 48.02
     },
     {
       "name": "Souss-Massa",
       "nameAr": "سوس - ماسة",
-      "fillPct": 53.0,
-      "storedMm3": 383.13,
+      "fillPct": 52.95,
+      "storedMm3": 382.72,
       "capacityMm3": 722.83,
-      "sameDay2025Pct": 19.56
+      "sameDay2025Pct": 19.48
     },
     {
       "name": "Drâa-Oued Noun",
       "nameAr": "درعة - واد نون",
-      "fillPct": 39.69,
-      "storedMm3": 416.05,
+      "fillPct": 40.03,
+      "storedMm3": 419.59,
       "capacityMm3": 1048.18,
-      "sameDay2025Pct": 28.22
+      "sameDay2025Pct": 28.19
     },
     {
       "name": "Guir-Ziz-Ghriss",
       "nameAr": "كير- زيز- غريس",
-      "fillPct": 59.9,
-      "storedMm3": 328.42,
+      "fillPct": 60.07,
+      "storedMm3": 329.35,
       "capacityMm3": 548.28,
-      "sameDay2025Pct": 46.33
+      "sameDay2025Pct": 46.16
     }
   ],
-  "note": "Relevé lu visuellement sur les pages 3 à 12 du bulletin (images, sans couche texte). Les sommes des bassins reproduisent le total national."
+  "note": "Relevé lu visuellement sur le bulletin du 23 nov. 2026 (pages 2 à 12, images sans couche texte). Les sommes des barrages reproduisent les totaux de bassin et le total national à ±0,02 Mm³. Détail par barrage : data-raw/dams/fill/dam-fill-2026-11-23.json."
 }

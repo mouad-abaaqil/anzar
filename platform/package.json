@@ -3,23 +3,33 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=24.0.0" },
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "scripts": {
     "dev": "concurrently -k -n api,web \"node --watch server/index.mjs\" \"vite --host 127.0.0.1\"",
     "build": "vite build",
     "preview": "vite preview --host 127.0.0.1",
     "start": "node server/index.mjs",
-    "test": "node --test tests/*.test.mjs"
+    "test": "node --test tests/*.test.mjs",
+    "check:design": "node scripts/check-design.mjs",
+    "gen:colors": "node scripts/gen-colors.mjs",
+    "e2e": "playwright test",
+    "e2e:shots": "SHOTS=1 playwright test e2e/screenshots.spec.js"
   },
   "dependencies": {
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/ibm-plex-sans-condensed": "^5.3.0",
+    "lucide-react": "^0.577.0",
     "maplibre-gl": "^6.19.0",
-    "lucide-react": "^0.577.0"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "vite": "^7.2.2",
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.1",
     "@vitejs/plugin-react": "^5.1.1",
-    "concurrently": "^9.2.1"
+    "concurrently": "^9.2.1",
+    "vite": "^7.2.2"
   }
 }

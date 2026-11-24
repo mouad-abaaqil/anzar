@@ -62,3 +62,22 @@ Récupération : 2026-11-22T23:59:32+00:00. Aucun modèle écarté (0 jour vide 
 | Guir-Ziz-Ghriss | 126.7 | -8.8 % (-22.6 à 31.6) | -11.2 |
 
 Lecture : la médiane des modèles est négative partout (de -2 % à -15 %), mais le signe n'est pas unanime (certains modèles donnent une hausse, jusqu'à +40 % en mm très faibles sur le Drâa). Un seul point par bassin, résolution 10 km : orographie mal représentée. Projection modélisée, pas une prévision ; usage non commercial.
+
+## 5. Résolution des hypothèses : lectures du 2026-11-23 (balance-v2)
+
+Détail, tableau avant/après et impact moteur : `platform/data-raw/balance/resolve-notes.md` ; fichier proposé : `platform/data-raw/balance/balance-v2.json` (non encore copié dans `public/data/`).
+
+| Id | Source | Date | Lue comment |
+|---|---|---|---|
+| HCP-SM-2025 | HCP, monographie régionale Souss-Massa éd. 2025 (https://www.hcp.ma/region-agadir/docs/docs/Monographie%20regionale%20Souss%20Massa%202024.pdf) | 2025 | PDF converti : apports moyens 671 Mm³/an (1939-2016, PDAIRE 1), 150 Mm³/an en moyenne 2015-2024 (ABHSM) ; nappes Souss -292, Chtouka -63,2, Tiznit -1,8 ; production d'eau potable 2023 = 92 097 000 m³ ; SAU 453 445 ha dont 174 862 irrigables. |
+| HCP-GOUN-2022 | HCP, monographie Guelmim-Oued Noun (https://www.hcp.ma/region-guelmim/docs/docs/monographie_regionale_2022.pdf) | 2022 (données 2019) | PDF converti : tableau 108 : production 13 826 740 m³, consommation 9 060 364 m³, 89 750 abonnés (ONEP). |
+| HCP-DAKHLA-2018 | HCP, monographie Dakhla-Oued Ed-Dahab 2018 (https://www.hcp.ma/region-eddakhla/attachment/1410090/) | 2018 | PDF converti : nappes fossiles « surexploitées et surtout mal connues », pas de volume exploitable chiffré. |
+| FREG-2024 | Revue FREG 5(10), Belkadi et El Haloui (https://www.revuefreg.fr/index.php/home/article/download/1799/1457/5852) | 2024-10-05 | PDF converti : Dakhla, 9 Mm³/an mobilisables ; bilan des besoins +2 à -8 Mm³/an. Source secondaire. |
+| Le360-Tan-Tan | https://fr.le360.ma/societe/tan-tan-fin-des-travaux-dextension-de-la-station-de-demineralisation_743BBG2L2ZAYTH73NUPBRY4Y7A/ | 2025-11-14 | Page lue : ~13 000 m³/j après extension de plus de 4 300 m³/j. |
+| Le360-Dakhla | https://fr.le360.ma/economie/sahara-un-regne-une-oeuvre-ep4-la-station-de-dessalement-de-leau-de-mer-a-dakhla-un-modele-de_2SXNDIYZYRB7NLJXZAZBZA62I4/ | 2026-03-02 | Page lue : ~100 000 m³/j, 37 Mm³/an (30 irrigation, 7 potable). |
+| Le360-reuse | https://fr.le360.ma/societe/reutilisation-des-eaux-usees-le-maroc-double-la-mise-avec-plus-de-3-milliards-de-dirhams_6ZVHNBP4BNENJCMFQRN3P2RG2E/ | 2026-05-17 | Page lue : 52,6 Mm³/an réutilisés, cible 100 en 2027, golfs 20,5. |
+| Le Brief | https://www.lebrief.ma/barrages-le-maroc-profite-de-163-milliards-m%C2%B3-deau-en-2026-100150365/ | 2026-04-29 | Page lue : apports 1er sept. 2025 - 23 avr. 2026 par bassin, Souss-Massa 346 Mm³ (-22 %). |
+| Hespress | https://fr.hespress.com/437826-dessalement-le-maroc-deploie-244-stations-pour-securiser-son-avenir-hydrique.html | 2025-08-16 | Page lue : Casablanca 300 Mm³/an, 40 % d'avancement, fin 2026 ; Dakhla 78 %, mi-2026. |
+| Atlas Original | https://atlasoriginal.net/au-coeur-de-la-campagne-agricole-du-souss-massa-2024-2025 | 2025-03-02 | Page lue (source secondaire) : Chtouka 275 000 m³/j dont 125 000 irrigation ; 158 433 ha irrigués. |
+
+Non lus (résultats de recherche seulement, UNVERIFIED) : ONEE rendement de distribution 75,4 % et d'adduction 94,8 %, ONEE production 1 374 Mm³ fin 2024, ABHSM 918 Mm³ d'irrigation (site inaccessible), Médias24 et Le Matin (403), Le Desk (403), Tan-Tan 3 460 + 8 640 m³/j (Médias24 2022), nappe de Guelmim (22,2 / 18,4 / 160 Mm³).

@@ -22,7 +22,7 @@ Rapports de contraste approximatifs, calculés à la main.
 | Sable | #F3EBDD | sections claires |
 
 ## Typographie
-Polices système, aucune dépendance (@fontsource non installé) : titres serif « Iowan Old Style / Palatino / Georgia », texte system-ui.
+Depuis la refonte (23 nov. 2026, `docs/DESIGN_ANZAR.md`) : IBM Plex Sans Condensed (titres, chiffres) et IBM Plex Mono (micro-labels) via @fontsource (OFL), texte en police système. Les anciennes pages utilisent encore titres serif « Iowan Old Style / Palatino / Georgia » et system-ui jusqu'à leur migration.
 
 ## Logo (`platform/public/brand/anzar/`)
 Goutte cyan dont le bas est taillé par une crête de l’Atlas, avec un soleil corail. `mark.svg` (sur nuit), `mark-on-light.svg`, `mark-mono.svg` (currentColor), `favicon.svg`, `logo.svg` (marque + mot + tagline). Texte du logo en police système (pas converti en tracés).

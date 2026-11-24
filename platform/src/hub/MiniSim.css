@@ -1,0 +1,63 @@
+/* Mini-tableau de bord (MiniSim.jsx). Tokens --az-* uniquement. */
+.msim { display: grid; gap: var(--az-sp-5); }
+.msim__head { display: flex; flex-wrap: wrap; gap: var(--az-sp-3); align-items: center; }
+
+.msim__result { display: grid; gap: var(--az-sp-3); min-height: 9.5rem; }
+.msim__big { margin: 0; display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--az-sp-2) var(--az-sp-3); }
+.msim__num {
+  font-family: var(--az-font-display);
+  font-weight: 600;
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  color: var(--az-text);
+  font-variant-numeric: tabular-nums;
+  min-width: 2ch;
+}
+.msim__unit { font-family: var(--az-font-display); font-size: var(--az-fs-h3); font-weight: 500; color: var(--az-text-muted); }
+.msim__meta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--az-sp-2) var(--az-sp-4); }
+.msim__delta { font-family: var(--az-font-mono); font-size: var(--az-fs-micro); letter-spacing: 0.04em; color: var(--az-accent); }
+
+.msim__bar {
+  position: relative;
+  height: 14px;
+  margin-bottom: var(--az-sp-4);
+  border-radius: var(--az-r-pill);
+  background: var(--az-water-soft);
+  overflow: visible;
+}
+.msim__bar-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--az-r-pill);
+  background: var(--az-water);
+  transform-origin: 0 50%;
+  transition: transform var(--az-dur-3) var(--az-ease-out);
+}
+.msim__bar--flux .msim__bar-fill { background: var(--az-flux-1); }
+.msim__bar-mark { position: absolute; top: -3px; bottom: -3px; width: 2px; margin-left: -1px; background: var(--az-text); }
+.msim__bar-mark i {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-style: normal;
+  font-family: var(--az-font-mono);
+  font-size: 0.6875rem;
+  color: var(--az-text-muted);
+  white-space: nowrap;
+}
+.msim__bar-mark i::after { content: ' mois'; }
+
+.msim__note { margin: 0; font-size: var(--az-fs-small); color: var(--az-text-muted); max-width: 46ch; }
+.msim__controls { display: grid; grid-template-columns: 1fr 1fr; gap: var(--az-sp-5); }
+.msim__foot { display: flex; flex-wrap: wrap; align-items: center; gap: var(--az-sp-3); }
+.msim__legal { margin: 0; }
+
+@media (max-width: 760px) {
+  .msim { gap: var(--az-sp-4); }
+  .msim__controls { grid-template-columns: 1fr; gap: var(--az-sp-3); }
+  .msim__result { min-height: 0; }
+  .msim__foot .az-btn--primary { width: 100%; justify-content: center; }
+}
+@media (prefers-reduced-motion: reduce) { .msim__bar-fill { transition: none; } }

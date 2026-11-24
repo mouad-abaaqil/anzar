@@ -19,15 +19,15 @@ test('every facility cites non-empty sources that resolve in the source registry
   }
 });
 
-test('latest dam snapshot matches the published regional totals (18 Nov 2026)', () => {
+test('latest dam snapshot matches the published regional totals (23 Nov 2026)', () => {
   const latest = [...region.snapshots].sort((a, b) => a.date.localeCompare(b.date)).at(-1);
-  assert.equal(latest.date, '2026-11-18');
-  assert.equal(latest.storageMm3, 383.13);
+  assert.equal(latest.date, '2026-11-23');
+  assert.equal(latest.storageMm3, 382.72);
   assert.equal(latest.capacityMm3, 722.83);
-  assert.equal(latest.fillPct, 53);
-  assert.equal(region.region.storageMm3, 383.13);
+  assert.equal(latest.fillPct, 52.95);
+  assert.equal(region.region.storageMm3, 382.72);
   assert.equal(region.region.capacityMm3, 722.83);
-  assert.equal(region.region.fillPct, 53);
+  assert.equal(region.region.fillPct, 52.95);
 });
 
 test('facilities include nine dams', () => {

@@ -59,7 +59,9 @@ test('band validator reports low <= volume <= high violations', () => {
 
 test('fill percentages always carry the word estimé', () => {
   for (const v of [0, 12.34, 100, NaN, undefined, null]) assert.match(fillText(v), /estimé/);
-  const src = readFileSync(resolve(root, 'src/pages/ForecastPage.jsx'), 'utf8');
+  // ForecastPage a été remplacée par le panneau du hub. fillPct (estimation satellite) ne s'affiche plus que via RainPanel ;
+  // les onglets du panneau lisent le bulletin officiel (fillPct sourcé), hors de cette règle.
+  const src = readFileSync(resolve(root, 'src/components/RainPanel.jsx'), 'utf8');
   for (const m of src.matchAll(/fillPct/g)) {
     const around = src.slice(Math.max(0, m.index - 40), m.index + 40);
     assert.match(around, /fillText\(/, `fillPct rendered without fillText: ${around}`);
@@ -74,8 +76,6 @@ test('rain totals fall back to daily sums using the API kind names', () => {
 });
 
 test('forecast UI files avoid forbidden quality wording', () => {
-  for (const f of ['src/pages/ForecastPage.jsx', 'src/components/RainPanel.jsx', 'src/lib/forecast.js']) {
+  for (const f of ['src/components/RainPanel.jsx', 'src/lib/forecast.js']) {
     assert.doesNotMatch(readFileSync(resolve(root, f), 'utf8'), /potable|WQI/i);
-  }
-  assert.ok(readdirSync(resolve(root, 'src/pages')).includes('ForecastPage.jsx'));
-});
+  }});

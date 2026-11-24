@@ -1,0 +1,2543 @@
+[
+  {
+    "id": "ahmed-el-hansali",
+    "name": "Ahmed El Hansali",
+    "lat": 32.693199,
+    "lon": -5.888425,
+    "regionId": "beni-mellal-khenifra",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 740.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/385347001",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "سد أحمد الحنصالي",
+    "yearBuilt": 2001,
+    "purpose": "E, AEPI, I",
+    "heightM": 101.0,
+    "wikipediaMatch": {
+      "row": "Ahmed El Hansali",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "ait-ouarda",
+    "name": "Ait Ouarda",
+    "lat": 32.108977,
+    "lon": -6.509732,
+    "regionId": "beni-mellal-khenifra",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 4.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/834066953",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q2884923",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1953,
+    "purpose": "E,I,BC",
+    "heightM": 43.0,
+    "wikipediaMatch": {
+      "row": "Ait Ouarda",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "barrage-bin-el-ouidane",
+    "name": "Barrage Bin el Ouidane",
+    "lat": 32.105857,
+    "lon": -6.464359,
+    "regionId": "beni-mellal-khenifra",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/428259386",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/504108035",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q2884936",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1953
+  },
+  {
+    "id": "hassan-premier",
+    "name": "Hassan Premier",
+    "lat": 31.814353,
+    "lon": -6.824198,
+    "regionId": "beni-mellal-khenifra",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 262.5,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/401967077",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q64483",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1986,
+    "purpose": "I, E, A.E.P.I.",
+    "heightM": 145.0,
+    "wikipediaMatch": {
+      "row": "Hassan Premier",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "moulay-youssef",
+    "name": "Moulay Youssef",
+    "lat": 31.646583,
+    "lon": -7.261431,
+    "regionId": "beni-mellal-khenifra",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 175.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/504108037",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1970,
+    "purpose": "E,I",
+    "heightM": 100.0,
+    "wikipediaMatch": {
+      "row": "Moulay Youssef",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "barrage-tanafnit-el-borj",
+    "name": "barrage Tanafnit El Borj",
+    "lat": 33.078056,
+    "lon": -5.502778,
+    "regionId": "beni-mellal-khenifra",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q2884993",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "al-massira",
+    "name": "Al Massira",
+    "lat": 32.481053,
+    "lon": -7.634016,
+    "regionId": "casablanca-settat",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 2760.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/218859983",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q2884929",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1979,
+    "purpose": "E, I, A.E.P.I.",
+    "heightM": 82.0,
+    "wikipediaMatch": {
+      "row": "Al Massira",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "barage-mazer",
+    "name": "Barage Mazer",
+    "lat": 33.106944,
+    "lon": -7.463611,
+    "regionId": "casablanca-settat",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q29083012",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barage-tamadroust",
+    "name": "Barage Tamadroust",
+    "lat": 33.004444,
+    "lon": -7.485278,
+    "regionId": "casablanca-settat",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q29083025",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "daourat",
+    "name": "Daourat",
+    "lat": 32.936048,
+    "lon": -8.063388,
+    "regionId": "casablanca-settat",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 9.5,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/321054222",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q2884934",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1950,
+    "purpose": "E",
+    "heightM": 40.0,
+    "wikipediaMatch": {
+      "row": "Daourat",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "sidi-said-maachou",
+    "name": "Sidi Said Maachou",
+    "lat": 33.142741,
+    "lon": -8.106635,
+    "regionId": "casablanca-settat",
+    "basin": "Oum Er-Rbia",
+    "river": "Oum Errabiaa",
+    "capacityMm3": 2.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/776744489",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q2884987",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "basinMethod": "river-keyword",
+    "yearBuilt": 1929,
+    "purpose": "E,A.E.P.I.",
+    "heightM": 29.0,
+    "wikipediaMatch": {
+      "row": "Sidi Said Maachou",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "barrage-de-l-oued-al-maleh",
+    "name": "barrage de l'Oued al Maleh",
+    "lat": 33.506944,
+    "lon": -7.339722,
+    "regionId": "casablanca-settat",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q27513866",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1930
+  },
+  {
+    "id": "achbarou",
+    "name": "Achbarou",
+    "lat": 31.154754,
+    "lon": -5.092003,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 1.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/178676135",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1986,
+    "purpose": "I, AC, AN",
+    "heightM": 20.0,
+    "wikipediaMatch": {
+      "row": "Achbarou",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "barage-timkit",
+    "name": "Barage Timkit",
+    "lat": 31.639522,
+    "lon": -5.322908,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/953976738",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-douiss",
+    "name": "Barrage Douiss",
+    "lat": 31.911275,
+    "lon": -3.511415,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/1103664850",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-taghaddoute",
+    "name": "Barrage Taghaddoute",
+    "lat": 30.620162,
+    "lon": -7.29899,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/402187851",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-tizgui",
+    "name": "Barrage Tizgui",
+    "lat": 30.821335,
+    "lon": -6.561587,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/1119407149",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q31869953",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-de-jdeid-under-construction",
+    "name": "Barrage de Jdeid (Under Construction)",
+    "lat": 30.84656,
+    "lon": -4.203068,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/1292417117",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-de-tamtattouchte",
+    "name": "Barrage de Tamtattouchte",
+    "lat": 31.65626,
+    "lon": -5.572992,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/1120079645",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-de-derivation-el-bourouj",
+    "name": "Barrage de dérivation El bourouj",
+    "lat": 31.503091,
+    "lon": -4.19144,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/1579879522",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-de-derivation-lahmida",
+    "name": "Barrage de dérivation Lahmida",
+    "lat": 31.507988,
+    "lon": -4.327203,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/205829447",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "سد التحويلي الحميدة"
+  },
+  {
+    "id": "barrage-de-derivation-moulay-brahim",
+    "name": "Barrage de dérivation Moulay Brahim",
+    "lat": 31.435604,
+    "lon": -4.30153,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/639373444",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-du-bleida",
+    "name": "Barrage du Bleida",
+    "lat": 30.367428,
+    "lon": -6.434469,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/1378426654",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "hassan-addakhil",
+    "name": "Hassan Addakhil",
+    "lat": 31.993151,
+    "lon": -4.460834,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 347.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/396771343",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1971,
+    "purpose": "I,EC",
+    "heightM": 85.0,
+    "wikipediaMatch": {
+      "row": "Hassan Addakhil",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "kaddoussa",
+    "name": "Kaddoussa",
+    "lat": 32.166265,
+    "lon": -3.785949,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 220.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/1080725441",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 2021,
+    "purpose": "I, AEP, PI",
+    "heightM": 62.0,
+    "wikipediaMatch": {
+      "row": "Kaddoussa",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "mansour-eddahbi",
+    "name": "Mansour Eddahbi",
+    "lat": 30.912449,
+    "lon": -6.759506,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 529.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/315079634",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q27533560",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1972,
+    "purpose": "E, I",
+    "heightM": 70.0,
+    "wikipediaMatch": {
+      "row": "Mansour Eddahbi",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "tiniourkane-dam",
+    "name": "Tiniourkane Dam",
+    "lat": 31.244398,
+    "lon": -5.569199,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/482566078",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-hassan-ii-2",
+    "name": "barrage Hassan-II",
+    "lat": 32.7916,
+    "lon": -4.76837,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q2884951",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-itzer",
+    "name": "barrage Itzer",
+    "lat": 32.911944,
+    "lon": -5.081667,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q2884962",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-dfilia",
+    "name": "barrage dfilia",
+    "lat": 32.010964,
+    "lon": -3.643306,
+    "regionId": "draa-tafilalet",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/1507518390",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "السد التلي الدفيلية"
+  },
+  {
+    "id": "allal-al-fassi",
+    "name": "Allal Al Fassi",
+    "lat": 33.931714,
+    "lon": -4.677583,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 81.5,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/504108030",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q4730393",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1990,
+    "purpose": "E, I, AEPI",
+    "heightM": 61.0,
+    "wikipediaMatch": {
+      "row": "Allal Al Fassi",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "asfalou",
+    "name": "Asfalou",
+    "lat": 34.632987,
+    "lon": -4.190205,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 317.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/387882040",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1999,
+    "purpose": "E, I",
+    "heightM": 112.0,
+    "wikipediaMatch": {
+      "row": "Asfalou",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "bab-louta",
+    "name": "Bab Louta",
+    "lat": 34.015022,
+    "lon": -4.333903,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 37.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/435467216",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/435467373",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1999,
+    "purpose": "AEP",
+    "heightM": 54.0,
+    "wikipediaMatch": {
+      "row": "Bab Louta",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "barrage-ben-smim",
+    "name": "Barrage Ben Smim",
+    "lat": 33.493366,
+    "lon": -5.179699,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/1172877855",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-boussraf",
+    "name": "Barrage Boussraf",
+    "lat": 33.488045,
+    "lon": -5.076422,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/1570528272",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-mehraz",
+    "name": "Barrage Mehraz",
+    "lat": 33.967273,
+    "lon": -4.970323,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/435606695",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-salah",
+    "name": "Barrage Salah",
+    "lat": 34.564727,
+    "lon": -4.669429,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/167447353",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-tizguit",
+    "name": "Barrage Tizguit",
+    "lat": 33.519109,
+    "lon": -5.091611,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/322305199",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-tizguit-haut",
+    "name": "Barrage Tizguit Haut",
+    "lat": 33.511642,
+    "lon": -5.087751,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/322305196",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "bouhouda",
+    "name": "Bouhouda",
+    "lat": 34.6103,
+    "lon": -4.573362,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 275.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/167316343",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1998,
+    "purpose": "I, AEP, PE",
+    "heightM": 55.0,
+    "wikipediaMatch": {
+      "row": "Bouhouda",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "elgaada-dam",
+    "name": "Elgaada Dam",
+    "lat": 34.0183,
+    "lon": -4.953871,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q22932976",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "idriss-1er",
+    "name": "Idriss 1Er",
+    "lat": 34.16161,
+    "lon": -4.749268,
+    "regionId": "fes-meknes",
+    "basin": "Sebou",
+    "river": "Oued Inaouen",
+    "capacityMm3": 1186.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/385406261",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q5989737",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "سد ادربس الأول",
+    "basinMethod": "river-keyword",
+    "yearBuilt": 1973,
+    "purpose": "E, I",
+    "heightM": 72.0,
+    "wikipediaMatch": {
+      "row": "Idriss 1Er",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "sidi-chahed",
+    "name": "Sidi Chahed",
+    "lat": 34.105902,
+    "lon": -5.319722,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 170.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/152388836",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1996,
+    "purpose": "AEPI, I",
+    "heightM": 51.0,
+    "wikipediaMatch": {
+      "row": "Sidi Chahed",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "barrage-amane-sayrrine",
+    "name": "barrage Amane Sayrrine",
+    "lat": 33.619444,
+    "lon": -5.426667,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q29081193",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-m-dez",
+    "name": "barrage M'DEZ",
+    "lat": 33.681615,
+    "lon": -4.52565,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q130337597",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-de-michlifen",
+    "name": "barrage de Michlifen",
+    "lat": 33.492763,
+    "lon": -5.177644,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q120359644",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage",
+    "name": "سد ساهلة",
+    "lat": 34.578103,
+    "lon": -4.662427,
+    "regionId": "fes-meknes",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/node/13836099935",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "سد ساهلة"
+  },
+  {
+    "id": "agherghis",
+    "name": "Agherghis",
+    "lat": 29.229192,
+    "lon": -9.727914,
+    "regionId": "guelmim-oued-noun",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 0.3,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/217677145",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1992,
+    "purpose": "PI",
+    "heightM": 24.0,
+    "wikipediaMatch": {
+      "row": "Agherghis",
+      "score": 0.889
+    }
+  },
+  {
+    "id": "fask-dam",
+    "name": "Fask Dam",
+    "lat": 28.945845,
+    "lon": -9.741463,
+    "regionId": "guelmim-oued-noun",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/node/13446378739",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/1466030164",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "سد فاصك"
+  },
+  {
+    "id": "imaouene",
+    "name": "Imaouene",
+    "lat": 29.22338,
+    "lon": -9.713134,
+    "regionId": "guelmim-oued-noun",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 0.25,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/217671230",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1992,
+    "purpose": "EC",
+    "heightM": 23.0,
+    "wikipediaMatch": {
+      "row": "Imaouene",
+      "score": 0.923
+    }
+  },
+  {
+    "id": "barrage-sakia-el-hamra",
+    "name": "barrage Sakia El Hamra",
+    "lat": 27.156429,
+    "lon": -13.17433,
+    "regionId": "laayoune-sakia-el-hamra",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q106643432",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-imil-had",
+    "name": "Barrage Imil Had",
+    "lat": 31.246368,
+    "lon": -9.623787,
+    "regionId": "marrakech-safi",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/415406974",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "hassan-1s",
+    "name": "Hassan 1s",
+    "lat": 31.845845,
+    "lon": -7.078198,
+    "regionId": "marrakech-safi",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/504108036",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "imfout",
+    "name": "Imfout",
+    "lat": 32.725451,
+    "lon": -7.926667,
+    "regionId": "marrakech-safi",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 27.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/290459048",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q2885028",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1944,
+    "purpose": "E,I,A.E.P.I",
+    "heightM": 50.0,
+    "wikipediaMatch": {
+      "row": "Imfout",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "lalla-takerkoust",
+    "name": "Lalla Takerkoust",
+    "lat": 31.3548,
+    "lon": -8.136027,
+    "regionId": "marrakech-safi",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 69.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/94898448",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q27520143",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1935,
+    "purpose": "E, I",
+    "heightM": 71.0,
+    "wikipediaMatch": {
+      "row": "Lalla Takerkoust",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "yaacoub-el-mansour",
+    "name": "Yaacoub El Mansour",
+    "lat": 31.189823,
+    "lon": -8.088128,
+    "regionId": "marrakech-safi",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 70.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/209650379",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q136850570",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 2008,
+    "purpose": "AEP",
+    "heightM": 70.0,
+    "wikipediaMatch": {
+      "row": "Yaacoub El Mansour",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "zerrar",
+    "name": "Zerrar",
+    "lat": 31.351498,
+    "lon": -9.573966,
+    "regionId": "marrakech-safi",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 123.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/relation/9846279",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 2014,
+    "purpose": "AEP, I, PI",
+    "heightM": 84.0,
+    "wikipediaMatch": {
+      "row": "Zerrar",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "barrage-ben-annou",
+    "name": "barrage Ben Annou",
+    "lat": 32.426389,
+    "lon": -7.885833,
+    "regionId": "marrakech-safi",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q29082288",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-sidi-saad",
+    "name": "barrage Sidi Saad",
+    "lat": 32.604167,
+    "lon": -7.942778,
+    "regionId": "marrakech-safi",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q29095534",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-2",
+    "name": "سد لالة تاكركوست",
+    "lat": 31.307778,
+    "lon": -8.143889,
+    "regionId": "marrakech-safi",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q138337607",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1929
+  },
+  {
+    "id": "barrage-hassan-ii",
+    "name": "Barrage Hassan II",
+    "lat": 34.206661,
+    "lon": -2.639878,
+    "regionId": "oriental",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/151579585",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "سد الحسن الثاني"
+  },
+  {
+    "id": "barrage-iche",
+    "name": "Barrage Iche",
+    "lat": 32.514636,
+    "lon": -1.01003,
+    "regionId": "oriental",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/307687326",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-moulay-ali",
+    "name": "Barrage Moulay Ali",
+    "lat": 34.855634,
+    "lon": -2.693199,
+    "regionId": "oriental",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/467506893",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "سد مولاي علي"
+  },
+  {
+    "id": "barrage-sfissef",
+    "name": "Barrage Sfissef",
+    "lat": 32.336366,
+    "lon": -1.345612,
+    "regionId": "oriental",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/node/2516958173",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "سد السفيسف"
+  },
+  {
+    "id": "mechra-homadi",
+    "name": "Mechra Homadi",
+    "lat": 34.736474,
+    "lon": -2.804682,
+    "regionId": "oriental",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 12.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/507327457",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q2884969",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "سد مشرع حمادي",
+    "yearBuilt": 1955,
+    "purpose": "E,I,A.E.P.I",
+    "heightM": 57.0,
+    "wikipediaMatch": {
+      "row": "Mechra Homadi",
+      "score": 0.88
+    }
+  },
+  {
+    "id": "mohamed-v",
+    "name": "Mohamed V",
+    "lat": 34.663331,
+    "lon": -2.937852,
+    "regionId": "oriental",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 410.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/504108025",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q2884977",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "سد محمد الخامس",
+    "yearBuilt": 1967,
+    "purpose": "E,I,A.E.P.I",
+    "heightM": 64.0,
+    "wikipediaMatch": {
+      "row": "Mohamed V",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "barrage-al-manzel",
+    "name": "barrage al manzel",
+    "lat": 34.900315,
+    "lon": -2.27356,
+    "regionId": "oriental",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/929397804",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "سد المنزل"
+  },
+  {
+    "id": "barrage-sidi-ali-ben-yakhlef",
+    "name": "barrage sidi ali ben yakhlef",
+    "lat": 34.89889,
+    "lon": -2.282367,
+    "regionId": "oriental",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/929402629",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "سد سيدي علي بن يخلف"
+  },
+  {
+    "id": "barrage-rouidat",
+    "name": "Barrage Rouidat",
+    "lat": 33.733305,
+    "lon": -6.967603,
+    "regionId": "rabat-sale-kenitra",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/442181116",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-sidi-mohammed-ben-abdallah",
+    "name": "Barrage Sidi Mohammed Ben Abdallah",
+    "lat": 33.937868,
+    "lon": -6.75037,
+    "regionId": "rabat-sale-kenitra",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/289906319",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "el-kansera",
+    "name": "El Kansera",
+    "lat": 34.041566,
+    "lon": -5.907678,
+    "regionId": "rabat-sale-kenitra",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 266.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/136979506",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q15216318",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1935,
+    "purpose": "E,I,A.E.P.I",
+    "heightM": 68.0,
+    "wikipediaMatch": {
+      "row": "El Kansera",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "tiddas",
+    "name": "Tiddas",
+    "lat": 33.581731,
+    "lon": -6.317758,
+    "regionId": "rabat-sale-kenitra",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 507.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/1148791531",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 2022,
+    "purpose": "AEPI",
+    "heightM": 106.0,
+    "wikipediaMatch": {
+      "row": "Tiddas",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "barrage-de-garde",
+    "name": "barrage de Garde",
+    "lat": 34.488333,
+    "lon": -6.413056,
+    "regionId": "rabat-sale-kenitra",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q29100933",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "abdelmoumen",
+    "name": "Abdelmoumen",
+    "lat": 30.675189,
+    "lon": -9.199146,
+    "regionId": "souss-massa",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 216.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/289868587",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1981,
+    "purpose": "E, I, A.E.P.I.",
+    "heightM": 94.0,
+    "wikipediaMatch": {
+      "row": "Abdelmoumen",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "ahl-souss",
+    "name": "Ahl Souss",
+    "lat": 30.053726,
+    "lon": -9.12817,
+    "regionId": "souss-massa",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 4.7,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/119569970",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 2004,
+    "purpose": "AEP, I",
+    "heightM": 49.0,
+    "wikipediaMatch": {
+      "row": "Ahl Souss",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "aoulouz",
+    "name": "Aoulouz",
+    "lat": 30.693065,
+    "lon": -8.137938,
+    "regionId": "souss-massa",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 110.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/385098917",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q12215566",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1991,
+    "purpose": "AN, I",
+    "heightM": 79.0,
+    "wikipediaMatch": {
+      "row": "Aoulouz",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "barrage-ait-hamou",
+    "name": "Barrage Ait hamou",
+    "lat": 30.70838,
+    "lon": -9.769432,
+    "regionId": "souss-massa",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/118710382",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-imi-el-kheng",
+    "name": "Barrage Imi El Kheng",
+    "lat": 30.667251,
+    "lon": -8.532225,
+    "regionId": "souss-massa",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/179486552",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-sidi-abdellah",
+    "name": "Barrage Sidi Abdellah",
+    "lat": 30.635982,
+    "lon": -8.824335,
+    "regionId": "souss-massa",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/409855136",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q106644512",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-tagenza",
+    "name": "Barrage Tagenza",
+    "lat": 30.482744,
+    "lon": -9.393712,
+    "regionId": "souss-massa",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/397336478",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "dkhila",
+    "name": "Dkhila",
+    "lat": 30.569413,
+    "lon": -9.285201,
+    "regionId": "souss-massa",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 0.7,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/387880522",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1986,
+    "purpose": "BC",
+    "heightM": 32.0,
+    "wikipediaMatch": {
+      "row": "Dkhila",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "moukhtar-soussi",
+    "name": "Moukhtar Soussi",
+    "lat": 30.734937,
+    "lon": -7.980348,
+    "regionId": "souss-massa",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 50.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/385157810",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q2884975",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 2002,
+    "purpose": "I, AN",
+    "heightM": 60.0,
+    "wikipediaMatch": {
+      "row": "Moukhtar Soussi",
+      "score": 0.96
+    }
+  },
+  {
+    "id": "moulay-abdellah",
+    "name": "Moulay Abdellah",
+    "lat": 30.76152,
+    "lon": -9.685829,
+    "regionId": "souss-massa",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 110.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/117814438",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 2001,
+    "purpose": "AEP",
+    "heightM": 65.0,
+    "wikipediaMatch": {
+      "row": "Moulay Abdellah",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "youssef-ben-tachfine",
+    "name": "Youssef Ben Tachfine",
+    "lat": 29.845416,
+    "lon": -9.495466,
+    "regionId": "souss-massa",
+    "basin": "Souss-Massa",
+    "river": "Oued Massa",
+    "capacityMm3": 303.5,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/385158725",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q2884999",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "basinMethod": "river-keyword",
+    "yearBuilt": 1972,
+    "purpose": "I, A.E.P.I.",
+    "heightM": 85.0,
+    "wikipediaMatch": {
+      "row": "Youssef Ben Tachfine",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "barrage-de-pierre",
+    "name": "barrage de pierre",
+    "lat": 30.605203,
+    "lon": -9.476401,
+    "regionId": "souss-massa",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/1155390454",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "9-avril-1947",
+    "name": "9 Avril 1947",
+    "lat": 35.528168,
+    "lon": -5.80571,
+    "regionId": "tanger-tetouan-al-hoceima",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 300.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q12215563",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1995,
+    "purpose": "AEPI",
+    "heightM": 52.0,
+    "wikipediaMatch": {
+      "row": "9 Avril 1947",
+      "score": 0.917
+    }
+  },
+  {
+    "id": "al-wahda",
+    "name": "Al Wahda",
+    "lat": 34.597912,
+    "lon": -5.200141,
+    "regionId": "tanger-tetouan-al-hoceima",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 3800.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/26301395",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q292131",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1996,
+    "purpose": "E, I, PE, T",
+    "heightM": 88.0,
+    "wikipediaMatch": {
+      "row": "Al Wahda",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "ali-thelat",
+    "name": "Ali Thelat",
+    "lat": 35.25,
+    "lon": -5.28,
+    "regionId": "tanger-tetouan-al-hoceima",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 30.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q27529374",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1935,
+    "purpose": "E, I",
+    "heightM": 36.0,
+    "wikipediaMatch": {
+      "row": "Ali Thelat",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "barrage-erraouz",
+    "name": "Barrage Erraouz",
+    "lat": 35.700752,
+    "lon": -5.502808,
+    "regionId": "tanger-tetouan-al-hoceima",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/198758602",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "barrage-de-talembote",
+    "name": "Barrage de Talembote",
+    "lat": 35.245992,
+    "lon": -5.290732,
+    "regionId": "tanger-tetouan-al-hoceima",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/399066814",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "سد تلمبوط"
+  },
+  {
+    "id": "mohamed-ben-abdelkrim-el-khattabi-dam",
+    "name": "Mohamed Ben Abdelkrim El Khattabi Dam",
+    "lat": 35.087105,
+    "lon": -3.818595,
+    "regionId": "tanger-tetouan-al-hoceima",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/95225969",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "moulay-bouchta-dam",
+    "name": "Moulay Bouchta Dam",
+    "lat": 35.24541,
+    "lon": -5.29093,
+    "regionId": "tanger-tetouan-al-hoceima",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q27539177",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  },
+  {
+    "id": "nakhla",
+    "name": "Nakhla",
+    "lat": 35.48,
+    "lon": -5.41,
+    "regionId": "tanger-tetouan-al-hoceima",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 5.7,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q5395487",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1961,
+    "purpose": "A,E.P.I",
+    "heightM": 46.0,
+    "wikipediaMatch": {
+      "row": "Nakhla",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "oued-el-makhazine",
+    "name": "Oued El Makhazine",
+    "lat": 34.941441,
+    "lon": -5.840046,
+    "regionId": "tanger-tetouan-al-hoceima",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 773.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "osm",
+    "sources": [
+      {
+        "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+        "url": "https://www.openstreetmap.org/way/289864149",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "nameAr": "وادي المخازن",
+    "yearBuilt": 1979,
+    "purpose": "E, I, A.E.P.I.",
+    "heightM": 67.0,
+    "wikipediaMatch": {
+      "row": "Oued El Makhazine",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "smir",
+    "name": "Smir",
+    "lat": 35.686389,
+    "lon": -5.391389,
+    "regionId": "tanger-tetouan-al-hoceima",
+    "basin": null,
+    "river": null,
+    "capacityMm3": 43.0,
+    "capacityMm3Source": "wikipedia",
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q4807436",
+        "readDate": "2026-11-23"
+      },
+      {
+        "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+        "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+    "yearBuilt": 1991,
+    "purpose": "AEPI",
+    "heightM": 45.0,
+    "wikipediaMatch": {
+      "row": "Smir",
+      "score": 1.0
+    }
+  },
+  {
+    "id": "barrage-dar-khrofa",
+    "name": "barrage Dar Khrofa",
+    "lat": 35.239034,
+    "lon": -5.778298,
+    "regionId": "tanger-tetouan-al-hoceima",
+    "basin": null,
+    "river": null,
+    "capacityMm3": null,
+    "capacityMm3Source": null,
+    "coordSource": "wikidata",
+    "sources": [
+      {
+        "name": "Wikidata",
+        "url": "https://www.wikidata.org/wiki/Q106646502",
+        "readDate": "2026-11-23"
+      }
+    ],
+    "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)"
+  }
+]

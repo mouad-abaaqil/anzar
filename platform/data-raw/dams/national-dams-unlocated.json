@@ -1,0 +1,1195 @@
+{
+ "note": "Lignes Wikipedia sans coordonnee verifiable : jamais placees sur la carte.",
+ "unlocated": [
+  {
+   "name": "Kasba Tadla",
+   "yearBuilt": 1929,
+   "heightM": 12.0,
+   "capacityMm3": 0.1,
+   "purposeCodes": "E, I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.57)"
+  },
+  {
+   "name": "Mellah",
+   "yearBuilt": 1931,
+   "heightM": 33.0,
+   "capacityMm3": 6.6,
+   "purposeCodes": "I,A.E.PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.60)"
+  },
+  {
+   "name": "Zemrane",
+   "yearBuilt": 1950,
+   "heightM": 20.0,
+   "capacityMm3": 0.6,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.62)"
+  },
+  {
+   "name": "Bine El Ouidane",
+   "yearBuilt": 1953,
+   "heightM": 133.0,
+   "capacityMm3": 1384.0,
+   "purposeCodes": "E, I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.71)"
+  },
+  {
+   "name": "Taghdout",
+   "yearBuilt": 1956,
+   "heightM": 26.0,
+   "capacityMm3": 3.0,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.82)"
+  },
+  {
+   "name": "Safi",
+   "yearBuilt": 1965,
+   "heightM": 18.0,
+   "capacityMm3": 2.0,
+   "purposeCodes": "A,E.P.I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.55)"
+  },
+  {
+   "name": "Ajras",
+   "yearBuilt": 1969,
+   "heightM": 18.0,
+   "capacityMm3": 3.0,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.55)"
+  },
+  {
+   "name": "Ibn Batouta",
+   "yearBuilt": 1977,
+   "heightM": 30.0,
+   "capacityMm3": 38.5,
+   "purposeCodes": "I, A.E.P.I.",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.71)"
+  },
+  {
+   "name": "Timi N’Outine",
+   "yearBuilt": 1981,
+   "heightM": 45.0,
+   "capacityMm3": 5.5,
+   "purposeCodes": "BC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.50)"
+  },
+  {
+   "name": "Mohamed B. A. El Khattabi",
+   "yearBuilt": 1981,
+   "heightM": 40.0,
+   "capacityMm3": 33.6,
+   "purposeCodes": "I, AEPI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.77)"
+  },
+  {
+   "name": "Garde Du Loukkos",
+   "yearBuilt": 1981,
+   "heightM": 9.0,
+   "capacityMm3": 4.0,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.59)"
+  },
+  {
+   "name": "Sidi Driss",
+   "yearBuilt": 1984,
+   "heightM": 42.0,
+   "capacityMm3": 7.0,
+   "purposeCodes": "BC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Msakhskha",
+   "yearBuilt": 1985,
+   "heightM": 20.0,
+   "capacityMm3": 2.66,
+   "purposeCodes": "AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.55)"
+  },
+  {
+   "name": "Arid",
+   "yearBuilt": 1985,
+   "heightM": 20.0,
+   "capacityMm3": 0.7,
+   "purposeCodes": "A.E.P.",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Ait Lambrabtiya",
+   "yearBuilt": 1985,
+   "heightM": 19.0,
+   "capacityMm3": 0.2,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.58)"
+  },
+  {
+   "name": "N’Zalet Azri",
+   "yearBuilt": 1985,
+   "heightM": 18.5,
+   "capacityMm3": 0.5,
+   "purposeCodes": "I, AC, AN",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.48)"
+  },
+  {
+   "name": "Imi Larbaa",
+   "yearBuilt": 1985,
+   "heightM": 16.0,
+   "capacityMm3": 0.78,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.59)"
+  },
+  {
+   "name": "Sfa",
+   "yearBuilt": 1985,
+   "heightM": 16.0,
+   "capacityMm3": 0.6,
+   "purposeCodes": "EC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Kwacem Aval",
+   "yearBuilt": 1985,
+   "heightM": 12.0,
+   "capacityMm3": 3.0,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.50)"
+  },
+  {
+   "name": "Sidi Ali",
+   "yearBuilt": 1985,
+   "heightM": 10.0,
+   "capacityMm3": 1.0,
+   "purposeCodes": "AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.75)"
+  },
+  {
+   "name": "Akka N’Oussikis",
+   "yearBuilt": 1986,
+   "heightM": 42.0,
+   "capacityMm3": 1.0,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.52)"
+  },
+  {
+   "name": "Tlet Boubker",
+   "yearBuilt": 1986,
+   "heightM": 30.0,
+   "capacityMm3": 2.75,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.60)"
+  },
+  {
+   "name": "Agafay",
+   "yearBuilt": 1986,
+   "heightM": 28.0,
+   "capacityMm3": 0.5,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.59)"
+  },
+  {
+   "name": "Akkrouz",
+   "yearBuilt": 1986,
+   "heightM": 24.0,
+   "capacityMm3": 0.65,
+   "purposeCodes": "I, AC, AN",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.55)"
+  },
+  {
+   "name": "Assif Taguenza",
+   "yearBuilt": 1986,
+   "heightM": 24.0,
+   "capacityMm3": 0.35,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Boukerdane",
+   "yearBuilt": 1986,
+   "heightM": 22.0,
+   "capacityMm3": 0.5,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Si El Miari",
+   "yearBuilt": 1986,
+   "heightM": 21.0,
+   "capacityMm3": 1.1,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Boutaaricht",
+   "yearBuilt": 1986,
+   "heightM": 18.0,
+   "capacityMm3": 0.7,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.50)"
+  },
+  {
+   "name": "Tizguit Aval",
+   "yearBuilt": 1986,
+   "heightM": 18.0,
+   "capacityMm3": 0.12,
+   "purposeCodes": "EC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.75)"
+  },
+  {
+   "name": "Beni Smir",
+   "yearBuilt": 1986,
+   "heightM": 16.0,
+   "capacityMm3": 1.0,
+   "purposeCodes": "AEP",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.62)"
+  },
+  {
+   "name": "Kheng El H’Da",
+   "yearBuilt": 1986,
+   "heightM": 15.0,
+   "capacityMm3": 3.8,
+   "purposeCodes": "AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.53)"
+  },
+  {
+   "name": "Hammou Ourzag",
+   "yearBuilt": 1986,
+   "heightM": 14.0,
+   "capacityMm3": 1.6,
+   "purposeCodes": "AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.54)"
+  },
+  {
+   "name": "Aïn Koreima",
+   "yearBuilt": 1987,
+   "heightM": 26.0,
+   "capacityMm3": 1.3,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.60)"
+  },
+  {
+   "name": "Rouidat Amont",
+   "yearBuilt": 1987,
+   "heightM": 24.0,
+   "capacityMm3": 3.0,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Imin Lhad",
+   "yearBuilt": 1987,
+   "heightM": 23.0,
+   "capacityMm3": 0.4,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.82)"
+  },
+  {
+   "name": "Ain Tourtoute",
+   "yearBuilt": 1987,
+   "heightM": 21.0,
+   "capacityMm3": 0.85,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.52)"
+  },
+  {
+   "name": "Batmat Rma",
+   "yearBuilt": 1987,
+   "heightM": 20.0,
+   "capacityMm3": 0.8,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.53)"
+  },
+  {
+   "name": "Mouillah",
+   "yearBuilt": 1987,
+   "heightM": 16.0,
+   "capacityMm3": 0.5,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Aman Seyernine",
+   "yearBuilt": 1987,
+   "heightM": 16.0,
+   "capacityMm3": 0.35,
+   "purposeCodes": "I, EC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.79)"
+  },
+  {
+   "name": "Azib Douirani",
+   "yearBuilt": 1987,
+   "heightM": 15.0,
+   "capacityMm3": 0.6,
+   "purposeCodes": "EC, AEP",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.50)"
+  },
+  {
+   "name": "Itzar",
+   "yearBuilt": 1989,
+   "heightM": 30.0,
+   "capacityMm3": 0.7,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.80)"
+  },
+  {
+   "name": "Boukhalef 1",
+   "yearBuilt": 1989,
+   "heightM": 20.0,
+   "capacityMm3": 1.1,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.50)"
+  },
+  {
+   "name": "Touiltest",
+   "yearBuilt": 1989,
+   "heightM": 17.0,
+   "capacityMm3": 1.0,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.47)"
+  },
+  {
+   "name": "Oued Aricha",
+   "yearBuilt": 1990,
+   "heightM": 30.0,
+   "capacityMm3": 1.8,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.55)"
+  },
+  {
+   "name": "Ras Bel Firane",
+   "yearBuilt": 1990,
+   "heightM": 17.0,
+   "capacityMm3": 0.3,
+   "purposeCodes": "I, AC, AEP",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.56)"
+  },
+  {
+   "name": "Blad El Gaâda",
+   "yearBuilt": 1991,
+   "heightM": 30.0,
+   "capacityMm3": 2.9,
+   "purposeCodes": "PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Garde Du Sebou",
+   "yearBuilt": 1991,
+   "heightM": 18.0,
+   "capacityMm3": 40.0,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Sghir",
+   "yearBuilt": 1991,
+   "heightM": 15.0,
+   "capacityMm3": 2.3,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Saboun",
+   "yearBuilt": 1991,
+   "heightM": 15.0,
+   "capacityMm3": 1.1,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.55)"
+  },
+  {
+   "name": "Tizguit Amont",
+   "yearBuilt": 1991,
+   "heightM": 15.0,
+   "capacityMm3": 0.3,
+   "purposeCodes": "PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.80)"
+  },
+  {
+   "name": "Joumoua",
+   "yearBuilt": 1992,
+   "heightM": 57.0,
+   "capacityMm3": 6.5,
+   "purposeCodes": "AEPI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.55)"
+  },
+  {
+   "name": "Essaf",
+   "yearBuilt": 1992,
+   "heightM": 29.0,
+   "capacityMm3": 1.0,
+   "purposeCodes": "I, AEP, AC, PE",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Jorf El Ghorab",
+   "yearBuilt": 1992,
+   "heightM": 29.0,
+   "capacityMm3": 0.9,
+   "purposeCodes": "AEP, AC, PE",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.73)"
+  },
+  {
+   "name": "Douiss Errachidia",
+   "yearBuilt": 1992,
+   "heightM": 21.0,
+   "capacityMm3": 0.95,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.52)"
+  },
+  {
+   "name": "Mahraz",
+   "yearBuilt": 1992,
+   "heightM": 17.0,
+   "capacityMm3": 0.6,
+   "purposeCodes": "PI, PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.83)"
+  },
+  {
+   "name": "Imin El Khang",
+   "yearBuilt": 1993,
+   "heightM": 39.0,
+   "capacityMm3": 12.0,
+   "purposeCodes": "I, AN",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.82)"
+  },
+  {
+   "name": "Sahla",
+   "yearBuilt": 1994,
+   "heightM": 55.0,
+   "capacityMm3": 62.0,
+   "purposeCodes": "I, AEPI, PE",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.80)"
+  },
+  {
+   "name": "Aggay",
+   "yearBuilt": 1995,
+   "heightM": 40.0,
+   "capacityMm3": 1.25,
+   "purposeCodes": "PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.57)"
+  },
+  {
+   "name": "Enjil",
+   "yearBuilt": 1995,
+   "heightM": 36.0,
+   "capacityMm3": 12.0,
+   "purposeCodes": "I, AEP",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.50)"
+  },
+  {
+   "name": "Arabet",
+   "yearBuilt": 1995,
+   "heightM": 17.0,
+   "capacityMm3": 1.7,
+   "purposeCodes": "AEP",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Saquia El Hamra",
+   "yearBuilt": 1995,
+   "heightM": 16.0,
+   "capacityMm3": 110.0,
+   "purposeCodes": "PI, RN",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.87)"
+  },
+  {
+   "name": "Gharbia",
+   "yearBuilt": 1997,
+   "heightM": 22.0,
+   "capacityMm3": 0.75,
+   "purposeCodes": "I, AEP",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.50)"
+  },
+  {
+   "name": "Beni Yakhlef",
+   "yearBuilt": 1997,
+   "heightM": 19.0,
+   "capacityMm3": 0.03,
+   "purposeCodes": "PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.64)"
+  },
+  {
+   "name": "Barrage sur Oued Za",
+   "yearBuilt": 1998,
+   "heightM": 83.0,
+   "capacityMm3": 275.0,
+   "purposeCodes": "I, AEPI, PE",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.46)"
+  },
+  {
+   "name": "Menzel",
+   "yearBuilt": 1998,
+   "heightM": 18.0,
+   "capacityMm3": 0.16,
+   "purposeCodes": "PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.83)"
+  },
+  {
+   "name": "Bouknadil",
+   "yearBuilt": 2001,
+   "heightM": 18.7,
+   "capacityMm3": 1.0,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.53)"
+  },
+  {
+   "name": "Ait Messaoud",
+   "yearBuilt": 2002,
+   "heightM": 34.0,
+   "capacityMm3": 13.2,
+   "purposeCodes": "BC, E, AEPI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.63)"
+  },
+  {
+   "name": "Boubagra",
+   "yearBuilt": 2002,
+   "heightM": 21.0,
+   "capacityMm3": 1.8,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.57)"
+  },
+  {
+   "name": "Had Laghoualem",
+   "yearBuilt": 2002,
+   "heightM": 19.0,
+   "capacityMm3": 0.9,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.44)"
+  },
+  {
+   "name": "Bouhouta",
+   "yearBuilt": 2002,
+   "heightM": 19.0,
+   "capacityMm3": 0.9,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.83)"
+  },
+  {
+   "name": "Oulad Abbas",
+   "yearBuilt": 2002,
+   "heightM": 15.5,
+   "capacityMm3": 0.9,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.58)"
+  },
+  {
+   "name": "Draa Lagragra",
+   "yearBuilt": 2003,
+   "heightM": 24.0,
+   "capacityMm3": 4.3,
+   "purposeCodes": "I, AEP",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.52)"
+  },
+  {
+   "name": "Oued Namous",
+   "yearBuilt": 2003,
+   "heightM": 17.6,
+   "capacityMm3": 1.5,
+   "purposeCodes": "AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.46)"
+  },
+  {
+   "name": "Roknet Ennam",
+   "yearBuilt": 2003,
+   "heightM": 17.5,
+   "capacityMm3": 2.5,
+   "purposeCodes": "AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.50)"
+  },
+  {
+   "name": "Sehb El Kheyat",
+   "yearBuilt": 2003,
+   "heightM": 16.5,
+   "capacityMm3": 0.56,
+   "purposeCodes": "AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.50)"
+  },
+  {
+   "name": "Baaj",
+   "yearBuilt": 2003,
+   "heightM": 16.5,
+   "capacityMm3": 0.45,
+   "purposeCodes": "AEP",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.44)"
+  },
+  {
+   "name": "Douiss Figuig",
+   "yearBuilt": 2004,
+   "heightM": 23.0,
+   "capacityMm3": 2.35,
+   "purposeCodes": "I, AC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.60)"
+  },
+  {
+   "name": "Tamesna",
+   "yearBuilt": 2005,
+   "heightM": 66.0,
+   "capacityMm3": 56.0,
+   "purposeCodes": "PI, AEP, I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.71)"
+  },
+  {
+   "name": "Sidi M’Hamed Ben Slimane El Jazouli",
+   "yearBuilt": 2005,
+   "heightM": 60.0,
+   "capacityMm3": 17.0,
+   "purposeCodes": "AEP,I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.57)"
+  },
+  {
+   "name": "My Hassan Bel Mehdi",
+   "yearBuilt": 2005,
+   "heightM": 49.0,
+   "capacityMm3": 31.0,
+   "purposeCodes": "AEPI, I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.59)"
+  },
+  {
+   "name": "Kheng Messaoud",
+   "yearBuilt": 2005,
+   "heightM": 24.0,
+   "capacityMm3": 1.3,
+   "purposeCodes": "PI, AC, AN",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.44)"
+  },
+  {
+   "name": "Reg Aouin Kora",
+   "yearBuilt": 2005,
+   "heightM": 16.0,
+   "capacityMm3": 1.2,
+   "purposeCodes": "PI, AC, AN",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.54)"
+  },
+  {
+   "name": "Hassar",
+   "yearBuilt": 2005,
+   "heightM": 15.0,
+   "capacityMm3": 2.13,
+   "purposeCodes": "EC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.71)"
+  },
+  {
+   "name": "Touizgui Remz",
+   "yearBuilt": 2007,
+   "heightM": 18.0,
+   "capacityMm3": 78.0,
+   "purposeCodes": "AC, I, AN, EC",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Tanger Med",
+   "yearBuilt": 2008,
+   "heightM": 80.0,
+   "capacityMm3": 25.0,
+   "purposeCodes": "AEPI, PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.55)"
+  },
+  {
+   "name": "Al Himer",
+   "yearBuilt": 2008,
+   "heightM": 44.0,
+   "capacityMm3": 14.0,
+   "purposeCodes": "PI, AN",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.60)"
+  },
+  {
+   "name": "Tatiouin",
+   "yearBuilt": 2008,
+   "heightM": 18.0,
+   "capacityMm3": 0.2,
+   "purposeCodes": "I, E",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.47)"
+  },
+  {
+   "name": "Sidi Yahya",
+   "yearBuilt": 2009,
+   "heightM": 30.0,
+   "capacityMm3": 11.0,
+   "purposeCodes": "PI, I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.70)"
+  },
+  {
+   "name": "El Handak",
+   "yearBuilt": 2009,
+   "heightM": 27.0,
+   "capacityMm3": 0.1,
+   "purposeCodes": "PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.60)"
+  },
+  {
+   "name": "Chbika",
+   "yearBuilt": 2009,
+   "heightM": 24.0,
+   "capacityMm3": 1.5,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.55)"
+  },
+  {
+   "name": "Takhzrit",
+   "yearBuilt": 2009,
+   "heightM": 22.0,
+   "capacityMm3": 1.2,
+   "purposeCodes": "I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.57)"
+  },
+  {
+   "name": "Sidi El Mahjoub",
+   "yearBuilt": 2009,
+   "heightM": 22.0,
+   "capacityMm3": 1.0,
+   "purposeCodes": "AC, I, PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Mazer",
+   "yearBuilt": 2011,
+   "heightM": 47.5,
+   "capacityMm3": 13.0,
+   "purposeCodes": "PI, AN, I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.73)"
+  },
+  {
+   "name": "Sfeissif",
+   "yearBuilt": 2011,
+   "heightM": 29.0,
+   "capacityMm3": 20.0,
+   "purposeCodes": "PI, I",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.80)"
+  },
+  {
+   "name": "Abou Abbass Essabti",
+   "yearBuilt": 2012,
+   "heightM": 75.0,
+   "capacityMm3": 25.0,
+   "purposeCodes": "I, AEP,PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.44)"
+  },
+  {
+   "name": "Koudiat El Garn",
+   "yearBuilt": 2012,
+   "heightM": 54.5,
+   "capacityMm3": 33.0,
+   "purposeCodes": "PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.55)"
+  },
+  {
+   "name": "EL MALLEH Amont",
+   "yearBuilt": 2012,
+   "heightM": 49.0,
+   "capacityMm3": 35.0,
+   "purposeCodes": "PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.59)"
+  },
+  {
+   "name": "Tiouine",
+   "yearBuilt": 2013,
+   "heightM": 84.0,
+   "capacityMm3": 270.0,
+   "purposeCodes": "AEP, I, PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "Tamalout",
+   "yearBuilt": 2014,
+   "heightM": 61.0,
+   "capacityMm3": 50.0,
+   "purposeCodes": "I, AEP, PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "My Boucheta",
+   "yearBuilt": 2014,
+   "heightM": 57.5,
+   "capacityMm3": 11.6,
+   "purposeCodes": "I, AEP, PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.80)"
+  },
+  {
+   "name": "Agdez",
+   "yearBuilt": 2023,
+   "heightM": 130.0,
+   "capacityMm3": 247.0,
+   "purposeCodes": "I, AEP, PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.67)"
+  },
+  {
+   "name": "M’Daz",
+   "yearBuilt": 2025,
+   "heightM": 109.0,
+   "capacityMm3": 700.0,
+   "purposeCodes": "E, I, A.E.P.I.",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.80)"
+  },
+  {
+   "name": "Sidi Abou",
+   "yearBuilt": 2025,
+   "heightM": 71.0,
+   "capacityMm3": 200.0,
+   "purposeCodes": "I, AEP, PI",
+   "reason": "aucune correspondance OSM/Wikidata (meilleur score 0.75)"
+  }
+ ],
+ "ambiguous": [
+  {
+   "name": "Sidi Mohamed Ben Abdallah",
+   "yearBuilt": 1974,
+   "heightM": 105.0,
+   "capacityMm3": 1025.0,
+   "purposeCodes": "A.E.P.I., PI",
+   "reason": "match ambigu ou deja pris",
+   "bestScore": 0.977,
+   "candidate": "Barrage Sidi Mohammed Ben Abdallah"
+  },
+  {
+   "name": "Hassan Ii",
+   "yearBuilt": 2006,
+   "heightM": 115.0,
+   "capacityMm3": 400.0,
+   "purposeCodes": "I, AEP, PI",
+   "reason": "match ambigu ou deja pris",
+   "bestScore": 1.0,
+   "candidate": "barrage Hassan-II"
+  }
+ ],
+ "outsideAllRegions": [
+  {
+   "name": "Presa de Cabrera",
+   "lat": 27.8109784,
+   "lon": -15.5798808,
+   "url": "https://www.openstreetmap.org/node/2218020723"
+  },
+  {
+   "name": "Presa de Los Guinchos",
+   "lat": 27.8162821,
+   "lon": -15.5787527,
+   "url": "https://www.openstreetmap.org/node/2218020740"
+  },
+  {
+   "name": "Madre da Levada do Moinho da Serra",
+   "lat": 32.7092463,
+   "lon": -16.8141736,
+   "url": "https://www.openstreetmap.org/node/4469057712"
+  },
+  {
+   "name": "Madre da Levada da Rocha Vermelha",
+   "lat": 32.7857387,
+   "lon": -17.1385275,
+   "url": "https://www.openstreetmap.org/node/4472342314"
+  },
+  {
+   "name": "Madre da Levada das Cruzinhas",
+   "lat": 32.747215,
+   "lon": -16.8900936,
+   "url": "https://www.openstreetmap.org/node/4479517673"
+  },
+  {
+   "name": "Madre da Levada do Cedro Gordo",
+   "lat": 32.7506934,
+   "lon": -16.8829929,
+   "url": "https://www.openstreetmap.org/node/4479522693"
+  },
+  {
+   "name": "Madre da Levada do Lanço",
+   "lat": 32.7851729,
+   "lon": -17.0588917,
+   "url": "https://www.openstreetmap.org/node/4483935930"
+  },
+  {
+   "name": "Presa de Tahodio",
+   "lat": 28.5086765,
+   "lon": -16.2692278,
+   "url": "https://www.openstreetmap.org/way/27622538"
+  },
+  {
+   "name": "Presa del Ancón",
+   "lat": 28.1072217,
+   "lon": -16.6843528,
+   "url": "https://www.openstreetmap.org/way/28526115"
+  },
+  {
+   "name": "Presa de Gambuesa",
+   "lat": 27.8578786,
+   "lon": -15.6024511,
+   "url": "https://www.openstreetmap.org/way/32398199"
+  },
+  {
+   "name": "Presa del Parralillo",
+   "lat": 27.9930568,
+   "lon": -15.7058319,
+   "url": "https://www.openstreetmap.org/way/42374833"
+  },
+  {
+   "name": "Presa Fumero",
+   "lat": 28.4824898,
+   "lon": -16.2511815,
+   "url": "https://www.openstreetmap.org/way/50803368"
+  },
+  {
+   "name": "Embalse de los Campitos",
+   "lat": 28.4877136,
+   "lon": -16.2623517,
+   "url": "https://www.openstreetmap.org/way/50803458"
+  },
+  {
+   "name": "Presa del Río",
+   "lat": 28.1547002,
+   "lon": -16.5349968,
+   "url": "https://www.openstreetmap.org/way/51746929"
+  },
+  {
+   "name": "Presa las Casas",
+   "lat": 28.1061323,
+   "lon": -16.6845507,
+   "url": "https://www.openstreetmap.org/way/85391449"
+  },
+  {
+   "name": "Presa el Cuchillo",
+   "lat": 28.5086303,
+   "lon": -16.2303513,
+   "url": "https://www.openstreetmap.org/way/87291864"
+  },
+  {
+   "name": "Presa de Mala",
+   "lat": 29.109724,
+   "lon": -13.4778178,
+   "url": "https://www.openstreetmap.org/way/92240907"
+  },
+  {
+   "name": "Presa los Charcos",
+   "lat": 28.1891643,
+   "lon": -16.769277,
+   "url": "https://www.openstreetmap.org/way/120247152"
+  },
+  {
+   "name": "Presa de Tía Eloisa",
+   "lat": 28.1705061,
+   "lon": -16.7457926,
+   "url": "https://www.openstreetmap.org/way/124842301"
+  },
+  {
+   "name": "Presa de Valerón",
+   "lat": 28.1350346,
+   "lon": -15.6054494,
+   "url": "https://www.openstreetmap.org/way/126733847"
+  },
+  {
+   "name": "Presa del Canario",
+   "lat": 27.7834299,
+   "lon": -15.5682474,
+   "url": "https://www.openstreetmap.org/way/136051697"
+  },
+  {
+   "name": "Prese de Mulagua",
+   "lat": 28.1397566,
+   "lon": -17.1954758,
+   "url": "https://www.openstreetmap.org/way/142205799"
+  },
+  {
+   "name": "Barrage Djorf Torba",
+   "lat": 31.5100513,
+   "lon": -2.7714486,
+   "url": "https://www.openstreetmap.org/way/143796343"
+  },
+  {
+   "name": "Presa del Toriño",
+   "lat": 28.4186564,
+   "lon": -16.3425526,
+   "url": "https://www.openstreetmap.org/way/155162543"
+  },
+  {
+   "name": "Presa Depósito Superior de los Eres",
+   "lat": 28.3474411,
+   "lon": -16.4294865,
+   "url": "https://www.openstreetmap.org/way/157333051"
+  },
+  {
+   "name": "La Presa de Cuevas Blancas",
+   "lat": 27.9633088,
+   "lon": -15.5428217,
+   "url": "https://www.openstreetmap.org/way/182590678"
+  },
+  {
+   "name": "Presa de Soria",
+   "lat": 27.9052704,
+   "lon": -15.6669805,
+   "url": "https://www.openstreetmap.org/way/182590728"
+  },
+  {
+   "name": "Barrage De Sikkak",
+   "lat": 35.044964,
+   "lon": -1.3403127,
+   "url": "https://www.openstreetmap.org/way/185012389"
+  },
+  {
+   "name": "Barrage d'El Mefrouch",
+   "lat": 34.8479716,
+   "lon": -1.287075,
+   "url": "https://www.openstreetmap.org/way/185019797"
+  },
+  {
+   "name": "Presa de los Molinos",
+   "lat": 28.5123981,
+   "lon": -14.0321154,
+   "url": "https://www.openstreetmap.org/way/188348540"
+  },
+  {
+   "name": "Presa Tejina",
+   "lat": 28.5349953,
+   "lon": -16.3586341,
+   "url": "https://www.openstreetmap.org/way/195412185"
+  },
+  {
+   "name": "Presa de Siberio",
+   "lat": 27.9795327,
+   "lon": -15.7198316,
+   "url": "https://www.openstreetmap.org/way/201484088"
+  },
+  {
+   "name": "Presa Charca de Don Eduardo",
+   "lat": 28.522694,
+   "lon": -16.3296428,
+   "url": "https://www.openstreetmap.org/way/236856141"
+  },
+  {
+   "name": "Barage Beni Bahdel",
+   "lat": 34.6990788,
+   "lon": -1.5098836,
+   "url": "https://www.openstreetmap.org/way/302768597"
+  },
+  {
+   "name": "Presa de Sansó",
+   "lat": 28.0642319,
+   "lon": -15.6824112,
+   "url": "https://www.openstreetmap.org/way/312744903"
+  },
+  {
+   "name": "Barrage Beni Bahdel",
+   "lat": 34.7118315,
+   "lon": -1.5035722,
+   "url": "https://www.openstreetmap.org/way/316753134"
+  },
+  {
+   "name": "Presa de Tabares",
+   "lat": 28.4983096,
+   "lon": -16.2955852,
+   "url": "https://www.openstreetmap.org/way/320482843"
+  },
+  {
+   "name": "Presa de Chira",
+   "lat": 27.9054003,
+   "lon": -15.6413295,
+   "url": "https://www.openstreetmap.org/way/338768679"
+  },
+  {
+   "name": "Barrage de Hammam Boughrara",
+   "lat": 34.8852331,
+   "lon": -1.6485136,
+   "url": "https://www.openstreetmap.org/way/381317217"
+  },
+  {
+   "name": "Presa de la Heredad de Arucas",
+   "lat": 28.1214374,
+   "lon": -15.5365405,
+   "url": "https://www.openstreetmap.org/way/404072093"
+  },
+  {
+   "name": "Barrage F'dérick",
+   "lat": 22.6916649,
+   "lon": -12.7116541,
+   "url": "https://www.openstreetmap.org/way/452103697"
+  },
+  {
+   "name": "Presa de Jiménez",
+   "lat": 28.0960645,
+   "lon": -16.6330794,
+   "url": "https://www.openstreetmap.org/way/474699736"
+  },
+  {
+   "name": "Presa Vieja",
+   "lat": 28.1281044,
+   "lon": -16.7546724,
+   "url": "https://www.openstreetmap.org/way/486235187"
+  },
+  {
+   "name": "Presa Los Pepes",
+   "lat": 28.1338195,
+   "lon": -16.7574583,
+   "url": "https://www.openstreetmap.org/way/486235196"
+  },
+  {
+   "name": "Presa de Valle Grande",
+   "lat": 28.5057522,
+   "lon": -16.2332313,
+   "url": "https://www.openstreetmap.org/way/486956138"
+  },
+  {
+   "name": "Presa Barranco el Saltadero",
+   "lat": 28.0454333,
+   "lon": -16.618795,
+   "url": "https://www.openstreetmap.org/way/490537213"
+  },
+  {
+   "name": "Presa Barranco el Espinal 3",
+   "lat": 28.5428372,
+   "lon": -16.3795885,
+   "url": "https://www.openstreetmap.org/way/492571750"
+  },
+  {
+   "name": "Presa Barranco el Espinal 2",
+   "lat": 28.542007,
+   "lon": -16.379081,
+   "url": "https://www.openstreetmap.org/way/492574531"
+  },
+  {
+   "name": "Presa Barranco el Espinal 1",
+   "lat": 28.539407,
+   "lon": -16.3780231,
+   "url": "https://www.openstreetmap.org/way/492574532"
+  },
+  {
+   "name": "Presa Pasada del Camello",
+   "lat": 28.176151,
+   "lon": -16.7858009,
+   "url": "https://www.openstreetmap.org/way/492591181"
+  },
+  {
+   "name": "Presa de Curbelo",
+   "lat": 28.1213731,
+   "lon": -16.7670968,
+   "url": "https://www.openstreetmap.org/way/494667492"
+  },
+  {
+   "name": "Presa de Don Hipólito",
+   "lat": 28.5208388,
+   "lon": -16.3276621,
+   "url": "https://www.openstreetmap.org/way/494806615"
+  },
+  {
+   "name": "Presa la Felipa",
+   "lat": 28.0818424,
+   "lon": -16.6175211,
+   "url": "https://www.openstreetmap.org/way/495531789"
+  },
+  {
+   "name": "Barragem do Pico da Urze",
+   "lat": 32.7538019,
+   "lon": -17.1189717,
+   "url": "https://www.openstreetmap.org/way/659769166"
+  },
+  {
+   "name": "Presa Barranco el Espinal 4",
+   "lat": 28.5434309,
+   "lon": -16.3796805,
+   "url": "https://www.openstreetmap.org/way/1276202251"
+  },
+  {
+   "name": "Presa",
+   "lat": 28.4791696,
+   "lon": -16.2549222,
+   "url": "https://www.openstreetmap.org/way/1327383905"
+  },
+  {
+   "name": "Barragem da Portela",
+   "lat": 32.7404023,
+   "lon": -16.8427723,
+   "url": "https://www.openstreetmap.org/way/1498610052"
+  }
+ ]
+}

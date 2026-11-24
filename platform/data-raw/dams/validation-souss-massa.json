@@ -1,0 +1,128 @@
+[
+ {
+  "name": "Moulay Abdellah",
+  "refCoord": [
+   30.773338,
+   -9.675681
+  ],
+  "refSource": "https://www.openstreetmap.org/relation/5961856",
+  "matched": "Barrage Moulay Abdellah",
+  "score": 1.0,
+  "locationUrlInOsmUrls": false,
+  "osmKm": 1.63,
+  "wikidataKm": null,
+  "note": "reference region.json = point OSM : l'ecart OSM est circulaire, seul wikidataKm est independant"
+ },
+ {
+  "name": "Dkhila",
+  "refCoord": [
+   30.569422,
+   -9.2854089
+  ],
+  "refSource": "https://www.openstreetmap.org/way/387880522",
+  "matched": "Barrage Dkhila",
+  "score": 1.0,
+  "locationUrlInOsmUrls": true,
+  "osmKm": 0.02,
+  "wikidataKm": null,
+  "note": "reference region.json = point OSM : l'ecart OSM est circulaire, seul wikidataKm est independant"
+ },
+ {
+  "name": "Ahl Souss",
+  "refCoord": [
+   30.0537593,
+   -9.1284082
+  ],
+  "refSource": "https://www.openstreetmap.org/way/119569970",
+  "matched": "Barrage Ahl Souss",
+  "score": 1.0,
+  "locationUrlInOsmUrls": true,
+  "osmKm": 0.02,
+  "wikidataKm": null,
+  "note": "reference region.json = point OSM : l'ecart OSM est circulaire, seul wikidataKm est independant"
+ },
+ {
+  "name": "Aoulouz",
+  "refCoord": [
+   30.705819,
+   -8.111548
+  ],
+  "refSource": "https://www.openstreetmap.org/way/385098917",
+  "matched": "Barrage Aoulouz",
+  "score": 1.0,
+  "locationUrlInOsmUrls": true,
+  "osmKm": 2.89,
+  "wikidataKm": 0.48,
+  "note": "reference region.json = point OSM : l'ecart OSM est circulaire, seul wikidataKm est independant"
+ },
+ {
+  "name": "Sidi Abdellah",
+  "refCoord": [
+   30.6359993,
+   -8.8243217
+  ],
+  "refSource": "https://www.openstreetmap.org/way/409855136",
+  "matched": "Barrage Sidi Abdellah",
+  "score": 1.0,
+  "locationUrlInOsmUrls": true,
+  "osmKm": 0.0,
+  "wikidataKm": 0.05,
+  "note": "reference region.json = point OSM : l'ecart OSM est circulaire, seul wikidataKm est independant"
+ },
+ {
+  "name": "Youssef Ben Tachfine",
+  "refCoord": [
+   29.809193,
+   -9.472591
+  ],
+  "refSource": "https://www.openstreetmap.org/way/385158725",
+  "matched": "Barrage Youssef ben Tachfine",
+  "score": 1.0,
+  "locationUrlInOsmUrls": true,
+  "osmKm": 4.59,
+  "wikidataKm": 4.56,
+  "note": "reference region.json = point OSM : l'ecart OSM est circulaire, seul wikidataKm est independant"
+ },
+ {
+  "name": "Abdelmoumen",
+  "refCoord": [
+   30.690474,
+   -9.20762
+  ],
+  "refSource": "https://www.openstreetmap.org/way/289868587",
+  "matched": "Barrage Abdelmoumen",
+  "score": 1.0,
+  "locationUrlInOsmUrls": true,
+  "osmKm": 1.88,
+  "wikidataKm": null,
+  "note": "reference region.json = point OSM : l'ecart OSM est circulaire, seul wikidataKm est independant"
+ },
+ {
+  "name": "Imi El Kheng",
+  "refCoord": [
+   30.6671908,
+   -8.5321919
+  ],
+  "refSource": "https://www.openstreetmap.org/way/179486552",
+  "matched": "Barrage Imi El Kheng",
+  "score": 1.0,
+  "locationUrlInOsmUrls": true,
+  "osmKm": 0.01,
+  "wikidataKm": null,
+  "note": "reference region.json = point OSM : l'ecart OSM est circulaire, seul wikidataKm est independant"
+ },
+ {
+  "name": "Mokhtar Soussi",
+  "refCoord": [
+   30.7278015,
+   -7.9722821
+  ],
+  "refSource": "https://www.openstreetmap.org/way/197857304",
+  "matched": "Barrage Moukthar Soussi",
+  "score": 0.96,
+  "locationUrlInOsmUrls": false,
+  "osmKm": 1.11,
+  "wikidataKm": 1.06,
+  "note": "reference region.json = point OSM : l'ecart OSM est circulaire, seul wikidataKm est independant"
+ }
+]

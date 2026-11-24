@@ -1,0 +1,13 @@
+/* Layout of the temporary #/kit page only */
+.kit-top { display: flex; justify-content: space-between; align-items: center; gap: var(--az-sp-4); padding-block: var(--az-sp-4); }
+.kit-top .az-row { flex-wrap: nowrap; }
+.kit-word { font-family: var(--az-font-display); font-size: 1.25rem; font-weight: 600; letter-spacing: 0.02em; text-transform: uppercase; }
+.kit-hero { display: flex; flex-direction: column; gap: var(--az-sp-5); padding-block: var(--az-sp-8) var(--az-sp-7); }
+.kit-deep { overflow: hidden; }
+.kit-nowrap { white-space: nowrap; }
+.kit-scroll { margin-top: var(--az-sp-5); }
+.kit-body { display: flex; flex-direction: column; gap: var(--az-sp-6); padding-block: var(--az-sp-7); }
+.kit-section { display: flex; flex-direction: column; gap: var(--az-sp-4); }
+.kit-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--az-sp-5); padding-block: var(--az-sp-4); border-block: var(--az-hairline) solid var(--az-line); }
+.kit-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: var(--az-gutter); }
+.kit-foot { padding-block: var(--az-sp-6); border-top: var(--az-hairline) solid var(--az-line); }

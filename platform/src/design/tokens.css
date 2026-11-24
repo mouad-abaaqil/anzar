@@ -1,0 +1,192 @@
+/* Anzar design tokens: the only file in src/ allowed to hold colour literals and font stacks.
+   Spec: docs/DESIGN_ANZAR_V2.md (palette v2, light "eau" theme) and docs/DESIGN_ANZAR.md (grid, type,
+   motion). All names start with --az-. Colours that MapLibre needs as strings are generated into
+   src/design/colors.js (npm run gen:colors); never edit that file by hand.
+   Palette derived from the SRM icons (public/brand/operators/icons): SRM blue #12508F as ink and
+   accent, SRM yellow #FAB61F for the call to action, SRM green #57B24A for "confortable". */
+:root {
+  /* Surfaces: light sky. Elevation = white panel + hairline on a pale sky background */
+  --az-bg: #f4f8fb;
+  --az-surface-1: #ffffff;
+  --az-surface-2: #e8f0f7;
+  --az-surface-3: #ffffff;
+  --az-scrim: rgba(10, 37, 64, 0.48);
+  --az-tile: #ffffff; /* behind the 12 SRM icons (opaque PNG on white) */
+  --az-page: #f4f8fb; /* = --az-bg, but never remapped by .az-deep (wave edges) */
+
+  /* Hairlines (decorative, < 3:1) and control borders (>= 3:1 on every surface) */
+  --az-line: #dbe5ee;
+  --az-line-strong: #c3d2df;
+  --az-line-control: #6a859e;
+
+  /* Text: deep navy ink derived from the SRM blue */
+  --az-text: #0a2540;
+  --az-text-muted: #3d5a78;
+  --az-text-faint: #526b84;
+
+  /* Accent = SRM blue: links, selection, focus, key figure. Not a data colour. */
+  --az-accent: #12508f;
+  --az-accent-hover: #0d3f73;
+  --az-accent-ink: #ffffff;
+  --az-accent-soft: rgba(18, 80, 143, 0.08);
+
+  /* Action = SRM yellow (sun): primary call to action only (button fill), never text on light */
+  --az-action: #fab61f;
+  --az-action-hover: #ffc94d;
+  --az-action-ink: #0a2540;
+  --az-action-edge: #a87500;
+  --az-sun: #fab61f;
+
+  /* Water: illustrations, waves, map water. Vivid azure, distinct from the accent and the flux scale */
+  --az-water: #2f9be0;
+  --az-water-soft: #d6ecfa;
+  --az-sky: #eaf4fb;
+
+  /* Editorial secondary (one word of a title, a micro-label): text-safe dark gold. Never data. */
+  --az-ochre: #8a5a00;
+  --az-ochre-ink: #ffffff;
+  --az-coral: #e4572e; /* legacy logo accent, kept for old pages only */
+
+  /* Data bands (reserve months). Each band also has a mandatory glyph: see DESIGN_ANZAR_V2.md.
+     --az-band-* = text-safe ink (>= 4.5:1 on every surface); --az-band-*-fill = map / swatch fill.
+     Fills get darker as the situation worsens (luminance 0.34 > 0.21 > 0.09), so they separate in
+     grayscale and for colour-blind readers too. --az-band-*-on = glyph colour on the fill. */
+  --az-band-critique: #a8201a;
+  --az-band-tendu: #8c5300;
+  --az-band-confortable: #256f1e;
+  --az-band-na: #6a859e;
+  --az-band-critique-fill: #a8201a;
+  --az-band-tendu-fill: #c8600c;
+  --az-band-confortable-fill: #57b24a;
+  --az-band-na-fill: #cdd8e2;
+  --az-band-critique-on: #ffffff;
+  --az-band-tendu-on: #ffffff;
+  --az-band-confortable-on: #0a2540;
+
+  /* Sahara flows (desalination / drinking demand): sequential blues, low (lighter) to high (darker).
+     flux-0 stays >= 3:1 on every light surface. */
+  --az-flux-0: #4589c2;
+  --az-flux-1: #2e6fae;
+  --az-flux-2: #1d5797;
+  --az-flux-3: #0b3a6e;
+  --az-flux-on: #ffffff; /* glyph on a flux swatch */
+
+  /* Feedback (UI messages, not data) */
+  --az-danger: #b3261e;
+  --az-success: #256f1e;
+
+  /* Focus ring */
+  --az-focus: #12508f;
+
+  /* Shadows: soft, blue-tinted (light UI) */
+  --az-shadow-pop: 0 12px 32px rgba(10, 37, 64, 0.14), 0 0 0 1px rgba(10, 37, 64, 0.06);
+  --az-shadow-sheet: 0 -8px 40px rgba(10, 37, 64, 0.18);
+
+  /* Deep surfaces ("profondeur"): hero and story sections in SRM blue, darker going down.
+     Apply with the .az-deep class (kit.css), which remaps the base tokens to these. */
+  --az-deep-bg: #12508f;
+  --az-deep-bg-2: #0a2e57;
+  --az-deep-surface-1: #0e467f;
+  --az-deep-surface-2: #0b3d72;
+  --az-deep-surface-3: #0a3566;
+  --az-deep-line: #2a659f;
+  --az-deep-line-strong: #3d76ad;
+  --az-deep-line-control: #8fb4da;
+  --az-deep-text: #ffffff;
+  --az-deep-text-muted: #cfe3f5;
+  --az-deep-text-faint: #a9c8e6;
+  --az-deep-accent: #fab61f;
+  --az-deep-accent-hover: #ffc94d;
+  --az-deep-accent-ink: #0a2540;
+  --az-deep-accent-soft: rgba(250, 182, 31, 0.14);
+  --az-deep-water: #8fd3f7;
+  --az-deep-band-critique: #ffb0a6;
+  --az-deep-band-tendu: #ffd27f;
+  --az-deep-band-confortable: #a8e69a;
+  --az-deep-focus: #fab61f;
+  --az-deep-scrim: rgba(4, 18, 36, 0.6);
+
+  /* Map (MapLibre, via colors.js): light basemap, blue-grey relief, vivid water */
+  --az-map-land: #f2f4f1;
+  --az-map-water: #2f9be0;
+  --az-map-water-line: #1d7fc4;
+  --az-map-hillshade-shadow: #47596b;
+  --az-map-hillshade-highlight: #ffffff;
+  --az-map-hillshade-accent: #8d9cab;
+  --az-map-label: #0a2540;
+  --az-map-halo: #ffffff;
+  --az-map-boundary: #12508f;
+  --az-map-selection: #fab61f;
+  --az-map-selection-casing: #0a2540;
+  --az-map-light: #ffffff;
+
+  /* Fonts (OFL, @fontsource, imported in src/main.jsx) */
+  --az-font-display: 'IBM Plex Sans Condensed', 'Arial Narrow', system-ui, sans-serif;
+  --az-font-text: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --az-font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Type scale */
+  --az-fs-hero: clamp(2.75rem, 11vw, 9.5rem);
+  --az-fs-h1: clamp(2.5rem, 6vw, 5.5rem);
+  --az-fs-h2: clamp(1.75rem, 3.2vw, 2.75rem);
+  --az-fs-h3: 1.375rem;
+  --az-fs-stat: clamp(2.5rem, 5vw, 4rem);
+  --az-fs-body: 1rem;
+  --az-fs-small: 0.875rem;
+  --az-fs-micro: 0.75rem;
+  --az-lh-tight: 0.92;
+  --az-lh-heading: 1.05;
+  --az-lh-body: 1.5;
+  --az-tracking-micro: 0.14em;
+  --az-tracking-display: -0.01em;
+
+  /* Spacing (4 px base) */
+  --az-sp-1: 4px;
+  --az-sp-2: 8px;
+  --az-sp-3: 12px;
+  --az-sp-4: 16px;
+  --az-sp-5: 24px;
+  --az-sp-6: 32px;
+  --az-sp-7: 48px;
+  --az-sp-8: 64px;
+  --az-sp-9: 96px;
+  --az-sp-10: 128px;
+
+  /* Layout grid */
+  --az-max: 1440px;
+  --az-gutter: 24px;
+  --az-margin: clamp(16px, 4vw, 48px);
+  --az-hairline: 1px;
+  --az-touch: 44px;
+  --az-sheet-w: 420px;
+
+  /* Radii: sharp by default */
+  --az-r-xs: 2px;
+  --az-r-sm: 4px;
+  --az-r-md: 8px;
+  --az-r-lg: 14px;
+  --az-r-pill: 999px;
+
+  /* Stacking */
+  --az-z-base: 0;
+  --az-z-sticky: 10;
+  --az-z-popover: 50;
+  --az-z-scrim: 80;
+  --az-z-sheet: 90;
+  --az-z-toast: 100;
+
+  /* Motion */
+  --az-dur-1: 120ms;
+  --az-dur-2: 200ms;
+  --az-dur-3: 320ms;
+  --az-ease-out: cubic-bezier(0.2, 0, 0, 1);
+  --az-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --az-dur-1: 1ms;
+    --az-dur-2: 1ms;
+    --az-dur-3: 1ms;
+  }
+}

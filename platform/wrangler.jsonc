@@ -1,0 +1,9 @@
+{
+  // Anzar : site statique servi par un Worker Cloudflare (assets seuls, pas d'API Node).
+  // Pas de « single-page-application » : l'app utilise des routes à hash, et /api/* doit répondre 404 (pas index.html).
+  "name": "anzar",
+  "compatibility_date": "2026-11-01",
+  "assets": { "directory": "./dist", "not_found_handling": "404-page" },
+  "routes": [{ "pattern": "anzar.abq.capital", "custom_domain": true }],
+  "workers_dev": true
+}

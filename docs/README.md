@@ -5,6 +5,7 @@ Lire d'abord [`../HANDOFF.md`](../HANDOFF.md) (but, façon de travailler, état,
 | Document | Contenu |
 | --- | --- |
 | [HISTORY.md](HISTORY.md) | journal détaillé du développement, décisions et résultats chiffrés |
+| [DESIGN_ANZAR.md](DESIGN_ANZAR.md) | **système de design de la refonte** (thème sombre, tokens, typographie, bandes, provenance, écriture, contrôle `npm run check:design`) |
 | [DESIGN_SPEC.md](DESIGN_SPEC.md) | spécification de design (couleurs du logo, typographie, composants, interdits) |
 | [FORECAST_SCHEMAS.md](FORECAST_SCHEMAS.md) | schémas de `storage-reconstruction.json` et `fill-forecast.json` |
 | [BRAND.md](BRAND.md) | provenance du logo SRM-SM, palette mesurée, contexte RAMSA |

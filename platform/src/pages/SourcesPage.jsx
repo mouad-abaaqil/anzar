@@ -1,7 +1,7 @@
 import { ArrowDownToLine, ExternalLink, FileText, ShieldCheck } from 'lucide-react';
 import { date } from '../lib/format.js';
 
-export default function SourcesPage({ data, onExport }) {
+export default function SourcesPage({ data, onExport, weatherPlace = 'Agadir' }) {
   return (
     <div className="sources-page">
       <section className="source-overview">
@@ -24,7 +24,7 @@ export default function SourcesPage({ data, onExport }) {
         </article>
         <article>
           <h3>Météo modélisée</h3>
-          <p>Données Open-Meteo pour Agadir. Elles fournissent un contexte météorologique, sans mesurer la qualité de l’eau.</p>
+          <p>Données Open-Meteo pour {weatherPlace}. Elles fournissent un contexte météorologique, sans mesurer la qualité de l’eau.</p>
         </article>
       </div>
 

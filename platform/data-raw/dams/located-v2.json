@@ -1,0 +1,4204 @@
+[
+ {
+  "id": "ahmed-el-hansali",
+  "name": "Ahmed El Hansali",
+  "lat": 32.693199,
+  "lon": -5.888425,
+  "regionId": "beni-mellal-khenifra",
+  "basin": "Oum Er-Rbia",
+  "river": null,
+  "capacityMm3": 697.2,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/385347001",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/385347001",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "سد أحمد الحنصالي",
+  "yearBuilt": 2001,
+  "purpose": "E, AEPI, I",
+  "heightM": 101.0,
+  "wikipediaMatch": {
+   "row": "Ahmed El Hansali",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 740.0,
+  "capacityCheck": {
+   "bulletinName": "Ahmed El Hanssali",
+   "joinConfidence": "fort",
+   "stockMm3": 572.16,
+   "fillPct": 82.07,
+   "derivedCapacityMm3": 697.2,
+   "wikipediaMm3": 740.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "ait-ouarda",
+  "name": "Ait Ouarda",
+  "lat": 32.108977,
+  "lon": -6.509732,
+  "regionId": "beni-mellal-khenifra",
+  "basin": null,
+  "river": null,
+  "capacityMm3": 4.0,
+  "capacityMm3Source": "wikipedia",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/834066953",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/834066953",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q2884923",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1953,
+  "purpose": "E,I,BC",
+  "heightM": 43.0,
+  "wikipediaMatch": {
+   "row": "Ait Ouarda",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 4.0
+ },
+ {
+  "id": "barrage-bin-el-ouidane",
+  "name": "Bin el Ouidane",
+  "lat": 32.105857,
+  "lon": -6.464359,
+  "regionId": "beni-mellal-khenifra",
+  "basin": "Oum Er-Rbia",
+  "river": null,
+  "capacityMm3": 1273.4,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/428259386",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/428259386",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/504108035",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q2884936",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrage Bin el Ouidane (32.106667, -6.463889)",
+    "url": "https://fr.wikipedia.org/?curid=416804",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia en, Bin el Ouidane Dam (32.10666667, -6.46361111)",
+    "url": "https://en.wikipedia.org/?curid=32836327",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126), ligne « Bine El Ouidane »",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1953,
+  "coordSourceType": "osm",
+  "status": "corrigé",
+  "note": "Aucune erreur de coordonnee : la ligne Wikipedia « Bine El Ouidane » n avait pas ete jointe a cause de l orthographe. Jointure ajoutee ; points OSM/Wikipedia a moins de 0,1 km.",
+  "regionCheck": "ok",
+  "heightM": 133.0,
+  "purpose": "E, I",
+  "wikipediaMatch": {
+   "row": "Bine El Ouidane",
+   "score": null,
+   "joinedBy": "revue manuelle (resolve-notes.md)"
+  },
+  "capacityWikipediaMm3": 1384.0,
+  "capacityCheck": {
+   "bulletinName": "Bin El Ouidane",
+   "joinConfidence": "fort",
+   "stockMm3": 1004.98,
+   "fillPct": 78.92,
+   "derivedCapacityMm3": 1273.4,
+   "wikipediaMm3": 1384.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "hassan-premier",
+  "name": "Hassan Premier",
+  "lat": 31.814353,
+  "lon": -6.824198,
+  "regionId": "beni-mellal-khenifra",
+  "basin": "Oum Er-Rbia",
+  "river": null,
+  "capacityMm3": 229.7,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/401967077",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/401967077",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q64483",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1986,
+  "purpose": "I, E, A.E.P.I.",
+  "heightM": 145.0,
+  "wikipediaMatch": {
+   "row": "Hassan Premier",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 262.5,
+  "capacityCheck": {
+   "bulletinName": "Hassan 1er",
+   "joinConfidence": "fort",
+   "stockMm3": 187.26,
+   "fillPct": 81.51,
+   "derivedCapacityMm3": 229.7,
+   "wikipediaMm3": 262.5,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "moulay-youssef",
+  "name": "Moulay Youssef",
+  "lat": 31.646583,
+  "lon": -7.261431,
+  "regionId": "beni-mellal-khenifra",
+  "basin": "Oum Er-Rbia",
+  "river": null,
+  "capacityMm3": 128.6,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/504108037",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/504108037",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1970,
+  "purpose": "E,I",
+  "heightM": 100.0,
+  "wikipediaMatch": {
+   "row": "Moulay Youssef",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 175.0,
+  "capacityCheck": {
+   "bulletinName": "Moulay Youssef",
+   "joinConfidence": "fort",
+   "stockMm3": 109.07,
+   "fillPct": 84.83,
+   "derivedCapacityMm3": 128.6,
+   "wikipediaMm3": 175.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "barrage-tanafnit-el-borj",
+  "name": "barrage Tanafnit El Borj",
+  "lat": 33.078056,
+  "lon": -5.502778,
+  "regionId": "beni-mellal-khenifra",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q2884993",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q2884993",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "al-massira",
+  "name": "Al Massira",
+  "lat": 32.481053,
+  "lon": -7.634016,
+  "regionId": "casablanca-settat",
+  "basin": "Oum Er-Rbia",
+  "river": null,
+  "capacityMm3": 2649.8,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/218859983",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/218859983",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q2884929",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1979,
+  "purpose": "E, I, A.E.P.I.",
+  "heightM": 82.0,
+  "wikipediaMatch": {
+   "row": "Al Massira",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 2760.0,
+  "capacityCheck": {
+   "bulletinName": "Al Massira",
+   "joinConfidence": "fort",
+   "stockMm3": 1107.1,
+   "fillPct": 41.78,
+   "derivedCapacityMm3": 2649.8,
+   "wikipediaMm3": 2760.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "barage-mazer",
+  "name": "Barage Mazer",
+  "lat": 33.106944,
+  "lon": -7.463611,
+  "regionId": "casablanca-settat",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q29083012",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q29083012",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barage-tamadroust",
+  "name": "Barage Tamadroust",
+  "lat": 33.004444,
+  "lon": -7.485278,
+  "regionId": "casablanca-settat",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q29083025",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q29083025",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "daourat",
+  "name": "Daourat",
+  "lat": 32.936048,
+  "lon": -8.063388,
+  "regionId": "casablanca-settat",
+  "basin": "Oum Er-Rbia",
+  "river": null,
+  "capacityMm3": 5.1,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/321054222",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/321054222",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q2884934",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1950,
+  "purpose": "E",
+  "heightM": 40.0,
+  "wikipediaMatch": {
+   "row": "Daourat",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 9.5,
+  "capacityCheck": {
+   "bulletinName": "Douarat",
+   "joinConfidence": "fort",
+   "stockMm3": 3.28,
+   "fillPct": 64.38,
+   "derivedCapacityMm3": 5.1,
+   "wikipediaMm3": 9.5,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "sidi-said-maachou",
+  "name": "Sidi Said Maachou",
+  "lat": 33.142741,
+  "lon": -8.106635,
+  "regionId": "casablanca-settat",
+  "basin": "Oum Er-Rbia",
+  "river": "Oum Errabiaa",
+  "capacityMm3": 0.8,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/776744489",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/776744489",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q2884987",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "basinMethod": "river-keyword",
+  "yearBuilt": 1929,
+  "purpose": "E,A.E.P.I.",
+  "heightM": 29.0,
+  "wikipediaMatch": {
+   "row": "Sidi Said Maachou",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 2.0,
+  "capacityCheck": {
+   "bulletinName": "Sidi Said Maachou",
+   "joinConfidence": "fort",
+   "stockMm3": 0.47,
+   "fillPct": 60.8,
+   "derivedCapacityMm3": 0.8,
+   "wikipediaMm3": 2.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "barrage-de-l-oued-al-maleh",
+  "name": "barrage de l'Oued al Maleh",
+  "lat": 33.506944,
+  "lon": -7.339722,
+  "regionId": "casablanca-settat",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q27513866",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q27513866",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1930,
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "achbarou",
+  "name": "Achbarou",
+  "lat": 31.154754,
+  "lon": -5.092003,
+  "regionId": "draa-tafilalet",
+  "basin": null,
+  "river": null,
+  "capacityMm3": 1.0,
+  "capacityMm3Source": "wikipedia",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/178676135",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/178676135",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1986,
+  "purpose": "I, AC, AN",
+  "heightM": 20.0,
+  "wikipediaMatch": {
+   "row": "Achbarou",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 1.0
+ },
+ {
+  "id": "barage-timkit",
+  "name": "Barage Timkit",
+  "lat": 31.639522,
+  "lon": -5.322908,
+  "regionId": "draa-tafilalet",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/953976738",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/953976738",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-douiss",
+  "name": "Douiss (Errachidia)",
+  "lat": 31.911275,
+  "lon": -3.511415,
+  "regionId": "draa-tafilalet",
+  "basin": null,
+  "river": null,
+  "capacityMm3": 0.95,
+  "capacityMm3Source": "wikipedia",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/1103664850",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/1103664850",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126), ligne « Douiss Errachidia »",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "corrigé",
+  "note": "Nominatim/OSM : « Barrage Douiss », caidat d Oued Naam, cercle et province d Errachidia (retenue way 1103665206, 0,5 km). Rattache a « Douiss Errachidia » (0,95 Mm3) ; « Douiss Figuig » reste non localise. Une seule source.",
+  "regionCheck": "ok",
+  "yearBuilt": 1992,
+  "heightM": 21.0,
+  "purpose": "I, AC",
+  "wikipediaMatch": {
+   "row": "Douiss Errachidia",
+   "score": null,
+   "joinedBy": "revue manuelle (resolve-notes.md)"
+  },
+  "capacityWikipediaMm3": 0.95
+ },
+ {
+  "id": "barrage-taghaddoute",
+  "name": "Barrage Taghaddoute",
+  "lat": 30.620162,
+  "lon": -7.29899,
+  "regionId": "draa-tafilalet",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/402187851",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/402187851",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-tizgui",
+  "name": "Barrage Tizgui",
+  "lat": 30.821335,
+  "lon": -6.561587,
+  "regionId": "draa-tafilalet",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/1119407149",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/1119407149",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q31869953",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-de-jdeid-under-construction",
+  "name": "Barrage de Jdeid (Under Construction)",
+  "lat": 30.84656,
+  "lon": -4.203068,
+  "regionId": "draa-tafilalet",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/1292417117",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/1292417117",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-de-tamtattouchte",
+  "name": "Barrage de Tamtattouchte",
+  "lat": 31.65626,
+  "lon": -5.572992,
+  "regionId": "draa-tafilalet",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/1120079645",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/1120079645",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-de-derivation-el-bourouj",
+  "name": "Barrage de dérivation El bourouj",
+  "lat": 31.503091,
+  "lon": -4.19144,
+  "regionId": "draa-tafilalet",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/1579879522",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/1579879522",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-de-derivation-lahmida",
+  "name": "Barrage de dérivation Lahmida",
+  "lat": 31.507988,
+  "lon": -4.327203,
+  "regionId": "draa-tafilalet",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/205829447",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/205829447",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "سد التحويلي الحميدة",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-de-derivation-moulay-brahim",
+  "name": "Barrage de dérivation Moulay Brahim",
+  "lat": 31.435604,
+  "lon": -4.30153,
+  "regionId": "draa-tafilalet",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/639373444",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/639373444",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-du-bleida",
+  "name": "Barrage du Bleida",
+  "lat": 30.367428,
+  "lon": -6.434469,
+  "regionId": "draa-tafilalet",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/1378426654",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/1378426654",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "hassan-addakhil",
+  "name": "Hassan Addakhil",
+  "lat": 31.993151,
+  "lon": -4.460834,
+  "regionId": "draa-tafilalet",
+  "basin": "Guir-Ziz-Gheris",
+  "river": null,
+  "capacityMm3": 287.6,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/396771343",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/396771343",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1971,
+  "purpose": "I,EC",
+  "heightM": 85.0,
+  "wikipediaMatch": {
+   "row": "Hassan Addakhil",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 347.0,
+  "capacityCheck": {
+   "bulletinName": "Hassan Addakhil",
+   "joinConfidence": "fort",
+   "stockMm3": 229.73,
+   "fillPct": 79.89,
+   "derivedCapacityMm3": 287.6,
+   "wikipediaMm3": 347.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "kaddoussa",
+  "name": "Kaddoussa",
+  "lat": 32.166265,
+  "lon": -3.785949,
+  "regionId": "draa-tafilalet",
+  "basin": "Guir-Ziz-Gheris",
+  "river": null,
+  "capacityMm3": 224.2,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/1080725441",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/1080725441",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 2021,
+  "purpose": "I, AEP, PI",
+  "heightM": 62.0,
+  "wikipediaMatch": {
+   "row": "Kaddoussa",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 220.0,
+  "capacityCheck": {
+   "bulletinName": "Kadoussa",
+   "joinConfidence": "fort",
+   "stockMm3": 96.38,
+   "fillPct": 42.99,
+   "derivedCapacityMm3": 224.2,
+   "wikipediaMm3": 220.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "mansour-eddahbi",
+  "name": "Mansour Eddahbi",
+  "lat": 30.912449,
+  "lon": -6.759506,
+  "regionId": "draa-tafilalet",
+  "basin": "Draa-Oued Noun",
+  "river": null,
+  "capacityMm3": 445.3,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/315079634",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/315079634",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q27533560",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1972,
+  "purpose": "E, I",
+  "heightM": 70.0,
+  "wikipediaMatch": {
+   "row": "Mansour Eddahbi",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 529.0,
+  "capacityCheck": {
+   "bulletinName": "Manssour Dahbi",
+   "joinConfidence": "fort",
+   "stockMm3": 220.23,
+   "fillPct": 49.46,
+   "derivedCapacityMm3": 445.3,
+   "wikipediaMm3": 529.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "tiniourkane-dam",
+  "name": "Tiniourkane Dam",
+  "lat": 31.244398,
+  "lon": -5.569199,
+  "regionId": "draa-tafilalet",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/482566078",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/482566078",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-hassan-ii-2",
+  "name": "Hassan II (Midelt)",
+  "lat": 32.7916,
+  "lon": -4.76837,
+  "regionId": "draa-tafilalet",
+  "basin": "Moulouya",
+  "river": null,
+  "capacityMm3": 353.7,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q2884951",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q2884951",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrage Hassan II : coordonnees 32.7916, -4.76837 (le texte de la page parle a tort de l oued Za)",
+    "url": "https://fr.wikipedia.org/?curid=4077379",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia en, Hassan II Dam (32.7914, -4.7681)",
+    "url": "https://en.wikipedia.org/?curid=41887720",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "OpenStreetMap relation 5745429 (retenue, centre 32.8181, -4.8048, a 4,5 km)",
+    "url": "https://www.openstreetmap.org/relation/5745429",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126), ligne « Hassan Ii »",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "corrigé",
+  "note": "Ligne « Hassan Ii » (2006, 115 m, 400 Mm3) jointe : barrage sur la Moulouya a 13 km au nord de Midelt (Wikipedia en) ; bulletin 2026-11-23 : Hassan 2 dans le bassin Moulouya.",
+  "regionCheck": "ok",
+  "yearBuilt": 2006,
+  "heightM": 115.0,
+  "purpose": "I, AEP, PI",
+  "wikipediaMatch": {
+   "row": "Hassan Ii",
+   "score": null,
+   "joinedBy": "revue manuelle (resolve-notes.md)"
+  },
+  "capacityWikipediaMm3": 400.0,
+  "capacityCheck": {
+   "bulletinName": "Hassan 2",
+   "joinConfidence": "fort",
+   "stockMm3": 216.44,
+   "fillPct": 61.2,
+   "derivedCapacityMm3": 353.7,
+   "wikipediaMm3": 400.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "barrage-itzer",
+  "name": "barrage Itzer",
+  "lat": 32.911944,
+  "lon": -5.081667,
+  "regionId": "draa-tafilalet",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q2884962",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q2884962",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-dfilia",
+  "name": "barrage dfilia",
+  "lat": 32.010964,
+  "lon": -3.643306,
+  "regionId": "draa-tafilalet",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/1507518390",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/1507518390",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "السد التلي الدفيلية",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "allal-al-fassi",
+  "name": "Allal Al Fassi",
+  "lat": 33.931714,
+  "lon": -4.677583,
+  "regionId": "fes-meknes",
+  "basin": "Sebou",
+  "river": null,
+  "capacityMm3": 15.7,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/504108030",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/504108030",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q4730393",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1990,
+  "purpose": "E, I, AEPI",
+  "heightM": 61.0,
+  "wikipediaMatch": {
+   "row": "Allal Al Fassi",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 81.5,
+  "capacityCheck": {
+   "bulletinName": "Allal El Fassi",
+   "joinConfidence": "fort",
+   "stockMm3": 14.98,
+   "fillPct": 95.55,
+   "derivedCapacityMm3": 15.7,
+   "wikipediaMm3": 81.5,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "asfalou",
+  "name": "Asfalou",
+  "lat": 34.632987,
+  "lon": -4.190205,
+  "regionId": "fes-meknes",
+  "basin": "Sebou",
+  "river": null,
+  "capacityMm3": 294.8,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/387882040",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/387882040",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1999,
+  "purpose": "E, I",
+  "heightM": 112.0,
+  "wikipediaMatch": {
+   "row": "Asfalou",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 317.0,
+  "capacityCheck": {
+   "bulletinName": "Asfalou",
+   "joinConfidence": "fort",
+   "stockMm3": 168.68,
+   "fillPct": 57.21,
+   "derivedCapacityMm3": 294.8,
+   "wikipediaMm3": 317.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "bab-louta",
+  "name": "Bab Louta",
+  "lat": 34.015022,
+  "lon": -4.333903,
+  "regionId": "fes-meknes",
+  "basin": "Sebou",
+  "river": null,
+  "capacityMm3": 34.5,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/435467216",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/435467216",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/435467373",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1999,
+  "purpose": "AEP",
+  "heightM": 54.0,
+  "wikipediaMatch": {
+   "row": "Bab Louta",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 37.0,
+  "capacityCheck": {
+   "bulletinName": "Bab Louta",
+   "joinConfidence": "fort",
+   "stockMm3": 29.31,
+   "fillPct": 85.0,
+   "derivedCapacityMm3": 34.5,
+   "wikipediaMm3": 37.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "barrage-ben-smim",
+  "name": "Barrage Ben Smim",
+  "lat": 33.493366,
+  "lon": -5.179699,
+  "regionId": "fes-meknes",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/1172877855",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/1172877855",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-boussraf",
+  "name": "Barrage Boussraf",
+  "lat": 33.488045,
+  "lon": -5.076422,
+  "regionId": "fes-meknes",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/1570528272",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/1570528272",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-mehraz",
+  "name": "Barrage Mehraz",
+  "lat": 33.967273,
+  "lon": -4.970323,
+  "regionId": "fes-meknes",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/435606695",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/435606695",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-salah",
+  "name": "Barrage Salah",
+  "lat": 34.564727,
+  "lon": -4.669429,
+  "regionId": "fes-meknes",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/167447353",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/167447353",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-tizguit",
+  "name": "Barrage Tizguit",
+  "lat": 33.519109,
+  "lon": -5.091611,
+  "regionId": "fes-meknes",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/322305199",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/322305199",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-tizguit-haut",
+  "name": "Barrage Tizguit Haut",
+  "lat": 33.511642,
+  "lon": -5.087751,
+  "regionId": "fes-meknes",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/322305196",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/322305196",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "bouhouda",
+  "name": "Bouhouda",
+  "lat": 34.6103,
+  "lon": -4.573362,
+  "regionId": "fes-meknes",
+  "basin": "Sebou",
+  "river": null,
+  "capacityMm3": 44.9,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/167316343",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/167316343",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1998,
+  "purpose": "I, AEP, PE",
+  "heightM": 55.0,
+  "wikipediaMatch": {
+   "row": "Bouhouda",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 275.0,
+  "capacityCheck": {
+   "bulletinName": "Bouhouda",
+   "joinConfidence": "fort",
+   "stockMm3": 34.64,
+   "fillPct": 77.17,
+   "derivedCapacityMm3": 44.9,
+   "wikipediaMm3": 275.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "elgaada-dam",
+  "name": "Elgaada Dam",
+  "lat": 34.0183,
+  "lon": -4.953871,
+  "regionId": "fes-meknes",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q22932976",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q22932976",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "idriss-1er",
+  "name": "Idriss 1Er",
+  "lat": 34.16161,
+  "lon": -4.749268,
+  "regionId": "fes-meknes",
+  "basin": "Sebou",
+  "river": "Oued Inaouen",
+  "capacityMm3": 1075.2,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/385406261",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/385406261",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q5989737",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "سد ادربس الأول",
+  "basinMethod": "river-keyword",
+  "yearBuilt": 1973,
+  "purpose": "E, I",
+  "heightM": 72.0,
+  "wikipediaMatch": {
+   "row": "Idriss 1Er",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 1186.0,
+  "capacityCheck": {
+   "bulletinName": "Idriss 1er",
+   "joinConfidence": "fort",
+   "stockMm3": 772.08,
+   "fillPct": 71.81,
+   "derivedCapacityMm3": 1075.2,
+   "wikipediaMm3": 1186.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "sidi-chahed",
+  "name": "Sidi Chahed",
+  "lat": 34.105902,
+  "lon": -5.319722,
+  "regionId": "fes-meknes",
+  "basin": "Sebou",
+  "river": null,
+  "capacityMm3": 154.0,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/152388836",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/152388836",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1996,
+  "purpose": "AEPI, I",
+  "heightM": 51.0,
+  "wikipediaMatch": {
+   "row": "Sidi Chahed",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 170.0,
+  "capacityCheck": {
+   "bulletinName": "Sidi Echahed",
+   "joinConfidence": "fort",
+   "stockMm3": 93.04,
+   "fillPct": 60.41,
+   "derivedCapacityMm3": 154.0,
+   "wikipediaMm3": 170.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "barrage-amane-sayrrine",
+  "name": "barrage Amane Sayrrine",
+  "lat": 33.619444,
+  "lon": -5.426667,
+  "regionId": "fes-meknes",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q29081193",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q29081193",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-m-dez",
+  "name": "M’Daz (Madaz)",
+  "lat": 33.681615,
+  "lon": -4.52565,
+  "regionId": "fes-meknes",
+  "basin": null,
+  "river": null,
+  "capacityMm3": 700.0,
+  "capacityMm3Source": "wikipedia",
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q130337597",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q130337597",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126), ligne « M’Daz »",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "corrigé",
+  "note": "Wikidata Q130337597 : « Madaz Dam », sur l oued Sebou (description ar), 33,6816/-4,5257 (Fes-Meknes). Rattache a la ligne « M’Daz » (2025, 700 Mm3) par le nom (Madaz) ; une seule source de coordonnee, capacite 700 Mm3 = table Wikipedia seule (non confirmee, absente du bulletin).",
+  "regionCheck": "ok",
+  "yearBuilt": 2025,
+  "heightM": 109.0,
+  "purpose": "E, I, A.E.P.I.",
+  "wikipediaMatch": {
+   "row": "M’Daz",
+   "score": null,
+   "joinedBy": "revue manuelle (resolve-notes.md)"
+  },
+  "capacityWikipediaMm3": 700.0
+ },
+ {
+  "id": "barrage-de-michlifen",
+  "name": "barrage de Michlifen",
+  "lat": 33.492763,
+  "lon": -5.177644,
+  "regionId": "fes-meknes",
+  "basin": "Sebou",
+  "river": null,
+  "capacityMm3": 1.4,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q120359644",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q120359644",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityCheck": {
+   "bulletinName": "Michlifen",
+   "joinConfidence": "fort",
+   "stockMm3": 0.75,
+   "fillPct": 54.63,
+   "derivedCapacityMm3": 1.4,
+   "wikipediaMm3": null,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "",
+  "name": "سد ساهلة",
+  "lat": 34.578103,
+  "lon": -4.662427,
+  "regionId": "fes-meknes",
+  "basin": "Sebou",
+  "river": null,
+  "capacityMm3": 71.2,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/node/13836099935",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/node/13836099935",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126), ligne « Sahla »",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "سد ساهلة",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "yearBuilt": 1994,
+  "heightM": 55.0,
+  "purpose": "I, AEPI, PE",
+  "wikipediaMatch": {
+   "row": "Sahla",
+   "score": null,
+   "joinedBy": "revue manuelle (resolve-notes.md)"
+  },
+  "capacityWikipediaMm3": 62.0,
+  "capacityCheck": {
+   "bulletinName": "Sahla",
+   "joinConfidence": "moyen",
+   "stockMm3": 63.55,
+   "fillPct": 89.3,
+   "derivedCapacityMm3": 71.2,
+   "wikipediaMm3": 62.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "agherghis",
+  "name": "Agherghis",
+  "lat": 29.229192,
+  "lon": -9.727914,
+  "regionId": "guelmim-oued-noun",
+  "basin": null,
+  "river": null,
+  "capacityMm3": 0.3,
+  "capacityMm3Source": "wikipedia",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/217677145",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/217677145",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1992,
+  "purpose": "PI",
+  "heightM": 24.0,
+  "wikipediaMatch": {
+   "row": "Agherghis",
+   "score": 0.889
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 0.3
+ },
+ {
+  "id": "fask-dam",
+  "name": "Fask Dam",
+  "lat": 28.945845,
+  "lon": -9.741463,
+  "regionId": "guelmim-oued-noun",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/node/13446378739",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/node/13446378739",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/1466030164",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "سد فاصك",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "imaouene",
+  "name": "Imaouene",
+  "lat": 29.22338,
+  "lon": -9.713134,
+  "regionId": "guelmim-oued-noun",
+  "basin": null,
+  "river": null,
+  "capacityMm3": 0.25,
+  "capacityMm3Source": "wikipedia",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/217671230",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/217671230",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1992,
+  "purpose": "EC",
+  "heightM": 23.0,
+  "wikipediaMatch": {
+   "row": "Imaouene",
+   "score": 0.923
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 0.25
+ },
+ {
+  "id": "barrage-sakia-el-hamra",
+  "name": "barrage Sakia El Hamra",
+  "lat": 27.156429,
+  "lon": -13.17433,
+  "regionId": "laayoune-sakia-el-hamra",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q106643432",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q106643432",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrage Sakia El Hamra (27.156429, -13.17433)",
+    "url": "https://fr.wikipedia.org/?curid=14103032",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "OpenStreetMap way 368097056 (retenue 27,051-27,159 / -13,176 a -13,085 ; le point Wikidata est a son coin nord-ouest)",
+    "url": "https://www.openstreetmap.org/way/368097056",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "ambigu",
+  "note": "Coordonnee coherente (Wikidata = Wikipedia fr, au bord de la retenue OSM) mais la capacite reste null : table 110 Mm3 (« Saquia El Hamra ») contre 112 Mm3 dans le texte de Wikipedia fr, sans source officielle.",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-imil-had",
+  "name": "Barrage Imil Had",
+  "lat": 31.246368,
+  "lon": -9.623787,
+  "regionId": "marrakech-safi",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/415406974",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/415406974",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "hassan-1s",
+  "name": "Hassan 1s",
+  "lat": 31.845845,
+  "lon": -7.078198,
+  "regionId": "marrakech-safi",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/504108036",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/504108036",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "imfout",
+  "name": "Imfout",
+  "lat": 32.725451,
+  "lon": -7.926667,
+  "regionId": "marrakech-safi",
+  "basin": "Oum Er-Rbia",
+  "river": null,
+  "capacityMm3": 9.0,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/290459048",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/290459048",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q2885028",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1944,
+  "purpose": "E,I,A.E.P.I",
+  "heightM": 50.0,
+  "wikipediaMatch": {
+   "row": "Imfout",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 27.0,
+  "capacityCheck": {
+   "bulletinName": "Imfout",
+   "joinConfidence": "fort",
+   "stockMm3": 0.75,
+   "fillPct": 8.32,
+   "derivedCapacityMm3": 9.0,
+   "wikipediaMm3": 27.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "lalla-takerkoust",
+  "name": "Lalla Takerkoust",
+  "lat": 31.3548,
+  "lon": -8.136027,
+  "regionId": "marrakech-safi",
+  "basin": "Tansift",
+  "river": null,
+  "capacityMm3": 50.4,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/94898448",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/94898448",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q27520143",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1935,
+  "purpose": "E, I",
+  "heightM": 71.0,
+  "wikipediaMatch": {
+   "row": "Lalla Takerkoust",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 69.0,
+  "capacityCheck": {
+   "bulletinName": "Lalla Takerkousst",
+   "joinConfidence": "fort",
+   "stockMm3": 40.43,
+   "fillPct": 80.21,
+   "derivedCapacityMm3": 50.4,
+   "wikipediaMm3": 69.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "yaacoub-el-mansour",
+  "name": "Yaacoub El Mansour",
+  "lat": 31.189823,
+  "lon": -8.088128,
+  "regionId": "marrakech-safi",
+  "basin": "Tansift",
+  "river": null,
+  "capacityMm3": 58.0,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/209650379",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/209650379",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q136850570",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 2008,
+  "purpose": "AEP",
+  "heightM": 70.0,
+  "wikipediaMatch": {
+   "row": "Yaacoub El Mansour",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 70.0,
+  "capacityCheck": {
+   "bulletinName": "Yaacoub El Manssour",
+   "joinConfidence": "fort",
+   "stockMm3": 46.07,
+   "fillPct": 79.49,
+   "derivedCapacityMm3": 58.0,
+   "wikipediaMm3": 70.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "zerrar",
+  "name": "Zerrar",
+  "lat": 31.351498,
+  "lon": -9.573966,
+  "regionId": "marrakech-safi",
+  "basin": null,
+  "river": null,
+  "capacityMm3": 123.0,
+  "capacityMm3Source": "wikipedia",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/relation/9846279",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/relation/9846279",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 2014,
+  "purpose": "AEP, I, PI",
+  "heightM": 84.0,
+  "wikipediaMatch": {
+   "row": "Zerrar",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 123.0
+ },
+ {
+  "id": "barrage-ben-annou",
+  "name": "barrage Ben Annou",
+  "lat": 32.426389,
+  "lon": -7.885833,
+  "regionId": "marrakech-safi",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q29082288",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q29082288",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-sidi-saad",
+  "name": "barrage Sidi Saad",
+  "lat": 32.604167,
+  "lon": -7.942778,
+  "regionId": "marrakech-safi",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q29095534",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q29095534",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "-2",
+  "name": "سد لالة تاكركوست",
+  "lat": 31.307778,
+  "lon": -8.143889,
+  "regionId": "marrakech-safi",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q138337607",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q138337607",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1929,
+  "coordSourceType": "wikidata",
+  "status": "ambigu",
+  "note": "Probable doublon de lalla-takerkoust (Wikidata Q138337607, a 5,3 km de la position OSM : au-dela du seuil de 5 km, non fusionne).",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-hassan-ii",
+  "name": "Barrage Hassan II",
+  "lat": 34.206661,
+  "lon": -2.639878,
+  "regionId": "oriental",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/151579585",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/151579585",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "سد الحسن الثاني",
+  "coordSourceType": "osm",
+  "status": "ambigu",
+  "note": "Ouvrage OSM « Hassan II » (commune d Ahl Oued Za). Le barrage de l oued Za (province de Taourirt, le360 2026-02-14) n a pas de coordonnee propre dans les sources lues : ce point est peut-etre le barrage sur l oued Za mal nomme, ou un autre ouvrage. Nom et lien avec la ligne « Barrage sur Oued Za » non confirmes : ne pas promouvoir le nom.",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-iche",
+  "name": "Barrage Iche",
+  "lat": 32.514636,
+  "lon": -1.01003,
+  "regionId": "oriental",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/307687326",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/307687326",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-moulay-ali",
+  "name": "Barrage Moulay Ali",
+  "lat": 34.855634,
+  "lon": -2.693199,
+  "regionId": "oriental",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/467506893",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/467506893",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "سد مولاي علي",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-sfissef",
+  "name": "Barrage Sfissef",
+  "lat": 32.336366,
+  "lon": -1.345612,
+  "regionId": "oriental",
+  "basin": "Moulouya",
+  "river": null,
+  "capacityMm3": 17.5,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/node/2516958173",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/node/2516958173",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "سد السفيسف",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityCheck": {
+   "bulletinName": "Sfisif",
+   "joinConfidence": "moyen",
+   "stockMm3": 17.27,
+   "fillPct": 98.9,
+   "derivedCapacityMm3": 17.5,
+   "wikipediaMm3": null,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "mechra-homadi",
+  "name": "Mechra Homadi",
+  "lat": 34.736474,
+  "lon": -2.804682,
+  "regionId": "oriental",
+  "basin": "Moulouya",
+  "river": null,
+  "capacityMm3": 4.7,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/507327457",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/507327457",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q2884969",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "سد مشرع حمادي",
+  "yearBuilt": 1955,
+  "purpose": "E,I,A.E.P.I",
+  "heightM": 57.0,
+  "wikipediaMatch": {
+   "row": "Mechra Homadi",
+   "score": 0.88
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 12.0,
+  "capacityCheck": {
+   "bulletinName": "Mechraa Homadi",
+   "joinConfidence": "fort",
+   "stockMm3": 2.51,
+   "fillPct": 53.76,
+   "derivedCapacityMm3": 4.7,
+   "wikipediaMm3": 12.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "mohamed-v",
+  "name": "Mohamed V",
+  "lat": 34.663331,
+  "lon": -2.937852,
+  "regionId": "oriental",
+  "basin": "Moulouya",
+  "river": null,
+  "capacityMm3": 164.9,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/504108025",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/504108025",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q2884977",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "سد محمد الخامس",
+  "yearBuilt": 1967,
+  "purpose": "E,I,A.E.P.I",
+  "heightM": 64.0,
+  "wikipediaMatch": {
+   "row": "Mohamed V",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 410.0,
+  "capacityCheck": {
+   "bulletinName": "Mohamed 5",
+   "joinConfidence": "fort",
+   "stockMm3": 114.62,
+   "fillPct": 69.49,
+   "derivedCapacityMm3": 164.9,
+   "wikipediaMm3": 410.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "barrage-al-manzel",
+  "name": "barrage al manzel",
+  "lat": 34.900315,
+  "lon": -2.27356,
+  "regionId": "oriental",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/929397804",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/929397804",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "سد المنزل",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-sidi-ali-ben-yakhlef",
+  "name": "barrage sidi ali ben yakhlef",
+  "lat": 34.89889,
+  "lon": -2.282367,
+  "regionId": "oriental",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/929402629",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/929402629",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "سد سيدي علي بن يخلف",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-rouidat",
+  "name": "Barrage Rouidat",
+  "lat": 33.733305,
+  "lon": -6.967603,
+  "regionId": "rabat-sale-kenitra",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/442181116",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/442181116",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-sidi-mohammed-ben-abdallah",
+  "name": "Sidi Mohamed Ben Abdellah",
+  "lat": 33.937868,
+  "lon": -6.75037,
+  "regionId": "rabat-sale-kenitra",
+  "basin": "Bouregreg",
+  "river": null,
+  "capacityMm3": 863.5,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/289906319",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/289906319",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata Q12215598, premiere valeur P625 (33.937811, -6.750905)",
+    "url": "https://www.wikidata.org/wiki/Q12215598",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia de, Stausee Sidi Mohammed Ben Abdallah (33.93888889, -6.75055556)",
+    "url": "https://de.wikipedia.org/?curid=12888403",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126), ligne « Sidi Mohamed Ben Abdallah »",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "corrigé",
+  "note": "Deux positions a 40 km : 33,94/-6,75 est correcte (OSM, Wikidata premiere valeur, Wikipedia de, a moins de 0,1 km ; Wikipedia ar : barrage a Oum Azza, province de Skhirate-Temara, a 24 km de Rabat ; bulletin 2026-11-23 : bassin du Bouregreg). 33,562/-6,4456 est une seconde valeur P625 dont la reference est la Wikipedia en cebuano (Q837615) : rejetee, doublon supprime.",
+  "regionCheck": "ok",
+  "yearBuilt": 1974,
+  "heightM": 105.0,
+  "purpose": "A.E.P.I., PI",
+  "wikipediaMatch": {
+   "row": "Sidi Mohamed Ben Abdallah",
+   "score": null,
+   "joinedBy": "revue manuelle (resolve-notes.md)"
+  },
+  "capacityWikipediaMm3": 1025.0,
+  "capacityCheck": {
+   "bulletinName": "Sidi Med Ben Abdellah",
+   "joinConfidence": "fort",
+   "stockMm3": 663.4,
+   "fillPct": 76.83,
+   "derivedCapacityMm3": 863.5,
+   "wikipediaMm3": 1025.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "el-kansera",
+  "name": "El Kansera",
+  "lat": 34.041566,
+  "lon": -5.907678,
+  "regionId": "rabat-sale-kenitra",
+  "basin": "Sebou",
+  "river": null,
+  "capacityMm3": 204.8,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/136979506",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/136979506",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q15216318",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1935,
+  "purpose": "E,I,A.E.P.I",
+  "heightM": 68.0,
+  "wikipediaMatch": {
+   "row": "El Kansera",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 266.0,
+  "capacityCheck": {
+   "bulletinName": "El Kensera",
+   "joinConfidence": "fort",
+   "stockMm3": 187.74,
+   "fillPct": 91.65,
+   "derivedCapacityMm3": 204.8,
+   "wikipediaMm3": 266.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "tiddas",
+  "name": "Tiddas",
+  "lat": 33.581731,
+  "lon": -6.317758,
+  "regionId": "rabat-sale-kenitra",
+  "basin": "Bouregreg",
+  "river": null,
+  "capacityMm3": 505.8,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/1148791531",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/1148791531",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 2022,
+  "purpose": "AEPI",
+  "heightM": 106.0,
+  "wikipediaMatch": {
+   "row": "Tiddas",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 507.0,
+  "capacityCheck": {
+   "bulletinName": "Tiddas",
+   "joinConfidence": "fort",
+   "stockMm3": 401.19,
+   "fillPct": 79.32,
+   "derivedCapacityMm3": 505.8,
+   "wikipediaMm3": 507.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "barrage-de-garde",
+  "name": "barrage de Garde",
+  "lat": 34.488333,
+  "lon": -6.413056,
+  "regionId": "rabat-sale-kenitra",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q29100933",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q29100933",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "abdelmoumen",
+  "name": "Abdelmoumen",
+  "lat": 30.675189,
+  "lon": -9.199146,
+  "regionId": "souss-massa",
+  "basin": "Souss-Massa",
+  "river": null,
+  "capacityMm3": 198.4,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/289868587",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/289868587",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1981,
+  "purpose": "E, I, A.E.P.I.",
+  "heightM": 94.0,
+  "wikipediaMatch": {
+   "row": "Abdelmoumen",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 216.0,
+  "capacityCheck": {
+   "bulletinName": "Abdelmoumene",
+   "joinConfidence": "fort",
+   "stockMm3": 72.48,
+   "fillPct": 36.53,
+   "derivedCapacityMm3": 198.4,
+   "wikipediaMm3": 216.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "ahl-souss",
+  "name": "Ahl Souss",
+  "lat": 30.053726,
+  "lon": -9.12817,
+  "regionId": "souss-massa",
+  "basin": "Souss-Massa",
+  "river": null,
+  "capacityMm3": 4.9,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/119569970",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/119569970",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 2004,
+  "purpose": "AEP, I",
+  "heightM": 49.0,
+  "wikipediaMatch": {
+   "row": "Ahl Souss",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 4.7,
+  "capacityCheck": {
+   "bulletinName": "Ahl Souss",
+   "joinConfidence": "fort",
+   "stockMm3": 4.58,
+   "fillPct": 93.21,
+   "derivedCapacityMm3": 4.9,
+   "wikipediaMm3": 4.7,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "aoulouz",
+  "name": "Aoulouz",
+  "lat": 30.693065,
+  "lon": -8.137938,
+  "regionId": "souss-massa",
+  "basin": "Souss-Massa",
+  "river": null,
+  "capacityMm3": 89.0,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/385098917",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/385098917",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q12215566",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1991,
+  "purpose": "AN, I",
+  "heightM": 79.0,
+  "wikipediaMatch": {
+   "row": "Aoulouz",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 110.0,
+  "capacityCheck": {
+   "bulletinName": "Oulouze",
+   "joinConfidence": "fort",
+   "stockMm3": 71.75,
+   "fillPct": 80.65,
+   "derivedCapacityMm3": 89.0,
+   "wikipediaMm3": 110.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "barrage-ait-hamou",
+  "name": "Barrage Ait hamou",
+  "lat": 30.70838,
+  "lon": -9.769432,
+  "regionId": "souss-massa",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/118710382",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/118710382",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-imi-el-kheng",
+  "name": "Barrage Imi El Kheng",
+  "lat": 30.667251,
+  "lon": -8.532225,
+  "regionId": "souss-massa",
+  "basin": "Souss-Massa",
+  "river": null,
+  "capacityMm3": 7.2,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/179486552",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/179486552",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityCheck": {
+   "bulletinName": "Imi El Kheng",
+   "joinConfidence": "fort",
+   "stockMm3": 2.18,
+   "fillPct": 30.09,
+   "derivedCapacityMm3": 7.2,
+   "wikipediaMm3": null,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "barrage-sidi-abdellah",
+  "name": "Barrage Sidi Abdellah",
+  "lat": 30.635982,
+  "lon": -8.824335,
+  "regionId": "souss-massa",
+  "basin": "Souss-Massa",
+  "river": null,
+  "capacityMm3": 10.5,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/409855136",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/409855136",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q106644512",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityCheck": {
+   "bulletinName": "Sidi Abdallah",
+   "joinConfidence": "fort",
+   "stockMm3": 4.99,
+   "fillPct": 47.74,
+   "derivedCapacityMm3": 10.5,
+   "wikipediaMm3": null,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "barrage-tagenza",
+  "name": "Barrage Tagenza",
+  "lat": 30.482744,
+  "lon": -9.393712,
+  "regionId": "souss-massa",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/397336478",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/397336478",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "dkhila",
+  "name": "Dkhila",
+  "lat": 30.569413,
+  "lon": -9.285201,
+  "regionId": "souss-massa",
+  "basin": "Souss-Massa",
+  "river": null,
+  "capacityMm3": 0.2,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/387880522",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/387880522",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1986,
+  "purpose": "BC",
+  "heightM": 32.0,
+  "wikipediaMatch": {
+   "row": "Dkhila",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 0.7,
+  "capacityCheck": {
+   "bulletinName": "Dkhila",
+   "joinConfidence": "fort",
+   "stockMm3": 0.11,
+   "fillPct": 48.22,
+   "derivedCapacityMm3": 0.2,
+   "wikipediaMm3": 0.7,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "moukhtar-soussi",
+  "name": "Moukhtar Soussi",
+  "lat": 30.734937,
+  "lon": -7.980348,
+  "regionId": "souss-massa",
+  "basin": "Souss-Massa",
+  "river": null,
+  "capacityMm3": 39.8,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/385157810",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/385157810",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q2884975",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 2002,
+  "purpose": "I, AN",
+  "heightM": 60.0,
+  "wikipediaMatch": {
+   "row": "Moukhtar Soussi",
+   "score": 0.96
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 50.0,
+  "capacityCheck": {
+   "bulletinName": "Med Mokhtar Soussi",
+   "joinConfidence": "fort",
+   "stockMm3": 4.22,
+   "fillPct": 10.61,
+   "derivedCapacityMm3": 39.8,
+   "wikipediaMm3": 50.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "moulay-abdellah",
+  "name": "Moulay Abdellah",
+  "lat": 30.76152,
+  "lon": -9.685829,
+  "regionId": "souss-massa",
+  "basin": "Souss-Massa",
+  "river": null,
+  "capacityMm3": 81.9,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/117814438",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/117814438",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 2001,
+  "purpose": "AEP",
+  "heightM": 65.0,
+  "wikipediaMatch": {
+   "row": "Moulay Abdellah",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 110.0,
+  "capacityCheck": {
+   "bulletinName": "Moulay Abdallah",
+   "joinConfidence": "fort",
+   "stockMm3": 78.16,
+   "fillPct": 95.39,
+   "derivedCapacityMm3": 81.9,
+   "wikipediaMm3": 110.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "youssef-ben-tachfine",
+  "name": "Youssef Ben Tachfine",
+  "lat": 29.845416,
+  "lon": -9.495466,
+  "regionId": "souss-massa",
+  "basin": "Souss-Massa",
+  "river": "Oued Massa",
+  "capacityMm3": 290.9,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/385158725",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/385158725",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q2884999",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrage Youssef Ibn Tachfin (29.84556, -9.49444)",
+    "url": "https://fr.wikipedia.org/?curid=1258502",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "basinMethod": "river-keyword",
+  "yearBuilt": 1972,
+  "purpose": "I, A.E.P.I.",
+  "heightM": 85.0,
+  "wikipediaMatch": {
+   "row": "Youssef Ben Tachfine",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "note": "L ouvrage OSM way 385158725 (waterway=dam, lu via api.openstreetmap.org) couvre lat 29,8424-29,8485, lon -9,4980 a -9,4929 : son centre est 29,8454/-9,4955, soit la valeur de ce fichier, a 0,1 km de Wikipedia fr. platform/public/data/region.json (29,809193/-9,472591, « way/385158725 ») est a 4,6 km hors de l emprise du way : coordonnee erronee, a corriger.",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 303.5,
+  "capacityCheck": {
+   "bulletinName": "Youssef Ben Tachfine",
+   "joinConfidence": "fort",
+   "stockMm3": 144.24,
+   "fillPct": 49.59,
+   "derivedCapacityMm3": 290.9,
+   "wikipediaMm3": 303.5,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "barrage-de-pierre",
+  "name": "barrage de pierre",
+  "lat": 30.605203,
+  "lon": -9.476401,
+  "regionId": "souss-massa",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/1155390454",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/1155390454",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "9-avril-1947",
+  "name": "9 Avril 1947",
+  "lat": 35.528168,
+  "lon": -5.80571,
+  "regionId": "tanger-tetouan-al-hoceima",
+  "basin": "Loukkos",
+  "river": null,
+  "capacityMm3": 305.6,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q12215563",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q12215563",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1995,
+  "purpose": "AEPI",
+  "heightM": 52.0,
+  "wikipediaMatch": {
+   "row": "9 Avril 1947",
+   "score": 0.917
+  },
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 300.0,
+  "capacityCheck": {
+   "bulletinName": "9 avril 1947",
+   "joinConfidence": "fort",
+   "stockMm3": 203.39,
+   "fillPct": 66.55,
+   "derivedCapacityMm3": 305.6,
+   "wikipediaMm3": 300.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "al-wahda",
+  "name": "Al Wahda",
+  "lat": 34.597912,
+  "lon": -5.200141,
+  "regionId": "tanger-tetouan-al-hoceima",
+  "basin": "Sebou",
+  "river": null,
+  "capacityMm3": 3452.1,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/26301395",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/26301395",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q292131",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1996,
+  "purpose": "E, I, PE, T",
+  "heightM": 88.0,
+  "wikipediaMatch": {
+   "row": "Al Wahda",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 3800.0,
+  "capacityCheck": {
+   "bulletinName": "Al Wahda",
+   "joinConfidence": "fort",
+   "stockMm3": 2550.03,
+   "fillPct": 73.87,
+   "derivedCapacityMm3": 3452.1,
+   "wikipediaMm3": 3800.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "ali-thelat",
+  "name": "Ali Thelat",
+  "lat": 35.25,
+  "lon": -5.28,
+  "regionId": "tanger-tetouan-al-hoceima",
+  "basin": null,
+  "river": null,
+  "capacityMm3": 30.0,
+  "capacityMm3Source": "wikipedia",
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q27529374",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q27529374",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1935,
+  "purpose": "E, I",
+  "heightM": 36.0,
+  "wikipediaMatch": {
+   "row": "Ali Thelat",
+   "score": 1.0
+  },
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 30.0
+ },
+ {
+  "id": "barrage-erraouz",
+  "name": "Barrage Erraouz",
+  "lat": 35.700752,
+  "lon": -5.502808,
+  "regionId": "tanger-tetouan-al-hoceima",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/198758602",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/198758602",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "barrage-de-talembote",
+  "name": "Barrage de Talembote",
+  "lat": 35.245992,
+  "lon": -5.290732,
+  "regionId": "tanger-tetouan-al-hoceima",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/399066814",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/399066814",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "سد تلمبوط",
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "mohamed-ben-abdelkrim-el-khattabi-dam",
+  "name": "Mohamed Ben Abdelkrim El Khattabi",
+  "lat": 35.087105,
+  "lon": -3.818595,
+  "regionId": "tanger-tetouan-al-hoceima",
+  "basin": "Loukkos",
+  "river": null,
+  "capacityMm3": 10.5,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/95225969",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/95225969",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126), ligne « Mohamed B. A. El Khattabi »",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "osm",
+  "status": "corrigé",
+  "note": "Jointure par nom a la ligne « Mohamed B. A. El Khattabi » (1981, 33,6 Mm3). Le bulletin 2026-11-23 donne une capacite derivee ~10,5 Mm3 : conflit avec la table, la valeur du bulletin est retenue.",
+  "regionCheck": "ok",
+  "yearBuilt": 1981,
+  "heightM": 40.0,
+  "purpose": "I, AEPI",
+  "wikipediaMatch": {
+   "row": "Mohamed B. A. El Khattabi",
+   "score": null,
+   "joinedBy": "revue manuelle (resolve-notes.md)"
+  },
+  "capacityWikipediaMm3": 33.6,
+  "capacityCheck": {
+   "bulletinName": "Ben Abdelkrim Khattabi",
+   "joinConfidence": "fort",
+   "stockMm3": 3.81,
+   "fillPct": 36.2,
+   "derivedCapacityMm3": 10.5,
+   "wikipediaMm3": 33.6,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "moulay-bouchta-dam",
+  "name": "Moulay Bouchta Dam",
+  "lat": 35.24541,
+  "lon": -5.29093,
+  "regionId": "tanger-tetouan-al-hoceima",
+  "basin": null,
+  "river": null,
+  "capacityMm3": null,
+  "capacityMm3Source": null,
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q27539177",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q27539177",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok"
+ },
+ {
+  "id": "nakhla",
+  "name": "Nakhla",
+  "lat": 35.48,
+  "lon": -5.41,
+  "regionId": "tanger-tetouan-al-hoceima",
+  "basin": "Loukkos",
+  "river": null,
+  "capacityMm3": 4.2,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q5395487",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q5395487",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1961,
+  "purpose": "A,E.P.I",
+  "heightM": 46.0,
+  "wikipediaMatch": {
+   "row": "Nakhla",
+   "score": 1.0
+  },
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 5.7,
+  "capacityCheck": {
+   "bulletinName": "Nakhla",
+   "joinConfidence": "fort",
+   "stockMm3": 2.47,
+   "fillPct": 58.65,
+   "derivedCapacityMm3": 4.2,
+   "wikipediaMm3": 5.7,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "oued-el-makhazine",
+  "name": "Oued El Makhazine",
+  "lat": 34.941441,
+  "lon": -5.840046,
+  "regionId": "tanger-tetouan-al-hoceima",
+  "basin": "Loukkos",
+  "river": null,
+  "capacityMm3": 695.8,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+   "url": "https://www.openstreetmap.org/way/289864149",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "OpenStreetMap (Overpass, base du 2026-11-23T14:04:09Z)",
+    "url": "https://www.openstreetmap.org/way/289864149",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "nameAr": "وادي المخازن",
+  "yearBuilt": 1979,
+  "purpose": "E, I, A.E.P.I.",
+  "heightM": 67.0,
+  "wikipediaMatch": {
+   "row": "Oued El Makhazine",
+   "score": 1.0
+  },
+  "coordSourceType": "osm",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 773.0,
+  "capacityCheck": {
+   "bulletinName": "Oued El Makhazine",
+   "joinConfidence": "fort",
+   "stockMm3": 454.7,
+   "fillPct": 65.35,
+   "derivedCapacityMm3": 695.8,
+   "wikipediaMm3": 773.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "smir",
+  "name": "Smir",
+  "lat": 35.686389,
+  "lon": -5.391389,
+  "regionId": "tanger-tetouan-al-hoceima",
+  "basin": "Loukkos",
+  "river": null,
+  "capacityMm3": 45.0,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q4807436",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q4807436",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Wikipedia fr, Barrages du Maroc (oldid 239787126)",
+    "url": "https://fr.wikipedia.org/w/index.php?title=Barrages_du_Maroc&oldid=239787126",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "yearBuilt": 1991,
+  "purpose": "AEPI",
+  "heightM": 45.0,
+  "wikipediaMatch": {
+   "row": "Smir",
+   "score": 1.0
+  },
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityWikipediaMm3": 43.0,
+  "capacityCheck": {
+   "bulletinName": "Smir",
+   "joinConfidence": "fort",
+   "stockMm3": 35.57,
+   "fillPct": 78.96,
+   "derivedCapacityMm3": 45.0,
+   "wikipediaMm3": 43.0,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ },
+ {
+  "id": "barrage-dar-khrofa",
+  "name": "barrage Dar Khrofa",
+  "lat": 35.239034,
+  "lon": -5.778298,
+  "regionId": "tanger-tetouan-al-hoceima",
+  "basin": "Loukkos",
+  "river": null,
+  "capacityMm3": 474.8,
+  "capacityMm3Source": "maadialna-bulletin-2026-11-23 (stock / taux de remplissage)",
+  "coordSource": {
+   "name": "Wikidata",
+   "url": "https://www.wikidata.org/wiki/Q106646502",
+   "readDate": "2026-11-23"
+  },
+  "sources": [
+   {
+    "name": "Wikidata",
+    "url": "https://www.wikidata.org/wiki/Q106646502",
+    "readDate": "2026-11-23"
+   },
+   {
+    "name": "Bulletin Maa Dialna du 2026-11-23 (capacite, bassin)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  ],
+  "license": "Coordonnees : OpenStreetMap (c) contributeurs, ODbL 1.0 ; Wikidata CC0 ; Wikipedia fr CC BY-SA 4.0 (attribution requise)",
+  "coordSourceType": "wikidata",
+  "status": "inchangé",
+  "regionCheck": "ok",
+  "capacityCheck": {
+   "bulletinName": "Dar Khroufa",
+   "joinConfidence": "fort",
+   "stockMm3": 368.81,
+   "fillPct": 77.68,
+   "derivedCapacityMm3": 474.8,
+   "wikipediaMm3": null,
+   "source": {
+    "name": "Ministere de l Equipement et de l Eau, situation journaliere des barrages du 2026-11-23 (Maa Dialna)",
+    "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/fr/etat_global.pdf",
+    "readDate": "2026-11-23"
+   }
+  }
+ }
+]

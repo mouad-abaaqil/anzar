@@ -1,0 +1,1807 @@
+{
+  "asOf": "2026-11-23",
+  "unitNote": "Stocks en Mm³, flux en Mm³/an. Ordres de grandeur pour un prototype, pas des relevés. Eaux souterraines non modélisées.",
+  "notes": [
+    "Données agricoles : superficies de grande hydraulique fin 2007 et demandes 2030 de Plan Bleu (2011) ; elles ne reflètent ni la sécheresse récente ni les restrictions d'irrigation.",
+    "Apports de bassin : moyennes de long terme publiées en 2011 (18 025 Mm³/an au total) ; la Banque mondiale cite environ 15 000 Mm³/an sur 1979-2018 (résultat de recherche, document non ouvert). Le scénario « normal » est donc optimiste.",
+    "Laâyoune-Sakia El Hamra et Dakhla-Oued Ed-Dahab : pas de bassin dans le bulletin du 2026-11-18 ; stock de surface = null.",
+    "Le groupement des bassins suit le bulletin ; Plan Bleu 2011 en regroupe certains (voir meanAnnualInflowMm3.note).",
+    "Aucun volume transférable entre régions n'est modélisé ; les projets d'interconnexion sont cités sans volume attribué à une région.",
+    "Réutilisation : volume national réutilisé 52,6 Mm³/an, cible 100 Mm³/an avant fin 2027, dont 20,5 Mm³ pour les golfs (Le360, 2026-05-17, page lue) ; aucun chiffre régional lu : reuse reste null.",
+    "Eaux souterraines (non modélisées, groundwater reste null) : nappes Souss -292, Chtouka -63,2, Tiznit -1,8 Mm³/an de bilan (PDAIRE, série jusqu'en 2016, HCP monographie Souss-Massa éd. 2025, page lue) ; Dakhla : 9 Mm³/an mobilisables (voir fluxContext de la région).",
+    "Guelmim-Oued Noun : consommation par habitant et pertes dérivées des données ONEP 2019 (HCP monographie 2022, page lue) ; la demande domestique de cette région est donc moins éloignée du relevé, mais reste une donnée de 2019."
+  ],
+  "regions": [
+    {
+      "id": "tanger-tetouan-al-hoceima",
+      "population": {
+        "value": 4030222,
+        "status": "sourced",
+        "source": "https://www.hcp.ma/file/242227/",
+        "date": "2024-11-07",
+        "year": 2024,
+        "refDate": "2024-09-01"
+      },
+      "popGrowthPctYr": {
+        "value": 1.26,
+        "status": "derived",
+        "source": "https://www.hcp.ma/file/242665/",
+        "date": "2024-11",
+        "note": "taux annuel moyen 2014-2024 (HCP) ; l'appliquer aux années futures est une hypothèse"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 85,
+          "status": "hypothese",
+          "source": "calibrage national : 36,83 M hab x 85 l/j x 365 x 1,25 = 1 428 Mm³ ; ordre de grandeur de la demande potable de 1 285 Mm³ en 2020 (Plan Bleu 2011, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf) et sous les 1 750 Mm³ du poste eau potable + industrie + tourisme (IRES 2022). Même valeur pour toutes les régions : les écarts urbain/rural ne sont pas modélisés.",
+          "date": "2026-11-23"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "taux de fuites supposé ; aucun rendement de réseau par région n'a été relevé dans les sources lues",
+          "date": "2026-11-23"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": 30300,
+          "status": "sourced",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Superficie aménagée fin 2007, grande hydraulique seule (Loukkos). Hors petite et moyenne hydraulique et irrigation privée : voir otherIrrigationMm3PerYear.",
+          "year": 2007
+        },
+        "m3PerHa": {
+          "value": 9043,
+          "status": "derived",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Demande 2030 du programme d'économie d'eau PNEEI (274 Mm³/an, annexe 3) divisée par la superficie : ce n'est pas un relevé de consommation."
+        },
+        "otherIrrigationMm3PerYear": {
+          "value": 325,
+          "status": "hypothese",
+          "source": "demande 2030 petite et moyenne hydraulique + irrigation privée par bassin (Plan Bleu 2011, tableau 11, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf), répartie vers la région par une allocation indicative non sourcée",
+          "date": "2026-11-23"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 35.2,
+          "status": "hypothese",
+          "source": "résidu national : 1 750 Mm³ (eau potable + industrie + tourisme, 2020, IRES 2022, https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf) moins 1428 Mm³ de domestique calculé ici = 322 Mm³, réparti au prorata de la population. Ignore le poids réel des zones industrielles (Casablanca, Jorf Lasfar, Safi) ; comprend le tourisme.",
+          "date": "2026-11-23"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 6.3,
+          "status": "sourced",
+          "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+          "date": "2025-05",
+          "note": "Al Hoceima 6,30 (en service)",
+          "byUse": {
+            "potableMm3PerYear": 6.3,
+            "irrigationMm3PerYear": 0,
+            "industryMm3PerYear": 0
+          },
+          "dataYear": 2023
+        },
+        "plannedMm3PerYear": []
+      },
+      "groundwater": null,
+      "basinShares": [
+        {
+          "basin": "Loukkos",
+          "share": 1,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        },
+        {
+          "basin": "Sebou",
+          "share": 0.05,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        }
+      ],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": null,
+          "status": "hypothese",
+          "source": "non documenté par région dans les sources lues",
+          "date": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "oriental",
+      "population": {
+        "value": 2294665,
+        "status": "sourced",
+        "source": "https://www.hcp.ma/file/242227/",
+        "date": "2024-11-07",
+        "year": 2024,
+        "refDate": "2024-09-01"
+      },
+      "popGrowthPctYr": {
+        "value": -0.09,
+        "status": "derived",
+        "source": "https://www.hcp.ma/file/242665/",
+        "date": "2024-11",
+        "note": "taux annuel moyen 2014-2024 (HCP) ; l'appliquer aux années futures est une hypothèse"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 85,
+          "status": "hypothese",
+          "source": "calibrage national : 36,83 M hab x 85 l/j x 365 x 1,25 = 1 428 Mm³ ; ordre de grandeur de la demande potable de 1 285 Mm³ en 2020 (Plan Bleu 2011, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf) et sous les 1 750 Mm³ du poste eau potable + industrie + tourisme (IRES 2022). Même valeur pour toutes les régions : les écarts urbain/rural ne sont pas modélisés.",
+          "date": "2026-11-23"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "taux de fuites supposé ; aucun rendement de réseau par région n'a été relevé dans les sources lues",
+          "date": "2026-11-23"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": 77280,
+          "status": "sourced",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Superficie aménagée fin 2007, grande hydraulique seule (Moulouya). Hors petite et moyenne hydraulique et irrigation privée : voir otherIrrigationMm3PerYear.",
+          "year": 2007
+        },
+        "m3PerHa": {
+          "value": 7428,
+          "status": "derived",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Demande 2030 du programme d'économie d'eau PNEEI (574 Mm³/an, annexe 3) divisée par la superficie : ce n'est pas un relevé de consommation."
+        },
+        "otherIrrigationMm3PerYear": {
+          "value": 441,
+          "status": "hypothese",
+          "source": "demande 2030 petite et moyenne hydraulique + irrigation privée par bassin (Plan Bleu 2011, tableau 11, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf), répartie vers la région par une allocation indicative non sourcée",
+          "date": "2026-11-23"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 20,
+          "status": "hypothese",
+          "source": "résidu national : 1 750 Mm³ (eau potable + industrie + tourisme, 2020, IRES 2022, https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf) moins 1428 Mm³ de domestique calculé ici = 322 Mm³, réparti au prorata de la population. Ignore le poids réel des zones industrielles (Casablanca, Jorf Lasfar, Safi) ; comprend le tourisme.",
+          "date": "2026-11-23"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 0,
+          "status": "derived",
+          "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+          "date": "2025-05",
+          "note": "aucune station dans le tableau 1",
+          "byUse": {
+            "potableMm3PerYear": 0,
+            "irrigationMm3PerYear": 0,
+            "industryMm3PerYear": 0
+          },
+          "dataYear": 2023
+        },
+        "plannedMm3PerYear": [
+          {
+            "value": 250,
+            "year": 2035,
+            "label": "Nador, 250 Mm³/an (140 potable, 110 irrigation) ; calendrier 2026/2035 ; une seule source, non retrouvée ailleurs",
+            "projectStatus": "planifié",
+            "status": "sourced",
+            "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+            "date": "2025-05"
+          }
+        ]
+      },
+      "groundwater": null,
+      "basinShares": [
+        {
+          "basin": "Moulouya",
+          "share": 1,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        },
+        {
+          "basin": "Guir-Ziz-Ghriss",
+          "share": 0.2,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        }
+      ],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": null,
+          "status": "hypothese",
+          "source": "non documenté par région dans les sources lues",
+          "date": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "fes-meknes",
+      "population": {
+        "value": 4467911,
+        "status": "sourced",
+        "source": "https://www.hcp.ma/file/242227/",
+        "date": "2024-11-07",
+        "year": 2024,
+        "refDate": "2024-09-01"
+      },
+      "popGrowthPctYr": {
+        "value": 0.53,
+        "status": "derived",
+        "source": "https://www.hcp.ma/file/242665/",
+        "date": "2024-11",
+        "note": "taux annuel moyen 2014-2024 (HCP) ; l'appliquer aux années futures est une hypothèse"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 85,
+          "status": "hypothese",
+          "source": "calibrage national : 36,83 M hab x 85 l/j x 365 x 1,25 = 1 428 Mm³ ; ordre de grandeur de la demande potable de 1 285 Mm³ en 2020 (Plan Bleu 2011, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf) et sous les 1 750 Mm³ du poste eau potable + industrie + tourisme (IRES 2022). Même valeur pour toutes les régions : les écarts urbain/rural ne sont pas modélisés.",
+          "date": "2026-11-23"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "taux de fuites supposé ; aucun rendement de réseau par région n'a été relevé dans les sources lues",
+          "date": "2026-11-23"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": null,
+          "status": "hypothese",
+          "source": "aucun périmètre de grande hydraulique rattaché à cette région dans Plan Bleu 2011 (tableau 8) ; l'irrigation éventuelle figure dans otherIrrigationMm3PerYear",
+          "date": "2026-11-23"
+        },
+        "m3PerHa": {
+          "value": null,
+          "status": "hypothese",
+          "source": "pas de périmètre de grande hydraulique : voir otherIrrigationMm3PerYear",
+          "date": "2026-11-23"
+        },
+        "otherIrrigationMm3PerYear": {
+          "value": 744,
+          "status": "hypothese",
+          "source": "demande 2030 petite et moyenne hydraulique + irrigation privée par bassin (Plan Bleu 2011, tableau 11, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf), répartie vers la région par une allocation indicative non sourcée",
+          "date": "2026-11-23"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 39,
+          "status": "hypothese",
+          "source": "résidu national : 1 750 Mm³ (eau potable + industrie + tourisme, 2020, IRES 2022, https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf) moins 1428 Mm³ de domestique calculé ici = 322 Mm³, réparti au prorata de la population. Ignore le poids réel des zones industrielles (Casablanca, Jorf Lasfar, Safi) ; comprend le tourisme.",
+          "date": "2026-11-23"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 0,
+          "status": "derived",
+          "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+          "date": "2025-05",
+          "note": "région intérieure, aucune station",
+          "byUse": {
+            "potableMm3PerYear": 0,
+            "irrigationMm3PerYear": 0,
+            "industryMm3PerYear": 0
+          },
+          "dataYear": 2023
+        },
+        "plannedMm3PerYear": []
+      },
+      "groundwater": null,
+      "basinShares": [
+        {
+          "basin": "Sebou",
+          "share": 0.35,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        }
+      ],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": null,
+          "status": "hypothese",
+          "source": "non documenté par région dans les sources lues",
+          "date": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "rabat-sale-kenitra",
+      "population": {
+        "value": 5132639,
+        "status": "sourced",
+        "source": "https://www.hcp.ma/file/242227/",
+        "date": "2024-11-07",
+        "year": 2024,
+        "refDate": "2024-09-01"
+      },
+      "popGrowthPctYr": {
+        "value": 1.14,
+        "status": "derived",
+        "source": "https://www.hcp.ma/file/242665/",
+        "date": "2024-11",
+        "note": "taux annuel moyen 2014-2024 (HCP) ; l'appliquer aux années futures est une hypothèse"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 85,
+          "status": "hypothese",
+          "source": "calibrage national : 36,83 M hab x 85 l/j x 365 x 1,25 = 1 428 Mm³ ; ordre de grandeur de la demande potable de 1 285 Mm³ en 2020 (Plan Bleu 2011, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf) et sous les 1 750 Mm³ du poste eau potable + industrie + tourisme (IRES 2022). Même valeur pour toutes les régions : les écarts urbain/rural ne sont pas modélisés.",
+          "date": "2026-11-23"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "taux de fuites supposé ; aucun rendement de réseau par région n'a été relevé dans les sources lues",
+          "date": "2026-11-23"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": 113350,
+          "status": "sourced",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Superficie aménagée fin 2007, grande hydraulique seule (Gharb). Hors petite et moyenne hydraulique et irrigation privée : voir otherIrrigationMm3PerYear.",
+          "year": 2007
+        },
+        "m3PerHa": {
+          "value": 7896,
+          "status": "derived",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Demande 2030 du programme d'économie d'eau PNEEI (895 Mm³/an, annexe 3) divisée par la superficie : ce n'est pas un relevé de consommation."
+        },
+        "otherIrrigationMm3PerYear": {
+          "value": 511,
+          "status": "hypothese",
+          "source": "demande 2030 petite et moyenne hydraulique + irrigation privée par bassin (Plan Bleu 2011, tableau 11, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf), répartie vers la région par une allocation indicative non sourcée",
+          "date": "2026-11-23"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 44.8,
+          "status": "hypothese",
+          "source": "résidu national : 1 750 Mm³ (eau potable + industrie + tourisme, 2020, IRES 2022, https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf) moins 1428 Mm³ de domestique calculé ici = 322 Mm³, réparti au prorata de la population. Ignore le poids réel des zones industrielles (Casablanca, Jorf Lasfar, Safi) ; comprend le tourisme.",
+          "date": "2026-11-23"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 0,
+          "status": "derived",
+          "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+          "date": "2025-05",
+          "note": "aucune station en service ; projet Rabat cité sans capacité",
+          "byUse": {
+            "potableMm3PerYear": 0,
+            "irrigationMm3PerYear": 0,
+            "industryMm3PerYear": 0
+          },
+          "dataYear": 2023
+        },
+        "plannedMm3PerYear": []
+      },
+      "groundwater": null,
+      "basinShares": [
+        {
+          "basin": "Sebou",
+          "share": 0.4,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        },
+        {
+          "basin": "Bouregreg",
+          "share": 0.6,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        }
+      ],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": null,
+          "status": "hypothese",
+          "source": "non documenté par région dans les sources lues",
+          "date": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "beni-mellal-khenifra",
+      "population": {
+        "value": 2525801,
+        "status": "sourced",
+        "source": "https://www.hcp.ma/file/242227/",
+        "date": "2024-11-07",
+        "year": 2024,
+        "refDate": "2024-09-01"
+      },
+      "popGrowthPctYr": {
+        "value": 0.02,
+        "status": "derived",
+        "source": "https://www.hcp.ma/file/242665/",
+        "date": "2024-11",
+        "note": "taux annuel moyen 2014-2024 (HCP) ; l'appliquer aux années futures est une hypothèse"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 85,
+          "status": "hypothese",
+          "source": "calibrage national : 36,83 M hab x 85 l/j x 365 x 1,25 = 1 428 Mm³ ; ordre de grandeur de la demande potable de 1 285 Mm³ en 2020 (Plan Bleu 2011, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf) et sous les 1 750 Mm³ du poste eau potable + industrie + tourisme (IRES 2022). Même valeur pour toutes les régions : les écarts urbain/rural ne sont pas modélisés.",
+          "date": "2026-11-23"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "taux de fuites supposé ; aucun rendement de réseau par région n'a été relevé dans les sources lues",
+          "date": "2026-11-23"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": 109000,
+          "status": "sourced",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Superficie aménagée fin 2007, grande hydraulique seule (Tadla). Hors petite et moyenne hydraulique et irrigation privée : voir otherIrrigationMm3PerYear.",
+          "year": 2007
+        },
+        "m3PerHa": {
+          "value": 8404,
+          "status": "derived",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Demande 2030 du programme d'économie d'eau PNEEI (916 Mm³/an, annexe 3) divisée par la superficie : ce n'est pas un relevé de consommation."
+        },
+        "otherIrrigationMm3PerYear": {
+          "value": 217,
+          "status": "hypothese",
+          "source": "demande 2030 petite et moyenne hydraulique + irrigation privée par bassin (Plan Bleu 2011, tableau 11, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf), répartie vers la région par une allocation indicative non sourcée",
+          "date": "2026-11-23"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 22.1,
+          "status": "hypothese",
+          "source": "résidu national : 1 750 Mm³ (eau potable + industrie + tourisme, 2020, IRES 2022, https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf) moins 1428 Mm³ de domestique calculé ici = 322 Mm³, réparti au prorata de la population. Ignore le poids réel des zones industrielles (Casablanca, Jorf Lasfar, Safi) ; comprend le tourisme.",
+          "date": "2026-11-23"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 0,
+          "status": "derived",
+          "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+          "date": "2025-05",
+          "note": "région intérieure, aucune station",
+          "byUse": {
+            "potableMm3PerYear": 0,
+            "irrigationMm3PerYear": 0,
+            "industryMm3PerYear": 0
+          },
+          "dataYear": 2023
+        },
+        "plannedMm3PerYear": []
+      },
+      "groundwater": null,
+      "basinShares": [
+        {
+          "basin": "Oum Er-Rbia",
+          "share": 0.3,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        }
+      ],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": null,
+          "status": "hypothese",
+          "source": "non documenté par région dans les sources lues",
+          "date": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "casablanca-settat",
+      "population": {
+        "value": 7688967,
+        "status": "sourced",
+        "source": "https://www.hcp.ma/file/242227/",
+        "date": "2024-11-07",
+        "year": 2024,
+        "refDate": "2024-09-01"
+      },
+      "popGrowthPctYr": {
+        "value": 1.14,
+        "status": "derived",
+        "source": "https://www.hcp.ma/file/242665/",
+        "date": "2024-11",
+        "note": "taux annuel moyen 2014-2024 (HCP) ; l'appliquer aux années futures est une hypothèse"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 85,
+          "status": "hypothese",
+          "source": "calibrage national : 36,83 M hab x 85 l/j x 365 x 1,25 = 1 428 Mm³ ; ordre de grandeur de la demande potable de 1 285 Mm³ en 2020 (Plan Bleu 2011, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf) et sous les 1 750 Mm³ du poste eau potable + industrie + tourisme (IRES 2022). Même valeur pour toutes les régions : les écarts urbain/rural ne sont pas modélisés.",
+          "date": "2026-11-23"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "taux de fuites supposé ; aucun rendement de réseau par région n'a été relevé dans les sources lues",
+          "date": "2026-11-23"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": 104600,
+          "status": "sourced",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Superficie aménagée fin 2007, grande hydraulique seule (Doukkala). Hors petite et moyenne hydraulique et irrigation privée : voir otherIrrigationMm3PerYear.",
+          "year": 2007
+        },
+        "m3PerHa": {
+          "value": 6329,
+          "status": "derived",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Demande 2030 du programme d'économie d'eau PNEEI (662 Mm³/an, annexe 3) divisée par la superficie : ce n'est pas un relevé de consommation."
+        },
+        "otherIrrigationMm3PerYear": {
+          "value": 321,
+          "status": "hypothese",
+          "source": "demande 2030 petite et moyenne hydraulique + irrigation privée par bassin (Plan Bleu 2011, tableau 11, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf), répartie vers la région par une allocation indicative non sourcée",
+          "date": "2026-11-23"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 67.2,
+          "status": "hypothese",
+          "source": "résidu national : 1 750 Mm³ (eau potable + industrie + tourisme, 2020, IRES 2022, https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf) moins 1428 Mm³ de domestique calculé ici = 322 Mm³, réparti au prorata de la population. Ignore le poids réel des zones industrielles (Casablanca, Jorf Lasfar, Safi) ; comprend le tourisme.",
+          "date": "2026-11-23"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 40,
+          "status": "sourced",
+          "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+          "date": "2025-05",
+          "note": "Jorf Lasfar 40 (industriel, OCP) ; +60 en cours (45 potable, 15 industrie), sans année sourcée",
+          "byUse": {
+            "potableMm3PerYear": 0,
+            "irrigationMm3PerYear": 0,
+            "industryMm3PerYear": 40
+          },
+          "dataYear": 2023
+        },
+        "plannedMm3PerYear": [
+          {
+            "value": 300,
+            "year": 2027,
+            "label": "Casablanca, 300 Mm³/an (270 potable, 30 irrigation) ; calendrier divergent 2026-2027 selon les sources ; 40 % d'avancement en août 2025, mise en service attendue fin 2026 (Hespress, 2025-08-16, page lue)",
+            "projectStatus": "en construction",
+            "status": "sourced",
+            "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+            "date": "2025-05"
+          },
+          {
+            "value": 60,
+            "year": null,
+            "label": "Jorf Lasfar, extension 60 Mm³/an (45 potable, 15 industrie), en cours de réalisation",
+            "projectStatus": "en construction",
+            "status": "sourced",
+            "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+            "date": "2025-05"
+          }
+        ]
+      },
+      "groundwater": null,
+      "basinShares": [
+        {
+          "basin": "Bouregreg",
+          "share": 0.3,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        },
+        {
+          "basin": "Oum Er-Rbia",
+          "share": 0.45,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        }
+      ],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": null,
+          "status": "hypothese",
+          "source": "non documenté par région dans les sources lues",
+          "date": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "marrakech-safi",
+      "population": {
+        "value": 4892393,
+        "status": "sourced",
+        "source": "https://www.hcp.ma/file/242227/",
+        "date": "2024-11-07",
+        "year": 2024,
+        "refDate": "2024-09-01"
+      },
+      "popGrowthPctYr": {
+        "value": 0.79,
+        "status": "derived",
+        "source": "https://www.hcp.ma/file/242665/",
+        "date": "2024-11",
+        "note": "taux annuel moyen 2014-2024 (HCP) ; l'appliquer aux années futures est une hypothèse"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 85,
+          "status": "hypothese",
+          "source": "calibrage national : 36,83 M hab x 85 l/j x 365 x 1,25 = 1 428 Mm³ ; ordre de grandeur de la demande potable de 1 285 Mm³ en 2020 (Plan Bleu 2011, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf) et sous les 1 750 Mm³ du poste eau potable + industrie + tourisme (IRES 2022). Même valeur pour toutes les régions : les écarts urbain/rural ne sont pas modélisés.",
+          "date": "2026-11-23"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "taux de fuites supposé ; aucun rendement de réseau par région n'a été relevé dans les sources lues",
+          "date": "2026-11-23"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": 142620,
+          "status": "sourced",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Superficie aménagée fin 2007, grande hydraulique seule (Haouz). Hors petite et moyenne hydraulique et irrigation privée : voir otherIrrigationMm3PerYear.",
+          "year": 2007
+        },
+        "m3PerHa": {
+          "value": 6072,
+          "status": "derived",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Demande 2030 du programme d'économie d'eau PNEEI (866 Mm³/an, annexe 3) divisée par la superficie : ce n'est pas un relevé de consommation."
+        },
+        "otherIrrigationMm3PerYear": {
+          "value": 1003,
+          "status": "hypothese",
+          "source": "demande 2030 petite et moyenne hydraulique + irrigation privée par bassin (Plan Bleu 2011, tableau 11, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf), répartie vers la région par une allocation indicative non sourcée",
+          "date": "2026-11-23"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 42.7,
+          "status": "hypothese",
+          "source": "résidu national : 1 750 Mm³ (eau potable + industrie + tourisme, 2020, IRES 2022, https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf) moins 1428 Mm³ de domestique calculé ici = 322 Mm³, réparti au prorata de la population. Ignore le poids réel des zones industrielles (Casablanca, Jorf Lasfar, Safi) ; comprend le tourisme.",
+          "date": "2026-11-23"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 8,
+          "status": "sourced",
+          "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+          "date": "2025-05",
+          "note": "Safi 8 (industriel, OCP) ; +42 en cours (30 potable, 12 industrie)",
+          "byUse": {
+            "potableMm3PerYear": 0,
+            "irrigationMm3PerYear": 0,
+            "industryMm3PerYear": 8
+          },
+          "dataYear": 2023
+        },
+        "plannedMm3PerYear": [
+          {
+            "value": 42,
+            "year": null,
+            "label": "Safi, extension 42 Mm³/an (30 potable, 12 industrie), en cours de réalisation",
+            "projectStatus": "en construction",
+            "status": "sourced",
+            "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+            "date": "2025-05"
+          },
+          {
+            "value": 42.8,
+            "year": 2035,
+            "label": "Essaouira, 42,8 Mm³/an (12,8 potable, 30 irrigation) ; calendrier 2027/2035",
+            "projectStatus": "planifié",
+            "status": "sourced",
+            "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+            "date": "2025-05"
+          }
+        ]
+      },
+      "groundwater": null,
+      "basinShares": [
+        {
+          "basin": "Oum Er-Rbia",
+          "share": 0.2,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        },
+        {
+          "basin": "Tensift",
+          "share": 1,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        }
+      ],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": null,
+          "status": "hypothese",
+          "source": "non documenté par région dans les sources lues",
+          "date": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "draa-tafilalet",
+      "population": {
+        "value": 1655623,
+        "status": "sourced",
+        "source": "https://www.hcp.ma/file/242227/",
+        "date": "2024-11-07",
+        "year": 2024,
+        "refDate": "2024-09-01"
+      },
+      "popGrowthPctYr": {
+        "value": 0.13,
+        "status": "derived",
+        "source": "https://www.hcp.ma/file/242665/",
+        "date": "2024-11",
+        "note": "taux annuel moyen 2014-2024 (HCP) ; l'appliquer aux années futures est une hypothèse"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 85,
+          "status": "hypothese",
+          "source": "calibrage national : 36,83 M hab x 85 l/j x 365 x 1,25 = 1 428 Mm³ ; ordre de grandeur de la demande potable de 1 285 Mm³ en 2020 (Plan Bleu 2011, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf) et sous les 1 750 Mm³ du poste eau potable + industrie + tourisme (IRES 2022). Même valeur pour toutes les régions : les écarts urbain/rural ne sont pas modélisés.",
+          "date": "2026-11-23"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "taux de fuites supposé ; aucun rendement de réseau par région n'a été relevé dans les sources lues",
+          "date": "2026-11-23"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": 65550,
+          "status": "sourced",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Superficie aménagée fin 2007, grande hydraulique seule (Tafilalet + Ouarzazate (Drâa)). Hors petite et moyenne hydraulique et irrigation privée : voir otherIrrigationMm3PerYear.",
+          "year": 2007
+        },
+        "m3PerHa": {
+          "value": 8360,
+          "status": "derived",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Demande 2030 du programme d'économie d'eau PNEEI (548 Mm³/an, annexe 3) divisée par la superficie : ce n'est pas un relevé de consommation."
+        },
+        "otherIrrigationMm3PerYear": {
+          "value": 929,
+          "status": "hypothese",
+          "source": "demande 2030 petite et moyenne hydraulique + irrigation privée par bassin (Plan Bleu 2011, tableau 11, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf), répartie vers la région par une allocation indicative non sourcée",
+          "date": "2026-11-23"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 14.5,
+          "status": "hypothese",
+          "source": "résidu national : 1 750 Mm³ (eau potable + industrie + tourisme, 2020, IRES 2022, https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf) moins 1428 Mm³ de domestique calculé ici = 322 Mm³, réparti au prorata de la population. Ignore le poids réel des zones industrielles (Casablanca, Jorf Lasfar, Safi) ; comprend le tourisme.",
+          "date": "2026-11-23"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 0,
+          "status": "derived",
+          "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+          "date": "2025-05",
+          "note": "région intérieure, aucune station",
+          "byUse": {
+            "potableMm3PerYear": 0,
+            "irrigationMm3PerYear": 0,
+            "industryMm3PerYear": 0
+          },
+          "dataYear": 2023
+        },
+        "plannedMm3PerYear": []
+      },
+      "groundwater": null,
+      "basinShares": [
+        {
+          "basin": "Drâa-Oued Noun",
+          "share": 0.85,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        },
+        {
+          "basin": "Guir-Ziz-Ghriss",
+          "share": 0.8,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        }
+      ],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": null,
+          "status": "hypothese",
+          "source": "non documenté par région dans les sources lues",
+          "date": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "souss-massa",
+      "population": {
+        "value": 3020431,
+        "status": "sourced",
+        "source": "https://www.hcp.ma/file/242227/",
+        "date": "2024-11-07",
+        "year": 2024,
+        "refDate": "2024-09-01"
+      },
+      "popGrowthPctYr": {
+        "value": 1.21,
+        "status": "derived",
+        "source": "https://www.hcp.ma/file/242665/",
+        "date": "2024-11",
+        "note": "taux annuel moyen 2014-2024 (HCP) ; l'appliquer aux années futures est une hypothèse"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 85,
+          "status": "hypothese",
+          "source": "calibrage national : 36,83 M hab x 85 l/j x 365 x 1,25 = 1 428 Mm³ ; ordre de grandeur de la demande potable de 1 285 Mm³ en 2020 (Plan Bleu 2011, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf) et sous les 1 750 Mm³ du poste eau potable + industrie + tourisme (IRES 2022). Même valeur pour toutes les régions : les écarts urbain/rural ne sont pas modélisés. Recoupement lu (non appliqué) : production d'eau potable 2023 de la région = 92,097 Mm³ (ONEE via HCP monographie Souss-Massa 2025, tableau « Figure 120 ») pour ~2,98 M hab. = ~84,6 l/hab/j de production brute, contre 85 x 1,25 = 106 l/hab/j dans le moteur. Non appliqué : on ignore si la production de la RAMSA est comprise dans ce total et il inclut les usages non domestiques.",
+          "date": "2026-11-23"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "taux de fuites supposé ; aucun rendement de réseau par région n'a été relevé dans les sources lues",
+          "date": "2026-11-23"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": 39900,
+          "status": "sourced",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Superficie aménagée fin 2007, grande hydraulique seule (Souss-Massa). Hors petite et moyenne hydraulique et irrigation privée : voir otherIrrigationMm3PerYear. Recoupement non utilisé (périmètre différent, ne pas substituer sans changer m3PerHa) : SAU 453 445 ha dont 174 862 ha irrigables et 108 192 ha en goutte-à-goutte (HCP, monographie régionale Souss-Massa éd. 2025, citant le ministère de l'Agriculture, https://www.hcp.ma/region-agadir/docs/docs/Monographie%20regionale%20Souss%20Massa%202024.pdf, lu le 2026-11-23) ; 158 433 ha irrigués dont 130 386 ha en localisé (Atlas Original, 2025-03-02, source secondaire).",
+          "year": 2007
+        },
+        "m3PerHa": {
+          "value": 3810,
+          "status": "derived",
+          "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+          "date": "2011-01",
+          "note": "Demande 2030 du programme d'économie d'eau PNEEI (152 Mm³/an, annexe 3) divisée par la superficie : ce n'est pas un relevé de consommation."
+        },
+        "otherIrrigationMm3PerYear": {
+          "value": 614,
+          "status": "hypothese",
+          "source": "demande 2030 petite et moyenne hydraulique + irrigation privée par bassin (Plan Bleu 2011, tableau 11, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf), répartie vers la région par une allocation indicative non sourcée",
+          "date": "2026-11-23"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 26.4,
+          "status": "hypothese",
+          "source": "résidu national : 1 750 Mm³ (eau potable + industrie + tourisme, 2020, IRES 2022, https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf) moins 1428 Mm³ de domestique calculé ici = 322 Mm³, réparti au prorata de la population. Ignore le poids réel des zones industrielles (Casablanca, Jorf Lasfar, Safi) ; comprend le tourisme.",
+          "date": "2026-11-23"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 100.4,
+          "status": "sourced",
+          "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+          "date": "2025-05",
+          "note": "Agadir/Chtouka 100,40 = 275 000 m³/j x 365 ; répartition 150 000 m³/j potable (54,75 Mm³/an) et 125 000 m³/j irrigation (45,625 Mm³/an), lue dans Atlas Original (2025-03-02, https://atlasoriginal.net/au-coeur-de-la-campagne-agricole-du-souss-massa-2024-2025, page lue le 2026-11-23) et dans le libellé du projet chtouka-agadir (Le360, 2022-01-30, non relu). La répartition 50,2/50,2 du Policy Center (2025-05) est incompatible avec 150 000/125 000 m³/j.",
+          "byUse": {
+            "potableMm3PerYear": 54.75,
+            "irrigationMm3PerYear": 45.625,
+            "industryMm3PerYear": 0
+          },
+          "dataYear": 2023
+        },
+        "plannedMm3PerYear": [
+          {
+            "value": 45.6,
+            "year": 2028,
+            "label": "Agadir, extension 45,6 Mm³/an (18,3 potable, 27,3 irrigation) ; corroboré : cible 400 000 m³/j dont 200 000 irrigation (Atlas Original, 2025-03-02, page lue) ; calendrier de travaux 2026 (Médias24 nov. 2025, non relu)",
+            "projectStatus": "planifié",
+            "status": "sourced",
+            "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+            "date": "2025-05"
+          }
+        ]
+      },
+      "groundwater": null,
+      "basinShares": [
+        {
+          "basin": "Souss-Massa",
+          "share": 1,
+          "status": "hypothese",
+          "source": "allocation indicative bassin → région : bassin de regions.json et bulletin du 2026-11-18, parts choisies à la main (barrages, zones desservies), non sourcées"
+        }
+      ],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": null,
+          "status": "hypothese",
+          "source": "non documenté par région dans les sources lues",
+          "date": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "guelmim-oued-noun",
+      "population": {
+        "value": 448685,
+        "status": "sourced",
+        "source": "https://www.hcp.ma/file/242227/",
+        "date": "2024-11-07",
+        "year": 2024,
+        "refDate": "2024-09-01"
+      },
+      "popGrowthPctYr": {
+        "value": 0.34,
+        "status": "derived",
+        "source": "https://www.hcp.ma/file/242665/",
+        "date": "2024-11",
+        "note": "taux annuel moyen 2014-2024 (HCP) ; l'appliquer aux années futures est une hypothèse"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 56.3,
+          "status": "derived",
+          "source": "https://www.hcp.ma/region-guelmim/docs/docs/monographie_regionale_2022.pdf",
+          "date": "2022",
+          "note": "Données ONEP 2019 (monographie 2022). Consommation facturée 2019 de la région (Guelmim, Tan-Tan, Assa-Zag, Sidi Ifni) = 9 060 364 m³ (tableau 108, services ONEP, lu) ÷ population 2019 estimée 441135 (population RGPH 2024 448685 ramenée à 2019 par le taux HCP 0,34 %/an : estimation) ÷ 365. Comprend les usages non domestiques raccordés (administrations, industrie, autres) : ce n'est pas un relevé domestique pur. Donnée 2019. Page lue le 2026-11-23."
+        },
+        "lossRatePct": {
+          "value": 52.6,
+          "status": "derived",
+          "source": "https://www.hcp.ma/region-guelmim/docs/docs/monographie_regionale_2022.pdf",
+          "date": "2022",
+          "note": "Données ONEP 2019 (monographie 2022). Convention du moteur : demande = consommation × (1 + pertes). Production 2019 = 13 826 740 m³ ; consommation facturée = 9 060 364 m³ ; rendement facturé = 65,5 % ; pertes au sens du moteur = production/consommation - 1 = 52.6 % (et non 34,5 %). Inclut pertes physiques et eau non facturée. Donnée 2019. Page lue le 2026-11-23."
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": null,
+          "status": "hypothese",
+          "source": "aucun périmètre de grande hydraulique rattaché à cette région dans Plan Bleu 2011 (tableau 8) ; l'irrigation éventuelle figure dans otherIrrigationMm3PerYear",
+          "date": "2026-11-23"
+        },
+        "m3PerHa": {
+          "value": null,
+          "status": "hypothese",
+          "source": "pas de périmètre de grande hydraulique : voir otherIrrigationMm3PerYear",
+          "date": "2026-11-23"
+        },
+        "otherIrrigationMm3PerYear": {
+          "value": 94,
+          "status": "hypothese",
+          "source": "demande 2030 petite et moyenne hydraulique + irrigation privée par bassin (Plan Bleu 2011, tableau 11, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf), répartie vers la région par une allocation indicative non sourcée",
+          "date": "2026-11-23"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 3.9,
+          "status": "hypothese",
+          "source": "résidu national : 1 750 Mm³ (eau potable + industrie + tourisme, 2020, IRES 2022, https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf) moins 1428 Mm³ de domestique calculé ici = 322 Mm³, réparti au prorata de la population. Ignore le poids réel des zones industrielles (Casablanca, Jorf Lasfar, Safi) ; comprend le tourisme.",
+          "date": "2026-11-23"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 4.745,
+          "status": "derived",
+          "source": "https://fr.le360.ma/societe/tan-tan-fin-des-travaux-dextension-de-la-station-de-demineralisation_743BBG2L2ZAYTH73NUPBRY4Y7A/",
+          "date": "2025-11-14",
+          "note": "Station de déminéralisation de Tan-Tan : « près de 13.000 m³ par jour » après extension de plus de 4 300 m³/j (inaugurée le 4 novembre 2025, Le360 du 14 novembre 2025, page lue) x 365 = 4,745 Mm³/an. Le360 écrit « eau de mer ou saumâtre » : une part peut venir de la nappe (Sehb El Harcha, source non lue), donc compter ceci comme dessalement compte en partie des eaux souterraines que le modèle exclut. Autres petites stations de la région : non relevées (0). Page lue le 2026-11-23.",
+          "byUse": {
+            "potableMm3PerYear": 4.745,
+            "irrigationMm3PerYear": 0,
+            "industryMm3PerYear": 0
+          },
+          "dataYear": 2025
+        },
+        "plannedMm3PerYear": [
+          {
+            "value": 3.15,
+            "year": null,
+            "label": "Sidi Ifni, 3,15 Mm³/an potable, en cours de réalisation",
+            "projectStatus": "en construction",
+            "status": "sourced",
+            "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+            "date": "2025-05"
+          },
+          {
+            "value": 34.6,
+            "year": 2035,
+            "label": "Guelmim, 34,6 Mm³/an (14,6 potable, 20 irrigation) ; 2027/2030/2035",
+            "projectStatus": "planifié",
+            "status": "sourced",
+            "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+            "date": "2025-05"
+          },
+          {
+            "value": 47.2,
+            "year": 2040,
+            "label": "Tan-Tan, 47,2 Mm³/an (3,2 potable, 35 irrigation, 9 hydrogène vert) ; 2027 à 2040",
+            "projectStatus": "planifié",
+            "status": "sourced",
+            "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+            "date": "2025-05"
+          }
+        ]
+      },
+      "groundwater": null,
+      "basinShares": [
+        {
+          "basin": "Drâa-Oued Noun",
+          "share": 0.075,
+          "status": "hypothese",
+          "source": "borne basse par capacité : barrage Fask (province de Guelmim, 79 Mm³) ÷ capacité du bassin au bulletin du 2026-11-18 (1 048,18 Mm³) ≈ 0,075. Sources : abhdon.ma/page/Ouvrages-Hydrauliques (4 grands barrages : Mansour Eddahbi 428 Mm³, Sultan Moulay Ali Cherif 280, Agdez 247, Fask 79 ; somme ≈ capacité du bassin), agrimaroc.ma (Fask, province de Guelmim)",
+          "note": "Incertitude : la part était de 0,15 (choisie à la main). Seul Fask est identifié dans la région ; d'autres retenues de la région (ex. Touizgui) et le remplissage propre de Fask ne sont pas dans le bulletin (remplissage supposé égal à celui du bassin). Les trois autres grands barrages du bassin ne sont pas attribués à cette région (la source lue ne donne pas leur province). La part de Drâa-Tafilalet (0,85) n'a pas été modifiée faute de source par barrage."
+        }
+      ],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": null,
+          "status": "hypothese",
+          "source": "non documenté par région dans les sources lues",
+          "date": "2026-11-23"
+        }
+      }
+    },
+    {
+      "id": "laayoune-sakia-el-hamra",
+      "population": {
+        "value": 451028,
+        "status": "sourced",
+        "source": "https://www.hcp.ma/file/242227/",
+        "date": "2024-11-07",
+        "year": 2024,
+        "refDate": "2024-09-01"
+      },
+      "popGrowthPctYr": {
+        "value": 2.06,
+        "status": "derived",
+        "source": "https://www.hcp.ma/file/242665/",
+        "date": "2024-11",
+        "note": "taux annuel moyen 2014-2024 (HCP) ; l'appliquer aux années futures est une hypothèse"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 85,
+          "status": "hypothese",
+          "source": "calibrage national : 36,83 M hab x 85 l/j x 365 x 1,25 = 1 428 Mm³ ; ordre de grandeur de la demande potable de 1 285 Mm³ en 2020 (Plan Bleu 2011, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf) et sous les 1 750 Mm³ du poste eau potable + industrie + tourisme (IRES 2022). Même valeur pour toutes les régions : les écarts urbain/rural ne sont pas modélisés.",
+          "date": "2026-11-23"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "taux de fuites supposé ; aucun rendement de réseau par région n'a été relevé dans les sources lues",
+          "date": "2026-11-23"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": null,
+          "status": "hypothese",
+          "source": "aucun périmètre de grande hydraulique rattaché à cette région dans Plan Bleu 2011 (tableau 8) ; l'irrigation éventuelle figure dans otherIrrigationMm3PerYear",
+          "date": "2026-11-23"
+        },
+        "m3PerHa": {
+          "value": null,
+          "status": "hypothese",
+          "source": "pas de périmètre de grande hydraulique : voir otherIrrigationMm3PerYear",
+          "date": "2026-11-23"
+        },
+        "otherIrrigationMm3PerYear": {
+          "value": 21,
+          "status": "hypothese",
+          "source": "demande 2030 petite et moyenne hydraulique + irrigation privée par bassin (Plan Bleu 2011, tableau 11, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf), répartie vers la région par une allocation indicative non sourcée",
+          "date": "2026-11-23"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 3.9,
+          "status": "hypothese",
+          "source": "résidu national : 1 750 Mm³ (eau potable + industrie + tourisme, 2020, IRES 2022, https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf) moins 1428 Mm³ de domestique calculé ici = 322 Mm³, réparti au prorata de la population. Ignore le poids réel des zones industrielles (Casablanca, Jorf Lasfar, Safi) ; comprend le tourisme.",
+          "date": "2026-11-23"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 24.59,
+          "status": "derived",
+          "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+          "date": "2025-05",
+          "note": "Laâyoune 20,20 ; Boujdour 3,90 ; Akhfennir 0,30 ; Tarfaya 0,16 ; Sidi El Ghazi 0,03 (rattachement des petites stations à la région : hypothèse)",
+          "byUse": {
+            "potableMm3PerYear": 23.39,
+            "irrigationMm3PerYear": 1.2,
+            "industryMm3PerYear": 0
+          },
+          "dataYear": 2023
+        },
+        "plannedMm3PerYear": [
+          {
+            "value": 60,
+            "year": 2035,
+            "label": "Boujdour, 60 Mm³/an irrigation ; 2030/2035",
+            "projectStatus": "planifié",
+            "status": "sourced",
+            "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+            "date": "2025-05",
+            "byUse": {
+              "potableMm3PerYear": 0,
+              "irrigationMm3PerYear": 60
+            },
+            "note": "Libellé de la source : irrigation ; l'unité du chiffre (60 Mm³/an) est jugée peu claire dans le document (à vérifier). Aucune part potable chiffrée."
+          },
+          {
+            "value": 0.47,
+            "year": null,
+            "label": "Tarfaya, 0,47 Mm³/an potable ; 2027/2035",
+            "projectStatus": "planifié",
+            "status": "sourced",
+            "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+            "date": "2025-05",
+            "byUse": {
+              "potableMm3PerYear": 0.47
+            }
+          },
+          {
+            "value": 0.16,
+            "year": null,
+            "label": "Amegrew, 0,16 Mm³/an potable, en cours de réalisation (rattachement à la région : hypothèse)",
+            "projectStatus": "en construction",
+            "status": "sourced",
+            "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+            "date": "2025-05",
+            "byUse": {
+              "potableMm3PerYear": 0.16
+            }
+          }
+        ]
+      },
+      "groundwater": null,
+      "basinShares": [],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": null,
+          "status": "hypothese",
+          "source": "non documenté par région dans les sources lues",
+          "date": "2026-11-23"
+        }
+      },
+      "stockNote": "Cette région n'a pas de bassin dans le bulletin des barrages (neuf bassins) : stock de surface = null, couverture fondée sur le dessalement seul. Indicateur de flux « couverture du potable par le dessalement » (voir fluxContext) : il ne mesure aucun stock.",
+      "fluxContext": {
+        "note": "Contexte documentaire du Sahara marocain : peu de barrages, eau potable surtout dessalée, nappes non modélisées. Aucun de ces éléments n'est un stock de surface compté dans la couverture.",
+        "desalShareOfCityPotable": {
+          "value": 0.78,
+          "status": "derived",
+          "source": "https://ecoactu.ma/laayoune-onee-station-dessalement-eau/",
+          "date": "2022-10-14",
+          "note": "52 000 m³/j dessalés ÷ 66 700 m³/j de production potable installée à Laâyoune (ville seulement, capacité installée, pas consommation) ; le reste (>14 700 m³/j) vient des eaux souterraines. Page lue."
+        },
+        "surfaceWorks": [
+          {
+            "label": "Grand barrage Sakia El Hamra (reconstruction)",
+            "capacityMm3": 112,
+            "progress": "83 % de réalisation (juil. 2025)",
+            "usage": "protection contre les crues et recharge de la nappe de Foum El Oued ; remplissage inconnu",
+            "countedInStock": false,
+            "source": "https://www.lavieeco.com/au-royaume/laayoune-le-barrage-sakia-el-hamra-realise-a-83/",
+            "date": "2025-07-14",
+            "note": "Absent du bulletin national des barrages (neuf bassins) : volume stocké inconnu, donc non intégré au stock ni aux mois de couverture. Capacité 112 Mm³ lue dans l'article ; autre source citée à 110 Mm³ (ancien dimensionnement)."
+          }
+        ]
+      }
+    },
+    {
+      "id": "dakhla-oued-ed-dahab",
+      "population": {
+        "value": 219965,
+        "status": "sourced",
+        "source": "https://www.hcp.ma/file/242227/",
+        "date": "2024-11-07",
+        "year": 2024,
+        "refDate": "2024-09-01"
+      },
+      "popGrowthPctYr": {
+        "value": 4.4,
+        "status": "derived",
+        "source": "https://www.hcp.ma/file/242665/",
+        "date": "2024-11",
+        "note": "taux annuel moyen 2014-2024 (HCP) ; l'appliquer aux années futures est une hypothèse"
+      },
+      "domestic": {
+        "lPerCapitaDay": {
+          "value": 85,
+          "status": "hypothese",
+          "source": "calibrage national : 36,83 M hab x 85 l/j x 365 x 1,25 = 1 428 Mm³ ; ordre de grandeur de la demande potable de 1 285 Mm³ en 2020 (Plan Bleu 2011, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf) et sous les 1 750 Mm³ du poste eau potable + industrie + tourisme (IRES 2022). Même valeur pour toutes les régions : les écarts urbain/rural ne sont pas modélisés.",
+          "date": "2026-11-23"
+        },
+        "lossRatePct": {
+          "value": 25,
+          "status": "hypothese",
+          "source": "taux de fuites supposé ; aucun rendement de réseau par région n'a été relevé dans les sources lues",
+          "date": "2026-11-23"
+        }
+      },
+      "agriculture": {
+        "irrigatedHa": {
+          "value": null,
+          "status": "hypothese",
+          "source": "aucun périmètre de grande hydraulique rattaché à cette région dans Plan Bleu 2011 (tableau 8) ; l'irrigation éventuelle figure dans otherIrrigationMm3PerYear",
+          "date": "2026-11-23"
+        },
+        "m3PerHa": {
+          "value": null,
+          "status": "hypothese",
+          "source": "pas de périmètre de grande hydraulique : voir otherIrrigationMm3PerYear",
+          "date": "2026-11-23"
+        },
+        "otherIrrigationMm3PerYear": {
+          "value": 21,
+          "status": "hypothese",
+          "source": "demande 2030 petite et moyenne hydraulique + irrigation privée par bassin (Plan Bleu 2011, tableau 11, https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf), répartie vers la région par une allocation indicative non sourcée",
+          "date": "2026-11-23"
+        }
+      },
+      "industry": {
+        "mm3PerYear": {
+          "value": 1.9,
+          "status": "hypothese",
+          "source": "résidu national : 1 750 Mm³ (eau potable + industrie + tourisme, 2020, IRES 2022, https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf) moins 1428 Mm³ de domestique calculé ici = 322 Mm³, réparti au prorata de la population. Ignore le poids réel des zones industrielles (Casablanca, Jorf Lasfar, Safi) ; comprend le tourisme.",
+          "date": "2026-11-23"
+        }
+      },
+      "desalination": {
+        "capacityMm3PerYear": {
+          "value": 0.01,
+          "status": "derived",
+          "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+          "date": "2025-05",
+          "note": "El Mhirriz 0,01 (rattachement : hypothèse) ; la grande station de Dakhla n'est pas en service dans les sources les plus récentes",
+          "byUse": {
+            "potableMm3PerYear": 0.01,
+            "irrigationMm3PerYear": 0,
+            "industryMm3PerYear": 0
+          },
+          "dataYear": 2023
+        },
+        "plannedMm3PerYear": [
+          {
+            "value": 37,
+            "year": 2027,
+            "label": "Dakhla, 37 Mm³/an (18,5 potable, 18,5 irrigation) ; achèvement annoncé 2026 (Médias24, nov. 2025) puis 2027 (Hespress, oct. 2026, relevé dans docs/research/09)",
+            "projectStatus": "en construction",
+            "status": "sourced",
+            "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+            "date": "2025-05",
+            "byUse": {
+              "potableMm3PerYear": 18.5,
+              "potableLowMm3PerYear": 7,
+              "irrigationMm3PerYear": 18.5
+            },
+            "note": "Part potable contestée selon les sources : 18,5 Mm³/an (PolicyCenter, source ci-dessus) contre environ 7 Mm³/an potable et 30 d'irrigation (résultats de recherche LesEco/Keops, pages non relues pour ce point) ; l'ONEE présente 22 500 m³/j (≈ 8,2 Mm³/an) pour l'eau potable de Dakhla (Médias24 2023, non relu). Greentimes (22 mai 2026, page lue) annonce 112 000 m³/j (≈ 41 Mm³/an) à terme, sans répartition ni date de mise en service. Fourchette potable utilisée : 7 à 18,5 Mm³/an (hypothèse de lecture). Mise à jour 2026-11-23 : Le360 (2026-03-02, page lue, https://fr.le360.ma/economie/sahara-un-regne-une-oeuvre-ep4-la-station-de-dessalement-de-leau-de-mer-a-dakhla-un-modele-de_2SXNDIYZYRB7NLJXZAZBZA62I4/) donne environ 100 000 m³/j, 37 Mm³/an dont ~30 irrigation (5 000 ha) et ~7 potable, construite 2021-2025 ; le chiffre ONEE de 22 500 m³/j potable (Médias24 2023) n'a pas été relu. La borne basse 7 Mm³/an potable est donc corroborée par une source lue ; la borne haute 18,5 reste celle du Policy Center. Hespress (2025-08-16, page lue) : 78 % d'avancement, mise en service attendue mi-2026. Aucune source lue ne confirme la mise en service : statut « en construction » conservé, aucune valeur changée."
+          }
+        ]
+      },
+      "groundwater": null,
+      "basinShares": [],
+      "reuse": {
+        "treatedWastewaterMm3PerYear": {
+          "value": null,
+          "status": "hypothese",
+          "source": "non documenté par région dans les sources lues",
+          "date": "2026-11-23"
+        }
+      },
+      "stockNote": "Cette région n'a pas de bassin dans le bulletin des barrages (neuf bassins) : stock de surface = null, couverture fondée sur le dessalement seul. Indicateur de flux « couverture du potable par le dessalement » (voir fluxContext) : il ne mesure aucun stock.",
+      "fluxContext": {
+        "note": "Dakhla-Oued Ed-Dahab : pas de barrage rattaché dans le bulletin ; l'eau potable repose aujourd'hui surtout sur des nappes profondes peu rechargées (non modélisées), le grand dessalement est en construction.",
+        "groundwaterContext": {
+          "text": "Seul aquifère connu et exploité : le Paléogène profond. Volume mobilisable estimé à 9 Mm³/an (étude d'actualisation du PDAIRE, ONEE-BO/ADI 2015) ; bassin Sakia El Hamra - Oued Eddahab : 98 Mm³ de ressources renouvelables dont 24 mobilisables, Paléogène 34 dont 8 ; bilan des besoins de la zone de Dakhla (tableau 4) : 7, 10, 12, 14, 17 Mm³/an selon les horizons contre 9 mobilisables (bilan +2 à -8) ; nappe exploitée en déstockage. Source secondaire (article scientifique) citant l'ABH et le PDAIRE. Aucun volume n'entre dans le moteur (nappes non modélisées). Article soumis le 2024-08-29, accepté le 2024-10-05 (CC BY 4.0), PDF lu le 2026-11-23.",
+          "status": "sourced",
+          "source": "https://www.revuefreg.fr/index.php/home/article/download/1799/1457/5852"
+        },
+        "plant": {
+          "text": "Station de dessalement de Dakhla : équipements d'osmose inverse installés, production visée 112 000 m³/j à terme, alimentée par l'éolien ; mise en service non datée dans l'article.",
+          "source": "https://greentimes.ma/blog/2026/05/22/dessalement-la-station-de-dakhla-franchit-une-etape-cle-et-prepare-une-production-de-112-000-m%C2%B3-deau-par-jour-alimentee-par-leolien/",
+          "date": "2026-05-22"
+        }
+      }
+    }
+  ],
+  "basins": [
+    {
+      "name": "Loukkos",
+      "meanAnnualInflowMm3": {
+        "value": 3600,
+        "status": "sourced",
+        "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+        "date": "2011-01",
+        "note": "Plan Bleu 2011, tableau 3 (écoulement moyen d'eau de surface, groupement d'origine : Loukkos, Tangérois et Côtiers Méditerranéens (12 800 km²)). Moyenne de long terme publiée en 2011 : les apports récents sont plus faibles."
+      },
+      "climateFactor": {
+        "dry": 0.25,
+        "normal": 0.6,
+        "wet": 1.2,
+        "damCaptureShare": 0.35,
+        "status": "hypothese",
+        "source": "facteurs sur l'écoulement moyen Plan Bleu 2011 (tableau 3) et part d'écoulement captée par les retenues (damCaptureShare) : hypothèses",
+        "note": "facteurs d'hypothèse choisis à l'œil, à pluie inchangée (curseur à 0 %), pour que le scénario normal de Souss-Massa reste proche du stock actuel ; non validés, pas une validation. Le facteur « normal » (0,6) reflète déjà une décennie récente plus sèche que la moyenne Plan Bleu 2011. Au réglage par défaut du simulateur, le curseur de pluie démarre à la médiane CMIP6 du bassin (−11,7 %) avec une élasticité de 2, soit environ −23,4 % sur les apports : le calage ne vaut pas pour ce réglage et le dessèchement est en partie compté deux fois (facteur + variation CMIP6). Facteurs non recalés.",
+        "date": "2026-11-23"
+      }
+    },
+    {
+      "name": "Moulouya",
+      "meanAnnualInflowMm3": {
+        "value": 1610,
+        "status": "sourced",
+        "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+        "date": "2011-01",
+        "note": "Plan Bleu 2011, tableau 3 (écoulement moyen d'eau de surface, groupement d'origine : Moulouya, Figuig, Kert, Isly et Kiss). Moyenne de long terme publiée en 2011 : les apports récents sont plus faibles."
+      },
+      "climateFactor": {
+        "dry": 0.25,
+        "normal": 0.6,
+        "wet": 1.2,
+        "damCaptureShare": 0.35,
+        "status": "hypothese",
+        "source": "facteurs sur l'écoulement moyen Plan Bleu 2011 (tableau 3) et part d'écoulement captée par les retenues (damCaptureShare) : hypothèses",
+        "note": "facteurs d'hypothèse choisis à l'œil, à pluie inchangée (curseur à 0 %), pour que le scénario normal de Souss-Massa reste proche du stock actuel ; non validés, pas une validation. Le facteur « normal » (0,6) reflète déjà une décennie récente plus sèche que la moyenne Plan Bleu 2011. Au réglage par défaut du simulateur, le curseur de pluie démarre à la médiane CMIP6 du bassin (−8,1 %) avec une élasticité de 2, soit environ −16,2 % sur les apports : le calage ne vaut pas pour ce réglage et le dessèchement est en partie compté deux fois (facteur + variation CMIP6). Facteurs non recalés.",
+        "date": "2026-11-23"
+      }
+    },
+    {
+      "name": "Sebou",
+      "meanAnnualInflowMm3": {
+        "value": 5600,
+        "status": "sourced",
+        "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+        "date": "2011-01",
+        "note": "Plan Bleu 2011, tableau 3 (écoulement moyen d'eau de surface, groupement d'origine : Sebou ; l'agence de bassin publie 5 170 Mm³ (1939-2017), source https://www.inbo-news.org/wp-content/uploads/2024/08/2023_CIEC3_Presentation_Fes_Bassins-Maroc_ABHS.pdf). Moyenne de long terme publiée en 2011 : les apports récents sont plus faibles."
+      },
+      "climateFactor": {
+        "dry": 0.25,
+        "normal": 0.6,
+        "wet": 1.2,
+        "damCaptureShare": 0.35,
+        "status": "hypothese",
+        "source": "facteurs sur l'écoulement moyen Plan Bleu 2011 (tableau 3) et part d'écoulement captée par les retenues (damCaptureShare) : hypothèses",
+        "note": "facteurs d'hypothèse choisis à l'œil, à pluie inchangée (curseur à 0 %), pour que le scénario normal de Souss-Massa reste proche du stock actuel ; non validés, pas une validation. Le facteur « normal » (0,6) reflète déjà une décennie récente plus sèche que la moyenne Plan Bleu 2011. Au réglage par défaut du simulateur, le curseur de pluie démarre à la médiane CMIP6 du bassin (−10,2 %) avec une élasticité de 2, soit environ −20,4 % sur les apports : le calage ne vaut pas pour ce réglage et le dessèchement est en partie compté deux fois (facteur + variation CMIP6). Facteurs non recalés.",
+        "date": "2026-11-23"
+      }
+    },
+    {
+      "name": "Bouregreg",
+      "meanAnnualInflowMm3": {
+        "value": 847,
+        "status": "sourced",
+        "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+        "date": "2011-01",
+        "note": "Plan Bleu 2011, tableau 3 (écoulement moyen d'eau de surface, groupement d'origine : Bou Regreg et Chaouia ; PDAIRE : 850). Moyenne de long terme publiée en 2011 : les apports récents sont plus faibles."
+      },
+      "climateFactor": {
+        "dry": 0.25,
+        "normal": 0.6,
+        "wet": 1.2,
+        "damCaptureShare": 0.35,
+        "status": "hypothese",
+        "source": "facteurs sur l'écoulement moyen Plan Bleu 2011 (tableau 3) et part d'écoulement captée par les retenues (damCaptureShare) : hypothèses",
+        "note": "facteurs d'hypothèse choisis à l'œil, à pluie inchangée (curseur à 0 %), pour que le scénario normal de Souss-Massa reste proche du stock actuel ; non validés, pas une validation. Le facteur « normal » (0,6) reflète déjà une décennie récente plus sèche que la moyenne Plan Bleu 2011. Au réglage par défaut du simulateur, le curseur de pluie démarre à la médiane CMIP6 du bassin (−11,1 %) avec une élasticité de 2, soit environ −22,2 % sur les apports : le calage ne vaut pas pour ce réglage et le dessèchement est en partie compté deux fois (facteur + variation CMIP6). Facteurs non recalés.",
+        "date": "2026-11-23"
+      }
+    },
+    {
+      "name": "Oum Er-Rbia",
+      "meanAnnualInflowMm3": {
+        "value": 3447,
+        "status": "sourced",
+        "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+        "date": "2011-01",
+        "note": "Plan Bleu 2011, tableau 3 (écoulement moyen d'eau de surface, groupement d'origine : Oum Er Rbia et El Jadida-Safi). Moyenne de long terme publiée en 2011 : les apports récents sont plus faibles."
+      },
+      "climateFactor": {
+        "dry": 0.25,
+        "normal": 0.6,
+        "wet": 1.2,
+        "damCaptureShare": 0.35,
+        "status": "hypothese",
+        "source": "facteurs sur l'écoulement moyen Plan Bleu 2011 (tableau 3) et part d'écoulement captée par les retenues (damCaptureShare) : hypothèses",
+        "note": "facteurs d'hypothèse choisis à l'œil, à pluie inchangée (curseur à 0 %), pour que le scénario normal de Souss-Massa reste proche du stock actuel ; non validés, pas une validation. Le facteur « normal » (0,6) reflète déjà une décennie récente plus sèche que la moyenne Plan Bleu 2011. Au réglage par défaut du simulateur, le curseur de pluie démarre à la médiane CMIP6 du bassin (−15,0 %) avec une élasticité de 2, soit environ −30,0 % sur les apports : le calage ne vaut pas pour ce réglage et le dessèchement est en partie compté deux fois (facteur + variation CMIP6). Facteurs non recalés.",
+        "date": "2026-11-23"
+      }
+    },
+    {
+      "name": "Tensift",
+      "meanAnnualInflowMm3": {
+        "value": 872,
+        "status": "sourced",
+        "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+        "date": "2011-01",
+        "note": "Plan Bleu 2011, tableau 3 (écoulement moyen d'eau de surface, groupement d'origine : Tensift et Ksob-Igouzoulen). Moyenne de long terme publiée en 2011 : les apports récents sont plus faibles."
+      },
+      "climateFactor": {
+        "dry": 0.25,
+        "normal": 0.6,
+        "wet": 1.2,
+        "damCaptureShare": 0.35,
+        "status": "hypothese",
+        "source": "facteurs sur l'écoulement moyen Plan Bleu 2011 (tableau 3) et part d'écoulement captée par les retenues (damCaptureShare) : hypothèses",
+        "note": "facteurs d'hypothèse choisis à l'œil, à pluie inchangée (curseur à 0 %), pour que le scénario normal de Souss-Massa reste proche du stock actuel ; non validés, pas une validation. Le facteur « normal » (0,6) reflète déjà une décennie récente plus sèche que la moyenne Plan Bleu 2011. Au réglage par défaut du simulateur, le curseur de pluie démarre à la médiane CMIP6 du bassin (−9,7 %) avec une élasticité de 2, soit environ −19,4 % sur les apports : le calage ne vaut pas pour ce réglage et le dessèchement est en partie compté deux fois (facteur + variation CMIP6). Facteurs non recalés.",
+        "date": "2026-11-23"
+      }
+    },
+    {
+      "name": "Souss-Massa",
+      "meanAnnualInflowMm3": {
+        "value": 671,
+        "status": "sourced",
+        "source": "https://www.hcp.ma/region-agadir/docs/docs/Monographie%20regionale%20Souss%20Massa%202024.pdf",
+        "date": "2025",
+        "note": "Apport annuel moyen d'eau de surface de la région Souss-Massa entre 1939 et 2016 : 671 Mm³/an (PDAIRE 1, via HCP monographie régionale éd. 2025, page lue) = Souss 429 + Massa 134 + Tamri-Tamraght 108. Remplace 626 (Plan Bleu 2011, groupement différent). Ces apports « atteignent uniquement une moyenne de 150 Mm³/an au cours de la dernière décennie (2015-2024) » (même page, ABHSM) : 150/671 = 0,22, sous le facteur « dry » 0,25 de climateFactor, donc le scénario « normal » (0,6) est optimiste pour ce bassin. Apports 1er sept. 2025 - 23 avr. 2026 : 346 Mm³, -22 % par rapport à la normale (Le Brief, 2026-04-29, https://www.lebrief.ma/barrages-le-maroc-profite-de-163-milliards-m%C2%B3-deau-en-2026-100150365/, page lue). climateFactor non modifié. Pages lues le 2026-11-23."
+      },
+      "climateFactor": {
+        "dry": 0.25,
+        "normal": 0.6,
+        "wet": 1.2,
+        "damCaptureShare": 0.35,
+        "status": "hypothese",
+        "source": "facteurs sur l'écoulement moyen Plan Bleu 2011 (tableau 3) et part d'écoulement captée par les retenues (damCaptureShare) : hypothèses",
+        "note": "facteurs d'hypothèse choisis à l'œil, à pluie inchangée (curseur à 0 %), pour que le scénario normal de Souss-Massa reste proche du stock actuel ; non validés, pas une validation. Le facteur « normal » (0,6) reflète déjà une décennie récente plus sèche que la moyenne Plan Bleu 2011. Au réglage par défaut du simulateur, le curseur de pluie démarre à la médiane CMIP6 du bassin (−10,7 %) avec une élasticité de 2, soit environ −21,4 % sur les apports : le calage ne vaut pas pour ce réglage et le dessèchement est en partie compté deux fois (facteur + variation CMIP6). Facteurs non recalés.",
+        "date": "2026-11-23"
+      },
+      "note": "Stockage : surélévation du barrage Mokhtar Soussi (Taroudant) de ~50 à 281 Mm³, avancement > 85 % et achèvement attendu début 2027 selon Le360 (https://fr.le360.ma/economie/taroudant-les-travaux-de-surelevation-du-barrage-mokhtar-soussi-depassent-85-davancement_VGO7RRUJ5RGCJNWAFB52XM5LGE/, date non relevée). Ouvrage de stockage, non compté comme apport ni comme dessalement."
+    },
+    {
+      "name": "Drâa-Oued Noun",
+      "meanAnnualInflowMm3": {
+        "value": 772,
+        "status": "derived",
+        "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+        "date": "2011-01",
+        "note": "Plan Bleu 2011, tableau 3 (écoulement moyen d'eau de surface, groupement d'origine : Drâa uniquement (98 600 km²) ; la partie Oued Noun / Guelmim n'est pas dans le tableau). Moyenne de long terme publiée en 2011 : les apports récents sont plus faibles."
+      },
+      "climateFactor": {
+        "dry": 0.25,
+        "normal": 0.6,
+        "wet": 1.2,
+        "damCaptureShare": 0.35,
+        "status": "hypothese",
+        "source": "facteurs sur l'écoulement moyen Plan Bleu 2011 (tableau 3) et part d'écoulement captée par les retenues (damCaptureShare) : hypothèses",
+        "note": "facteurs d'hypothèse choisis à l'œil, à pluie inchangée (curseur à 0 %), pour que le scénario normal de Souss-Massa reste proche du stock actuel ; non validés, pas une validation. Le facteur « normal » (0,6) reflète déjà une décennie récente plus sèche que la moyenne Plan Bleu 2011. Au réglage par défaut du simulateur, le curseur de pluie démarre à la médiane CMIP6 du bassin (+7,2 %) avec une élasticité de 2, soit environ +14,4 % sur les apports : cette hausse compense en partie le facteur « normal » calé sur la décennie récente, et le calage ne vaut pas pour ce réglage. Facteurs non recalés.",
+        "date": "2026-11-23"
+      }
+    },
+    {
+      "name": "Guir-Ziz-Ghriss",
+      "meanAnnualInflowMm3": {
+        "value": 626,
+        "status": "sourced",
+        "source": "https://planbleu.org/sites/default/files/publications/eau_energie_cc_maroc_fr.pdf",
+        "date": "2011-01",
+        "note": "Plan Bleu 2011, tableau 3 (écoulement moyen d'eau de surface, groupement d'origine : Ziz, Rhéris, Guir, Bouâanane et Maider). Moyenne de long terme publiée en 2011 : les apports récents sont plus faibles."
+      },
+      "climateFactor": {
+        "dry": 0.25,
+        "normal": 0.6,
+        "wet": 1.2,
+        "damCaptureShare": 0.35,
+        "status": "hypothese",
+        "source": "facteurs sur l'écoulement moyen Plan Bleu 2011 (tableau 3) et part d'écoulement captée par les retenues (damCaptureShare) : hypothèses",
+        "note": "facteurs d'hypothèse choisis à l'œil, à pluie inchangée (curseur à 0 %), pour que le scénario normal de Souss-Massa reste proche du stock actuel ; non validés, pas une validation. Le facteur « normal » (0,6) reflète déjà une décennie récente plus sèche que la moyenne Plan Bleu 2011. Au réglage par défaut du simulateur, le curseur de pluie démarre à la médiane CMIP6 du bassin (−8,1 %) avec une élasticité de 2, soit environ −16,2 % sur les apports : le calage ne vaut pas pour ce réglage et le dessèchement est en partie compté deux fois (facteur + variation CMIP6). Facteurs non recalés.",
+        "date": "2026-11-23"
+      }
+    }
+  ],
+  "projects": [
+    {
+      "id": "chtouka-agadir",
+      "regionIds": [
+        "souss-massa"
+      ],
+      "kind": "dessalement",
+      "label": "Agadir / Chtouka Aït Baha : 275 000 m³/j (150 000 potable, 125 000 irrigation) à la mise en service ; 400 000 m³/j visés",
+      "capacityMm3PerYear": 100.4,
+      "year": 2022,
+      "status": "en service",
+      "source": "https://fr.le360.ma/economie/dessalement-deau-de-mer-mise-en-service-de-la-station-de-chtouka-ait-baha-254009/",
+      "date": "2022-01-30"
+    },
+    {
+      "id": "agadir-extension",
+      "regionIds": [
+        "souss-massa"
+      ],
+      "kind": "dessalement",
+      "label": "Agadir, extension de 45,6 Mm³/an (18,3 potable, 27,3 irrigation)",
+      "capacityMm3PerYear": 45.6,
+      "year": 2028,
+      "status": "planifié",
+      "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+      "date": "2025-05"
+    },
+    {
+      "id": "tiznit-sidi-ifni",
+      "regionIds": [
+        "souss-massa",
+        "guelmim-oued-noun"
+      ],
+      "kind": "dessalement",
+      "label": "Tiznit - Sidi Ifni, 154,6 Mm³/an cumulés ; répartition entre les deux régions non sourcée ; 2028/2030/2035",
+      "capacityMm3PerYear": 154.6,
+      "year": 2028,
+      "status": "planifié",
+      "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+      "date": "2025-05"
+    },
+    {
+      "id": "sidi-ifni",
+      "regionIds": [
+        "guelmim-oued-noun"
+      ],
+      "kind": "dessalement",
+      "label": "Sidi Ifni, 3,15 Mm³/an potable, en cours de réalisation",
+      "capacityMm3PerYear": 3.15,
+      "year": null,
+      "status": "en construction",
+      "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+      "date": "2025-05"
+    },
+    {
+      "id": "guelmim-desal",
+      "regionIds": [
+        "guelmim-oued-noun"
+      ],
+      "kind": "dessalement",
+      "label": "Guelmim, 34,6 Mm³/an ; 2027/2030/2035",
+      "capacityMm3PerYear": 34.6,
+      "year": 2035,
+      "status": "planifié",
+      "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+      "date": "2025-05"
+    },
+    {
+      "id": "tan-tan-desal",
+      "regionIds": [
+        "guelmim-oued-noun"
+      ],
+      "kind": "dessalement",
+      "label": "Tan-Tan, 47,2 Mm³/an ; 2027 à 2040",
+      "capacityMm3PerYear": 47.2,
+      "year": 2040,
+      "status": "planifié",
+      "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+      "date": "2025-05"
+    },
+    {
+      "id": "laayoune-desal",
+      "regionIds": [
+        "laayoune-sakia-el-hamra"
+      ],
+      "kind": "dessalement",
+      "label": "Laâyoune, 20,2 Mm³/an (19 potable, 1,2 irrigation) ; autres stations de la région : voir water-balance par région",
+      "capacityMm3PerYear": 20.2,
+      "year": null,
+      "status": "en service",
+      "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+      "date": "2025-05"
+    },
+    {
+      "id": "boujdour-desal",
+      "regionIds": [
+        "laayoune-sakia-el-hamra"
+      ],
+      "kind": "dessalement",
+      "label": "Boujdour, extension 60 Mm³/an irrigation ; 2030/2035",
+      "capacityMm3PerYear": 60,
+      "year": 2035,
+      "status": "planifié",
+      "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+      "date": "2025-05"
+    },
+    {
+      "id": "dakhla-desal",
+      "regionIds": [
+        "dakhla-oued-ed-dahab"
+      ],
+      "kind": "dessalement",
+      "label": "Dakhla, 37 Mm³/an (18,5 potable, 18,5 irrigation) ; achèvement annoncé 2026 puis 2027 : sources divergentes",
+      "capacityMm3PerYear": 37,
+      "year": 2027,
+      "status": "en construction",
+      "source": "https://medias24.com/2025/11/13/dessalement-en-2026-achevement-de-la-station-de-dakhla-et-lancement-de-lextension-de-celle-de-chtouka",
+      "date": "2025-11-13"
+    },
+    {
+      "id": "casablanca-desal",
+      "regionIds": [
+        "casablanca-settat"
+      ],
+      "kind": "dessalement",
+      "label": "Casablanca, 300 Mm³/an (270 potable, 30 irrigation) ; calendrier divergent 2026-2027 ; 40 % d'avancement en août 2025, mise en service attendue fin 2026 (Hespress, 2025-08-16, page lue)",
+      "capacityMm3PerYear": 300,
+      "year": 2027,
+      "status": "en construction",
+      "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+      "date": "2025-05"
+    },
+    {
+      "id": "jorf-lasfar-ocp",
+      "regionIds": [
+        "casablanca-settat"
+      ],
+      "kind": "dessalement",
+      "label": "Jorf Lasfar (OCP, industriel) : 40 Mm³/an en service, +60 en cours",
+      "capacityMm3PerYear": 40,
+      "year": null,
+      "status": "en service",
+      "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+      "date": "2025-05"
+    },
+    {
+      "id": "safi-ocp",
+      "regionIds": [
+        "marrakech-safi"
+      ],
+      "kind": "dessalement",
+      "label": "Safi (OCP, industriel) : 8 Mm³/an en service, +42 en cours",
+      "capacityMm3PerYear": 8,
+      "year": null,
+      "status": "en service",
+      "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+      "date": "2025-05"
+    },
+    {
+      "id": "essaouira-desal",
+      "regionIds": [
+        "marrakech-safi"
+      ],
+      "kind": "dessalement",
+      "label": "Essaouira, 42,8 Mm³/an ; 2027/2035",
+      "capacityMm3PerYear": 42.8,
+      "year": 2035,
+      "status": "planifié",
+      "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+      "date": "2025-05"
+    },
+    {
+      "id": "nador-desal",
+      "regionIds": [
+        "oriental"
+      ],
+      "kind": "dessalement",
+      "label": "Nador, 250 Mm³/an ; 2026/2035 ; une seule source",
+      "capacityMm3PerYear": 250,
+      "year": 2035,
+      "status": "planifié",
+      "source": "https://www.policycenter.ma/sites/default/files/2025-05/PP_19-25%20(Vedie).pdf",
+      "date": "2025-05"
+    },
+    {
+      "id": "sebou-bouregreg",
+      "regionIds": [
+        "rabat-sale-kenitra",
+        "casablanca-settat"
+      ],
+      "kind": "interconnexion",
+      "label": "Interconnexion Sebou-Bouregreg, 66,5 km, deux stations de pompage, débit nominal 15 m³/s ; en service depuis août 2023 ; volumes annoncés divergents selon les articles",
+      "capacityMm3PerYear": null,
+      "year": 2023,
+      "status": "en service",
+      "source": "https://fr.le360.ma/societe/pourquoi-et-comment-le-maroc-mise-sur-les-autoroutes-de-leau_SHZVYUMN5NFF7HXNFT7QAMIAHQ/",
+      "date": "2023-08-28"
+    },
+    {
+      "id": "sebou-oum-er-rbia",
+      "regionIds": [
+        "rabat-sale-kenitra",
+        "casablanca-settat",
+        "beni-mellal-khenifra",
+        "marrakech-safi"
+      ],
+      "kind": "interconnexion",
+      "label": "Phase 2 : renforcement Sebou-Bouregreg et liaison de 209,6 km vers Oum Er-Rbia ; études fin 2026, travaux annoncés après (PPP)",
+      "capacityMm3PerYear": null,
+      "year": null,
+      "status": "planifié",
+      "source": "https://medias24.com/2026/02/20/nizar-baraka-le-chantier-de-lautoroute-de-leau-bouregreg-oum-er-rbia-prevu-des-fin-2026-1631601",
+      "date": "2026-02-20"
+    },
+    {
+      "id": "makhazine-dar-khrofa",
+      "regionIds": [
+        "tanger-tetouan-al-hoceima"
+      ],
+      "kind": "interconnexion",
+      "label": "Liaison Oued El Makhazine - Dar Khrofa (Loukkos), 40,3 km, station de pompage 3,2 m³/s ; mise en service progressive",
+      "capacityMm3PerYear": null,
+      "year": null,
+      "status": "en construction",
+      "source": "https://fr.le360.ma/societe/pourquoi-et-comment-le-maroc-mise-sur-les-autoroutes-de-leau_SHZVYUMN5NFF7HXNFT7QAMIAHQ/",
+      "date": "2026-11-23"
+    }
+  ],
+  "sectorGuide": {
+    "note": "Parts nationales de la demande par secteur, 2020, selon le Département de l'Eau cité par l'IRES (2022).",
+    "demand2020Mm3": {
+      "value": 16280,
+      "status": "sourced",
+      "source": "https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf",
+      "date": "2022-03-17"
+    },
+    "agriculture2020Mm3": {
+      "value": 14530,
+      "status": "sourced",
+      "source": "https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf",
+      "date": "2022-03-17",
+      "sharePct": 89.26
+    },
+    "aepit2020Mm3": {
+      "value": 1750,
+      "status": "sourced",
+      "source": "https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf",
+      "date": "2022-03-17",
+      "sharePct": 10.74,
+      "note": "eau potable + industrie + tourisme"
+    },
+    "agriculture2050Mm3": {
+      "value": 16090,
+      "status": "sourced",
+      "source": "https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf",
+      "date": "2022-03-17"
+    },
+    "aepit2050Mm3": {
+      "value": 2600,
+      "status": "sourced",
+      "source": "https://www.ires.ma/sites/default/files/docs_publications/Avenir_de_leau_au_Maroc-Rapport_de_synthese.pdf",
+      "date": "2022-03-17",
+      "sharePct": 13.91
+    }
+  }
+}

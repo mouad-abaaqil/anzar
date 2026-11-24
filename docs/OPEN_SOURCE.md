@@ -10,6 +10,8 @@ Research checked 19 November 2026. This project uses an actual interactive geogr
 | OpenFreeMap public Liberty style | Vector basemap, roads, water and place labels | Commercial use allowed; public instance requires no API key and advertises no map-view/request limits. No SLA. Respect attribution to OpenFreeMap, OpenMapTiles and OpenStreetMap. | https://openfreemap.org/ and https://openfreemap.org/quick_start/ |
 | Mapterhorn | Global 30 m elevation data used as a terrain mesh and hillshade | Project code BSD-3; terrain datasets have their own open-data terms. Attribution is included by the TileJSON and links to the full source list. | https://mapterhorn.com/ and https://mapterhorn.com/attribution/ |
 | Lucide React (`lucide-react`) | Interface controls | ISC; retain dependency license notices | https://github.com/lucide-icons/lucide |
+| IBM Plex Sans Condensed (`@fontsource/ibm-plex-sans-condensed` 5.3) | Display type (titles, figures) | SIL Open Font License 1.1 (font files bundled into the build; keep the OFL notice shipped in the package) | https://github.com/IBM/plex and https://fontsource.org/fonts/ibm-plex-sans-condensed |
+| IBM Plex Mono (`@fontsource/ibm-plex-mono` 5.3) | Micro-labels, buttons, tabs | SIL Open Font License 1.1 | https://github.com/IBM/plex and https://fontsource.org/fonts/ibm-plex-mono |
 
 Endpoints:
 

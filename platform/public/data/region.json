@@ -1,12 +1,12 @@
 {
-  "asOf": "2026-11-18",
+  "asOf": "2026-11-23",
   "researchedAt": "2026-11-19",
   "region": {
     "name": "Souss-Massa",
-    "storageMm3": 383.13,
+    "storageMm3": 382.72,
     "capacityMm3": 722.83,
-    "fillPct": 53.0,
-    "totalNote": "Total publié conservé ; somme des stocks arrondis par barrage : 383,12 Mm³."
+    "fillPct": 52.95,
+    "totalNote": "Total publié du bulletin du 23 nov. 2026 (page 10) ; somme des stocks par barrage : 382,72 Mm³."
   },
   "snapshots": [
     {
@@ -30,6 +30,14 @@
       "fillPct": 53.0,
       "sameDayPreviousYearFillPct": 19.56,
       "sourceId": "maa-2026-11-18"
+    },
+    {
+      "date": "2026-11-23",
+      "storageMm3": 382.72,
+      "capacityMm3": 722.83,
+      "fillPct": 52.95,
+      "sameDayPreviousYearFillPct": 19.48,
+      "sourceId": "maa-2026-11-23"
     }
   ],
   "sources": [
@@ -177,6 +185,16 @@
       "kind": "boundary",
       "license": "CC BY-IGO (attribution requise)",
       "limitations": "Limites administratives de référence, pas des limites d’un opérateur ni d’un bassin hydraulique. Jeu limité à 10 régions sur 12."
+    },
+    {
+      "id": "maa-2026-11-23",
+      "title": "Situation journalière des barrages — Souss-Massa, page 10",
+      "publisher": "Ministère de l’Équipement, de l’Eau et des Forêts / Maa Dialna",
+      "url": "https://maadialna.ma/sites/default/files/barrages/2026-11-23/ar/etat_global.pdf",
+      "date": "2026-11-23",
+      "kind": "official-snapshot",
+      "license": "Publicly accessible; redistribution license not specified in PDF",
+      "limitations": "Relevé lu visuellement sur la page 10 (somme des barrages = total, ±0,01 Mm³). Stockage, pas qualité chimique. Pas un flux de télémesure. Même jour 2025 : 19,48 % (région seulement)."
     }
   ],
   "context": [
@@ -241,14 +259,14 @@
       "locationNote": "Point représentatif OSM, non emplacement de capteur.",
       "description": "Ouvrage du bassin de Tamri participant à l’alimentation du Grand Agadir.",
       "sourceIds": [
-        "maa-2026-11-18",
+        "maa-2026-11-23",
         "abhsm-inventory",
         "osm",
         "abhsm-hydraulic-2023"
       ],
-      "storageMm3": 78.57,
-      "fillPct": 95.9,
-      "asOf": "2026-11-18"
+      "storageMm3": 78.16,
+      "fillPct": 95.39,
+      "asOf": "2026-11-23"
     },
     {
       "id": "dkhila",
@@ -264,14 +282,14 @@
       "locationNote": "Point représentatif OSM, non emplacement de capteur.",
       "description": "Petit ouvrage de compensation et de dérivation sur l’Issen.",
       "sourceIds": [
-        "maa-2026-11-18",
+        "maa-2026-11-23",
         "abhsm-inventory",
         "osm",
         "abhsm-hydraulic-2023"
       ],
-      "storageMm3": 0.16,
-      "fillPct": 67.79,
-      "asOf": "2026-11-18"
+      "storageMm3": 0.11,
+      "fillPct": 48.22,
+      "asOf": "2026-11-23"
     },
     {
       "id": "ahl-souss",
@@ -287,14 +305,14 @@
       "locationNote": "Point représentatif OSM, non emplacement de capteur.",
       "description": "Ouvrage de la zone d’Aït Baha, pour mobilisation des eaux locales.",
       "sourceIds": [
-        "maa-2026-11-18",
+        "maa-2026-11-23",
         "abhsm-inventory",
         "osm",
         "abhsm-hydraulic-2023"
       ],
-      "storageMm3": 4.59,
-      "fillPct": 93.4,
-      "asOf": "2026-11-18"
+      "storageMm3": 4.58,
+      "fillPct": 93.21,
+      "asOf": "2026-11-23"
     },
     {
       "id": "aoulouz",
@@ -310,14 +328,14 @@
       "locationNote": "Point représentatif OSM, non emplacement de capteur.",
       "description": "Barrage du Souss, important pour la régularisation et les usages agricoles.",
       "sourceIds": [
-        "maa-2026-11-18",
+        "maa-2026-11-23",
         "abhsm-inventory",
         "osm",
         "abhsm-hydraulic-2023"
       ],
-      "storageMm3": 71.89,
-      "fillPct": 80.81,
-      "asOf": "2026-11-18"
+      "storageMm3": 71.75,
+      "fillPct": 80.65,
+      "asOf": "2026-11-23"
     },
     {
       "id": "sidi-abdellah",
@@ -333,37 +351,37 @@
       "locationNote": "Point représentatif OSM, non emplacement de capteur.",
       "description": "Ouvrage recensé dans la situation officielle de Souss-Massa.",
       "sourceIds": [
-        "maa-2026-11-18",
+        "maa-2026-11-23",
         "abhsm-inventory",
         "osm",
         "abhsm-hydraulic-2023"
       ],
-      "storageMm3": 4.8,
-      "fillPct": 45.92,
-      "asOf": "2026-11-18"
+      "storageMm3": 4.99,
+      "fillPct": 47.74,
+      "asOf": "2026-11-23"
     },
     {
       "id": "youssef-ben-tachfine",
       "name": "Youssef Ben Tachfine",
       "kind": "dam",
       "coordinates": [
-        -9.472591,
-        29.809193
+        -9.4955,
+        29.8454
       ],
       "locationAccuracy": "approximate",
       "locationSourceId": "osm",
       "locationUrl": "https://www.openstreetmap.org/way/385158725",
-      "locationNote": "Point représentatif OSM, non emplacement de capteur.",
+      "locationNote": "Centre du tracé OSM du plan d'eau (way 385158725), corrigé le 23 nov. 2026 : l'ancien point était à 4,6 km du tracé ; confirmé à 0,1 km de Wikipédia fr. Point représentatif, non emplacement de capteur.",
       "description": "Barrage sur l’oued Massa, associé aux usages d’irrigation et d’eau potable du sud du bassin.",
       "sourceIds": [
-        "maa-2026-11-18",
+        "maa-2026-11-23",
         "abhsm-inventory",
         "osm",
         "abhsm-hydraulic-2023"
       ],
       "storageMm3": 144.24,
       "fillPct": 49.59,
-      "asOf": "2026-11-18"
+      "asOf": "2026-11-23"
     },
     {
       "id": "abdelmoumen",
@@ -379,14 +397,14 @@
       "locationNote": "Point représentatif OSM, non emplacement de capteur.",
       "description": "Barrage sur l’Issen, associé à l’eau potable du Grand Agadir et à l’irrigation.",
       "sourceIds": [
-        "maa-2026-11-18",
+        "maa-2026-11-23",
         "abhsm-inventory",
         "osm",
         "abhsm-hydraulic-2023"
       ],
-      "storageMm3": 72.44,
-      "fillPct": 36.5,
-      "asOf": "2026-11-18"
+      "storageMm3": 72.48,
+      "fillPct": 36.53,
+      "asOf": "2026-11-23"
     },
     {
       "id": "imi-el-kheng",
@@ -402,14 +420,14 @@
       "locationNote": "Point représentatif OSM, non emplacement de capteur.",
       "description": "Ouvrage du bassin du Souss, près d’Oulad Berhil.",
       "sourceIds": [
-        "maa-2026-11-18",
+        "maa-2026-11-23",
         "abhsm-inventory",
         "osm",
         "abhsm-hydraulic-2023"
       ],
-      "storageMm3": 2.21,
-      "fillPct": 30.47,
-      "asOf": "2026-11-18"
+      "storageMm3": 2.18,
+      "fillPct": 30.09,
+      "asOf": "2026-11-23"
     },
     {
       "id": "mokhtar-soussi",
@@ -425,14 +443,14 @@
       "locationNote": "Point représentatif OSM, non emplacement de capteur.",
       "description": "Barrage en amont du Souss, dans le secteur d’Ouzioua.",
       "sourceIds": [
-        "maa-2026-11-18",
+        "maa-2026-11-23",
         "abhsm-inventory",
         "osm",
         "abhsm-hydraulic-2023"
       ],
       "storageMm3": 4.22,
       "fillPct": 10.61,
-      "asOf": "2026-11-18"
+      "asOf": "2026-11-23"
     },
     {
       "id": "chtouka-desalination",

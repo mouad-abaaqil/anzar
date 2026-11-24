@@ -136,25 +136,8 @@ export function projectRegions(geo, { width = 360, pad = 12 } = {}) {
 
 export const REGION_SCOPE_NOTICE = 'Détail par ouvrage non intégré pour cette région : seul le Souss-Massa a des barrages, infrastructures et analyses détaillés dans cet outil.';
 
-// Routes: '#/' or empty = landing; '#/app[/<pageId>[/<regionId>]]' = application.
-// Legacy '#<pageId>' lands in the application on that page. The default region is never written in the hash.
-export function parseRoute(hash, pageIds, defaultRegionId = DEFAULT_REGION_ID) {
-  const parts = String(hash || '').replace(/^#/, '').split('/').filter(Boolean);
-  const rid = v => (v && v !== defaultRegionId ? v : null);
-  if (parts.length === 0) return { view: 'landing', page: 'overview', regionId: null };
-  if (parts[0] === 'app') {
-    const page = pageIds.includes(parts[1]) ? parts[1] : 'overview';
-    return { view: 'app', page, regionId: pageIds.includes(parts[1]) ? rid(parts[2]) : null };
-  }
-  if (pageIds.includes(parts[0])) return { view: 'app', page: parts[0], regionId: null };
-  return { view: 'landing', page: 'overview', regionId: null };
-}
-
-export function canonicalHash(route, defaultRegionId = DEFAULT_REGION_ID) {
-  if (route.view === 'landing') return '#/';
-  const rid = route.regionId && route.regionId !== defaultRegionId ? `/${route.regionId}` : '';
-  return `#/app/${route.page}${rid}`;
-}
+// Routes du hub : voir src/hub/routes.js (#/ récit, #/r/<région>[/<onglet>] exploration, #/sources, anciennes adresses redirigées).
+export { parseHubRoute as parseRoute, hubHash as canonicalHash } from '../hub/routes.js';
 
 // Unknown ids (or a list not yet loaded is the caller's concern) fall back to the default region.
 export const resolveRegionId = (regions, id, defaultRegionId = DEFAULT_REGION_ID) => (

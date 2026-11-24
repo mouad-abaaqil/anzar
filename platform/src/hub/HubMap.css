@@ -1,0 +1,87 @@
+.hub-map { position: absolute; inset: 0; overflow: hidden; background: var(--az-map-land); color: var(--az-text); font-family: var(--az-font-text); font-size: var(--az-fs-small); }
+.hub-map__canvas { position: absolute; inset: 0; }
+.hub-map__overlay { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
+.hub-map.is-story .hub-map__canvas { pointer-events: none; }
+.hub-map.is-story .maplibregl-ctrl-top-right { display: none; }
+.hub-map__sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* Chargement : squelette bleu clair, une houle lente (rien si reduced-motion), pas de texte visible. */
+.hub-map__skeleton { position: absolute; inset: 0; z-index: 3; background: linear-gradient(180deg, var(--az-sky) 0%, var(--az-water-soft) 100%); overflow: hidden; }
+.hub-map__skeleton::after { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, transparent 30%, color-mix(in srgb, var(--az-surface-1) 55%, transparent) 50%, transparent 70%); transform: translateX(-100%); animation: hub-map-sheen 1.8s var(--az-ease-in-out) infinite; }
+@keyframes hub-map-sheen { to { transform: translateX(100%); } }
+@media (prefers-reduced-motion: reduce) { .hub-map__skeleton::after { animation: none; opacity: 0; } }
+
+/* Repli sans WebGL : message + liste des barrages lus au bulletin. */
+.hub-map__fallback { position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column; gap: var(--az-sp-4); padding: var(--az-sp-6) var(--az-margin, 16px); background: linear-gradient(180deg, var(--az-sky) 0%, var(--az-bg) 100%); overflow: auto; }
+.hub-map__fallback-msg { display: flex; flex-direction: column; gap: var(--az-sp-1); max-width: 40ch; margin: 0; color: var(--az-text-muted); }
+.hub-map__fallback-msg strong { color: var(--az-text); font-size: var(--az-fs-body); }
+.hub-map__fallback-list { display: flex; flex-direction: column; gap: var(--az-sp-2); max-width: 420px; padding: var(--az-sp-4); background: var(--az-surface-1); border: 1px solid var(--az-line); border-radius: var(--az-r-md); }
+.hub-map__fallback-list ul { display: flex; flex-direction: column; gap: var(--az-sp-2); margin: 0; padding: 0; list-style: none; }
+.hub-map__fallback-list li { display: grid; grid-template-columns: 1fr 96px 3.5em; align-items: center; gap: var(--az-sp-3); color: var(--az-text); }
+.hub-map__fallback-bar { height: 8px; border-radius: var(--az-r-pill); background: var(--az-water-soft); overflow: hidden; }
+.hub-map__fallback-bar i { display: block; height: 100%; background: var(--az-map-water); transform-origin: left; transform: scaleX(var(--lvl, 0)); }
+.hub-map__fallback-val { text-align: right; font-family: var(--az-font-mono); font-variant-numeric: tabular-nums; }
+.hub-map__fallback-note { color: var(--az-text-muted); font-size: var(--az-fs-micro); }
+.hub-map.is-story .hub-map__fallback { justify-content: flex-end; }
+
+.hub-map__tip { position: absolute; z-index: var(--az-z-popover); display: flex; flex-direction: column; gap: var(--az-sp-1); max-width: 280px; padding: var(--az-sp-3); background: var(--az-surface-3); border: 1px solid var(--az-line-strong); border-radius: var(--az-r-sm); box-shadow: var(--az-shadow-pop); font-size: var(--az-fs-small); color: var(--az-text-muted); pointer-events: none; }
+.hub-map__tip strong { color: var(--az-text); font-weight: 600; }
+.hub-map__tip.is-pinned { pointer-events: auto; }
+.hub-map__tip a { padding-block: var(--az-sp-2); }
+
+/* Barrages : petits réservoirs. Le niveau d'eau intérieur monte jusqu'au taux lu au bulletin. */
+/* Pas de position ici : .maplibregl-marker (absolute) place l'élément. */
+.hub-dam-wrap::after { content: ""; position: absolute; left: 50%; top: 50%; width: 100%; height: 100%; border-radius: var(--az-r-pill); border: 1.5px solid var(--az-map-water); transform: translate(-50%, -50%) scale(1); opacity: 0; pointer-events: none; }
+.hub-dam-wrap.is-ripple::after { animation: hub-dam-ripple 1.1s var(--az-ease-out) 1; }
+@keyframes hub-dam-ripple { 0% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(2.4); } }
+.hub-dam { --d: 12px; --lvl: 0; position: relative; display: block; box-sizing: border-box; width: var(--d); height: var(--d); padding: 0; overflow: hidden; border-radius: var(--az-r-pill); border: 1.5px solid var(--az-map-boundary); background: color-mix(in srgb, var(--az-surface-1) 88%, transparent); box-shadow: 0 1px 3px color-mix(in srgb, var(--az-text) 28%, transparent); cursor: pointer; transition: opacity var(--az-dur-3) var(--az-ease-out), transform var(--az-dur-3) var(--az-ease-out); }
+.hub-dam__water { position: absolute; inset: 0; background: var(--az-map-water); transform-origin: 50% 100%; transform: scaleY(var(--lvl)); transition: transform 900ms cubic-bezier(0.34, 1.56, 0.64, 1), background-color var(--az-dur-3); }
+.hub-dam.is-bas .hub-dam__water { background: color-mix(in srgb, var(--az-map-water) 50%, var(--az-map-hillshade-accent)); }
+.hub-dam.is-empty { border-color: color-mix(in srgb, var(--az-map-boundary) 70%, transparent); }
+.hub-dam.is-unknown { border-style: dotted; border-color: var(--az-text-muted); }
+.hub-dam.is-pending { opacity: 0; transform: scale(0.3); }
+.hub-dam::before { content: ""; position: absolute; inset: -8px; }
+.hub-dam:focus-visible { outline: 2px solid var(--az-focus); outline-offset: 3px; }
+@media (hover: hover) { .hub-dam:hover { border-color: var(--az-accent); border-width: 2px; } }
+@media (prefers-reduced-motion: reduce) {
+  .hub-dam, .hub-dam__water { transition: none; }
+  .hub-dam-wrap.is-ripple::after { animation: none; }
+}
+.hub-map.is-dams-off .hub-dam-wrap { visibility: hidden; }
+.hub-map.is-story .hub-dam-wrap { pointer-events: none; }
+.hub-map.is-dams-faint .hub-dam { opacity: 0.55; }
+
+/* Contrôles : clairs, 44 px au tactile. */
+.hub-map .maplibregl-ctrl-group { background: var(--az-surface-1); border: 1px solid var(--az-line-strong); box-shadow: var(--az-shadow-pop); }
+.hub-map .maplibregl-ctrl-group button { background-color: transparent; }
+.hub-map .maplibregl-ctrl-group button + button { border-top: 1px solid var(--az-line); }
+.hub-map .maplibregl-ctrl-group button:focus-visible { outline: 2px solid var(--az-focus); outline-offset: -2px; }
+@media (pointer: coarse) {
+  .hub-map .maplibregl-ctrl-group button { width: var(--az-touch, 44px); height: var(--az-touch, 44px); }
+  .hub-dam::before { inset: -16px; }
+}
+.hub-map .maplibregl-ctrl-attrib { background: color-mix(in srgb, var(--az-surface-1) 85%, transparent); color: var(--az-text-muted); }
+.hub-map .maplibregl-ctrl-attrib a { color: var(--az-text-muted); }
+
+.hub-map__legend { position: absolute; left: var(--az-margin, 16px); bottom: var(--az-margin, 16px); z-index: var(--az-z-sticky); max-width: min(360px, calc(100% - 2 * var(--az-margin, 16px))); background: var(--az-surface-1); border: 1px solid var(--az-line-strong); border-radius: var(--az-r-md); box-shadow: var(--az-shadow-pop); }
+.hub-map__legend-toggle { display: flex; align-items: center; min-height: var(--az-touch, 44px); padding: 0 var(--az-sp-4); width: 100%; background: transparent; border: 0; color: inherit; cursor: pointer; font: inherit; }
+.hub-map__legend-toggle:focus-visible { outline: 2px solid var(--az-focus); outline-offset: -2px; }
+.hub-map__legend-body { display: flex; flex-direction: column; gap: var(--az-sp-4); padding: 0 var(--az-sp-4) var(--az-sp-4); max-height: 46vh; overflow: auto; }
+.hub-map__legend .az-legend__list { gap: var(--az-sp-2) var(--az-sp-4); }
+.hub-map__layers { display: flex; flex-direction: column; gap: var(--az-sp-2); margin: 0; padding: 0; list-style: none; font-size: var(--az-fs-small); color: var(--az-text); }
+.hub-map__layers li { display: flex; align-items: center; gap: var(--az-sp-3); }
+.hub-map__layers .hub-map__note { color: var(--az-text-muted); padding-left: calc(22px + var(--az-sp-3)); }
+.hub-map__sw { flex: none; box-sizing: border-box; width: 22px; height: 14px; }
+.hub-map__sw--dam { position: relative; width: 16px; height: 16px; margin-inline: 3px; overflow: hidden; border-radius: var(--az-r-pill); border: 1.5px solid var(--az-map-boundary); background: var(--az-surface-1); }
+.hub-map__sw--dam b { position: absolute; inset: 0; background: var(--az-map-water); transform-origin: 50% 100%; transform: scaleY(0.62); }
+.hub-map__sw--dam.is-bas b { background: color-mix(in srgb, var(--az-map-water) 50%, var(--az-map-hillshade-accent)); transform: scaleY(0.22); }
+.hub-map__sw--dam.is-empty { border-color: color-mix(in srgb, var(--az-map-boundary) 70%, transparent); }
+.hub-map__sw--dam.is-unknown { width: 10px; height: 10px; margin-inline: 6px; border-style: dotted; border-color: var(--az-text-muted); }
+.hub-map__sw--solid { height: 0; border-top: 2px solid var(--az-accent); }
+.hub-map__sw--dash { height: 0; border-top: 2px dashed var(--az-accent); }
+.hub-map__sw--faint { height: 0; border-top: 2px solid color-mix(in srgb, var(--az-accent) 40%, transparent); }
+/* Le récit porte son propre texte : pas de légende par-dessus. */
+.hub-map.is-story .hub-map__legend { display: none; }
+@media (max-width: 599px) {
+  .hub-map__legend { right: var(--az-margin, 16px); max-width: none; }
+}
