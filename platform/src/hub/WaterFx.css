@@ -1,7 +1,53 @@
-/* Motifs d'eau (WaterFx.jsx). Tokens --az-* uniquement. */
+/* Motifs d'eau (WaterFx.jsx, water/clock.js). Tokens --az-* uniquement. Décor : pointer-events none, aria-hidden.
+   Boucles : transform/opacity seulement, gelées par défaut ; elles tournent quand la zone est à l'écran (.is-live,
+   posée par un IntersectionObserver) ET que l'utilisateur est actif (.is-awake sur la racine). Rien sous
+   prefers-reduced-motion ni en mode immobile (.sty--still). */
 .wfx { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 
-/* Jauge réservoir : niveau qui monte une fois (transform, aucune boucle). */
+.wx-loop.wx-loop { animation-play-state: paused; }
+.is-awake .is-live .wx-loop.wx-loop, .is-awake .is-live.wx-loop.wx-loop { animation-play-state: running; }
+@keyframes wx-drift { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
+@keyframes wx-rise {
+  0% { transform: translate3d(0, 0, 0) scale(0.6); opacity: 0; }
+  12% { opacity: 0.85; }
+  80% { opacity: 0.5; }
+  100% { transform: translate3d(0, -72vh, 0) scale(1); opacity: 0; }
+}
+@keyframes wx-ripple { from { transform: scale(0); opacity: 0.28; } to { transform: scale(1); opacity: 0; } }
+
+/* Surface d'eau en couches (bas de l'ouverture, décor sans carte) */
+.wx-sea { position: absolute; inset: auto 0 0 0; height: clamp(72px, 15vh, 150px); overflow: hidden; pointer-events: none; }
+.wx-sea__layer { position: absolute; left: 0; bottom: 0; width: 200%; height: 100%; display: block; animation: wx-drift 26s linear infinite; }
+.wx-sea__layer--0 { color: var(--az-deep-water); opacity: 0.32; animation-duration: 30s; animation-direction: reverse; }
+.wx-sea__layer--1 { height: 78%; color: var(--az-water); opacity: 0.42; animation-duration: 21s; }
+.wx-sea__layer--2 { height: 52%; color: var(--az-deep-bg); opacity: 0.78; animation-duration: 14s; }
+
+/* Bulles (sections profondes, pied de page) */
+.wx-bubbles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.wx-bubble {
+  --s: 6px;
+  position: absolute;
+  bottom: -16px;
+  width: var(--s);
+  height: var(--s);
+  border-radius: var(--az-r-pill);
+  border: 1px solid color-mix(in srgb, var(--az-deep-water) 75%, transparent);
+  background: color-mix(in srgb, var(--az-deep-water) 18%, transparent);
+  opacity: 0;
+  animation: wx-rise 13s linear infinite;
+}
+
+/* Ligne d'eau entre deux sections */
+.wx-line { position: absolute; inset: -12px 0 auto 0; height: 24px; overflow: hidden; pointer-events: none; color: color-mix(in srgb, var(--az-water) 70%, transparent); }
+.wx-line__svg { display: block; width: 200%; height: 100%; animation: wx-drift 24s linear infinite; }
+
+/* Surface ondulée d'un réservoir : posée sur la ligne de niveau (bas du SVG = niveau exact). */
+.wx-surface { position: absolute; left: 0; bottom: calc(100% - 1px); width: 200%; height: 9px; display: block; animation: wx-drift 3.6s linear infinite; }
+
+/* Ondulation au toucher sur les boutons */
+.wx-ripple { position: absolute; z-index: 0; border-radius: var(--az-r-pill); background: currentColor; opacity: 0; transform: scale(0); pointer-events: none; animation: wx-ripple 0.65s var(--az-ease-out) forwards; }
+
+/* Jauge réservoir : niveau qui monte une fois (transform). */
 .wfx-gauge { --wfx-level: 0; --wfx-ghost: 0; width: clamp(76px, 9vw, 104px); flex: none; }
 .wfx-gauge__tank {
   position: relative;
@@ -10,7 +56,7 @@
   border-top-width: 0;
   border-radius: 0 0 var(--az-r-lg) var(--az-r-lg);
   overflow: hidden;
-  background: linear-gradient(180deg, transparent 0%, var(--az-water-soft) 100%);
+  background: linear-gradient(180deg, transparent 0%, color-mix(in srgb, var(--az-water-soft) 70%, transparent) 100%);
 }
 .wfx-gauge__water {
   position: absolute;
@@ -21,7 +67,6 @@
   transition: transform 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
 }
 .wfx-gauge.is-run .wfx-gauge__water { transform: translateY(calc((1 - var(--wfx-level)) * 100%)); }
-.wfx-gauge__surface { position: absolute; left: 0; bottom: 100%; width: 100%; height: 10px; display: block; }
 .wfx-gauge__tick { position: absolute; left: 0; width: 8px; height: var(--az-hairline); background: var(--az-line-control); }
 .wfx-gauge__ghost {
   position: absolute;
@@ -48,8 +93,11 @@
 .wfx-wave { display: block; pointer-events: none; }
 .wfx-wave--top, .wfx-wave--bottom { width: 100%; height: clamp(16px, 3vw, 40px); }
 .wfx-wave--top { transform: scaleY(-1); }
-.wfx-wave--right { width: clamp(18px, 2.4vw, 36px); height: 100%; }
 
+.sty--still .wx-loop, .sty--still .wx-ripple { animation: none !important; }
+.sty--still .wx-bubbles, .sty--still .wx-line { display: none; }
 @media (prefers-reduced-motion: reduce) {
+  .wx-loop, .wx-ripple { animation: none !important; }
+  .wx-bubbles, .wx-line { display: none; }
   .wfx-gauge__water, .wfx-gauge__ghost { transition: none; }
 }

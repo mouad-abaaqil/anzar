@@ -4,8 +4,8 @@ import { validateStyleMin } from '@maplibre/maplibre-gl-style-spec';
 import { colors } from '../src/design/colors.js';
 import {
   FIELDS_ZOOM, FIELD_BASE_HEIGHT, FIELDS_LAYER_IDS, FIELDS_OPACITY, FIELDS_FADE_MS, FIELDS_LEGEND,
-  fieldHeight, fieldsFilter, heightExpression, fieldsLayers, fieldsPaint, fieldsTransition, fieldsWanted, veilOpacity, isFieldSubclass,
-} from '../src/hub/layers/fields.js';
+  fieldHeight, fieldsFilter, heightExpression, fieldsLayers, fieldsPaint, fieldsTransition, fieldsWanted, veilOpacity, isFieldSubclass, parseShowFieldsArg,
+}  from '../src/hub/layers/fields.js';
 import {
   GLOBE_PROJECTION, GLOBE_ZOOM, GLOBE_CAMERA, MOROCCO_FADE, ATMOSPHERE_BLEND, MAP_MIN_ZOOM,
   fadeByZoom, showMorocco, showDamsAt, DAMS_MIN_ZOOM, moroccoK, needsGlobe, isGlobeStop,
@@ -109,4 +109,12 @@ test('globe : couches Maroc absentes au globe lointain, pleines au national', ()
   assert.equal(showDamsAt(GLOBE_CAMERA.zoom), false);
   assert.ok(showDamsAt(3) && DAMS_MIN_ZOOM < 3, 'barrages visibles au cadrage national mobile (≈ 3,2-3,5)');
   assert.ok(isGlobeStop({ globe: true }) && !isGlobeStop({}) && !isGlobeStop(null));
+});
+
+test('showFields : un booléen false n’allume jamais la couche (régression)', () => {
+  assert.deepEqual(parseShowFieldsArg(false), { on: false, animate: true });
+  assert.deepEqual(parseShowFieldsArg(true), { on: true, animate: true });
+  assert.deepEqual(parseShowFieldsArg({ on: false }), { on: false, animate: true });
+  assert.deepEqual(parseShowFieldsArg({ animate: false }), { on: true, animate: false });
+  assert.equal(parseShowFieldsArg().on, true);
 });

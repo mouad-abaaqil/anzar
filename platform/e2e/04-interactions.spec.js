@@ -67,16 +67,14 @@ test.describe('interactions du tableau de bord', () => {
     expect(REGIONS.some(r => landed.startsWith('#/r/' + r.id))).toBe(true);
   });
 
-  test('Partager copie un lien avec région et onglet', async ({ page }) => {
+  test('aucun bouton Partager (accueil et tableau de bord)', async ({ page }) => {
     await page.goto('/#/r/oriental/together');
     await waitDashboard(page);
-    await page.getByRole('button', { name: /Partager/ }).click();
-    await expect(page.locator('.hub-toast')).toHaveText('Lien copié.');
-    const live = await page.locator('.hub-toast').innerText();
-    const clip = await page.evaluate(() => navigator.clipboard.readText()).catch(e => 'ERR ' + e.message);
-    test.info().annotations.push({ type: 'info', description: live + ' | presse-papiers: ' + clip });
-    expect(live).toMatch(/Lien copié/);
-    expect(clip).toMatch(/#\/r\/oriental\/together$/);
+    await expect(page.getByRole('button', { name: /Partager/i })).toHaveCount(0);
+    await expect(page.locator('.hub-toast, dialog.hub-sharebox')).toHaveCount(0);
+    await page.goto('/#/');
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    await expect(page.getByRole('button', { name: /Partager/i })).toHaveCount(0);
   });
 
   test('tiroir Sources : ouverture, contenu, Échap', async ({ page }) => {

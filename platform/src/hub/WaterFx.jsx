@@ -1,9 +1,10 @@
-// Motifs d'eau d'Anzar : pluie et ondulations en canvas (une rafale courte, jamais en boucle), jauge dont le
-// niveau monte une fois, vague de bord de section. Sans librairie.
-// Budget : rien ne tourne au repos (≤ 2 % CPU) ; 30 images/s au plus pendant une rafale de ~3 s ; densité de
-// pixels plafonnée à 1,5 ; arrêt si l'onglet est caché ou le canvas hors écran ; rien sous prefers-reduced-motion.
-// Couleur : variable --az-water lue sur l'élément (remappée par .az-deep), donc aucune couleur écrite ici.
+// Motifs d'eau d'Anzar (décoratifs, aria-hidden) : pluie fine dont chaque goutte fait une ondulation à la surface,
+// ondulations concentriques, surface d'eau en couches (vagues SVG), bulles, jauge « réservoir », vague de bord.
+// Budget : un seul rAF partagé (water/clock.js, 30 images/s max), rien hors écran ni onglet caché, arrêt ~10 s après le
+// dernier geste (rien ne bouge au repos), rien du tout sous prefers-reduced-motion. Boucles CSS : transform/opacity
+// seulement. Couleurs : variables --az-* lues sur l'élément (remappées par .az-deep) ; aucune couleur écrite ici.
 import { useEffect, useRef, useState } from 'react';
+import { awake, onFrame, watchActivity } from './water/clock.js';
 import './WaterFx.css';
 
 const RM = '(prefers-reduced-motion: reduce)';
@@ -19,24 +20,16 @@ export function useReducedMotion() {
   return reduced;
 }
 
-const FRAME_MS = 1000 / 30;
-const BURST_MS = { rain: 3000, ripples: 2600 };
 const rand = (a, b) => a + Math.random() * (b - a);
-
-function makeRain(w, h) {
-  const n = Math.round(Math.min(70, Math.max(24, (w * h) / 9000)));
-  return Array.from({ length: n }, () => ({
-    x: rand(0, w * 1.1), y: rand(-h * 0.5, -10), len: rand(8, 16), v: rand(0.45, 0.75),
-    t0: rand(0, 1300), stop: rand(h * 0.35, h * 0.98), hit: -1,
-  }));
-}
+const RIPPLE_MS = 900;
 
 /**
- * Rafale d'eau dans un canvas plein cadre (parent positionné). play : true pour lancer (front montant) ;
- * replayKey : change pour relancer. mode 'rain' (gouttes qui tombent et font un rond) ou 'ripples'
- * (anneaux concentriques autour de points en fractions [x, y]).
+ * Canvas plein cadre (parent positionné).
+ * mode 'rain' : pluie continue tant que la zone est visible et l'utilisateur actif ; chaque goutte tombe jusqu'à la
+ *   surface (bande [surface, 1] de la hauteur) et y dessine une ondulation.
+ * mode 'ripples' : une rafale d'anneaux autour de points [x, y] (fractions) quand play passe à vrai.
  */
-export default function WaterFx({ mode = 'rain', play = true, replayKey = 0, points = [[0.3, 0.6], [0.7, 0.4]], className = '' }) {
+export default function WaterFx({ mode = 'rain', play = true, surface = 0.86, points = [[0.3, 0.6], [0.7, 0.4]], className = '' }) {
   const ref = useRef(null);
   const reduced = useReducedMotion();
 
@@ -45,54 +38,54 @@ export default function WaterFx({ mode = 'rain', play = true, replayKey = 0, poi
     if (!cv || reduced || !play) return undefined;
     const ctx = cv.getContext?.('2d');
     if (!ctx) return undefined;
-    let raf = 0, last = 0, start = 0, elapsedBefore = 0, running = true, visible = true;
-    const dpr = Math.min(1.5, window.devicePixelRatio || 1);
-    let w = 0, h = 0, drops = [];
+    let w = 1, h = 1, visible = true, unsub = null, drops = [], rings = [], t0 = 0, draining = false;
     const size = () => {
       const r = cv.getBoundingClientRect();
       w = Math.max(1, r.width); h = Math.max(1, r.height);
-      cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      cv.width = Math.round(w); cv.height = Math.round(h); // densité 1 : traits fins, coût minimal
     };
-    size();
-    if (mode === 'rain') drops = makeRain(w, h);
-    const color = getComputedStyle(cv).getPropertyValue('--az-water').trim() || 'currentColor';
-    const total = BURST_MS[mode] || 2600;
+    const color = () => getComputedStyle(cv).getPropertyValue('--az-water').trim() || 'currentColor';
+    let ink = 'currentColor';
+    const newDrop = (t, first) => ({
+      x: rand(-0.05 * w, 1.05 * w), y: first ? rand(-h, 0) : rand(-0.25 * h, -12), v: rand(0.5, 0.85), len: rand(10, 18),
+      stop: h * rand(surface, Math.min(0.995, surface + (1 - surface) * 0.9)), born: t,
+    });
+    const seed = t => {
+      const n = Math.round(Math.min(48, Math.max(16, (w * h) / 26000)));
+      drops = Array.from({ length: n }, () => newDrop(t, true));
+    };
 
     const draw = t => {
+      if (!t0) t0 = t;
       ctx.clearRect(0, 0, w, h);
-      ctx.strokeStyle = color;
+      ctx.strokeStyle = ink;
       ctx.lineCap = 'round';
       if (mode === 'rain') {
-        for (const d of drops) {
-          const dt = t - d.t0;
-          if (dt < 0) continue;
-          if (d.hit < 0) {
-            const y = d.y + dt * d.v;
-            if (y >= d.stop) d.hit = t;
-            else {
-              ctx.globalAlpha = 0.5;
-              ctx.lineWidth = 1.2;
-              ctx.beginPath();
-              ctx.moveTo(d.x - (y - d.y) * 0.12, y);
-              ctx.lineTo(d.x - (y - d.y) * 0.12 - d.len * 0.12, y - d.len);
-              ctx.stroke();
-              continue;
-            }
+        const live = awake() && !draining;
+        ctx.globalAlpha = 0.55;
+        ctx.lineWidth = 1.1;
+        ctx.beginPath();
+        for (let i = 0; i < drops.length; i++) {
+          const d = drops[i];
+          const y = d.y + (t - d.born) * d.v;
+          if (y >= d.stop) {
+            rings.push({ x: d.x - (d.stop - d.y) * 0.1, y: d.stop, t });
+            drops[i] = live ? newDrop(t, false) : null;
+            continue;
           }
-          const k = (t - d.hit) / 700;
-          if (k > 1) continue;
-          const x = d.x - (d.stop - d.y) * 0.12;
-          ctx.globalAlpha = 0.45 * (1 - k);
-          ctx.lineWidth = 1;
-          ctx.beginPath();
-          ctx.ellipse(x, d.stop, 2 + k * 14, 1 + k * 4, 0, 0, Math.PI * 2);
-          ctx.stroke();
+          const x = d.x - (y - d.y) * 0.1;
+          ctx.moveTo(x, y);
+          ctx.lineTo(x + d.len * 0.1, y - d.len);
         }
-      } else {
+        ctx.stroke();
+        drops = drops.filter(Boolean);
+      }
+      // ondulations (pluie) ou anneaux (rafale)
+      if (mode === 'ripples') {
+        const k0 = t - t0;
         points.forEach(([fx, fy], i) => {
           for (let ring = 0; ring < 3; ring++) {
-            const k = (t - i * 260 - ring * 420) / 1500;
+            const k = (k0 - i * 260 - ring * 420) / 1500;
             if (k < 0 || k > 1) continue;
             const r = 6 + k * Math.min(140, w * 0.22);
             ctx.globalAlpha = 0.5 * (1 - k);
@@ -102,41 +95,98 @@ export default function WaterFx({ mode = 'rain', play = true, replayKey = 0, poi
             ctx.stroke();
           }
         });
+        if (k0 > 2600) stop(true);
+      } else {
+        rings = rings.filter(r => t - r.t < RIPPLE_MS);
+        ctx.lineWidth = 1;
+        for (const r of rings) {
+          const k = (t - r.t) / RIPPLE_MS;
+          ctx.globalAlpha = 0.5 * (1 - k);
+          ctx.beginPath();
+          ctx.ellipse(r.x, r.y, 2 + k * 16, 0.8 + k * 4.2, 0, 0, Math.PI * 2);
+          ctx.stroke();
+        }
+        if (!drops.length && !rings.length) stop(true);
       }
       ctx.globalAlpha = 1;
     };
-
-    const tick = now => {
-      raf = 0;
-      if (!running || !visible || document.hidden) return;
-      if (!start) start = now;
-      if (now - last >= FRAME_MS) {
-        last = now;
-        const t = elapsedBefore + (now - start);
-        if (t > total) { ctx.clearRect(0, 0, w, h); running = false; return; }
-        draw(t);
-      }
-      raf = requestAnimationFrame(tick);
+    function stop(clear) {
+      unsub?.(); unsub = null;
+      if (clear) ctx.clearRect(0, 0, w, h);
+    }
+    const run = () => {
+      if (unsub || !visible || document.hidden) return;
+      if (mode === 'rain' && !awake()) return;
+      draining = false;
+      size();
+      ink = color();
+      const now = performance.now();
+      if (mode === 'rain' && !drops.length) seed(now);
+      unsub = onFrame(draw);
     };
-    const pause = () => { if (start) { elapsedBefore += performance.now() - start; start = 0; } cancelAnimationFrame(raf); raf = 0; };
-    const resume = () => { if (running && visible && !document.hidden && !raf) raf = requestAnimationFrame(tick); };
-    const onVis = () => (document.hidden ? pause() : resume());
-    document.addEventListener('visibilitychange', onVis);
+    // Inactivité : la pluie s'arrête doucement (les gouttes en vol finissent leur chute) ; reprise au premier geste.
+    const offWake = mode === 'rain' ? watchActivity(v => { if (v) run(); else draining = true; }) : null;
     let io = null;
     if (typeof IntersectionObserver !== 'undefined') {
-      io = new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible) resume(); else pause(); });
+      io = new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible) run(); else { stop(true); drops = []; rings = []; } });
       io.observe(cv);
     }
-    resume();
-    return () => { running = false; cancelAnimationFrame(raf); document.removeEventListener('visibilitychange', onVis); io?.disconnect(); };
-  }, [mode, play, replayKey, reduced]); // eslint-disable-line react-hooks/exhaustive-deps
+    run();
+    return () => { stop(false); offWake?.(); io?.disconnect(); };
+  }, [mode, play, reduced, surface]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (reduced) return null;
   return <canvas ref={ref} className={'wfx ' + className} aria-hidden="true" />;
 }
 
+/** Surface d'eau en couches (vagues SVG qui glissent, boucle CSS gelée au repos). Décor, aria-hidden. */
+const SEA_PATH = 'M0 40 C120 22 240 22 360 40 C480 58 600 58 720 40 C840 22 960 22 1080 40 C1200 58 1320 58 1440 40 C1560 22 1680 22 1800 40 C1920 58 2040 58 2160 40 C2280 22 2400 22 2520 40 C2640 58 2760 58 2880 40 V120 H0Z';
+export function Sea({ className = '' }) {
+  return (
+    <div className={'wx-sea ' + className} aria-hidden="true">
+      {[0, 1, 2].map(i => (
+        <svg key={i} className={'wx-sea__layer wx-sea__layer--' + i + ' wx-loop'} viewBox="0 0 2880 120" preserveAspectRatio="none">
+          <path d={SEA_PATH} fill="currentColor" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+/** Bulles qui montent lentement (sections profondes). Décor, aria-hidden. */
+const BUBBLES = [[8, 0, 13, 6], [17, 3.5, 11, 4], [29, 7, 15, 8], [41, 1.5, 12, 5], [55, 5, 14, 7], [66, 9, 12, 4], [74, 2.5, 16, 9], [86, 6, 13, 5], [93, 10, 11, 6]];
+export function Bubbles({ className = '' }) {
+  return (
+    <div className={'wx-bubbles ' + className} aria-hidden="true">
+      {BUBBLES.map(([x, delay, dur, size], i) => (
+        <span key={i} className="wx-bubble wx-loop" style={{ left: x + '%', animationDelay: delay + 's', animationDuration: dur + 's', '--s': size + 'px' }} />
+      ))}
+    </div>
+  );
+}
+
+/** Ligne d'eau animée entre deux sections. Décor, aria-hidden. */
+export function WaterLine({ className = '' }) {
+  return (
+    <div className={'wx-line ' + className} aria-hidden="true">
+      <svg className="wx-line__svg wx-loop" viewBox="0 0 2880 24" preserveAspectRatio="none">
+        <path d="M0 12 C180 2 360 2 540 12 C720 22 900 22 1080 12 C1260 2 1440 2 1620 12 C1800 22 1980 22 2160 12 C2340 2 2520 2 2700 12 C2790 17 2850 17 2880 12" fill="none" stroke="currentColor" strokeWidth="1.5" vectorEffect="non-scaling-stroke" />
+      </svg>
+    </div>
+  );
+}
+
+/** Surface ondulée d'un réservoir (posée sur la ligne de niveau, la boucle glisse horizontalement). */
+export function Surface({ className = '' }) {
+  return (
+    <svg className={'wx-surface wx-loop ' + className} viewBox="0 0 200 12" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 6 Q25 0 50 6 T100 6 T150 6 T200 6 V12 H0Z" fill="currentColor" />
+    </svg>
+  );
+}
+
 /**
- * Jauge « réservoir » : le niveau monte une fois jusqu'à pct (0-100) quand run devient vrai.
+ * Jauge « réservoir » : le niveau monte une fois jusqu'à pct (0-100) quand run devient vrai, la surface ondule.
  * ghostPct : trait pointillé de comparaison (ex. même jour l'an dernier). Le niveau est linéaire (honnête) :
  * la forme est un réservoir droit, pas une goutte, pour que la hauteur se lise comme un pourcentage.
  */
@@ -146,11 +196,7 @@ export function LevelGauge({ pct, ghostPct = null, ghostLabel = '', run = true, 
   return (
     <div className={'wfx-gauge' + (run ? ' is-run' : '')} style={{ '--wfx-level': p / 100, '--wfx-ghost': g == null ? 0 : g / 100 }} role="img" aria-label={label}>
       <div className="wfx-gauge__tank">
-        <div className="wfx-gauge__water">
-          <svg className="wfx-gauge__surface" viewBox="0 0 120 12" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M0 6 Q15 0 30 6 T60 6 T90 6 T120 6 V12 H0Z" fill="currentColor" />
-          </svg>
-        </div>
+        <div className="wfx-gauge__water"><Surface className="wfx-gauge__surface" /></div>
         {[25, 50, 75].map(t => <span key={t} className="wfx-gauge__tick" style={{ bottom: t + '%' }} aria-hidden="true" />)}
         {g != null && <span className="wfx-gauge__ghost" aria-hidden="true" />}
       </div>
@@ -159,18 +205,36 @@ export function LevelGauge({ pct, ghostPct = null, ghostLabel = '', run = true, 
   );
 }
 
-/** Vague de bord (SVG, currentColor). side 'top' | 'bottom' | 'right'. */
+/** Vague de bord (SVG, currentColor). side 'top' | 'bottom'. */
 export function Wave({ side = 'bottom', className = '' }) {
-  if (side === 'right') {
-    return (
-      <svg className={'wfx-wave wfx-wave--right ' + className} viewBox="0 0 48 800" preserveAspectRatio="none" aria-hidden="true">
-        <path fill="currentColor" d="M0 0 H22 C42 70 6 130 24 200 C42 270 8 330 26 400 C44 470 6 530 24 600 C42 670 10 730 24 800 H0Z" />
-      </svg>
-    );
-  }
   return (
     <svg className={'wfx-wave wfx-wave--' + side + ' ' + className} viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true">
       <path fill="currentColor" d="M0 48 V22 C180 4 360 4 540 20 C720 36 900 40 1080 24 C1260 8 1350 10 1440 18 V48Z" />
     </svg>
   );
+}
+
+/** Ondulation au toucher / clic sur les boutons d'un conteneur (délégation, une seule écoute). */
+export function useTouchRipples(rootRef, enabled) {
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root || !enabled) return undefined;
+    const on = e => {
+      const btn = e.target.closest?.('.az-btn, .wx-ripple-host');
+      if (!btn || !root.contains(btn) || btn.disabled) return;
+      const r = btn.getBoundingClientRect();
+      const s = document.createElement('span');
+      const d = Math.max(r.width, r.height) * 2;
+      s.className = 'wx-ripple';
+      s.setAttribute('aria-hidden', 'true');
+      s.style.width = s.style.height = d + 'px';
+      s.style.left = (e.clientX - r.left - d / 2) + 'px';
+      s.style.top = (e.clientY - r.top - d / 2) + 'px';
+      btn.appendChild(s);
+      s.addEventListener('animationend', () => s.remove(), { once: true });
+      setTimeout(() => s.remove(), 900);
+    };
+    root.addEventListener('pointerdown', on, { passive: true });
+    return () => root.removeEventListener('pointerdown', on);
+  }, [rootRef, enabled]);
 }

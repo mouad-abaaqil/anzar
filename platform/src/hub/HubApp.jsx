@@ -1,9 +1,9 @@
 // Racine du hub Anzar : barre haute, état partagé, carte persistante, accueil ou panneau, tiroir Sources, pied de page.
+// (Pas de bouton Partager : retiré à la demande du propriétaire ; l'adresse # de chaque vue reste copiable telle quelle.)
 // Accueil : défilement natif du document (la carte reste fixe derrière). Tableau de bord : vue fixe avec une fine barre basse.
 // Contrat : docs/HUB_CONTRACT.md. Les modules des autres agents sont chargés si présents (import.meta.glob),
 // sinon un espace réservé s'affiche : l'application ne casse jamais faute d'un fichier.
 import { Component, Suspense, lazy, useCallback, useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
-import { Share2 } from 'lucide-react';
 import { Button, MicroLabel, RegionSwitcher, Sheet } from '../design/index.js';
 import { download } from '../lib/format.js';
 import { regionPoint } from '../lib/openData.js';
@@ -25,55 +25,6 @@ const FALLBACK_SCENARIO = { hydrology: 'normal', popGrowth: null, demandReductio
 const focusTarget = id => e => { e.preventDefault(); document.getElementById(id)?.focus(); };
 const go = route => { window.location.hash = hubHash(route); };
 
-// Partage robuste : Web Share (écran tactile), sinon presse-papiers (contexte sécurisé), sinon execCommand('copy')
-// sur un champ caché, sinon 'manual' (petite fenêtre avec le lien sélectionné). -> 'shared' | 'copied' | 'aborted' | 'manual'
-export async function shareLink({ url, title, text }) {
-  const coarse = typeof window.matchMedia === 'function' && window.matchMedia('(pointer: coarse)').matches;
-  if (coarse && typeof navigator.share === 'function' && (!navigator.canShare || navigator.canShare({ url }))) {
-    try { await navigator.share({ title, text, url }); return 'shared'; }
-    catch (e) { return e?.name === 'AbortError' ? 'aborted' : 'manual'; } // geste utilisateur consommé : fenêtre directe
-  }
-  if (window.isSecureContext && navigator.clipboard?.writeText) {
-    try { await navigator.clipboard.writeText(url); return 'copied'; } catch { /* refus ou indisponible : repli */ }
-  }
-  try {
-    const ta = document.createElement('textarea');
-    ta.value = url;
-    ta.setAttribute('readonly', '');
-    ta.className = 'hub-copybuf';
-    document.body.appendChild(ta);
-    ta.select();
-    ta.setSelectionRange(0, url.length);
-    const ok = document.execCommand?.('copy');
-    ta.remove();
-    if (ok) return 'copied';
-  } catch { /* repli suivant */ }
-  return 'manual';
-}
-
-function ShareBox({ url, onClose }) {
-  const ref = useRef(null);
-  const input = useRef(null);
-  useEffect(() => {
-    const dlg = ref.current;
-    if (!dlg) return;
-    if (url && !dlg.open) { try { dlg.showModal(); } catch { dlg.setAttribute('open', ''); } }
-    if (!url && dlg.open) dlg.close();
-    if (url) requestAnimationFrame(() => { input.current?.focus(); input.current?.select(); });
-  }, [url]);
-  return (
-    <dialog ref={ref} className="hub-sharebox" aria-labelledby="hub-sharebox-t" onClose={onClose} onCancel={onClose}>
-      <h2 id="hub-sharebox-t" className="hub-sharebox__title">Copier le lien</h2>
-      <p className="hub-sharebox__text">La copie automatique n’est pas disponible ici. Le lien est sélectionné : copiez-le (Ctrl+C, ⌘C ou appui long).</p>
-      <label className="hub-sharebox__label">
-        <span>Lien de cette vue</span>
-        <input ref={input} type="text" readOnly value={url || ''} onFocus={e => e.target.select()} />
-      </label>
-      <div className="hub-sharebox__actions"><Button variant="secondary" size="sm" onClick={onClose}>Fermer</Button></div>
-    </dialog>
-  );
-}
-
 class Guard extends Component {
   state = { failed: false };
   static getDerivedStateFromError() { return { failed: true }; }
@@ -81,6 +32,11 @@ class Guard extends Component {
   render() {
     return this.state.failed ? <Placeholder name={this.props.name} note="Ce module a rencontré une erreur." /> : this.props.children;
   }
+}
+
+// Attente du module de carte : même squelette d'eau que la carte elle-même (HubMap.css), jamais une zone blanche.
+function MapWait() {
+  return <div className="hub-map__skeleton hub-mapwait" role="status"><span className="hub-live">Chargement de la carte</span></div>;
 }
 
 function Placeholder({ name, note = 'En cours d’intégration.' }) {
@@ -143,7 +99,7 @@ export default function HubApp({ route }) {
   const [mapFeatures, setMapFeatures] = useState({ fields: false, globe: false });
   const applyStop = (handle, stop) => {
     handle.flyToStop?.(stop);
-    handle.showFields?.(!!stop?.showFields);
+    handle.showFields?.({ on: !!stop?.showFields }); // la carte attend un objet : un booléen `false` serait lu comme « allumer » (défaut on = true)
   };
   const setMap = useCallback(handle => {
     mapRef.current = handle;
@@ -162,7 +118,7 @@ export default function HubApp({ route }) {
   const prevMode = useRef(mode);
   useEffect(() => {
     try {
-      if (mode === 'explore') { mapRef.current?.showFields?.(false); mapRef.current?.flyToRegion?.(regionId); }
+      if (mode === 'explore') { mapRef.current?.showFields?.({ on: false }); mapRef.current?.flyToRegion?.(regionId); }
       else if (prevMode.current === 'explore') mapRef.current?.resetView?.();
     } catch (e) { console.warn('[hub] caméra', e); }
     prevMode.current = mode;
@@ -181,33 +137,13 @@ export default function HubApp({ route }) {
     document.title = 'Anzar · L’eau du Maroc';
   }, []);
 
-  // Annonce (lecteurs d'écran) des changements de région et d'onglet ; partage du lien de la vue.
+  // Annonce (lecteurs d'écran) des changements de région et d'onglet.
   const [announce, setAnnounce] = useState('');
   const regionName = regionList.find(r => r.id === regionId)?.name;
   const tabLabel = { today: 'Aujourd’hui', tomorrow: 'Demain', together: 'Ensemble' }[tab];
   useEffect(() => {
     setAnnounce(mode === 'explore' && regionName ? regionName + ', onglet ' + tabLabel : mode === 'story' ? 'Accueil' : '');
   }, [mode, regionName, tabLabel]);
-  const [toast, setToast] = useState('');
-  const [shareBox, setShareBox] = useState(null);
-  const toastTimer = useRef(0);
-  useEffect(() => () => clearTimeout(toastTimer.current), []);
-  const notify = msg => {
-    clearTimeout(toastTimer.current);
-    setToast(msg);
-    toastTimer.current = setTimeout(() => setToast(''), 3500);
-  };
-  const share = async () => {
-    // Adresse canonique de la vue : région et onglet en exploration, accueil sinon.
-    const route = mode === 'explore' ? { view: 'explore', regionId, tab } : { view: 'story' };
-    const url = window.location.origin + window.location.pathname + window.location.search + hubHash(route);
-    const text = mode === 'explore' && regionName ? 'Anzar : ' + regionName + ', onglet ' + tabLabel : 'Anzar : l’eau du Maroc, région par région';
-    const res = await shareLink({ url, title: 'Anzar · L’eau du Maroc', text });
-    if (res === 'copied') notify('Lien copié.');
-    else if (res === 'shared') notify('Lien partagé.');
-    else if (res === 'manual') setShareBox(url);
-  };
-
   const sources = data.status === 'ready' ? data.region?.sources || [] : [];
   // Lieu de la météo modélisée : Agadir pour Souss-Massa (point de référence), sinon le centre de la région active.
   const weatherPlace = (() => {
@@ -240,18 +176,15 @@ export default function HubApp({ route }) {
             </div>
           )}
           {mode === 'explore' && regionName && <span className="hub-bar__active" title="Région active">{regionName}</span>}
-          <Button variant="secondary" size="sm" className="hub-share" onClick={share} icon={<Share2 size={18} />} aria-label={mode === 'explore' ? 'Partager : copier le lien de cette vue (région et onglet)' : 'Partager : copier le lien de la page d’accueil'}><span className="hub-share__label">Partager</span></Button>
         </div>
       </header>
 
       <div className="hub-live" role="status" aria-live="polite">{announce}</div>
-      <div className={'hub-toast' + (toast ? ' is-on' : '')} role="status" aria-live="polite" aria-atomic="true">{toast}</div>
-      <ShareBox url={shareBox} onClose={() => setShareBox(null)} />
       <main id="hub-main" className="hub-stage" tabIndex={-1}>
         <div className="hub-mapwrap">
           {HubMap ? (
             <Guard name="Carte">
-              <Suspense fallback={<Placeholder name="Carte" note="Chargement." />}>
+              <Suspense fallback={<MapWait />}>
                 <HubMap
                   ref={setMap}
                   regionId={regionId}
@@ -279,7 +212,7 @@ export default function HubApp({ route }) {
         {data.status === 'ready' && mode === 'story' && (
           <div className="hub-layer hub-layer--story">
             {Story ? (
-              <Guard name="Accueil"><Suspense fallback={null}><Story data={data} regionId={regionId} onEnter={enter} onShare={share} flyToStop={flyToStop} mapFeatures={mapFeatures} /></Suspense></Guard>
+              <Guard name="Accueil"><Suspense fallback={null}><Story data={data} regionId={regionId} onEnter={enter} flyToStop={flyToStop} mapFeatures={mapFeatures} /></Suspense></Guard>
             ) : <Placeholder name="Accueil" />}
           </div>
         )}

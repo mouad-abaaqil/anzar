@@ -101,6 +101,12 @@ export const fieldsPaint = on => ({
 /** État demandé : commande impérative (showFields / étape du récit) prioritaire, sinon prop layers.fields. */
 export const fieldsWanted = (cmd, layers, story) => (cmd ?? (!story && layers?.fields === true));
 
+/** showFields accepte { on, animate } ou un booléen ; un booléen `false` ne doit JAMAIS allumer la couche (régression : défaut on = true). */
+export const parseShowFieldsArg = arg => {
+  const { on = true, animate = true } = typeof arg === 'boolean' ? { on: arg } : (arg || {});
+  return { on: !!on, animate: animate !== false };
+};
+
 export const FIELDS_LEGEND = {
   label: 'Terres agricoles cartographiées (OpenStreetMap, ODbL)',
   note: 'Hauteur symbolique ; zones généralisées, pas des parcelles. Ne dit rien de l’irrigation réelle.',

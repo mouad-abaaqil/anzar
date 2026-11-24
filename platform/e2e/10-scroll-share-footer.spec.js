@@ -2,7 +2,8 @@ import { test, expect } from '@playwright/test';
 import { overflowX, waitDashboard, waitMap } from './helpers.js';
 import { checkScroll } from './scroll-helpers.js';
 
-// Défilement natif de l'accueil, pied de page toujours atteignable, barre basse du tableau de bord, partage robuste.
+// Défilement natif de l'accueil, pied de page toujours atteignable, barre basse du tableau de bord, mise en page des
+// légendes posées sur la carte (le bouton Partager a été retiré : le nom du fichier est gardé pour les références).
 // Machine sensible : lancer seul, sous le verrou (sh scripts/with-capture-lock.sh npx playwright test e2e/10-scroll-share-footer.spec.js).
 
 test.describe('défilement de l’accueil', () => {
@@ -36,18 +37,45 @@ test.describe('défilement de l’accueil', () => {
     await expect(page.locator('#sty-t-chiffres')).toBeInViewport({ timeout: 8000 });
     await expect.poll(() => page.evaluate(() => scrollY)).toBeGreaterThan(1000);
   });
-  test('pas de débordement à 768, 1280 et 1920 px', async ({ page }) => {
+  test('légendes sur la carte : 360 à 1920 px, dans la fenêtre, sans chevauchement, cibles ≥ 44 px', async ({ page }) => {
+    await page.emulateMedia({ reducedMotion: 'reduce' }); // légendes à leur place finale (pas d'apparition)
     await page.goto('/#/');
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-    for (const [w, h] of [[768, 1024], [1280, 800], [1920, 1080]]) {
+    const ids = ['hero', 'contexte', 'ecarts', 'demande', 'sud', 'climat', 'barrages', 'chiffres', 'essayez'];
+    const sides = new Set();
+    for (const [w, h] of [[360, 740], [390, 844], [768, 1024], [1024, 768], [1280, 800], [1920, 1080]]) {
       await page.setViewportSize({ width: w, height: h });
       await page.waitForTimeout(300);
       const ox = await overflowX(page);
       expect.soft(ox.scrollWidth, w + ' px ' + JSON.stringify(ox)).toBeLessThanOrEqual(ox.inner);
-      // Titres de section alignés : même abscisse pour tous.
-      const xs = await page.evaluate(() => [...document.querySelectorAll('.sty-sec .sty-title')].map(t => Math.round(t.getBoundingClientRect().left)));
-      expect.soft(new Set(xs).size, w + ' px : titres alignés ' + xs.join(',')).toBe(1);
+      for (const id of ids) {
+        await page.evaluate(i => document.querySelector('[data-stop="' + i + '"]')?.scrollIntoView({ block: 'start' }), id);
+        await page.waitForTimeout(150);
+        const g = await page.evaluate(i => {
+          const sec = document.querySelector('[data-stop="' + i + '"]');
+          const c = sec.querySelector('[data-cap]').getBoundingClientRect();
+          const s = sec.getBoundingClientRect();
+          const bar = document.querySelector('.hub-bar').getBoundingClientRect();
+          const rail = document.querySelector('.sty-rail.is-on')?.getBoundingClientRect();
+          const ov = (a, b) => !!(a && b && a.left < b.right - 1 && b.left < a.right - 1 && a.top < b.bottom - 1 && b.top < a.bottom - 1);
+          const small = [...sec.querySelectorAll('.az-btn, .sty-hero__scroll, .msim input[type=range]')]
+            .filter(e => { const r = e.getBoundingClientRect(); return r.width > 0 && (r.width < 44 || r.height < 44); })
+            .map(e => (e.innerText || e.className).toString().trim().slice(0, 24));
+          return {
+            inX: c.left >= -1 && c.right <= innerWidth + 1, rail: ov(c, rail), small,
+            topFrac: (c.top - s.top) / (innerHeight - bar.bottom), side: sec.className.match(/sty-sec--(left|right|bottom|low|center)/)?.[1],
+          };
+        }, id);
+        if (g.side) sides.add(g.side);
+        expect.soft(g.inX, w + ' px, ' + id + ' : légende hors de la fenêtre').toBe(true);
+        expect.soft(g.rail, w + ' px, ' + id + ' : légende sous le rail').toBe(false);
+        expect.soft(g.small, w + ' px, ' + id + ' : cibles < 44 px').toEqual([]);
+        // Mobile : la moitié haute reste à la carte (la légende commence sous ~40 % de la scène).
+        if (w < 900) expect.soft(g.topFrac, w + ' px, ' + id + ' : la légende mange la moitié haute (carte)').toBeGreaterThan(0.38);
+      }
     }
+    // Composition variée sur grand écran (pas toujours une colonne à gauche).
+    expect(sides.size, 'places des légendes : ' + [...sides].join(',')).toBeGreaterThanOrEqual(4);
   });
 });
 
@@ -74,52 +102,5 @@ test.describe('pied de page et barre basse', () => {
     await expect(page.locator('.hub-nav').getByRole('link', { name: 'Accueil' })).toHaveAttribute('aria-current', 'page');
     await expect(page.locator('.hub-bar')).not.toContainText(/Récit/);
     await expect(page.getByRole('link', { name: /retour à l’accueil/ })).toBeVisible();
-  });
-});
-
-test.describe('partage', () => {
-  test('presse-papiers autorisé : lien de la vue (région et onglet) copié, retour visible', async ({ page, context, baseURL }) => {
-    await context.grantPermissions(['clipboard-read', 'clipboard-write']);
-    await page.goto('/#/r/souss-massa/tomorrow');
-    await waitDashboard(page);
-    await page.locator('.hub-bar .hub-share').click();
-    await expect(page.locator('.hub-toast')).toHaveText('Lien copié.');
-    const clip = await page.evaluate(() => navigator.clipboard.readText());
-    expect(clip).toBe(new URL('/#/r/souss-massa/tomorrow', baseURL).href);
-    // Accueil : lien vers #/
-    await page.goto('/#/');
-    await page.locator('.hub-bar .hub-share').click();
-    await expect(page.locator('.hub-toast')).toHaveText('Lien copié.');
-    expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(new URL('/#/', baseURL).href);
-  });
-
-  test('presse-papiers refusé : repli execCommand, sinon fenêtre avec le lien sélectionné', async ({ page }) => {
-    await page.addInitScript(() => {
-      if (navigator.clipboard) navigator.clipboard.writeText = () => Promise.reject(new DOMException('refusé', 'NotAllowedError'));
-    });
-    await page.goto('/#/r/souss-massa/together');
-    await waitDashboard(page);
-    await page.locator('.hub-bar .hub-share').click();
-    // execCommand('copy') réussit dans Chrome : « Lien copié » ; sinon la fenêtre de repli s'ouvre.
-    await expect.poll(async () => (await page.locator('.hub-toast').innerText()) || (await page.locator('dialog.hub-sharebox[open]').count() ? 'dialog' : ''), { timeout: 5000 }).toMatch(/Lien copié|dialog/);
-  });
-
-  test('aucune copie possible : fenêtre avec le lien sélectionné, fermable', async ({ page, baseURL }) => {
-    await page.addInitScript(() => {
-      if (navigator.clipboard) navigator.clipboard.writeText = () => Promise.reject(new DOMException('refusé', 'NotAllowedError'));
-      document.execCommand = () => false;
-    });
-    await page.goto('/#/r/souss-massa/together');
-    await waitDashboard(page);
-    await page.locator('.hub-bar .hub-share').click();
-    const dlg = page.locator('dialog.hub-sharebox[open]');
-    await expect(dlg).toBeVisible();
-    const input = dlg.getByLabel('Lien de cette vue');
-    await expect(input).toHaveValue(new URL('/#/r/souss-massa/together', baseURL).href);
-    await expect(input).toBeFocused();
-    const sel = await input.evaluate(el => el.selectionEnd - el.selectionStart);
-    expect(sel, 'lien sélectionné').toBeGreaterThan(10);
-    await dlg.getByRole('button', { name: 'Fermer' }).click();
-    await expect(page.locator('dialog.hub-sharebox[open]')).toHaveCount(0);
   });
 });

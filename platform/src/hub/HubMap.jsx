@@ -5,7 +5,7 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 import { colors, Legend, MicroLabel, BANDS } from '../design/index.js';
 import { joinDamFill, damSize, damTooltip, fillLevel, frDay, fr } from './damsData.js';
 import { drawableLinks, arcPoints, linkStyle, linkTip, distToPolyline } from './layers/links.js';
-import { FIELDS_ZOOM, FIELDS_LAYER_IDS, FIELDS_LEGEND, fieldsLayers, fieldsPaint, fieldsTransition, fieldsWanted } from './layers/fields.js';
+import { FIELDS_ZOOM, FIELDS_LAYER_IDS, FIELDS_LEGEND, fieldsLayers, fieldsPaint, fieldsTransition, fieldsWanted, parseShowFieldsArg } from './layers/fields.js';
 import { GLOBE_PROJECTION, MERCATOR, MAP_MIN_ZOOM, ATMOSPHERE_BLEND, GLOBE_CAMERA, GLOBE_SPIN, GLOBE_ZOOM, MOROCCO_FADE, fadeByZoom, showDamsAt, isGlobeStop } from './layers/globe.js';
 import './HubMap.css';
 
@@ -391,9 +391,10 @@ const HubMap = forwardRef(function HubMap({
   }, [move, padding]);
 
   // ——— Terres agricoles en 3D (layers/fields.js) ———
-  const showFields = useCallback(({ on = true, animate = true } = {}) => {
-    fieldsAnimRef.current = animate !== false;
-    setFieldsCmd(!!on);
+  const showFields = useCallback(arg => {
+    const { on, animate } = parseShowFieldsArg(arg);
+    fieldsAnimRef.current = animate;
+    setFieldsCmd(on);
   }, []);
 
   const flyToStop = useCallback(stop => {
